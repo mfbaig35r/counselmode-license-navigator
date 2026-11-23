@@ -66,6 +66,10 @@ def build() -> dict[str, str]:
         docs[os.path.join(ROOT, "references", "choosing-a-license.md")] = render_choosing(json.load(f)["goals"])
     with open(os.path.join(ROOT, "data", "compatibility.json"), encoding="utf-8") as f:
         docs[os.path.join(ROOT, "references", "compatibility-matrix.md")] = render_matrix(json.load(f))
+    with open(os.path.join(ROOT, "data", "projects.json"), encoding="utf-8") as f:
+        projects = json.load(f)
+    docs[os.path.join(ROOT, "references", "common-projects.md")] = render_projects(projects)
+    docs[os.path.join(ROOT, "references", "relicensing-log.md")] = render_relicensing(projects, context["relicensing"])
     for name, title, intro, rows in TABLES(context, models):
         docs[os.path.join(ROOT, "references", name)] = (
             f"# {title}\n\n" + (f"{intro}\n\n" if intro else "") + table(rows)
@@ -77,7 +81,6 @@ def TABLES(context: dict, models: list) -> list[tuple[str, str, str, list[dict]]
     return [
         ("case-law.md", "Case law", "Verify statuses on the docket before publication.", context["case_law"]),
         ("regulatory-overlay.md", "Regulatory overlay", "", context["regulatory"]),
-        ("relicensing-log.md", "Relicensing log", "", context["relicensing"]),
         (
             "model-map.md",
             "AI model \u2192 license map (keyed by model version)",
@@ -85,6 +88,73 @@ def TABLES(context: dict, models: list) -> list[tuple[str, str, str, list[dict]]
             models,
         ),
     ]
+
+
+def era_range(era: dict) -> str:
+    lo, hi = era["versions"]["from"], era["versions"]["to"]
+    if lo is None and hi is None:
+        return "all versions"
+    if lo is None:
+        return f"up to {hi}"
+    return f"{lo} to {hi}" if hi else f"{lo} and later"
+
+
+def render_projects(projects: list[dict]) -> str:
+    """Common components: each project's current license, with any earlier ones, from data/projects.json."""
+    rows = []
+    for p in sorted(projects, key=lambda p: (p["category"], p["name"].lower())):
+        now = p["eras"][-1]
+        rows.append(
+            {
+                "Project": p["name"],
+                "Category": p["category"],
+                "License now (SPDX)": now["license_expression"],
+                "Earlier": "; ".join(f"{era_range(e)}: {e['license_expression']}" for e in p["eras"][:-1]),
+                "Steward": p["steward"],
+                "Verified": now["verification_status"],
+                "Editorial view": p["editorial_view"],
+            }
+        )
+    intro = (
+        "Generated from data/projects.json, keyed by version: licenses change between releases, so check the era for "
+        "the release you use (the project_license tool and the `project` command do). Each era cites the project's "
+        "LICENSE file at a tag."
+    )
+    return "# Common components\n\n" + intro + "\n\n" + table(rows)
+
+
+def render_relicensing(projects: list[dict], model_events: list[dict]) -> str:
+    """Every license change: the boundaries between a project's eras, plus model-family changes from context.json."""
+    rows = []
+    for p in projects:
+        for prev, era in zip(p["eras"], p["eras"][1:]):
+            forks = [f["id"] for f in p.get("forks", []) if f.get("since") and f["since"] >= (prev["since"] or "")]
+            rows.append(
+                {
+                    "Project": p["name"],
+                    "From": prev["license_expression"],
+                    "To": era["license_expression"],
+                    "Versions": era_range(era),
+                    "Date": era["since"],
+                    "Forks": ", ".join(forks),
+                    "Source": "; ".join(v for v in (era.get("change") or {}).values() if v),
+                }
+            )
+    rows.sort(key=lambda r: r["Date"])
+    rows += [
+        {
+            "Project": m["Project"],
+            "From": m["From"],
+            "To": m["To"],
+            "Versions": "",
+            "Date": m["Date"],
+            "Forks": m["Notes / fork"],
+            "Source": m["Source"],
+        }
+        for m in model_events
+    ]
+    intro = "Generated from data/projects.json (software) and data/context.json (AI model families)."
+    return "# Relicensing log\n\n" + intro + "\n\n" + table(rows)
 
 
 def render_choosing(goals: list[dict]) -> str:

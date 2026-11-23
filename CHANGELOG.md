@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.13 (2026-11-23)
+
+- **Software projects, keyed by version** (`data/projects.json`, the `project_license` MCP tool and the `project`
+  command): 99 well-known projects, from operating systems and databases to frameworks and developer tools, with the
+  license each version is under. Each license era cites the project's LICENSE file at a release tag (131 of 139 eras
+  verified; the rest say why, for example closed-source products with no LICENSE file), and each license change cites
+  its announcement and the commit that made it. Forks link to the project they came from (Valkey from Redis 7.2.4,
+  OpenTofu from Terraform, Apache Pekko from Akka). `projects.json` replaces the unverified project list in
+  `context.json`; `common-projects.md` and the relicensing log are now generated from it, and the log covers 40
+  software license changes.
+- **14 new license records**, each checked against its own text: curl, SSH-OpenSSH, OpenSSL (the pre-3.0 license),
+  Ruby, Artistic-1.0-Perl, GPL-1.0-or-later, Zend-2.0, the Swift and Qt LGPL exceptions, Elastic License 1.0, the
+  Facebook BSD+Patents grant React used until 2017, FSL-1.0, the n8n Sustainable Use License and the CockroachDB
+  Software License. 34 records are now fully verified and 13 partially.
+- Project groupings use a new rule, `expression_family`: the most open choice in an OR, the most restrictive part of
+  an AND.
+
 ## 2.12 (2026-11-23)
 
 - **Compatibility rulings checked against primary sources** (FSF compatibility pages and GPL FAQ matrix, the license

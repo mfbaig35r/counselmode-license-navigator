@@ -4,8 +4,8 @@ All files are in `oss-license-advisor/data/`, UTF-8 JSON. `data/` is the source 
 
 ## licenses.json
 
-`{schema_version, generated, disclaimer, licenses: [...]}`. One record per SPDX ID or `LicenseRef-` (139: 129
-licenses in 12 families, and 10 exceptions).
+`{schema_version, generated, disclaimer, licenses: [...]}`. One record per SPDX ID or `LicenseRef-` (156: 144
+licenses in 12 families, and 12 exceptions).
 
 | Field | Values |
 |---|---|
@@ -91,10 +91,29 @@ must have them (tested). Never infer a model's license from its vendor.
 `{"how people write it": "SPDX ID or LicenseRef"}`, matched case- and punctuation-insensitively. Includes SPDX's
 deprecated identifiers (`GPL-3.0` is `GPL-3.0-only`).
 
+## projects.json
+
+A list of well-known software projects, keyed by version, because projects change licenses between releases:
+`{id, name, steward, category, aliases, repo, edition_of, eras, forks, editorial_view, notes}`.
+
+| Field | Values |
+|---|---|
+| `id` | Slug; stable |
+| `steward` | Who controls the project's licensing today |
+| `category` | `operating-system`, `language-runtime`, `compiler`, `c-library`, `framework`, `database`, `search`, `infrastructure`, `observability`, `storage`, `dev-tool`, `media`, `crypto`, `ml-framework`, `application` (tested) |
+| `aliases` | Names people type, matched at word boundaries like model aliases. A name is shared only between editions of one project ("VS Code": the MIT source and Microsoft's build), so a lookup returns all of them (tested) |
+| `repo` | Source repository; null for closed-source products |
+| `edition_of` | The project this is an edition of, when editions differ in license (FFmpeg's GPL build, Microsoft's VS Code) |
+| `eras` | Ordered license periods: `{versions: {from, to}, since, license_expression, change, source, quote, verification_status, last_verified}`. `versions` are release lines ("7.2" as `to` covers every 7.2.x); only the last era has `to: null`. `change` (`announcement`, `commit`) is on every era after the first. `source` is the LICENSE file at a tag or commit, never a branch, when `Verified (primary)`; `quote` is verbatim from it (all tested) |
+| `forks` | `{id, from_version, since, reason}`; each `id` is a project here (tested) |
+| `editorial_view` | CounselMode's view of what it means to build on it; not legal advice |
+
+`references/common-projects.md` and the software part of `references/relicensing-log.md` are generated from it.
+
 ## context.json
 
-`case_law`, `regulatory`, `relicensing` and `projects` (each project with an SPDX `license_expression` and its
-`expression_verification_status`), plus `spdx_snapshot` (list version and re-keyed IDs).
+`case_law`, `regulatory` and `relicensing` (AI model families only; software license changes are the era boundaries in
+`projects.json`), plus `spdx_snapshot` (list version and re-keyed IDs).
 
 ## spdx_snapshot_3.29.0.json
 

@@ -22,7 +22,7 @@ READ_ONLY = ToolAnnotations(read_only_hint=True, destructive_hint=False, idempot
 MAX_COMPONENTS = 500
 SITE = "https://counselmode.com"
 HANDOFF = f"For a full compliance screening of these dependencies, with a report, see {SITE}."
-DATA_FILES = ("licenses", "compatibility", "compat_groups", "models", "aliases", "context")
+DATA_FILES = ("licenses", "compatibility", "compat_groups", "models", "projects", "aliases", "context")
 Scenario = Literal["internal", "saas", "distribute", "device"]
 
 INSTRUCTIONS = """\
@@ -30,6 +30,8 @@ License answers for software, AI models and data, from a curated dataset keyed b
 
 - Resolve the exact license first. If lookup_license returns candidates, ask the user which one; never pick.
 - For AI models, use model_license with the exact model and version; never infer a license from the vendor.
+- For a named software project (Redis, Terraform, Linux), use project_license with the version in use: licenses
+  change between releases.
 - Ask which scenario applies (internal use, SaaS, distribution, a device) before stating obligations or risk.
 - Every record has provenance: say how it was verified and when, and say so plainly when it is not re-verified or
   volatile. Recommend confirming anything that matters against the license text, and a lawyer for real decisions.
@@ -52,6 +54,13 @@ def _url(record: dict) -> str:
     if "Listed" in str((record.get("provenance") or {}).get("spdx_list_status")):
         return f"https://spdx.org/licenses/{record['id']}.html"
     return SITE
+
+
+def _era_range(era: dict) -> str:
+    lo, hi = era["versions"]["from"], era["versions"]["to"]
+    if lo is None and hi is None:
+        return "all versions"
+    return f"{lo or 'up'} to {hi}" if hi else f"{lo} and later"
 
 
 def _model_id(m: dict) -> str:
@@ -91,6 +100,25 @@ def create_server() -> FastMCP:
         if not hits:
             raise ToolError(f"{model!r} is not mapped. Read the license shipped with the exact checkpoint.")
         return done({"query": model, "results": hits})
+
+    @mcp.tool(annotations=READ_ONLY)
+    def project_license(
+        project: Annotated[
+            str, Field(description='The software project, e.g. "Redis", "Terraform", "Linux kernel", "Next.js".')
+        ],
+        version: Annotated[
+            str | None,
+            Field(description='The version in use, e.g. "7.4" or "1.5.7". Omit to get every license era.'),
+        ] = None,
+    ) -> dict:
+        """The license a well-known software project is released under, keyed by version: projects change licenses
+        (Redis, Elasticsearch, Terraform), so the answer depends on the release. Returns each matching project's license
+        eras with the LICENSE file each was checked against; with a version, only the era covering it, with its risk for
+        internal use, SaaS and distribution."""
+        hits = ll.project(project, version)
+        if not hits:
+            raise ToolError(f"{project!r} is not mapped. Read the LICENSE file in the exact release you use.")
+        return done({"query": project, "results": hits})
 
     @mcp.tool(annotations=READ_ONLY)
     def check_compatibility(
@@ -221,6 +249,8 @@ def _search(ll, query: str, limit: int = 10) -> list[dict]:
         add(r["id"], r["name"], _url(r))
     for m in ll.model(query):
         add(_model_id(m), f"{m['vendor']} {m['model']}: {m['license']}", _url(m))
+    for p in ll.project(query):
+        add(f"project:{p['id']}", f"{p['name']}: {p['eras'][-1]['license_expression']}", p["repo"])
     words = [w for w in re.findall(r"[a-z0-9.+-]+", query.lower()) if len(w) > 1]
     scored = []
     for r in ll.LIC:
@@ -234,6 +264,22 @@ def _search(ll, query: str, limit: int = 10) -> list[dict]:
 
 
 def _fetch(ll, id_: str, disclaimer: str) -> dict:
+    if id_.startswith("project:"):
+        p = next((p for p in ll.PROJECTS if f"project:{p['id']}" == id_), None)
+        if p is None:
+            raise ToolError(f"No record {id_!r}. Use an id from `search`.")
+        eras = "\n".join(
+            f"- {_era_range(e)}: {e['license_expression']} ({e['verification_status']}; {e['source']})"
+            for e in p["eras"]
+        )
+        return {
+            "id": id_,
+            "title": p["name"],
+            "text": f"{p['name']} (steward: {p['steward']})\n\nLicense by version:\n{eras}\n\n"
+            f"Editorial view: {p['editorial_view']}\n\n{disclaimer}",
+            "url": p["repo"],
+            "metadata": {"category": p["category"], "current_license": p["eras"][-1]["license_expression"]},
+        }
     if id_.startswith("model:"):
         m = next((m for m in ll.MODELS if _model_id(m) == id_), None)
         if m is None:

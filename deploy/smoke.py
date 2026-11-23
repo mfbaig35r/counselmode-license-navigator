@@ -32,6 +32,7 @@ TOOLS = {
     "choose_license",
     "lookup_license",
     "model_license",
+    "project_license",
     "check_compatibility",
     "license_obligations",
     "triage_dependencies",

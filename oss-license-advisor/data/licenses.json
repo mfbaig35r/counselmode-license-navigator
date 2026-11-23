@@ -18,7 +18,7 @@
    "triggers": [],
    "obligations": [],
    "facts": {
-    "steward_year": "N/A; e.g., U.S. federal government works (17 U.S.C. \u00a7105)",
+    "steward_year": "N/A; e.g., U.S. federal government works (17 U.S.C. §105)",
     "allows": "Any use without permission",
     "conditions": "None; but no warranty disclaimer and moral rights may persist outside U.S.",
     "copyleft_detail": "None",
@@ -53,7 +53,7 @@
    "fsf_status": "free",
    "fsf_note": "Yes",
    "patent_grant": "excluded",
-   "patent_note": "No - expressly withholds patent rights (\u00a74a)",
+   "patent_note": "No - expressly withholds patent rights (§4a)",
    "copyleft_scope": "none",
    "triggers": [],
    "obligations": [],
@@ -474,7 +474,7 @@
    "fsf_status": "free",
    "fsf_note": "Free; compatible with GPLv3, not with GPLv2 (FSF cites patent termination and indemnification provisions).",
    "patent_grant": "express",
-   "patent_note": "Yes (\u00a73) with patent-retaliation termination if you sue over patents",
+   "patent_note": "Yes (§3) with patent-retaliation termination if you sue over patents",
    "copyleft_scope": "none",
    "triggers": [
     "distribution"
@@ -497,7 +497,7 @@
    },
    "editorial_view": {
     "build_on": "Low risk; must carry NOTICE files forward and flag modified files. Patent termination if you assert patents against the work.",
-    "license_your_own": "Preferred corporate permissive license thanks to explicit patent grant and contribution terms (\u00a75).",
+    "license_your_own": "Preferred corporate permissive license thanks to explicit patent grant and contribution terms (§5).",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
    },
@@ -1230,6 +1230,332 @@
    "warnings": []
   },
   {
+   "id": "curl",
+   "name": "curl License",
+   "family": "permissive",
+   "family_tab": "2-Permissive",
+   "osi_status": "approved",
+   "osi_note": "Yes (approved Apr. 17, 2026; OSI category: Legacy)",
+   "fsf_status": "not_reviewed",
+   "fsf_note": "Not on the FSF license list. The text pairs an ISC-style grant with the X11 name clause; the FSF lists ISC and X11 as free and GPL-compatible.",
+   "patent_grant": "none",
+   "patent_note": "No express patent license",
+   "copyleft_scope": "none",
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution"
+   ],
+   "facts": {
+    "steward_year": "Daniel Stenberg (curl project) / 2002 (curl 7.10, Oct. 1, 2002, per curl's docs/HISTORY.md)",
+    "allows": "Use, copy, modify and distribute for any purpose, with or without fee",
+    "conditions": "Copyright notice and permission notice must appear in all copies; a copyright holder's name may not be used in advertising or promotion without written authorization",
+    "copyleft_detail": "None",
+    "gpl_compatibility": "Not rated by the FSF; its conditions are notice-only, like the X11 and ISC licenses, which the FSF lists as GPL-compatible",
+    "notable_projects": "curl and libcurl (since 7.10)",
+    "saas": "No obligations",
+    "notes": "SPDX and the OSI list carry the 1996-2015 copyright line; curl's own COPYING at curl-8_23_0 reads 1996-2026 with 'many contributors'. The license terms are the same."
+   },
+   "editorial_view": {
+    "build_on": "Very low risk: keep the copyright and permission notice with every copy, including in the notices file that ships with binaries.",
+    "license_your_own": "Usable, but MIT or ISC say nearly the same thing and are far better known.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "US (general); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/curl/curl/blob/curl-8_23_0/COPYING ; https://github.com/curl/curl/blob/curl-8_23_0/docs/HISTORY.md ; https://opensource.org/license/curl ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/curl.html (list 3.29.0, 2026-09-16)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": false,
+    "spdx_list_status": "Listed (SPDX 3.29.0)"
+   },
+   "caveat": true,
+   "warnings": []
+  },
+  {
+   "id": "SSH-OpenSSH",
+   "name": "SSH OpenSSH license",
+   "family": "permissive",
+   "family_tab": "2-Permissive",
+   "osi_status": "not_approved",
+   "osi_note": "No (not on the OSI list)",
+   "fsf_status": "not_reviewed",
+   "fsf_note": "Not on the FSF license list as a named license",
+   "patent_grant": "none",
+   "patent_note": "No; Tatu Ylonen's terms say they do not license patents or copyrights held by third parties",
+   "copyleft_scope": "none",
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "naming_rule"
+   ],
+   "facts": {
+    "steward_year": "Tatu Ylonen (1995) and the OpenSSH developers / LICENCE revision 1.20, 2017",
+    "allows": "Use for any purpose; copy, modify and redistribute",
+    "conditions": "Derived versions must be clearly marked as such; a derived work incompatible with the protocol description in the RFC must not be called \"ssh\" or \"Secure Shell\"; keep copyright notices",
+    "copyleft_detail": "None",
+    "gpl_compatibility": "Not rated by the FSF; no primary source rates it. Its conditions are marking, naming and notice rules with no advertising clause",
+    "notable_projects": "OpenSSH (portable)",
+    "saas": "No obligations",
+    "notes": "The SPDX text for SSH-OpenSSH is section 1 of OpenSSH's LICENCE file (Tatu Ylonen's terms, the OpenSSH developers' comments and the no-warranty text). The same file also carries BSD-2-Clause, BSD-3-Clause, ISC-style, MIT-style and public-domain terms for other components."
+   },
+   "editorial_view": {
+    "build_on": "Low risk: keep the notices, mark modified versions as modified, and do not call a protocol-incompatible fork \"ssh\". Other OpenSSH components carry their own BSD and ISC notices, which also need to be kept.",
+    "license_your_own": "Not suitable for new projects; it is written around one program and one protocol.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "US (general); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/openssh/openssh-portable/blob/V_10_6_P2/LICENCE ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/SSH-OpenSSH.html (list 3.29.0, 2026-09-16)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": false,
+    "spdx_list_status": "Listed (SPDX 3.29.0)"
+   },
+   "caveat": true,
+   "warnings": [
+    "SSH-OpenSSH covers only part of OpenSSH's LICENCE file; the other components' BSD, ISC and MIT-style notices also apply to a full OpenSSH distribution."
+   ]
+  },
+  {
+   "id": "OpenSSL",
+   "name": "OpenSSL License (OpenSSL License plus original SSLeay License)",
+   "family": "permissive",
+   "family_tab": "2-Permissive",
+   "osi_status": "not_approved",
+   "osi_note": "No (not on the OSI list)",
+   "fsf_status": "free",
+   "fsf_note": "Free but GPL-incompatible. The FSF describes the conjunction of the OpenSSL and SSLeay licenses as a copyleft free software license with an advertising clause like the original BSD license, and notes that OpenSSL 3.0.0 and later use Apache-2.0.",
+   "patent_grant": "none",
+   "patent_note": "No",
+   "copyleft_scope": "file_or_library",
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "naming_rule",
+    "same_license"
+   ],
+   "facts": {
+    "steward_year": "OpenSSL Project (OpenSSL License, 1998) and Eric Young (SSLeay License, 1995)",
+    "allows": "Use, modify and redistribute in source and binary forms; free for commercial and non-commercial use",
+    "conditions": "Both licenses apply at once. Keep copyright notices in source and reproduce them with binaries; advertising materials mentioning the software must display the OpenSSL and Eric Young acknowledgments; every redistribution must keep the OpenSSL acknowledgment; derived products may not be called \"OpenSSL\" without permission; Eric Young must be credited as author of the parts used in a product; Windows-specific apps code needs a Tim Hudson acknowledgment; the terms for any public version or derivative of the SSLeay code cannot be changed, including to the GPL",
+    "copyleft_detail": "Light: the SSLeay terms of any public version or derivative of that code cannot be changed; no source-disclosure duty",
+    "gpl_compatibility": "Incompatible with the GPL (FSF)",
+    "notable_projects": "OpenSSL 1.1.1 and earlier (OpenSSL 3.0.0 and later are Apache-2.0)",
+    "saas": "No obligations",
+    "notes": "SPDX also lists OpenSSL-standalone and SSLeay-standalone for code that carries only one half. \"OpenSSL\" is the combined double license that OpenSSL 1.x ships."
+   },
+   "editorial_view": {
+    "build_on": "Low to moderate: keep both notices and honor the advertising acknowledgments. A GPL program that links OpenSSL 1.x needs a linking exception from its own copyright holders (see Note-OpenSSL-linking-exception). OpenSSL 3.x (Apache-2.0) avoids both issues.",
+    "license_your_own": "Do not use for new work: it is project-specific and GPL-incompatible.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "US (general); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/openssl/openssl/blob/OpenSSL_1_1_1w/LICENSE ; https://github.com/openssl/openssl/blob/openssl-3.0.0/LICENSE.txt ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/OpenSSL.html (list 3.29.0, 2026-09-16)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": false,
+    "spdx_list_status": "Listed (SPDX 3.29.0)"
+   },
+   "caveat": true,
+   "warnings": [
+    "The advertising clauses reach advertising materials that mention features or use of the software, which can affect product marketing."
+   ]
+  },
+  {
+   "id": "Ruby",
+   "name": "Ruby License",
+   "family": "permissive",
+   "family_tab": "2-Permissive",
+   "osi_status": "not_approved",
+   "osi_note": "No (not on the OSI list)",
+   "fsf_status": "free",
+   "fsf_note": "Free; GPL-compatible through the explicit dual-licensing clause",
+   "patent_grant": "none",
+   "patent_note": "No",
+   "copyleft_scope": "none",
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "naming_rule"
+   ],
+   "facts": {
+    "steward_year": "Yukihiro Matsumoto (Ruby) / unversioned; last substantive change 2002 (SPDX license comment)",
+    "allows": "Give away verbatim source copies; modify; distribute binaries; include parts in other software, including commercial software",
+    "conditions": "Verbatim copies must keep all copyright notices and disclaimers. To modify you must do at least ONE of: make your modifications freely available, use them only inside your organization, give non-standard binaries non-standard names with directions to the original, or make other arrangements with the author. Binary distribution has a similar pick-one rule (directions to the original, the source, renamed binaries, or other arrangements)",
+    "copyleft_detail": "None required: sharing modifications is one option among several",
+    "gpl_compatibility": "Ruby is offered as Ruby OR BSD-2-Clause (OR GPL-2.0 before 1.9.3), and the FSF treats it as GPL-compatible through that choice. The Ruby License terms alone are not rated separately",
+    "notable_projects": "Ruby (CRuby/MRI), offered as Ruby OR BSD-2-Clause",
+    "saas": "No obligations",
+    "notes": "Scripts and libraries supplied as input to or produced as output from Ruby are not covered by its copyright (clause 5)."
+   },
+   "editorial_view": {
+    "build_on": "Low risk. Most users take Ruby under its BSD-2-Clause alternative, which needs only the notices.",
+    "license_your_own": "Not for new projects; it is unversioned and tied to Ruby.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "US (general); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/ruby/ruby/blob/v4.0.10/COPYING ; https://github.com/ruby/ruby/blob/v4.0.10/BSDL ; https://github.com/ruby/ruby/blob/v1_9_2_320/COPYING ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/Ruby.html (list 3.29.0, 2026-09-16)",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": false,
+    "spdx_list_status": "Listed (SPDX 3.29.0)",
+    "verification_note": "The 2002 date for the last substantive change comes from the SPDX license comment, not from a Ruby source."
+   },
+   "caveat": true,
+   "warnings": [
+    "Ruby's COPYING says some files in the distribution are not under these terms; their conditions are in the file LEGAL."
+   ]
+  },
+  {
+   "id": "Artistic-1.0-Perl",
+   "name": "Artistic License 1.0 (Perl)",
+   "family": "permissive",
+   "family_tab": "2-Permissive",
+   "osi_status": "approved",
+   "osi_note": "Yes, listed as Superseded (by the Artistic License 2.0)",
+   "fsf_status": "nonfree",
+   "fsf_note": "Listed under nonfree licenses: the FSF says it cannot call Artistic 1.0 free because it is too vague. The FSF lists Perl's disjunction (Artistic 1.0 or the GNU GPL) as free and GPL-compatible.",
+   "patent_grant": "none",
+   "patent_note": "No",
+   "copyleft_scope": "none",
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "naming_rule"
+   ],
+   "facts": {
+    "steward_year": "Larry Wall (Perl) / year not stated in the text",
+    "allows": "Copy and give away verbatim source; apply fixes; modify; distribute executables; aggregate with commercial distributions; embed the interpreter by linking",
+    "conditions": "Keep copyright notices and disclaimers; changed files need a prominent notice of how and when they changed; for modified versions do at least ONE of: make changes freely available, use them only inside your organization, rename non-standard executables and document them, or make other arrangements; similar pick-one rule for executables; no fee for the Package itself (copying and support fees allowed); no endorsement using the Copyright Holder's name",
+    "copyleft_detail": "None required: sharing modifications is one option among several",
+    "gpl_compatibility": "Not GPL-compatible on its own (the FSF does not treat it as free); Perl is GPL-compatible because the GPL is an alternative",
+    "notable_projects": "Perl 5 (Artistic-1.0-Perl OR GPL-1.0-or-later)",
+    "saas": "No obligations",
+    "notes": "Per SPDX, this Perl-site text differs from the OSI 'Artistic-1.0' text, particularly in clauses 5 to 8. Clause 8 treats embedded aggregation in a commercial distribution as not a distribution of the Package. Perl's own copy at v5.44.0 matches SPDX except one spelling ('MERCHANTABILITY')."
+   },
+   "editorial_view": {
+    "build_on": "Low risk for Perl itself because you can choose the GPL alternative or follow the Artistic terms. Standalone Artistic-1.0 code is vaguer: mark changed files and pick one of the modification options.",
+    "license_your_own": "Do not use; the Artistic License 2.0 replaces it.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "US (general); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/Perl/perl5/blob/v5.44.0/Artistic ; https://github.com/Perl/perl5/blob/v5.44.0/README ; https://opensource.org/license/artistic-1-0-perl ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/Artistic-1.0-Perl.html (list 3.29.0, 2026-09-16)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": false,
+    "spdx_list_status": "Listed (SPDX 3.29.0)"
+   },
+   "caveat": true,
+   "warnings": []
+  },
+  {
+   "id": "Zend-2.0",
+   "name": "Zend License v2.0",
+   "family": "permissive",
+   "family_tab": "2-Permissive",
+   "osi_status": "not_approved",
+   "osi_note": "No (not on the OSI list)",
+   "fsf_status": "free",
+   "fsf_note": "Free and non-copyleft but GPL-incompatible; the FSF says it has practical problems like those of the original BSD license and recommends against using it",
+   "patent_grant": "none",
+   "patent_note": "No",
+   "copyleft_scope": "none",
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "naming_rule"
+   ],
+   "facts": {
+    "steward_year": "Zend Technologies Ltd. / Version 2.00 (copyright 1999-2006 in the php-src copy; 1999-2002 in the SPDX copy)",
+    "allows": "Redistribute and use in source and binary forms, with or without modification",
+    "conditions": "Keep copyright notices in source and reproduce them with binaries; every redistribution must keep the acknowledgment \"This product includes the Zend Engine, freely available at http://www.zend.com\"; advertising materials mentioning features or use must display \"The Zend Engine is freely available at http://www.zend.com\"; no endorsement using \"Zend\" or \"Zend Engine\"; code may also be used under later versions Zend publishes",
+    "copyleft_detail": "None",
+    "gpl_compatibility": "Incompatible with the GPL (FSF)",
+    "notable_projects": "PHP's Zend Engine (Zend/LICENSE) through PHP 8.5.x; removed in PHP 8.6.0, which is BSD-3-Clause",
+    "saas": "No obligations",
+    "notes": ""
+   },
+   "editorial_view": {
+    "build_on": "Low risk, but the required acknowledgment strings and the advertising clause must be honored, and the code cannot be combined into a GPL program. PHP 8.6 and later avoid the issue.",
+    "license_your_own": "Do not use; even PHP has moved off it.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "US (general); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/php/php-src/blob/php-8.5.13/Zend/LICENSE ; https://github.com/php/php-src/blob/php-8.6.0/LICENSE ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/Zend-2.0.html (list 3.29.0, 2026-09-16)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": false,
+    "spdx_list_status": "Listed (SPDX 3.29.0)"
+   },
+   "caveat": true,
+   "warnings": []
+  },
+  {
+   "id": "LicenseRef-Facebook-Patents",
+   "name": "Facebook Additional Grant of Patent Rights (React PATENTS file, Version 1 and Version 2)",
+   "family": "permissive",
+   "family_tab": "2-Permissive",
+   "osi_status": "not_approved",
+   "osi_note": "No (not on the OSI list; BSD-2-Clause-Patent is a different license)",
+   "fsf_status": "not_reviewed",
+   "fsf_note": "Not on the FSF license list",
+   "patent_grant": "express",
+   "patent_note": "Yes: a license under Facebook patent claims (v2: Necessary Claims infringed by the Software standing alone) to make, use, sell and transfer the Software. It ends automatically if you bring a patent assertion against Facebook or its affiliates, even one unrelated to the Software, or (v1 only) claim a Facebook patent is invalid",
+   "copyleft_scope": "none",
+   "triggers": [
+    "any_use"
+   ],
+   "obligations": [
+    "patent_retaliation"
+   ],
+   "facts": {
+    "steward_year": "Facebook, Inc. / 2014 (Version 1, React 0.12) and 2015 (Version 2, React 0.13.2)",
+    "allows": "Adds a patent license to the BSD-3-Clause copyright license it ships with; it does not restrict the copyright license",
+    "conditions": "No patent license for modifications or combinations. The patent license terminates for anyone who brings a patent claim against Facebook or its subsidiaries or affiliates (on any subject), against anyone over a Facebook product or service, or against anyone over the Software. Version 1 also terminates on a claim that a Facebook patent is invalid or unenforceable. Version 2 adds a carve-out for a counterclaim unrelated to the Software in a patent suit Facebook started",
+    "copyleft_detail": "None",
+    "gpl_compatibility": "Not rated by the FSF. The Apache Software Foundation lists \"Facebook BSD+Patents\" in Category X, saying its terms are not a subset of Apache-2.0 and cannot be sublicensed as Apache-2.0",
+    "notable_projects": "React 0.12 to 15.6.1 (2014 to 2017); React 15.6.2 and later are MIT with no PATENTS file",
+    "saas": "No obligations; the termination rule applies however you use the Software",
+    "notes": "Use with BSD-3-Clause as \"BSD-3-Clause AND LicenseRef-Facebook-Patents\". Version 2 replaced Version 1 in React on Apr. 10, 2015 (commit b8ba8c83)."
+   },
+   "editorial_view": {
+    "build_on": "The copyright terms are ordinary BSD-3-Clause. The practical effect of the PATENTS file is that bringing any patent claim against Facebook or its affiliates, even one unrelated to React, ends your patent license for the React versions that carry it. Upgrading to React 15.6.2 or later (MIT) removes the file.",
+    "license_your_own": "Do not use; its steward replaced it with MIT in 2017.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "US (general); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/facebook/react/blob/v15.6.1/PATENTS ; https://github.com/facebook/react/blob/v0.12.0/PATENTS ; https://github.com/facebook/react/blob/v15.6.1/LICENSE ; https://github.com/facebook/react/blob/v15.6.2/LICENSE ; https://github.com/facebook/react/commit/b8ba8c83f318b84e42933f6928f231dc0918f864 ; https://www.apache.org/legal/resolved.html ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": false,
+    "spdx_list_status": "Not on SPDX list - LicenseRef"
+   },
+   "caveat": true,
+   "warnings": [
+    "Applies to React 0.12 to 15.6.1 only; check the React version in your lockfile.",
+    "The termination covers patent claims against Facebook on any subject, so a dispute unrelated to React can end the React patent license."
+   ]
+  },
+  {
    "id": "LGPL-2.1-only",
    "name": "GNU LGPL v2.1 [LGPL-2.1-only]",
    "family": "weak_copyleft",
@@ -1335,7 +1661,7 @@
    "fsf_status": "free",
    "fsf_note": "Free; weak copyleft; compatible with GPLv3, not with GPLv2 by itself. FSF recommends it for special circumstances only.",
    "patent_grant": "express",
-   "patent_note": "Yes (via GPLv3 \u00a711)",
+   "patent_note": "Yes (via GPLv3 §11)",
    "copyleft_scope": "file_or_library",
    "triggers": [
     "distribution"
@@ -1384,7 +1710,7 @@
    "fsf_status": "free",
    "fsf_note": "Free; weak copyleft; compatible with GPLv3, not with GPLv2 by itself. FSF recommends it for special circumstances only.",
    "patent_grant": "express",
-   "patent_note": "Yes (via GPLv3 \u00a711)",
+   "patent_note": "Yes (via GPLv3 §11)",
    "copyleft_scope": "file_or_library",
    "triggers": [
     "distribution"
@@ -1431,7 +1757,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Free; indirectly GPL-compatible via \u00a73.3 (GPL-2.0, LGPL-2.1, AGPL-3.0 and later) unless marked \"Incompatible With Secondary Licenses\".",
+   "fsf_note": "Free; indirectly GPL-compatible via §3.3 (GPL-2.0, LGPL-2.1, AGPL-3.0 and later) unless marked \"Incompatible With Secondary Licenses\".",
    "patent_grant": "express",
    "patent_note": "Yes (with patent retaliation)",
    "copyleft_scope": "file_or_library",
@@ -1448,7 +1774,7 @@
     "steward_year": "Mozilla / 2012",
     "allows": "Use and combine in \"Larger Works\" under any license",
     "conditions": "Source of MPL-covered files (and modifications to them) must be available under MPL; keep notices",
-    "copyleft_detail": "File-level; applies to distribution in Source Code Form (\u00a73.1) and Executable Form (\u00a73.2)",
+    "copyleft_detail": "File-level; applies to distribution in Source Code Form (§3.1) and Executable Form (§3.2)",
     "gpl_compatibility": "Compatible with GPL/LGPL/AGPL via \"Secondary License\" (unless marked \"Incompatible With Secondary Licenses\")",
     "notable_projects": "Firefox, Thunderbird, LibreOffice (MPL/LGPL), Terraform providers, OpenTofu",
     "saas": "Not triggered by SaaS",
@@ -1954,7 +2280,7 @@
    "fsf_status": "free",
    "fsf_note": "Free; copyleft. FSF: GPLv2 by itself is not compatible with GPLv3; \"or later\" code can be combined under GPLv3.",
    "patent_grant": "none",
-   "patent_note": "No express grant (implied; \u00a77 \"liberty or death\")",
+   "patent_note": "No express grant (implied; §7 \"liberty or death\")",
    "copyleft_scope": "whole_work",
    "triggers": [
     "distribution"
@@ -2048,7 +2374,7 @@
    "fsf_status": "free",
    "fsf_note": "Free; copyleft; FSF-recommended. Not compatible with GPLv2 by itself (GPLv2-or-later code can be combined under GPLv3).",
    "patent_grant": "express",
-   "patent_note": "Yes (\u00a711)",
+   "patent_note": "Yes (§11)",
    "copyleft_scope": "whole_work",
    "triggers": [
     "distribution"
@@ -2063,7 +2389,7 @@
    "facts": {
     "steward_year": "FSF / 2007",
     "allows": "As GPLv2",
-    "conditions": "As GPLv2 plus: Installation Information for \"User Products\" (anti-tivoization), anti-DRM (\u00a73), express patent license & anti-discrimination patent deal terms (\u00a711), 30-day cure for first violation (\u00a78)",
+    "conditions": "As GPLv2 plus: Installation Information for \"User Products\" (anti-tivoization), anti-DRM (§3), express patent license & anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)",
     "copyleft_detail": "Whole work; \"convey\" (distribution)",
     "gpl_compatibility": "Compatible with Apache-2.0, LGPLv3, AGPLv3 (combination); INCOMPATIBLE with GPLv2-only",
     "notable_projects": "Most GNU projects (Bash, GCC, GIMP; also Ansible, Samba) are GPL-3.0-or-later, not -only: check each project's license notice",
@@ -2096,7 +2422,7 @@
    "fsf_status": "free",
    "fsf_note": "Free; copyleft; FSF-recommended. Not compatible with GPLv2 by itself (GPLv2-or-later code can be combined under GPLv3).",
    "patent_grant": "express",
-   "patent_note": "Yes (\u00a711)",
+   "patent_note": "Yes (§11)",
    "copyleft_scope": "whole_work",
    "triggers": [
     "distribution"
@@ -2111,7 +2437,7 @@
    "facts": {
     "steward_year": "FSF / 2007",
     "allows": "As GPLv2",
-    "conditions": "As GPLv2 plus: Installation Information for \"User Products\" (anti-tivoization), anti-DRM (\u00a73), express patent license & anti-discrimination patent deal terms (\u00a711), 30-day cure for first violation (\u00a78)",
+    "conditions": "As GPLv2 plus: Installation Information for \"User Products\" (anti-tivoization), anti-DRM (§3), express patent license & anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)",
     "copyleft_detail": "Whole work; \"convey\" (distribution)",
     "gpl_compatibility": "Compatible with Apache-2.0, LGPLv3, AGPLv3 (combination); INCOMPATIBLE with GPLv2-only",
     "notable_projects": "Bash, GCC, GIMP, Ansible, Samba",
@@ -2325,6 +2651,53 @@
    "warnings": []
   },
   {
+   "id": "GPL-1.0-or-later",
+   "name": "GNU General Public License v1.0 or later",
+   "family": "strong_copyleft",
+   "family_tab": "4-Strong Copyleft",
+   "osi_status": "approved",
+   "osi_note": "Yes for GPL version 1 (OSI lists it as GPL-1.0, Superseded); the SPDX list does not flag GPL-1.0-or-later as OSI-approved",
+   "fsf_status": "not_reviewed",
+   "fsf_note": "The FSF license list does not rate GPL version 1 by name. Under the or-later option a recipient may follow GPLv2 or GPLv3, which the list rates free.",
+   "patent_grant": "varies",
+   "patent_note": "Depends on the version chosen: v1 and v2 have no express grant; v3 has one",
+   "copyleft_scope": "whole_work",
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license"
+   ],
+   "facts": {
+    "steward_year": "FSF / February 1989",
+    "allows": "Copy, distribute and modify; under section 7 a recipient may follow version 1 or any later version published by the FSF",
+    "conditions": "Keep notices and give recipients a copy of the license; mark modified files with what changed and the date; any work you distribute or publish that contains the Program must be licensed to all third parties under this license; object-code distribution must come with source, a three-year written offer, or (noncommercial only) the source information you received; interactive programs must show a copyright and no-warranty notice",
+    "copyleft_detail": "Whole work; distribution or publication",
+    "gpl_compatibility": "Compatible with GPLv2 and GPLv3 by choosing the later version (section 7)",
+    "notable_projects": "Perl 5 (as the alternative to Artistic-1.0-Perl)",
+    "saas": "Not triggered",
+    "notes": ""
+   },
+   "editorial_view": {
+    "build_on": "Treat it as strong copyleft on distribution. Because of the or-later option you can follow GPL-2.0 or GPL-3.0 instead, which is how it combines with modern GPL code. For Perl, the Artistic alternative is also available.",
+    "license_your_own": "Do not use for new work; choose GPL-3.0-or-later.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "US (general); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/Perl/perl5/blob/v5.44.0/Copying ; https://github.com/Perl/perl5/blob/v5.44.0/README ; https://opensource.org/license/gpl-1-0 ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/GPL-1.0-or-later.html (list 3.29.0, 2026-09-16)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": false,
+    "spdx_list_status": "Listed (SPDX 3.29.0)"
+   },
+   "caveat": true,
+   "warnings": []
+  },
+  {
    "id": "AGPL-3.0-only",
    "name": "GNU Affero GPL v3.0 [AGPL-3.0-only]",
    "family": "network_copyleft",
@@ -2332,7 +2705,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Free; copyleft; FSF recommends it for software commonly run over a network. Not compatible with GPLv2; combinable with GPLv3 under \u00a713 of each.",
+   "fsf_note": "Free; copyleft; FSF recommends it for software commonly run over a network. Not compatible with GPLv2; combinable with GPLv3 under §13 of each.",
    "patent_grant": "express",
    "patent_note": "Yes",
    "copyleft_scope": "network",
@@ -2351,11 +2724,11 @@
    "facts": {
     "steward_year": "FSF / 2007 (Affero v1: 2002)",
     "allows": "As GPLv3",
-    "conditions": "As GPLv3 plus \u00a713: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version",
+    "conditions": "As GPLv3 plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version",
     "copyleft_detail": "Whole work; distribution AND remote network interaction with modified version",
-    "gpl_compatibility": "Compatible with GPLv3: combination permitted by GPLv3 \u00a713 and AGPLv3 \u00a713; the AGPL part keeps its network clause",
+    "gpl_compatibility": "Compatible with GPLv3: combination permitted by GPLv3 §13 and AGPLv3 §13; the AGPL part keeps its network clause",
     "notable_projects": "Grafana, Elasticsearch & Kibana (AGPL option alongside SSPL and ELv2), Redis 8 (AGPLv3 option alongside RSALv2 and SSPLv1), MinIO (repository no longer maintained)",
-    "saas": "Triggered when a modified version is offered to users interacting with it over a network (\u00a713)",
+    "saas": "Triggered when a modified version is offered to users interacting with it over a network (§13)",
     "notes": "Scope of \"interacting remotely\" and what counts as the \"Program\" in a microservice architecture is debated."
    },
    "editorial_view": {
@@ -2382,7 +2755,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Free; copyleft; FSF recommends it for software commonly run over a network. Not compatible with GPLv2; combinable with GPLv3 under \u00a713 of each.",
+   "fsf_note": "Free; copyleft; FSF recommends it for software commonly run over a network. Not compatible with GPLv2; combinable with GPLv3 under §13 of each.",
    "patent_grant": "express",
    "patent_note": "Yes",
    "copyleft_scope": "network",
@@ -2401,11 +2774,11 @@
    "facts": {
     "steward_year": "FSF / 2007 (Affero v1: 2002)",
     "allows": "As GPLv3",
-    "conditions": "As GPLv3 plus \u00a713: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version",
+    "conditions": "As GPLv3 plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version",
     "copyleft_detail": "Whole work; distribution AND remote network interaction with modified version",
-    "gpl_compatibility": "Compatible with GPLv3: combination permitted by GPLv3 \u00a713 and AGPLv3 \u00a713; the AGPL part keeps its network clause",
+    "gpl_compatibility": "Compatible with GPLv3: combination permitted by GPLv3 §13 and AGPLv3 §13; the AGPL part keeps its network clause",
     "notable_projects": "Mastodon, iText, Ghostscript, Nextcloud (mixed; some files AGPL-3.0-only)",
-    "saas": "Triggered when a modified version is offered to users interacting with it over a network (\u00a713)",
+    "saas": "Triggered when a modified version is offered to users interacting with it over a network (§13)",
     "notes": "Scope of \"interacting remotely\" and what counts as the \"Program\" in a microservice architecture is debated."
    },
    "editorial_view": {
@@ -2601,7 +2974,7 @@
    "facts": {
     "steward_year": "MongoDB / 2018",
     "allows": "Use, modify, distribute (GPLv3-based per MongoDB; s.13 replaced)",
-    "conditions": "\u00a713: offering the program \"as a service\" requires releasing source of the ENTIRE service stack (management, UI, APIs, monitoring, backup, hosting software) under SSPL",
+    "conditions": "§13: offering the program \"as a service\" requires releasing source of the ENTIRE service stack (management, UI, APIs, monitoring, backup, hosting software) under SSPL",
     "copyleft_detail": "Entire service infrastructure",
     "gpl_compatibility": "Incompatible with GPL/AGPL",
     "notable_projects": "MongoDB (since Oct. 16, 2018), Elasticsearch/Kibana (since 2021; SSPL still offered alongside AGPL-3.0 and ELv2), Graylog (current)",
@@ -2896,7 +3269,7 @@
     "gpl_compatibility": "Not compatible",
     "notable_projects": "Redis modules (historic), Neo4j Enterprise 3.4-3.5 (AGPL + Commons Clause)",
     "saas": "Restricted",
-    "notes": "Neo4j v. PureThink: the LICENSOR (Neo4j) appended the Commons Clause to the AGPL; the court rejected the argument that licensees could strip it out under AGPL \u00a77/\u00a710, because those sections restrict \"you\" (the licensee), not the licensor. 9th Cir. unpublished, non-precedential memorandum (Feb. 18, 2022). District court findings of fact July 22, 2024 (US$597,000 damages + permanent injunction); judgment entered Aug. 15, 2024 (reported to add prejudgment interest less a stipulated deduction); appeal No. 24-5538 dismissed Dec. 10, 2025; satisfaction of judgment filed Dec. 15, 2025. No appellate merits ruling on \u00a77. See Case Law tab."
+    "notes": "Neo4j v. PureThink: the LICENSOR (Neo4j) appended the Commons Clause to the AGPL; the court rejected the argument that licensees could strip it out under AGPL §7/§10, because those sections restrict \"you\" (the licensee), not the licensor. 9th Cir. unpublished, non-precedential memorandum (Feb. 18, 2022). District court findings of fact July 22, 2024 (US$597,000 damages + permanent injunction); judgment entered Aug. 15, 2024 (reported to add prejudgment interest less a stipulated deduction); appeal No. 24-5538 dismissed Dec. 10, 2025; satisfaction of judgment filed Dec. 15, 2025. No appellate merits ruling on §7. See Case Law tab."
    },
    "editorial_view": {
     "build_on": "Moderate-high; ambiguity of \"substantially\". A project labeled \"Apache 2.0 + Commons Clause\" is NOT Apache-licensed.",
@@ -3202,6 +3575,211 @@
    },
    "caveat": true,
    "warnings": []
+  },
+  {
+   "id": "LicenseRef-Elastic-1.0",
+   "name": "Elastic License 1.0 (Elastic License Agreement, Posted Date April 20, 2018)",
+   "family": "source_available",
+   "family_tab": "6-Source-Available",
+   "osi_status": "not_approved",
+   "osi_note": "No (not on the OSI list)",
+   "fsf_status": "not_reviewed",
+   "fsf_note": "Not on the FSF license list",
+   "patent_grant": "none",
+   "patent_note": "No patent grant",
+   "copyleft_scope": "contract",
+   "triggers": [
+    "any_use",
+    "service_offering",
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "no_production_use",
+    "maas_gate"
+   ],
+   "facts": {
+    "steward_year": "Elasticsearch BV (Elastic) / 2018 (Posted Date April 20, 2018)",
+    "allows": "No-charge license to use the Basic Features and Functions of the object code, solely for your internal business operations; prepare Derivative Works of the Commercial Software source for testing; keep a public copy of the repository with the Agreement included",
+    "conditions": "No reverse engineering of object code; no redistribution, sale, sublicensing or other transfer to third parties; no Prohibited SaaS Offering; no circumventing License Keys; no removing Marks and Notices; derivative works of Commercial Software may not be used in production; ends automatically on breach",
+    "copyleft_detail": "Contract terms; no source-sharing duty",
+    "gpl_compatibility": "Not compatible: the Agreement bars redistribution",
+    "notable_projects": "Elasticsearch and Kibana x-pack code, 6.3 to 7.10 (alongside Apache-2.0 for the rest of each repository)",
+    "saas": "Restricted: no SaaS where access to the Elastic Software or its features is a primary reason or substantial motivation for users",
+    "notes": "\"Commercial Software\" is source in files with an Elastic License header or in the x-pack folder. Elastic may modify the Agreement, effective on the new Posted Date. Elasticsearch and Kibana 7.11 and later moved to SSPL-1.0 OR Elastic-2.0."
+   },
+   "editorial_view": {
+    "build_on": "Fine for running the Basic features internally. Do not redistribute it, run modified x-pack code in production, or offer it as a hosted service without Elastic's permission. The OSS builds (\"-oss\" artifacts, Apache-2.0) avoid these terms.",
+    "license_your_own": "Not a model to copy: it is a vendor agreement with Dutch governing law and no redistribution rights.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "Netherlands: Dutch law; Amsterdam courts (section 5); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/elastic/elasticsearch/blob/v7.10.2/licenses/ELASTIC-LICENSE.txt ; https://github.com/elastic/elasticsearch/blob/v6.3.0/LICENSE.txt ; https://github.com/elastic/elasticsearch/blob/v7.11.0/LICENSE.txt ; https://github.com/elastic/kibana/blob/v6.3.0/LICENSE.txt ; https://github.com/elastic/kibana/blob/v7.10.2/licenses/ELASTIC-LICENSE.txt ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/ (list 3.29.0; no Elastic-1.0 ID)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": true,
+    "spdx_list_status": "Not on SPDX list - LicenseRef"
+   },
+   "caveat": true,
+   "warnings": [
+    "Anti-assignment: the Agreement cannot be assigned, including by operation of law in a merger or acquisition, without Elastic's consent. Flag in M&A diligence.",
+    "\"Basic Features and Functions\" are defined by a page on elastic.co that Elastic may change."
+   ]
+  },
+  {
+   "id": "LicenseRef-FSL-1.0-Apache-2.0",
+   "name": "Functional Source License, Version 1.0, Apache 2.0 Change License",
+   "family": "source_available",
+   "family_tab": "6-Source-Available",
+   "osi_status": "not_approved",
+   "osi_note": "No (not on the OSI list)",
+   "fsf_status": "not_reviewed",
+   "fsf_note": "Not on the FSF license list",
+   "patent_grant": "express",
+   "patent_note": "Yes, for Permitted Purposes; ends immediately if you claim the Software infringes any patent",
+   "copyleft_scope": "use_restriction",
+   "triggers": [
+    "competing_use",
+    "service_offering",
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "no_competing_service",
+    "patent_retaliation"
+   ],
+   "facts": {
+    "steward_year": "Functional Software, Inc. dba Sentry / 2023 (first in Sentry 23.11.1, Nov. 2023)",
+    "allows": "Use, copy, modify, create derivative works, publicly perform and display, and redistribute for any Permitted Purpose",
+    "conditions": "No Competing Use: use in or for a commercial product or service that competes with the Software or another licensor product, including as a substitute, in a way that exposes the Software's APIs, or with substantially similar functionality. Internal use, non-commercial education and research, and development or managed services for a licensee are permitted. Redistributions must include a copy of or link to the terms and keep copyright notices. On the second anniversary of release the Software becomes available under Apache-2.0",
+    "copyleft_detail": "Usage restriction; 2-year change to Apache-2.0",
+    "gpl_compatibility": "Not compatible until the change date; Apache-2.0 is then compatible with GPLv3 (FSF)",
+    "notable_projects": "Sentry 23.11.1 to 24.2.0 (24.3.0 moved to FSL 1.1)",
+    "saas": "Restricted only for competing use; managed services for a licensee are a Permitted Purpose",
+    "notes": "Differs from FSL-1.1-ALv2: 1.0 names exposing the Software's APIs as a Competing Use, and its change clause says the Software \"will become available\" under Apache-2.0, while 1.1 grants an irrevocable future Apache-2.0 license."
+   },
+   "editorial_view": {
+    "build_on": "Low to moderate unless your product competes with Sentry. Each release becomes Apache-2.0 two years after it was made available.",
+    "license_your_own": "Use FSL-1.1-ALv2 instead; 1.0 is superseded and its change clause is a statement rather than an express grant.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "US (general); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/getsentry/sentry/blob/23.11.1/LICENSE.md ; https://github.com/getsentry/sentry/blob/24.2.0/LICENSE.md ; https://github.com/getsentry/sentry/blob/24.3.0/LICENSE.md ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/ (list 3.29.0; lists FSL-1.1-ALv2 and FSL-1.1-MIT, not FSL 1.0)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": true,
+    "spdx_list_status": "Not on SPDX list - LicenseRef"
+   },
+   "caveat": true,
+   "warnings": [
+    "\"Exposes the APIs of the Software\" is listed as a Competing Use; review any integration that re-exposes Sentry's APIs commercially."
+   ]
+  },
+  {
+   "id": "LicenseRef-n8n-Sustainable-Use-1.0",
+   "name": "n8n Sustainable Use License 1.0",
+   "family": "source_available",
+   "family_tab": "6-Source-Available",
+   "osi_status": "not_approved",
+   "osi_note": "No (not on the OSI list)",
+   "fsf_status": "not_reviewed",
+   "fsf_note": "Not on the FSF license list",
+   "patent_grant": "express",
+   "patent_note": "Yes; ends immediately if you or your company make a written claim that the software infringes a patent",
+   "copyleft_scope": "use_restriction",
+   "triggers": [
+    "distribution",
+    "service_offering",
+    "commercial_use"
+   ],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "patent_retaliation",
+    "maas_gate"
+   ],
+   "facts": {
+    "steward_year": "n8n / 2022 (commit 521cf51e, Mar. 17, 2022; first in n8n 0.169.0)",
+    "allows": "Use, copy, distribute, make available and prepare derivative works, within the limitations",
+    "conditions": "Use or modify only for your own internal business purposes or for non-commercial or personal use; distribute or provide it to others only free of charge for non-commercial purposes; keep all notices; give recipients a copy of the terms; mark modified copies",
+    "copyleft_detail": "Usage restriction",
+    "gpl_compatibility": "Not compatible",
+    "notable_projects": "n8n (0.169 and later)",
+    "saas": "Restricted: providing n8n to others is allowed only free of charge for non-commercial purposes",
+    "notes": "Internal business use, including commercial companies running workflows for themselves, is within the grant. Before 0.169 n8n used Apache-2.0 with the Commons Clause."
+   },
+   "editorial_view": {
+    "build_on": "Fine for running n8n inside your own business. Offering it to customers, hosting it for others commercially, or reselling it needs a separate license from n8n.",
+    "license_your_own": "A short vendor-protective license; not open source.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "No governing-law clause in the text; verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/n8n-io/n8n/blob/n8n@3.3.0/LICENSE.md ; https://github.com/n8n-io/n8n/blob/n8n@0.169.0/LICENSE.md ; https://github.com/n8n-io/n8n/blob/n8n@0.168.0/LICENSE.md ; https://github.com/n8n-io/n8n/commit/521cf51e7cfb73ad60650b72206083d4c2666d29 ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": true,
+    "spdx_list_status": "Not on SPDX list - LicenseRef"
+   },
+   "caveat": true,
+   "warnings": [
+    "Files with \".ee.\" in the name or \".ee\" in the directory name are not under this license; they need a paid n8n Enterprise License (LICENSE_EE.md).",
+    "n8n's LICENSE.md says content of branches other than the main branch is not licensed."
+   ]
+  },
+  {
+   "id": "LicenseRef-CockroachDB-Software-License",
+   "name": "CockroachDB Software License",
+   "family": "source_available",
+   "family_tab": "6-Source-Available",
+   "osi_status": "not_approved",
+   "osi_note": "No (not on the OSI list)",
+   "fsf_status": "not_reviewed",
+   "fsf_note": "Not on the FSF license list",
+   "patent_grant": "express",
+   "patent_note": "Yes, limited to claims necessarily infringed by the Software as provided, for CockroachDB purposes; ends on any written patent claim relating to the Software",
+   "copyleft_scope": "contract",
+   "triggers": [
+    "any_use",
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "patent_retaliation",
+    "no_production_use"
+   ],
+   "facts": {
+    "steward_year": "Cockroach Labs, Inc. / 2024 (first in v24.3.0, Nov. 2024; v24.2.0 was BUSL-1.1)",
+    "allows": "Use, copy and distribute the Software and create Modified Versions (not other derivative works), for operating, evaluating, testing, fixing, integrating with and improving CockroachDB",
+    "conditions": "No operation without a License Key except Limited Non-Production Use (single node, or an introductory period, in development or testing); Telemetry must be shared unless your License Key allows disabling it; do not circumvent Protective Measures and keep them in Modified Versions; keep notices, pass on the Agreement and mark modifications; benchmark disclosures must include replication details, and Cockroach Labs may benchmark your products; 15-day cure period, otherwise termination",
+    "copyleft_detail": "Contract terms; Modified Versions keep the Protective Measures",
+    "gpl_compatibility": "Not compatible",
+    "notable_projects": "CockroachDB 24.3 and later",
+    "saas": "Production use, including services built on it, needs a License Key from Cockroach Labs",
+    "notes": "The License Key terms (who qualifies, on what conditions) are set outside this text."
+   },
+   "editorial_view": {
+    "build_on": "Treat it like a commercial license: production use depends on a License Key and on Telemetry rules that sit outside the open text. Development on a single node is allowed. Releases through 24.2 remain under BUSL-1.1 and convert on their Change Dates.",
+    "license_your_own": "Not a model to copy: key-gated and telemetry-dependent.",
+    "attribution": "CounselMode editorial view; not legal advice",
+    "jurisdiction": "New York law; state and federal courts in New York County, New York (exclusive); verify locally"
+   },
+   "provenance": {
+    "source": "https://github.com/cockroachdb/cockroach/blob/v26.2.12/LICENSE ; https://github.com/cockroachdb/cockroach/blob/v24.3.0/LICENSE ; https://github.com/cockroachdb/cockroach/blob/v24.2.0/LICENSE ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
+    "volatile": true,
+    "spdx_list_status": "Not on SPDX list - LicenseRef"
+   },
+   "caveat": true,
+   "warnings": [
+    "Telemetry includes data the licensor may use and disclose under its Privacy Policy; check data-protection obligations before deploying.",
+    "Liability is capped at US$100.",
+    "Benchmark clause: publishing benchmarks triggers disclosure duties and lets Cockroach Labs benchmark your products."
+   ]
   },
   {
    "id": "PolyForm-Noncommercial-1.0.0",
@@ -6329,6 +6907,70 @@
    ],
    "obligations": [
     "source_disclosure"
+   ],
+   "triggers": [
+    "distribution"
+   ]
+  },
+  {
+   "record_type": "exception",
+   "id": "Swift-exception",
+   "expression": "Apache-2.0 WITH Swift-exception",
+   "name": "Swift Exception (Runtime Library Exception to Apache-2.0)",
+   "family": "exception",
+   "family_tab": "13-Exceptions",
+   "caveat": true,
+   "base": "Apache-2.0",
+   "effect": "If you compile your source code with the Software and portions of it end up embedded in the binary product, you may redistribute that product without the attribution Apache-2.0 sections 4(a), 4(b) and 4(d) would otherwise require",
+   "facts": {
+    "notable_projects": "Swift (swiftlang/swift), Swift Package Manager",
+    "notes": "Applies only to portions embedded in your binary by compiling with Swift; redistributing the Swift toolchain itself still needs full Apache-2.0 compliance."
+   },
+   "editorial_view": {
+    "practical_effect": "Apps compiled with Swift do not need Apache-2.0 notices for the runtime code embedded in them; the toolchain itself stays under Apache-2.0.",
+    "attribution": "CounselMode editorial view; not legal advice"
+   },
+   "provenance": {
+    "source": "https://github.com/swiftlang/swift/blob/swift-6.4.3-RELEASE/LICENSE.txt ; https://github.com/swiftlang/swift-package-manager/blob/swift-6.4.3-RELEASE/LICENSE.txt ; https://spdx.org/licenses/Swift-exception.html (SPDX 3.29.0)",
+    "verification_status": "Verified (primary) - on SPDX 3.29.0 exceptions list",
+    "last_verified": "2026-11-23",
+    "volatile": false,
+    "expression_valid_in": "SPDX 2.3 and 3.0"
+   },
+   "warnings": [],
+   "obligations": [],
+   "triggers": []
+  },
+  {
+   "record_type": "exception",
+   "id": "Qt-LGPL-exception-1.1",
+   "expression": "LGPL-2.1-only WITH Qt-LGPL-exception-1.1",
+   "name": "Qt LGPL exception 1.1 (The Qt Company Qt LGPL Exception version 1.1)",
+   "family": "exception",
+   "family_tab": "13-Exceptions",
+   "caveat": true,
+   "base": "LGPL-2.1-only",
+   "effect": "Object code of a \"work that uses the Library\" may include material from unmodified Qt header files (numerical parameters, data structure layouts, accessors, macros, inline functions and templates) and be distributed on terms of your choice, if you still comply with LGPL-2.1 section 6",
+   "facts": {
+    "notable_projects": "Qt 5 (qtbase) LGPL-2.1 offer, Qt 5.5 to 5.6 (this wording); Qt 5.4.x carries the \"Digia Qt LGPL Exception version 1.1\" wording instead",
+    "notes": "Qt source file headers at v5.6.3 offer LGPL-2.1 or LGPL-3.0 and point to this exception. At v5.7.0 the same headers offer LGPL-3.0, GPL-2.0 or GPL-3.0 with no exception. The exception does not lift the LGPL-2.1 section 6 duties."
+   },
+   "editorial_view": {
+    "practical_effect": "Using Qt 5.6 or earlier under LGPL-2.1 does not make your object code a derivative of Qt just because it inlines Qt header material; you still owe the LGPL-2.1 section 6 duties, including letting users relink.",
+    "attribution": "CounselMode editorial view; not legal advice"
+   },
+   "provenance": {
+    "source": "https://github.com/qt/qtbase/blob/v5.6.3/LGPL_EXCEPTION.txt ; https://github.com/qt/qtbase/blob/v5.6.3/src/corelib/global/qglobal.cpp ; https://github.com/qt/qtbase/blob/v5.7.0/src/corelib/global/qglobal.cpp ; https://github.com/qt/qtbase/blob/v5.4.0/LGPL_EXCEPTION.txt ; https://spdx.org/licenses/Qt-LGPL-exception-1.1.html (SPDX 3.29.0)",
+    "verification_status": "Verified (primary) - on SPDX 3.29.0 exceptions list",
+    "last_verified": "2026-11-23",
+    "volatile": false,
+    "expression_valid_in": "SPDX 2.3 and 3.0"
+   },
+   "warnings": [
+    "Qt 5.4.x ships the Digia wording, which SPDX lists separately as Digia-Qt-LGPL-exception-1.1."
+   ],
+   "obligations": [
+    "relinking"
    ],
    "triggers": [
     "distribution"

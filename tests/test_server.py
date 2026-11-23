@@ -38,6 +38,7 @@ def test_tools_are_the_expected_read_only_set():
         "choose_license",
         "lookup_license",
         "model_license",
+        "project_license",
         "check_compatibility",
         "license_obligations",
         "triage_dependencies",
@@ -71,6 +72,13 @@ def test_model_license_by_exact_version():
     assert out["results"] and all(m["license_id"] == "Apache-2.0" for m in out["results"])
     with pytest.raises(ToolError, match="not mapped"):
         call("model_license", model="no-such-model-xyz")
+
+
+def test_project_license_by_version():
+    out = call("project_license", project="Terraform", version="1.5.7")
+    assert [e["license_expression"] for r in out["results"] for e in r["eras"]] == ["MPL-2.0"]
+    with pytest.raises(ToolError, match="not mapped"):
+        call("project_license", project="no-such-project-xyz")
 
 
 def test_compatibility_on_license_ids():

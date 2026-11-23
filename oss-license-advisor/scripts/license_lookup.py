@@ -3,6 +3,7 @@
 
   license_lookup.py lookup <license id, name or alias>
   license_lookup.py model <model name>
+  license_lookup.py project <project name> [--version X]   (or "Redis 7.4"; keyed by version)
   license_lookup.py compat <inbound license> <outbound license>
   license_lookup.py obligations <license> --scenario internal|saas|distribute|device
   license_lookup.py triage <file> [--scenario ...]   (one license per line, or CSV/TSV with a license column)
@@ -23,8 +24,11 @@ import sys
 DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 
 
-def _load(name):
-    with open(os.path.join(DATA, name), encoding="utf-8") as f:
+def _load(name, default=None):
+    path = os.path.join(DATA, name)
+    if default is not None and not os.path.exists(path):
+        return default
+    with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -33,6 +37,7 @@ LIC = DB["licenses"]
 ALIASES = _load("aliases.json")
 COMP = _load("compatibility.json")
 MODELS = _load("models.json")
+PROJECTS = _load("projects.json", default=[])
 GROUPS = {label: set(g["members"]) for label, g in _load("compat_groups.json")["groups"].items()}
 GOALS = {g["goal"]: g for g in _load("choosing.json")["goals"]}
 
@@ -192,16 +197,64 @@ def model(query: str) -> list[dict]:
     q = norm(query)
     if not q:
         return []
-    q_words = words(query)
-
-    def hit(alias: str) -> bool:
-        a, a_words = norm(alias), words(alias)
-        # Same or broader ("Gemma" for "Gemma 4"), or more specific at a word break ("Llama 3.1 8B" for "Llama 3.1").
-        return a.startswith(q) or (q_words.startswith(a_words) and q_words[len(a_words) :][:1] in ("", " "))
-
     return [
-        m for m in MODELS if any(hit(a) for a in m.get("aliases") or [m["model"]]) or norm(m["vendor"]).startswith(q)
+        m
+        for m in MODELS
+        if any(_alias_hit(query, a) for a in m.get("aliases") or [m["model"]]) or norm(m["vendor"]).startswith(q)
     ]
+
+
+def _alias_hit(query: str, alias: str) -> bool:
+    """Same name or broader ("Gemma" for "Gemma 4"), or more specific at a word break ("Llama 3.1 8B" for "Llama 3.1",
+    but not "Mistral Large 2.1" for "Mistral Large 2")."""
+    q, q_words = norm(query), words(query)
+    a, a_words = norm(alias), words(alias)
+    return bool(q) and (a.startswith(q) or (q_words.startswith(a_words) and q_words[len(a_words) :][:1] in ("", " ")))
+
+
+_VERSION = re.compile(r"^(.*?)[\s-]+v?(\d+(?:\.\d+)*)\+?$")
+
+
+def _version(v: str | None) -> tuple[int, ...] | None:
+    nums = re.findall(r"\d+", v or "")
+    return tuple(int(n) for n in nums) if nums else None
+
+
+def _in_era(v: tuple[int, ...], era: dict) -> bool:
+    """A version is in an era when it falls within its release lines: "7.2" as an upper bound covers every 7.2.x."""
+    lo, hi = _version(era["versions"]["from"]), _version(era["versions"]["to"])
+    return (lo is None or v[: len(lo)] >= lo) and (hi is None or v[: len(hi)] <= hi)
+
+
+def project(query: str, version: str | None = None) -> list[dict]:
+    """Project records for a query, matched on name, id and `aliases` like model(); each carries its license eras. With a
+    version (given, or trailing the query as in "Redis 7.4"), only the era covering that version is kept, with its risk
+    per scenario."""
+
+    def names(p):
+        return [p["name"], p["id"], *p.get("aliases", [])]
+
+    # A trailing version ("Redis 7.4") is a version, unless it is part of a name ("Python 3" as an alias).
+    m = _VERSION.match(query.strip())
+    if version is None and m and not any(norm(query) == norm(a) for p in PROJECTS for a in names(p)):
+        query, version = m.group(1), m.group(2)
+    hits = [p for p in PROJECTS if any(_alias_hit(query, a) for a in names(p))]
+    v = _version(version)
+    out = []
+    for p in hits:
+        eras = [e for e in p["eras"] if v is None or _in_era(v, e)]
+        if v is not None:
+            eras = [
+                {
+                    **e,
+                    "risk": {
+                        s: expression_risk(e["license_expression"], s)[1] for s in ("internal", "saas", "distribute")
+                    },
+                }
+                for e in eras
+            ]
+        out.append({**p, "eras": eras, **({"version": version} if version else {})})
+    return out
 
 
 def compat(inbound: str, outbound: str) -> dict:
@@ -335,15 +388,11 @@ _TOKEN = re.compile(r"\(|\)|[^\s()]+")
 OPS = ("AND", "OR", "WITH")
 
 
-def expression_risk(expr: str, scenario: str) -> tuple[str, str, object]:
-    """(license ID or text, risk, volatile) for an SPDX expression. OR takes the least risky choice, AND the most;
-    AND binds tighter than OR; WITH keeps the license and drops the exception. Unknown or ambiguous parts are UNKNOWN."""
+def _fold(expr: str, leaf, rank):
+    """Evaluate an SPDX expression: OR keeps the part with the lowest rank, AND the highest; AND binds tighter than OR;
+    WITH keeps the license and drops the exception. `leaf` maps a license name to a value, `rank` orders values."""
     tokens = _TOKEN.findall(expr)
     pos = 0
-
-    def leaf(text):
-        r = unique(text)
-        return (r["id"], family_risk(r, scenario), r["provenance"].get("volatile")) if r else (text, "UNKNOWN", None)
 
     def primary():
         nonlocal pos
@@ -369,7 +418,7 @@ def expression_risk(expr: str, scenario: str) -> tuple[str, str, object]:
         while pos < len(tokens) and tokens[pos] == "AND":
             pos += 1
             parts.append(primary())
-        return max(parts, key=lambda x: ORDER.index(x[1]))
+        return max(parts, key=rank)
 
     def disjunction():
         nonlocal pos
@@ -377,9 +426,48 @@ def expression_risk(expr: str, scenario: str) -> tuple[str, str, object]:
         while pos < len(tokens) and tokens[pos] == "OR":
             pos += 1
             parts.append(conjunction())
-        return min(parts, key=lambda x: ORDER.index(x[1]))
+        return min(parts, key=rank)
 
-    return disjunction() if tokens else (expr, "UNKNOWN", None)
+    return disjunction() if tokens else None
+
+
+def expression_risk(expr: str, scenario: str) -> tuple[str, str, object]:
+    """(license ID or text, risk, volatile) for an SPDX expression. OR takes the least risky choice, AND the most.
+    Unknown or ambiguous parts are UNKNOWN."""
+
+    def leaf(text):
+        r = unique(text)
+        return (r["id"], family_risk(r, scenario), r["provenance"].get("volatile")) if r else (text, "UNKNOWN", None)
+
+    return _fold(expr, leaf, lambda x: ORDER.index(x[1])) or (expr, "UNKNOWN", None)
+
+
+# From most open to most closed: how a project is grouped by license.
+OPENNESS = [
+    "public_domain",
+    "permissive",
+    "weak_copyleft",
+    "strong_copyleft",
+    "network_copyleft",
+    "content_data",
+    "hardware",
+    "ethical_source",
+    "source_available",
+    "noncommercial",
+    "ai_model_licenses",
+    "proprietary",
+    "unknown",
+]
+
+
+def expression_family(expr: str) -> str:
+    """The family of an SPDX expression: the most open choice in an OR, the most restrictive part of an AND."""
+
+    def leaf(text):
+        r = unique(text)
+        return r["family"] if r and r["family"] in OPENNESS else "unknown"
+
+    return _fold(expr, leaf, OPENNESS.index) or "unknown"
 
 
 def read_components(path: str) -> list[tuple[str, str]]:
@@ -417,7 +505,7 @@ def main(argv: list[str]) -> int:
     args = [
         a
         for i, a in enumerate(argv[1:], 1)
-        if not a.startswith("--") and argv[i - 1] not in ("--scenario", "--includes")
+        if not a.startswith("--") and argv[i - 1] not in ("--scenario", "--includes", "--version")
     ]
     if cmd == "lookup":
         out = lookup(" ".join(args))
@@ -431,6 +519,12 @@ def main(argv: list[str]) -> int:
         _print(hits or "Model not mapped - read the license shipped with the checkpoint.")
         print(DISCLAIMER)
         return 0
+    if cmd == "project":
+        version = argv[argv.index("--version") + 1] if "--version" in argv else None
+        hits = project(" ".join(a for a in args if a != version), version)
+        _print(hits or "Project not mapped - read the LICENSE file in the exact release you use.")
+        print(DISCLAIMER)
+        return 0 if hits else 1
     if cmd == "compat" and len(args) >= 2:
         out = compat(args[0], args[1])
         _print(out if "error" in out or out["tuples"] else {**out, "note": "No tuple - analyze manually."})

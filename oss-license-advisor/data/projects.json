@@ -1,0 +1,3604 @@
+[
+ {
+  "id": "linux",
+  "name": "Linux kernel",
+  "steward": "Linux kernel community",
+  "category": "operating-system",
+  "aliases": [
+   "Linux",
+   "Linux kernel",
+   "the kernel"
+  ],
+  "repo": "https://github.com/torvalds/linux",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "GPL-2.0-only WITH Linux-syscall-note",
+    "source": "https://github.com/torvalds/linux/blob/v7.3/COPYING",
+    "quote": "The Linux Kernel is provided under: SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Programs that only call the kernel through normal system calls are not affected by its GPL. Kernel modules and modified kernels you distribute must come with source under GPL-2.0.",
+  "notes": "github.com/torvalds/linux is the mainline mirror of git.kernel.org. COPYING points to LICENSES/ and Documentation/process/license-rules.rst: individual files may carry other GPL-2.0-compatible licenses (for example dual BSD/GPL drivers and UAPI headers). The SPDX ID GPL-2.0 in COPYING is the deprecated form of GPL-2.0-only.\nSteward detail: The Linux kernel community; Linus Torvalds maintains mainline. Copyright stays with individual contributors."
+ },
+ {
+  "id": "android",
+  "name": "Android Open Source Project (AOSP)",
+  "steward": "Google (Android Open Source Project)",
+  "category": "operating-system",
+  "aliases": [
+   "Android",
+   "AOSP",
+   "Android Open Source Project"
+  ],
+  "repo": "https://android.googlesource.com/platform/frameworks/base",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0 AND GPL-2.0-only WITH Linux-syscall-note",
+    "source": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-17.0.0_r1/NOTICE",
+    "quote": "NOTICE file corresponding to the section 4 d of the Apache License, Version 2.0, in this case for the Android-specific code.",
+    "verification_status": "Not re-verified",
+    "last_verified": null
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Most of the Android platform is Apache-2.0, so device makers can ship modified userland code without publishing it; the Linux kernel inside is GPL-2.0 and its changes must be published when distributed. Google Mobile Services and Play apps are not part of AOSP and are licensed separately.",
+  "notes": "AOSP has no single top-level LICENSE: it is hundreds of repositories, each with its own license. The NOTICE file fetched at android-17.0.0_r1 in platform/frameworks/base (which also carries MODULE_LICENSE_APACHE2) confirms the Apache-2.0 part only; the kernel part rests on the separate kernel repositories and AOSP's licensing page (https://source.android.com/docs/setup/about/licenses), so the combined expression is marked Not re-verified. Many AOSP components use other licenses (BSD in bionic, for example).\nSteward detail: Google LLC, through the Android Open Source Project."
+ },
+ {
+  "id": "freebsd",
+  "name": "FreeBSD",
+  "steward": "FreeBSD Project",
+  "category": "operating-system",
+  "aliases": [
+   "FreeBSD"
+  ],
+  "repo": "https://github.com/freebsd/freebsd-src",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-2-Clause",
+    "source": "https://github.com/freebsd/freebsd-src/blob/release/15.1.0/COPYRIGHT",
+    "quote": "The compilation of software known as FreeBSD is distributed under the following terms:",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive: you can build closed products on FreeBSD as long as you keep the copyright notices.",
+  "notes": "COPYRIGHT covers the FreeBSD compilation under BSD-2-Clause and reproduces the 4.4BSD-Lite (University of California) terms; individual components (contrib/, some drivers, the toolchain) carry their own licenses, including some GPL code in contrib. Older releases used a BSD-4-Clause-style compilation notice; not modelled.\nSteward detail: The FreeBSD Project (supported by the FreeBSD Foundation)."
+ },
+ {
+  "id": "openbsd",
+  "name": "OpenBSD",
+  "steward": "OpenBSD project",
+  "category": "operating-system",
+  "aliases": [
+   "OpenBSD"
+  ],
+  "repo": "https://github.com/openbsd/src",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "ISC AND BSD-2-Clause AND BSD-3-Clause",
+    "source": "https://github.com/openbsd/src/blob/b15065270d9f7bcece8851abcc56f7911a726656/share/misc/license.template",
+    "quote": "Below is an example license to be used for new code in OpenBSD, modeled after the ISC license.",
+    "verification_status": "Not re-verified",
+    "last_verified": null
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive throughout; new OpenBSD code uses an ISC-style license and the inherited BSD code is BSD-licensed, so closed products can build on it with notices kept.",
+  "notes": "OpenBSD has no top-level LICENSE file and the GitHub mirror has no release tags, so the source is share/misc/license.template at a pinned mirror commit; it confirms only that new code uses an ISC-style license. The base system mixes ISC, BSD-2-Clause, BSD-3-Clause (4.4BSD) and some other licenses (see https://www.openbsd.org/policy.html). The expression is a summary, not a file statement, so it is Not re-verified. The current data's 'ISC AND BSD-2-Clause' omits the BSD-3-Clause Berkeley code."
+ },
+ {
+  "id": "xnu",
+  "name": "XNU (Darwin kernel)",
+  "steward": "Apple",
+  "category": "operating-system",
+  "aliases": [
+   "XNU",
+   "Darwin",
+   "Darwin kernel"
+  ],
+  "repo": "https://github.com/apple-oss-distributions/xnu",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "APSL-2.0",
+    "source": "https://github.com/apple-oss-distributions/xnu/blob/xnu-12377.121.6/APPLE_LICENSE",
+    "quote": "APPLE PUBLIC SOURCE LICENSE Version 2.0 - August 6, 2003",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "APSL-2.0 is a file-level copyleft with a network-use clause: modified XNU files you deploy or distribute must be published. macOS itself is proprietary and is not covered.",
+  "notes": "Some XNU files (BSD-derived code, Mach) carry their own notices. Releases before 2003 used APSL 1.x; not modelled."
+ },
+ {
+  "id": "windows",
+  "name": "Microsoft Windows",
+  "steward": "Microsoft",
+  "category": "operating-system",
+  "aliases": [
+   "Windows",
+   "Microsoft Windows"
+  ],
+  "repo": null,
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "LicenseRef-Proprietary",
+    "source": "https://www.microsoft.com/en-us/useterms",
+    "quote": null,
+    "verification_status": "Not re-verified",
+    "last_verified": null
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Proprietary: use is governed by the Microsoft license terms for your edition and channel (retail, OEM or volume licensing), including limits on virtualization and transfer.",
+  "notes": "No public source or LICENSE file exists. The source is Microsoft's license-terms portal, which was not fetched (it blocks automated requests); terms differ by edition, version and purchase channel."
+ },
+ {
+  "id": "glibc",
+  "name": "GNU C Library (glibc)",
+  "steward": "GNU Project",
+  "category": "c-library",
+  "aliases": [
+   "glibc",
+   "GNU C Library",
+   "GNU libc"
+  ],
+  "repo": "https://sourceware.org/git/glibc.git",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "LGPL-2.1-or-later",
+    "source": "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=COPYING.LESSERv2;hb=refs/tags/glibc-2.44",
+    "quote": "GNU LESSER GENERAL PUBLIC LICENSE Version 2.1, February 1999",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Linking your program dynamically against glibc, as almost every Linux program does, places no license obligations on your code. Shipping a modified glibc means publishing those changes under the LGPL.",
+  "notes": "At glibc-2.44 COPYING.LIB is a symlink to COPYING.LESSERv2 (LGPL-2.1 text); README says 'See the file COPYING.LIB for copying conditions'. The 'or later' comes from the per-file headers, not from COPYING.LESSERv2. LICENSES lists the few files under other notices. Fetched by a shallow git clone of the tag (the gitweb URL is behind bot protection). Very old releases (before about 2.2) used the GNU Library GPL 2.0; not modelled.\nSteward detail: The GNU Project; glibc maintainers (much of the copyright is held by the Free Software Foundation)."
+ },
+ {
+  "id": "musl",
+  "name": "musl libc",
+  "steward": "Rich Felker and contributors",
+  "category": "c-library",
+  "aliases": [
+   "musl",
+   "musl libc"
+  ],
+  "repo": "https://git.musl-libc.org/cgit/musl",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://git.musl-libc.org/cgit/musl/plain/COPYRIGHT?h=v1.2.6",
+    "quote": "musl as a whole is licensed under the following standard MIT license:",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive, including for static linking: keep the copyright notice and you can ship musl inside closed binaries.",
+  "notes": "COPYRIGHT lists a few files under other permissive terms (public domain and BSD-style). Early pre-1.0 releases used LGPL; not modelled.\nSteward detail: Rich Felker and the musl contributors."
+ },
+ {
+  "id": "gcc-runtime",
+  "name": "GCC runtime libraries (libgcc, libstdc++)",
+  "steward": "GNU Project",
+  "category": "compiler",
+  "aliases": [
+   "GCC",
+   "libgcc",
+   "libstdc++",
+   "GCC runtime"
+  ],
+  "repo": "https://gcc.gnu.org/git/gcc.git",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "GPL-3.0-or-later WITH GCC-exception-3.1",
+    "source": "https://github.com/gcc-mirror/gcc/blob/releases/gcc-16.2.0/COPYING.RUNTIME",
+    "quote": "GCC RUNTIME LIBRARY EXCEPTION Version 3.1, 31 March 2009",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Programs compiled with GCC can be distributed under any license even though they link libgcc and libstdc++, as long as an eligible compilation process was used. The compiler itself is GPL-3.0-or-later.",
+  "notes": "Source is the official GitHub mirror of gcc.gnu.org/git (the gitweb raw URL is behind bot protection); COPYING3 holds the GPL-3.0 text. The runtime exception arrived with GCC 4.4 (2009); earlier releases used GPL-2.0 with the older libgcc exception, not modelled.\nSteward detail: The GNU Project / Free Software Foundation."
+ },
+ {
+  "id": "llvm",
+  "name": "LLVM / Clang",
+  "steward": "LLVM Foundation",
+  "category": "compiler",
+  "aliases": [
+   "LLVM",
+   "Clang",
+   "LLVM Project",
+   "llvm-project"
+  ],
+  "repo": "https://github.com/llvm/llvm-project",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "8"
+    },
+    "since": null,
+    "license_expression": "NCSA",
+    "source": "https://github.com/llvm/llvm-project/blob/llvmorg-8.0.1/llvm/LICENSE.TXT",
+    "quote": "LLVM Release License ============================================================================== University of Illinois/NCSA Open Source License",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "9",
+     "to": null
+    },
+    "since": "2019-01-19",
+    "license_expression": "Apache-2.0 WITH LLVM-exception",
+    "change": {
+     "announcement": "https://llvm.org/docs/DeveloperPolicy.html#relicensing",
+     "commit": "https://github.com/llvm/llvm-project/commit/469bdefd448b76c5adcdd67256e9a44fabf7e027"
+    },
+    "source": "https://github.com/llvm/llvm-project/blob/llvmorg-9.0.0/llvm/LICENSE.TXT",
+    "quote": "The LLVM Project is under the Apache License v2.0 with LLVM Exceptions:",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive with a patent grant; the LLVM exception means binaries compiled with Clang carry no attribution duty for runtime code. Keep notices when you redistribute LLVM itself.",
+  "notes": "From LLVM 9 the LICENSE.TXT still reproduces the 'Legacy LLVM License' (NCSA) for code not yet relicensed; checked again at llvmorg-23.1.6 (unchanged headline). The relicensing commit landed 2019-01-19 on the main branch; LLVM 8.x releases (including 8.0.1, July 2019) shipped under NCSA.\nSteward detail: The LLVM Foundation and LLVM contributors."
+ },
+ {
+  "id": "openjdk",
+  "name": "OpenJDK",
+  "steward": "Oracle and the OpenJDK community",
+  "category": "language-runtime",
+  "aliases": [
+   "OpenJDK",
+   "JDK",
+   "Java"
+  ],
+  "repo": "https://github.com/openjdk/jdk",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "source": "https://github.com/openjdk/jdk/blob/jdk-27-ga/LICENSE",
+    "quote": "\"CLASSPATH\" EXCEPTION TO THE GPL",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Running any Java program on OpenJDK, and shipping OpenJDK with an application, does not put your application under the GPL thanks to the Classpath exception. Oracle's own JDK builds are under separate Oracle terms.",
+  "notes": "LICENSE is the GPL-2.0 text followed by the Classpath exception, which applies only to files whose header says Oracle designates them as subject to it; a few tools and files are plain GPL-2.0. Vendor builds (Temurin, Corretto, Oracle JDK) add their own terms.\nSteward detail: Oracle leads OpenJDK, with community contributors."
+ },
+ {
+  "id": "cpython",
+  "name": "CPython",
+  "steward": "Python Software Foundation",
+  "category": "language-runtime",
+  "aliases": [
+   "Python",
+   "CPython"
+  ],
+  "repo": "https://github.com/python/cpython",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "PSF-2.0",
+    "source": "https://github.com/python/cpython/blob/v3.15.2/LICENSE",
+    "quote": "Python software and documentation are licensed under the Python Software Foundation License Version 2.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive: you can embed or ship Python in closed products; keep the license notice and summarise changes if you modify it.",
+  "notes": "LICENSE also carries the historical BeOpen, CNRI and CWI licenses for older code (SPDX models the full stack as Python-2.0), and states that since 3.8.6 documentation code is dual licensed PSF-2.0 or 0BSD. Bundled libraries (OpenSSL, expat, libffi and others) keep their own licenses. Releases before 2.1 predate the PSF license; not modelled."
+ },
+ {
+  "id": "nodejs",
+  "name": "Node.js",
+  "steward": "OpenJS Foundation",
+  "category": "language-runtime",
+  "aliases": [
+   "Node.js",
+   "Node",
+   "nodejs"
+  ],
+  "repo": "https://github.com/nodejs/node",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/nodejs/node/blob/v26.13.1/LICENSE",
+    "quote": "Node.js is licensed for use as follows:",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive. Your real exposure is in the npm packages you install, which have their own licenses and should be scanned.",
+  "notes": "LICENSE is MIT for Node.js followed by the licenses of bundled dependencies (V8, OpenSSL, ICU, libuv, npm and others)."
+ },
+ {
+  "id": "react",
+  "name": "React",
+  "steward": "Meta",
+  "category": "framework",
+  "aliases": [
+   "React",
+   "React.js",
+   "ReactJS"
+  ],
+  "repo": "https://github.com/facebook/react",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "0.11"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/facebook/react/blob/v0.11.2/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "0.12",
+     "to": "15.6.1"
+    },
+    "since": "2014-10-28",
+    "license_expression": "BSD-3-Clause AND LicenseRef-Facebook-Patents",
+    "change": {
+     "announcement": "https://legacy.reactjs.org/blog/2014/10/28/react-v0.12.html",
+     "commit": "https://github.com/facebook/react/commit/dcf415c2b91ce52fd5d4dd02b70875ba9d33290f"
+    },
+    "source": "https://github.com/facebook/react/blob/v0.12.0/LICENSE",
+    "quote": "BSD License For React software",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "15.6.2",
+     "to": null
+    },
+    "since": "2017-09-22",
+    "license_expression": "MIT",
+    "change": {
+     "announcement": "https://engineering.fb.com/2017/09/22/web/relicensing-react-jest-flow-and-immutable-js/",
+     "commit": "https://github.com/facebook/react/commit/b765fb25ebc6e53bb8de2496d2828d9d01c2774b"
+    },
+    "source": "https://github.com/facebook/react/blob/v15.6.2/LICENSE",
+    "quote": "MIT License",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Current React is MIT, so it is low risk. If you still ship React 15.6.1 or older, it came with a BSD license plus a patent grant that ends if you sue Facebook over patents.",
+  "notes": "The BSD era shipped a separate PATENTS file ('Additional Grant of Patent Rights', revised to Version 2 in commit b8ba8c83, 2015-04-10, checked at v0.12.0 and v15.6.1); it has no SPDX ID, so it is written here as LicenseRef-Facebook-Patents. 15.6.2 was released under MIT alongside 16.0.0. Checked again at v19.3.1: MIT. Governance changes after 2025 are not reflected in the steward line, which follows the LICENSE copyright notice.\nSteward detail: Meta Platforms, Inc. (copyright holder named in LICENSE)."
+ },
+ {
+  "id": "vue",
+  "name": "Vue.js",
+  "steward": "Evan You and contributors",
+  "category": "framework",
+  "aliases": [
+   "Vue",
+   "Vue.js",
+   "VueJS",
+   "Vue 3"
+  ],
+  "repo": "https://github.com/vuejs/core",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/vuejs/core/blob/v3.5.46/LICENSE",
+    "quote": "The MIT License (MIT)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive: keep the notice and use it anywhere.",
+  "notes": "vuejs/core is Vue 3; Vue 2 lived in vuejs/vue, also MIT.\nSteward detail: Evan You and the Vue contributors."
+ },
+ {
+  "id": "angular",
+  "name": "Angular",
+  "steward": "Google",
+  "category": "framework",
+  "aliases": [
+   "Angular"
+  ],
+  "repo": "https://github.com/angular/angular",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/angular/angular/blob/21.0.3/LICENSE",
+    "quote": "The MIT License",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive: keep the notice and use it anywhere.",
+  "notes": "Covers Angular 2 and later. AngularJS (1.x) is a separate repository (angular/angular.js), also MIT."
+ },
+ {
+  "id": "qt",
+  "name": "Qt (open-source offer)",
+  "steward": "The Qt Company",
+  "category": "framework",
+  "aliases": [
+   "Qt",
+   "Qt open source",
+   "qtbase"
+  ],
+  "repo": "https://github.com/qt/qtbase",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": "5.4",
+     "to": "5.6"
+    },
+    "since": null,
+    "license_expression": "LGPL-2.1-only WITH Qt-LGPL-exception-1.1 OR LGPL-3.0-only",
+    "source": "https://github.com/qt/qtbase/blob/v5.6.3/LICENSE.LGPLv21",
+    "quote": "You may use, distribute and copy the Qt Toolkit under the terms of GNU Lesser General Public License version 2.1, which is displayed below.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "5.7",
+     "to": null
+    },
+    "since": "2016-01-13",
+    "license_expression": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+    "change": {
+     "announcement": "https://www.qt.io/blog/2016/01/13/new-agreement-with-the-kde-free-qt-foundation",
+     "commit": "https://github.com/qt/qtbase/commit/1a88b2f768e86474f8fc6facf60cd0dd46a555c8"
+    },
+    "source": "https://github.com/qt/qtbase/blob/v5.7.0/LICENSE.LGPL3",
+    "quote": "GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Using Qt's open-source offer in a closed product means meeting LGPL-3.0 (dynamic linking or relinkable objects, and letting users replace Qt, which matters on locked devices) or buying a commercial license. Some Qt add-on modules and tools are GPL-3.0 only.",
+  "notes": "Qt has no single LICENSE file; the expression comes from the per-file headers of qtbase, checked at v5.4.0, v5.6.3 ('LGPL 2.1 or version 3' plus the Qt LGPL Exception 1.1 in LGPL_EXCEPTION.txt), v5.7.0 (LGPL-3.0, or GPL-2.0 or GPL-3.0) and v6.12.1 (SPDX: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only). Qt 5.0 to 5.3 (LGPL-2.1 with exception or GPL-3.0) and Qt 4 and earlier are not modelled. Tools and tests in qtbase are GPL-3.0-only WITH Qt-GPL-exception-1.0 per REUSE.toml. The Qt-LGPL-exception-1.1 ID needs a license record. The current data's 'LGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Proprietary' omits GPL-2.0-only and folds in the commercial offer, now split into qt-commercial.\nSteward detail: The Qt Company; the KDE Free Qt Foundation agreement requires Qt to stay available under open-source terms."
+ },
+ {
+  "id": "qt-commercial",
+  "name": "Qt (commercial license)",
+  "steward": "The Qt Company",
+  "category": "framework",
+  "aliases": [
+   "Qt commercial",
+   "Qt Commercial License"
+  ],
+  "repo": "https://github.com/qt/qtbase",
+  "edition_of": "qt",
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "LicenseRef-Proprietary",
+    "source": "https://github.com/qt/qtbase/blob/v6.12.1/LICENSES/LicenseRef-Qt-Commercial.txt",
+    "quote": "Licensees holding valid commercial Qt licenses may use this software in accordance with the the terms contained in a written agreement between you and The Qt Company.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "A paid license from The Qt Company that removes the LGPL and GPL obligations; terms (per developer, per device, distribution fees) are set by your agreement.",
+  "notes": "The LicenseRef-Qt-Commercial.txt file at the tag only points to the written agreement and https://www.qt.io/terms-conditions; the agreement itself was not reviewed. The quote reproduces the file's own typo ('the the')."
+ },
+ {
+  "id": "ffmpeg",
+  "name": "FFmpeg (default build)",
+  "steward": "FFmpeg developers",
+  "category": "media",
+  "aliases": [
+   "FFmpeg",
+   "libavcodec",
+   "libavformat"
+  ],
+  "repo": "https://github.com/FFmpeg/FFmpeg",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "LGPL-2.1-or-later",
+    "source": "https://github.com/FFmpeg/FFmpeg/blob/n9.1/LICENSE.md",
+    "quote": "Most files in FFmpeg are under the GNU Lesser General Public License version 2.1 or later (LGPL v2.1+).",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "A default build is LGPL-2.1-or-later: link it dynamically (or allow relinking) and your application can stay closed. Check the configure flags of every build you ship, since they decide the license.",
+  "notes": "Codec patents are a separate question from the copyright license. Optional external libraries pulled in at configure time keep their own licenses.\nSteward detail: The FFmpeg developers (copyright held by contributors)."
+ },
+ {
+  "id": "ffmpeg-gpl",
+  "name": "FFmpeg (--enable-gpl build)",
+  "steward": "FFmpeg developers",
+  "category": "media",
+  "aliases": [
+   "FFmpeg GPL build",
+   "--enable-gpl"
+  ],
+  "repo": "https://github.com/FFmpeg/FFmpeg",
+  "edition_of": "ffmpeg",
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "GPL-2.0-or-later",
+    "source": "https://github.com/FFmpeg/FFmpeg/blob/n9.1/LICENSE.md",
+    "quote": "None of these parts are used by default, you have to explicitly pass `--enable-gpl` to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "A build configured with --enable-gpl is GPL-2.0-or-later as a whole: distributing it, or an application linked to it, requires GPL terms and source. Builds with --enable-nonfree cannot be redistributed.",
+  "notes": "Adding --enable-version3 moves the build to (L)GPL-3.0-or-later, which some external libraries require; --enable-nonfree produces a binary that LICENSE.md says is unredistributable.\nSteward detail: The FFmpeg developers (copyright held by contributors)."
+ },
+ {
+  "id": "openssl",
+  "name": "OpenSSL",
+  "steward": "OpenSSL Project",
+  "category": "crypto",
+  "aliases": [
+   "OpenSSL",
+   "libssl",
+   "libcrypto"
+  ],
+  "repo": "https://github.com/openssl/openssl",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "1.1.1"
+    },
+    "since": null,
+    "license_expression": "OpenSSL",
+    "source": "https://github.com/openssl/openssl/blob/OpenSSL_1_1_1w/LICENSE",
+    "quote": "The OpenSSL toolkit stays under a double license, i.e. both the conditions of the OpenSSL License and the original SSLeay license apply to the toolkit.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "3.0",
+     "to": null
+    },
+    "since": "2018-12-06",
+    "license_expression": "Apache-2.0",
+    "change": {
+     "announcement": "https://openssl-library.org/post/2017-03-20-license/",
+     "commit": "https://github.com/openssl/openssl/commit/151333164ece49fdba3fe5c4bbdc3333cd9ae66d"
+    },
+    "source": "https://github.com/openssl/openssl/blob/openssl-3.0.0/LICENSE.txt",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "OpenSSL 3.0 and later are Apache-2.0: permissive, with a patent grant, and compatible with GPL-3.0 but not GPL-2.0-only. OpenSSL 1.x carries the old OpenSSL/SSLeay terms, with an advertising clause and GPL incompatibility.",
+  "notes": "There was no 2.x release. The relicensing was announced in March 2017 and applied on 2018-12-06 to the branch that became 3.0.0; 1.1.1 and earlier stay on the old license. SPDX 'OpenSSL' covers the combined OpenSSL and SSLeay licenses and needs a license record. Checked again at openssl-4.1.0: Apache-2.0."
+ },
+ {
+  "id": "postgresql",
+  "name": "PostgreSQL",
+  "steward": "PostgreSQL Global Development Group",
+  "category": "database",
+  "aliases": [
+   "PostgreSQL",
+   "Postgres"
+  ],
+  "repo": "https://github.com/postgres/postgres",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "PostgreSQL",
+    "source": "https://github.com/postgres/postgres/blob/REL_19_0/COPYRIGHT",
+    "quote": "PostgreSQL Database Management System (also known as Postgres, formerly known as Postgres95)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive, similar to MIT/BSD: you can embed, modify or offer it as a service with no source obligations.",
+  "notes": "github.com/postgres/postgres is the official mirror of git.postgresql.org. Extensions and tools in the ecosystem have their own licenses."
+ },
+ {
+  "id": "mysql",
+  "name": "MySQL (Community)",
+  "steward": "Oracle",
+  "category": "database",
+  "aliases": [
+   "MySQL",
+   "MySQL Server",
+   "MySQL Community"
+  ],
+  "repo": "https://github.com/mysql/mysql-server",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "GPL-2.0-only",
+    "source": "https://github.com/mysql/mysql-server/blob/mysql-26.10.0/LICENSE",
+    "quote": "This software is released under version 2 of the GNU General Public License (GPLv2), as set forth below, with the following additional permissions:",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Running MySQL as your application's database does not affect your code. Distributing MySQL itself, or a program linked to its client library, brings GPL-2.0 obligations unless you buy Oracle's commercial license.",
+  "notes": "LICENSE adds a permission to link with separately licensed software such as OpenSSL, and states that the bundled client library (libmysqlclient, Connector/C) is also subject to the Universal FOSS Exception 1.0. Oracle also sells MySQL under commercial terms (and an Enterprise Edition with closed components); that offer is not a file in the repository and is not modelled, so the current data's 'OR LicenseRef-Proprietary' is dropped from the expression. Oracle 'elects' GPLv2 only where third-party code offers a choice of GPL versions. MariaDB is a separate project."
+ },
+ {
+  "id": "sqlite",
+  "name": "SQLite",
+  "steward": "D. Richard Hipp (Hwaci)",
+  "category": "database",
+  "aliases": [
+   "SQLite",
+   "sqlite3"
+  ],
+  "repo": "https://github.com/sqlite/sqlite",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "LicenseRef-Public-Domain",
+    "source": "https://github.com/sqlite/sqlite/blob/version-3.54.1/LICENSE.md",
+    "quote": "SQLite Is Public Domain",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "No license obligations. Organisations that need a formal license for legal reasons can buy a warranty of title from the SQLite developers.",
+  "notes": "github.com/sqlite/sqlite is the official Git mirror of the Fossil repository. LICENSE.md notes that a few non-core files in the repository are under other open-source licenses.\nSteward detail: D. Richard Hipp and the SQLite developers (Hwaci)."
+ },
+ {
+  "id": "mongodb",
+  "name": "MongoDB (Community Server)",
+  "steward": "MongoDB, Inc.",
+  "category": "database",
+  "aliases": [
+   "MongoDB",
+   "mongod",
+   "MongoDB Community"
+  ],
+  "repo": "https://github.com/mongodb/mongo",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "4.0.3"
+    },
+    "since": null,
+    "license_expression": "AGPL-3.0-only",
+    "source": "https://github.com/mongodb/mongo/blob/r4.0.3/LICENSE-Community.txt",
+    "quote": "it under the terms of the GNU Affero General Public License, version 3, as published by the Free Software Foundation.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "4.0.4",
+     "to": null
+    },
+    "since": "2018-10-16",
+    "license_expression": "SSPL-1.0",
+    "change": {
+     "announcement": "https://www.mongodb.com/press/mongodb-issues-new-server-side-public-license-for-mongodb-community-server",
+     "commit": "https://github.com/mongodb/mongo/commit/5851c894963cb2d675f2c0628e2dc782e23e65a9"
+    },
+    "source": "https://github.com/mongodb/mongo/blob/r4.0.4/LICENSE-Community.txt",
+    "quote": "Server Side Public License VERSION 1, OCTOBER 16, 2018",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Using MongoDB as the database behind your own application is fine. Offering MongoDB itself as a service triggers SSPL section 13, which requires releasing the source of the whole service stack, so in practice that needs a commercial license.",
+  "notes": "The README at r4.0.4 says all versions released after 2018-10-16, including patch fixes for older lines, are under SSPL; so 3.6.9, 3.4.18 and later patches are SSPL even though their version numbers fall before 4.0.4, as are dev releases from 4.1.5. The AGPL-era license file adds an OpenSSL linking exception and a clarification about management software. Drivers are Apache-2.0 and separate. Checked again at r9.0.8: SSPL-1.0. Debian and Fedora do not accept SSPL as a free license."
+ },
+ {
+  "id": "redis",
+  "name": "Redis",
+  "steward": "Redis Ltd.",
+  "category": "database",
+  "aliases": [
+   "Redis",
+   "redis-server",
+   "Redis Open Source"
+  ],
+  "repo": "https://github.com/redis/redis",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "7.2"
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/redis/redis/blob/7.2.4/COPYING",
+    "quote": "Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "7.4",
+     "to": "7.4"
+    },
+    "since": "2024-03-20",
+    "license_expression": "LicenseRef-RSALv2 OR SSPL-1.0",
+    "change": {
+     "announcement": "https://redis.io/blog/redis-adopts-dual-source-available-licensing/",
+     "commit": "https://github.com/redis/redis/commit/0b34396924eca4edc524469886dc5be6c77ec4ed"
+    },
+    "source": "https://github.com/redis/redis/blob/7.4.0/LICENSE.txt",
+    "quote": "Starting on March 20th, 2024, Redis follows a dual-licensing model with all Redis project code contributions under version 7.4 and subsequent releases",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "8.0",
+     "to": null
+    },
+    "since": "2025-05-01",
+    "license_expression": "LicenseRef-RSALv2 OR SSPL-1.0 OR AGPL-3.0-only",
+    "change": {
+     "announcement": "https://redis.io/blog/agplv3/",
+     "commit": "https://github.com/redis/redis/commit/d65102861f51af48241f607afa678c4c2a0f894c"
+    },
+    "source": "https://github.com/redis/redis/blob/8.0.0/LICENSE.txt",
+    "quote": "Starting with Redis 8, Redis Open Source is moving to a tri-licensing model",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [
+   {
+    "id": "valkey",
+    "from_version": "7.2.4",
+    "since": "2024-03-28",
+    "reason": "relicensing"
+   }
+  ],
+  "editorial_view": "Redis 7.2 and earlier stay BSD-3-Clause. From 7.4 you choose RSALv2 or SSPL-1.0, neither of them open source; from 8.0 AGPL-3.0 is a third option, so an open-source project can use Redis 8 under AGPL.",
+  "notes": "Checked: 7.2.4 and 7.2.17 COPYING (BSD-3-Clause), 7.4.0, 8.0.0 and 8.12.0 LICENSE.txt. The 7.2 line kept receiving BSD-licensed patch releases after 7.4 shipped."
+ },
+ {
+  "id": "valkey",
+  "name": "Valkey",
+  "steward": "Linux Foundation",
+  "category": "database",
+  "aliases": [
+   "Valkey"
+  ],
+  "repo": "https://github.com/valkey-io/valkey",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/valkey-io/valkey/blob/9.2.0/COPYING",
+    "quote": "BSD 3-Clause License",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive BSD-3-Clause, like Redis 7.2 and earlier: keep the notices and use it anywhere, including as a managed service.",
+  "notes": "Forked from Redis 7.2.4 (the valkey repository carries tags from 7.2.4 onward). Checked at 7.2.4 and 9.2.0.\nSteward detail: The Valkey project under the Linux Foundation."
+ },
+ {
+  "id": "elasticsearch",
+  "name": "Elasticsearch",
+  "steward": "Elastic",
+  "category": "search",
+  "aliases": [
+   "Elasticsearch",
+   "Elastic Search",
+   "ES"
+  ],
+  "repo": "https://github.com/elastic/elasticsearch",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "6.2"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/elastic/elasticsearch/blob/v6.2.4/LICENSE.txt",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "6.3",
+     "to": "7.10"
+    },
+    "since": "2018-02-27",
+    "license_expression": "Apache-2.0 AND LicenseRef-Elastic-1.0",
+    "change": {
+     "announcement": "https://www.elastic.co/blog/doubling-down-on-open",
+     "commit": "https://github.com/elastic/elasticsearch/commit/0d8aa7527e242fbda9d84867ab8bc955758eebce"
+    },
+    "source": "https://github.com/elastic/elasticsearch/blob/v6.3.0/LICENSE.txt",
+    "quote": "Source code in this repository is variously licensed under the Apache License Version 2.0, an Apache compatible license, or the Elastic License.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "7.11",
+     "to": "8.15"
+    },
+    "since": "2021-01-14",
+    "license_expression": "(SSPL-1.0 OR Elastic-2.0) AND Elastic-2.0",
+    "change": {
+     "announcement": "https://www.elastic.co/blog/licensing-change",
+     "commit": "https://github.com/elastic/elasticsearch/commit/a92a647b9f17d1bddf5c707490a19482c273eda3"
+    },
+    "source": "https://github.com/elastic/elasticsearch/blob/v7.11.0/LICENSE.txt",
+    "quote": "The default throughout the repository is a dual license under the Server Side Public License, v 1 and the Elastic License 2.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "8.16",
+     "to": null
+    },
+    "since": "2024-08-29",
+    "license_expression": "(AGPL-3.0-only OR SSPL-1.0 OR Elastic-2.0) AND Elastic-2.0",
+    "change": {
+     "announcement": "https://www.elastic.co/blog/elasticsearch-is-open-source-again",
+     "commit": "https://github.com/elastic/elasticsearch/commit/a59c182f9f7e9d1bf3d6eecbc0e44f24ff91d053"
+    },
+    "source": "https://github.com/elastic/elasticsearch/blob/v8.16.0/LICENSE.txt",
+    "quote": "a triple license under the \"GNU Affero General Public License v3.0 only\", \"the Server Side Public License, v 1\", and the \"Elastic License 2.0\"",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [
+   {
+    "id": "opensearch",
+    "from_version": "7.10.2",
+    "since": "2021-04-12",
+    "reason": "relicensing"
+   }
+  ],
+  "editorial_view": "Up to 7.10.2 the Apache-2.0 '-oss' builds are fully open source. From 8.16, code outside x-pack can be taken under AGPL-3.0, but x-pack code (in the default distribution) is Elastic License 2.0 only, which bars offering Elasticsearch as a managed service.",
+  "notes": "Each LICENSE.txt says the default license applies unless a file header says otherwise and that some code is solely under the Elastic License, found only in the x-pack folder; the 'AND Elastic-2.0' (or AND Elastic License 1.0 for 6.3 to 7.10) term reflects that. From 6.3 to 7.10 the '-oss' artifacts excluded x-pack and were Apache-2.0 only. The 2021 change was announced 2021-01-14 and took effect in 7.11.0 (Elastic License 2.0 replaced 1.0 in commit a92a647b before release; see https://www.elastic.co/blog/elastic-license-v2). Checked: v6.2.4, v6.3.0, v7.10.2, v7.11.0, v8.15.5, v8.16.0, v9.5.7. The current data's 'Elastic-2.0 OR SSPL-1.0 OR AGPL-3.0-only' omits the x-pack ELv2-only term. Elastic License 1.0 needs a license record.\nSteward detail: Elastic N.V. (Elasticsearch B.V.)."
+ },
+ {
+  "id": "kibana",
+  "name": "Kibana",
+  "steward": "Elastic",
+  "category": "observability",
+  "aliases": [
+   "Kibana"
+  ],
+  "repo": "https://github.com/elastic/kibana",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "6.2"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/elastic/kibana/blob/v6.2.4/LICENSE.md",
+    "quote": "Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "6.3",
+     "to": "7.10"
+    },
+    "since": "2018-02-27",
+    "license_expression": "Apache-2.0 AND LicenseRef-Elastic-1.0",
+    "change": {
+     "announcement": "https://www.elastic.co/blog/doubling-down-on-open",
+     "commit": "https://github.com/elastic/kibana/commit/fe4609647dd2a7a7fedfb23d63f5886a24eacbe1"
+    },
+    "source": "https://github.com/elastic/kibana/blob/v6.3.0/LICENSE.txt",
+    "quote": "Source code in this repository is variously licensed under the Apache License Version 2.0, an Apache compatible license, or the Elastic License.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "7.11",
+     "to": "8.15"
+    },
+    "since": "2021-01-14",
+    "license_expression": "(SSPL-1.0 OR Elastic-2.0) AND Elastic-2.0",
+    "change": {
+     "announcement": "https://www.elastic.co/blog/licensing-change",
+     "commit": "https://github.com/elastic/kibana/commit/170a2956c84d46262a3ae310f89aee6f2580860a"
+    },
+    "source": "https://github.com/elastic/kibana/blob/v7.11.0/LICENSE.txt",
+    "quote": "The default throughout the repository is a dual license under the Server Side Public License, v 1 and the Elastic License 2.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "8.16",
+     "to": null
+    },
+    "since": "2024-08-29",
+    "license_expression": "(AGPL-3.0-only OR SSPL-1.0 OR Elastic-2.0) AND Elastic-2.0",
+    "change": {
+     "announcement": "https://www.elastic.co/blog/elasticsearch-is-open-source-again",
+     "commit": "https://github.com/elastic/kibana/commit/b6287708f687d4e3288851052c0c6ae4ade8ce60"
+    },
+    "source": "https://github.com/elastic/kibana/blob/v8.16.0/LICENSE.txt",
+    "quote": "a triple license under the \"GNU Affero General Public License v3.0 only\", \"the Server Side Public License, v 1\", and the \"Elastic License 2.0\"",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [
+   {
+    "id": "opensearch-dashboards",
+    "from_version": "7.10.2",
+    "since": "2021-04-12",
+    "reason": "relicensing"
+   }
+  ],
+  "editorial_view": "Same pattern as Elasticsearch: from 8.16 code outside x-pack can be used under AGPL-3.0, but the default distribution includes x-pack code that is Elastic License 2.0 only, which bars offering Kibana as a managed service.",
+  "notes": "Before 6.3 the file was LICENSE.md. The 2021 change came in two commits: 170a2956 (2021-01-20, SSPL and Elastic License) and 4584a8b5 (2021-02-04, Elastic License 2.0), both before 7.11.0. Checked: v6.2.4, v6.3.0, v7.10.2, v7.11.0, v8.15.5, v8.16.0, v9.5.7. Category is observability because Kibana is the Elastic Stack UI; the relicensing log groups it with Elasticsearch.\nSteward detail: Elastic N.V. (Elasticsearch B.V.)."
+ },
+ {
+  "id": "opensearch",
+  "name": "OpenSearch",
+  "steward": "OpenSearch Software Foundation",
+  "category": "search",
+  "aliases": [
+   "OpenSearch"
+  ],
+  "repo": "https://github.com/opensearch-project/OpenSearch",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/opensearch-project/OpenSearch/blob/3.10.0/LICENSE.txt",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive Apache-2.0: keep NOTICE files and mark changes; offering it as a managed service is allowed.",
+  "notes": "Fork of Elasticsearch 7.10.2, announced 2021-01-21 and launched 2021-04-12 (relicensing log). Version numbering restarted at 1.0.0.\nSteward detail: OpenSearch Software Foundation (Linux Foundation)."
+ },
+ {
+  "id": "opensearch-dashboards",
+  "name": "OpenSearch Dashboards",
+  "steward": "OpenSearch Software Foundation",
+  "category": "observability",
+  "aliases": [
+   "OpenSearch Dashboards"
+  ],
+  "repo": "https://github.com/opensearch-project/OpenSearch-Dashboards",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/opensearch-project/OpenSearch-Dashboards/blob/3.10.0/LICENSE.txt",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive Apache-2.0: keep NOTICE files and mark changes; offering it as a managed service is allowed.",
+  "notes": "Fork of Kibana 7.10.2, launched with OpenSearch on 2021-04-12. Added because the relicensing log names the OpenSearch fork of Elasticsearch/Kibana.\nSteward detail: OpenSearch Software Foundation (Linux Foundation)."
+ },
+ {
+  "id": "terraform",
+  "name": "Terraform",
+  "steward": "IBM",
+  "category": "infrastructure",
+  "aliases": [
+   "Terraform",
+   "HashiCorp Terraform"
+  ],
+  "repo": "https://github.com/hashicorp/terraform",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "1.5"
+    },
+    "since": null,
+    "license_expression": "MPL-2.0",
+    "source": "https://github.com/hashicorp/terraform/blob/v1.5.7/LICENSE",
+    "quote": "Mozilla Public License, version 2.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "1.6",
+     "to": null
+    },
+    "since": "2023-08-10",
+    "license_expression": "BUSL-1.1",
+    "change": {
+     "announcement": "https://www.hashicorp.com/blog/hashicorp-adopts-business-source-license",
+     "commit": "https://github.com/hashicorp/terraform/commit/b145fbcaadf0fa7d0e7040eac641d9aef2a26433"
+    },
+    "source": "https://github.com/hashicorp/terraform/blob/v1.6.0/LICENSE",
+    "quote": "Licensed Work: Terraform 1.6.0. The Licensed Work is (c) 2023 HashiCorp, Inc.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [
+   {
+    "id": "opentofu",
+    "from_version": "pre-1.6.0 main (8a085b42)",
+    "since": "2023-09-20",
+    "reason": "relicensing"
+   }
+  ],
+  "editorial_view": "Terraform 1.5.x and earlier are MPL-2.0. From 1.6, BUSL-1.1 allows production use unless you offer Terraform to third parties as a hosted or embedded product that competes with the licensor's paid versions; each version converts to MPL-2.0 four years after publication.",
+  "notes": "Checked: v1.5.5, v1.5.7 (MPL-2.0), v1.6.0, v1.17.2 (BUSL-1.1). Commit 4eba7c05 (2026-03-11) changed the Licensor to International Business Machines Corporation (IBM) and rewrote the Additional Use Grant to define 'competitive offering' (paid products that significantly overlap; unpaid products are not competitive). 1.6.0 was published 2023-10-04, so its MPL-2.0 conversion falls in October 2027. Providers and most HashiCorp SDKs and libraries stayed MPL-2.0.\nSteward detail: IBM (BUSL licensor named in LICENSE since March 2026; formerly HashiCorp, Inc.)."
+ },
+ {
+  "id": "vault",
+  "name": "Vault",
+  "steward": "IBM",
+  "category": "infrastructure",
+  "aliases": [
+   "Vault",
+   "HashiCorp Vault"
+  ],
+  "repo": "https://github.com/hashicorp/vault",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "1.14.8"
+    },
+    "since": null,
+    "license_expression": "MPL-2.0",
+    "source": "https://github.com/hashicorp/vault/blob/v1.14.8/LICENSE",
+    "quote": "Mozilla Public License, version 2.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "1.14.9",
+     "to": null
+    },
+    "since": "2023-08-10",
+    "license_expression": "BUSL-1.1",
+    "change": {
+     "announcement": "https://www.hashicorp.com/blog/hashicorp-adopts-business-source-license",
+     "commit": "https://github.com/hashicorp/vault/commit/0b12cdcfd17278d7cca25ec37ffacd96b8d5c6c7"
+    },
+    "source": "https://github.com/hashicorp/vault/blob/v1.14.9/LICENSE",
+    "quote": "Licensed Work: Vault Version 1.14.9 or later.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [
+   {
+    "id": "openbao",
+    "from_version": "pre-1.15.0 main (bfe89a40)",
+    "since": "2023-11-09",
+    "reason": "relicensing"
+   }
+  ],
+  "editorial_view": "Vault 1.14.8 and earlier are MPL-2.0. Later versions are BUSL-1.1: production use is allowed unless you offer Vault to third parties as a hosted or embedded product that competes with the licensor's paid versions.",
+  "notes": "The first BUSL minor release was 1.15.0 (main branch changed 2023-08-11). The 1.14 patch line stayed MPL-2.0 through 1.14.8; 1.14.9 and later 1.14 patches carry BUSL (commit 48ab1eae, 2024-01-02, 'EOY license fixes 1.14.x'; LICENSE reads 'Vault Version 1.14.9 or later'). Checked: v1.14.0 to v1.14.5, v1.14.8 (MPL), v1.14.9, v1.14.10, v1.15.0, v2.2.2 (BUSL). Current LICENSE names IBM as licensor (commit 610f0e6a, 2026-03-26).\nSteward detail: IBM (BUSL licensor named in LICENSE; formerly HashiCorp, Inc.)."
+ },
+ {
+  "id": "consul",
+  "name": "Consul",
+  "steward": "IBM",
+  "category": "infrastructure",
+  "aliases": [
+   "Consul",
+   "HashiCorp Consul"
+  ],
+  "repo": "https://github.com/hashicorp/consul",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "1.16.4"
+    },
+    "since": null,
+    "license_expression": "MPL-2.0",
+    "source": "https://github.com/hashicorp/consul/blob/v1.16.4/LICENSE",
+    "quote": "Mozilla Public License, version 2.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "1.16.5",
+     "to": null
+    },
+    "since": "2023-08-10",
+    "license_expression": "BUSL-1.1",
+    "change": {
+     "announcement": "https://www.hashicorp.com/blog/hashicorp-adopts-business-source-license",
+     "commit": "https://github.com/hashicorp/consul/commit/5fb9df1640cfa1aaf96228da1f44b31ecd6b825a"
+    },
+    "source": "https://github.com/hashicorp/consul/blob/v1.16.5/LICENSE",
+    "quote": "Licensed Work: Consul Version 1.16.5 or later.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Consul 1.16.4 and earlier are MPL-2.0. Later versions are BUSL-1.1: production use is allowed unless you offer Consul to third parties as a hosted or embedded product that competes with the licensor's paid versions.",
+  "notes": "The first BUSL minor release was 1.17.0; the 1.16 patch line stayed MPL-2.0 through 1.16.4, and 1.16.5 and later carry BUSL (commit 057c8db7, 2024-01-02). Checked: v1.16.0 to v1.16.4 (MPL), v1.16.5, v1.16.7, v1.17.0, v2.1.0 (BUSL). Current LICENSE names IBM as licensor (commit 8197dfca, 2026-03-18). No fork is named in the relicensing log.\nSteward detail: IBM (BUSL licensor named in LICENSE; formerly HashiCorp, Inc.)."
+ },
+ {
+  "id": "opentofu",
+  "name": "OpenTofu",
+  "steward": "Linux Foundation",
+  "category": "infrastructure",
+  "aliases": [
+   "OpenTofu",
+   "tofu",
+   "OpenTF"
+  ],
+  "repo": "https://github.com/opentofu/opentofu",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MPL-2.0",
+    "source": "https://github.com/opentofu/opentofu/blob/v1.13.10/LICENSE",
+    "quote": "Mozilla Public License, version 2.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "MPL-2.0 is file-level copyleft: you can use and embed OpenTofu, including as a hosted service, and must share changes only to its own MPL files when you distribute them.",
+  "notes": "Forked from the Terraform main branch at 8a085b42, the last commit before the BUSL change (Terraform then in 1.6.0 pre-release), so it is often described as a fork of Terraform 1.5.x. Announced as OpenTF in August 2023; Linux Foundation launch 2023-09-20 (https://www.linuxfoundation.org/press/announcing-opentofu). First stable release 1.6.0.\nSteward detail: The OpenTofu project under the Linux Foundation."
+ },
+ {
+  "id": "openbao",
+  "name": "OpenBao",
+  "steward": "OpenSSF (Linux Foundation)",
+  "category": "infrastructure",
+  "aliases": [
+   "OpenBao"
+  ],
+  "repo": "https://github.com/openbao/openbao",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MPL-2.0",
+    "source": "https://github.com/openbao/openbao/blob/v2.7.3/LICENSE",
+    "quote": "Mozilla Public License, version 2.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "MPL-2.0 file-level copyleft: you can use, embed and host OpenBao, sharing changes to its own MPL files when you distribute them.",
+  "notes": "Forked from Vault's main branch at bfe89a40, the last commit before the BUSL change (Vault then at 1.15.0-beta1). 'since' is the repository creation and first working-group meeting date (2023-11-09); public announcement followed in December 2023 under LF Edge, and the project later moved to OpenSSF. First stable release v2.0.0 (2024-07-17).\nSteward detail: The OpenBao project under OpenSSF (Linux Foundation)."
+ },
+ {
+  "id": "kubernetes",
+  "name": "Kubernetes",
+  "steward": "Cloud Native Computing Foundation",
+  "category": "infrastructure",
+  "aliases": [
+   "Kubernetes",
+   "k8s"
+  ],
+  "repo": "https://github.com/kubernetes/kubernetes",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/kubernetes/kubernetes/blob/v1.37.2/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive Apache-2.0 with a patent grant: keep notices and mark changes.",
+  "notes": "Vendored dependencies keep their own licenses; distributions and managed services add their own terms.\nSteward detail: Cloud Native Computing Foundation (Linux Foundation)."
+ },
+ {
+  "id": "grafana",
+  "name": "Grafana",
+  "steward": "Grafana Labs",
+  "category": "observability",
+  "aliases": [
+   "Grafana"
+  ],
+  "repo": "https://github.com/grafana/grafana",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "7.5"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/grafana/grafana/blob/v7.5.17/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "8.0",
+     "to": null
+    },
+    "since": "2021-04-20",
+    "license_expression": "AGPL-3.0-only",
+    "change": {
+     "announcement": "https://grafana.com/blog/2021/04/20/grafana-loki-tempo-relicensing-to-agplv3/",
+     "commit": "https://github.com/grafana/grafana/commit/8db3eb90ae8c20e1a2bbbad300e0683def9bf8fb"
+    },
+    "source": "https://github.com/grafana/grafana/blob/v8.0.0/LICENSE",
+    "quote": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Running unmodified Grafana, even for customers, has no source obligation. If you modify Grafana and let users interact with it over a network, AGPL-3.0 requires offering them your modified source.",
+  "notes": "The relicensing commit landed 2021-04-20 on main; 7.5.x patch releases (checked 7.5.0, 7.5.17) stayed Apache-2.0 and 8.0.0 was the first AGPL release. README at v13.3.1 says 'Grafana is distributed under AGPL-3.0-only' with Apache-2.0 exceptions (plugins SDKs, some libraries) listed in LICENSING.md."
+ },
+ {
+  "id": "loki",
+  "name": "Grafana Loki",
+  "steward": "Grafana Labs",
+  "category": "observability",
+  "aliases": [
+   "Loki",
+   "Grafana Loki"
+  ],
+  "repo": "https://github.com/grafana/loki",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "2.2"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/grafana/loki/blob/v2.2.1/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "2.3",
+     "to": null
+    },
+    "since": "2021-04-20",
+    "license_expression": "AGPL-3.0-only",
+    "change": {
+     "announcement": "https://grafana.com/blog/2021/04/20/grafana-loki-tempo-relicensing-to-agplv3/",
+     "commit": "https://github.com/grafana/loki/commit/a9d85de4aa5290cf2f8b2dca5d08645bbd0dc66c"
+    },
+    "source": "https://github.com/grafana/loki/blob/v2.3.0/LICENSE",
+    "quote": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Running Loki unmodified has no source obligation; modified versions offered to users over a network must offer their source under AGPL-3.0. Client libraries listed in LICENSING.md stay Apache-2.0.",
+  "notes": "Named in the relicensing log's Grafana entry. Checked: v2.2.1 (Apache-2.0), v2.3.0 and v3.7.10 (AGPL). README: 'Grafana Loki is distributed under AGPL-3.0-only'."
+ },
+ {
+  "id": "tempo",
+  "name": "Grafana Tempo",
+  "steward": "Grafana Labs",
+  "category": "observability",
+  "aliases": [
+   "Tempo",
+   "Grafana Tempo"
+  ],
+  "repo": "https://github.com/grafana/tempo",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "0.6"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/grafana/tempo/blob/v0.6.0/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "0.7",
+     "to": null
+    },
+    "since": "2021-04-20",
+    "license_expression": "AGPL-3.0-only",
+    "change": {
+     "announcement": "https://grafana.com/blog/2021/04/20/grafana-loki-tempo-relicensing-to-agplv3/",
+     "commit": "https://github.com/grafana/tempo/commit/37aeb4d1c9a66662dfe9e8655d199886739f52af"
+    },
+    "source": "https://github.com/grafana/tempo/blob/v0.7.0/LICENSE",
+    "quote": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Running Tempo unmodified has no source obligation; modified versions offered to users over a network must offer their source under AGPL-3.0.",
+  "notes": "Named in the relicensing log's Grafana entry. Checked: v0.6.0 (Apache-2.0), v0.7.0, v1.0.0, v3.1.1 (AGPL). README: 'Grafana Tempo is distributed under AGPL-3.0-only'."
+ },
+ {
+  "id": "minio",
+  "name": "MinIO (community server)",
+  "steward": "MinIO, Inc.",
+  "category": "storage",
+  "aliases": [
+   "MinIO"
+  ],
+  "repo": "https://github.com/minio/minio",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "RELEASE.2021-04-22T15-44-28Z"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/minio/minio/blob/RELEASE.2021-04-22T15-44-28Z/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "RELEASE.2021-05-11T23-27-41Z",
+     "to": null
+    },
+    "since": "2021-04-23",
+    "license_expression": "AGPL-3.0-or-later",
+    "change": {
+     "announcement": "https://blog.min.io/from-open-source-to-free-and-open-source-minio-is-now-fully-licensed-under-gnu-agplv3/",
+     "commit": "https://github.com/minio/minio/commit/069432566fcfac1f1053677cc925ddafd750730a"
+    },
+    "source": "https://github.com/minio/minio/blob/RELEASE.2021-05-11T23-27-41Z/LICENSE",
+    "quote": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [
+   {
+    "id": "silo",
+    "from_version": "RELEASE.2025-10-15T17-29-55Z",
+    "since": "2025-10-25",
+    "reason": "abandonment"
+   }
+  ],
+  "editorial_view": "The license is AGPL, but the bigger fact is that the community edition is no longer maintained: the repository is archived and the last community release is from October 2025. Plan a migration (for example to the Silo fork or another S3-compatible store) rather than new adoption.",
+  "notes": "The LICENSE file is the plain AGPL-3.0 text; the source file headers (checked cmd/server-main.go at RELEASE.2025-10-15T17-29-55Z) say 'either version 3 of the License, or (at your option) any later version', hence AGPL-3.0-or-later. The current data's AGPL-3.0-only is therefore corrected. The license commit is dated 2021-04-23 (authored 2021-04-18) and first appears in RELEASE.2021-05-11T23-27-41Z; RELEASE.2021-04-22 is still Apache-2.0. Wind-down per the relicensing log: admin console cut back May 2025, maintenance mode 2025-12-03 (commit 27742d46), archived 2026-04-25 (GitHub shows archived, last push 2026-04-24). The vendor's product is AIStor under commercial terms. Last tag: RELEASE.2025-10-15T17-29-55Z.\nSteward detail: MinIO, Inc. The community repository was archived in April 2026."
+ },
+ {
+  "id": "silo",
+  "name": "Silo (PGSTY Silo)",
+  "steward": "Pigsty",
+  "category": "storage",
+  "aliases": [
+   "Silo",
+   "PGSTY Silo",
+   "pgsty/minio"
+  ],
+  "repo": "https://github.com/pgsty/silo",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "AGPL-3.0-or-later",
+    "source": "https://github.com/pgsty/silo/blob/RELEASE.2026-11-12T00-00-00Z/LICENSE",
+    "quote": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Same AGPL terms as the MinIO community server it continues: unmodified use is free of source obligations, and modified versions offered over a network must offer their source.",
+  "notes": "Community fork of the MinIO server, created as pgsty/minio on 2025-10-25 (after MinIO's last community release) and renamed pgsty/silo on 2026-08-06 (README). README: 'Silo is AGPL-3.0-or-later, derived from minio/minio'; contributions are inbound=outbound with DCO, no CLA.\nSteward detail: Pigsty (PGSTY), per the project README."
+ },
+ {
+  "id": "wordpress",
+  "name": "WordPress",
+  "steward": "WordPress community",
+  "category": "application",
+  "aliases": [
+   "WordPress",
+   "WordPress core"
+  ],
+  "repo": "https://github.com/WordPress/wordpress-develop",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "GPL-2.0-or-later",
+    "source": "https://github.com/WordPress/WordPress/blob/7.1.5/license.txt",
+    "quote": "either version 2 of the License, or (at your option) any later version.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Running a site has no source obligation. Themes and plugins that you distribute are widely treated as derivative works whose PHP code must be GPL-compatible.",
+  "notes": "Fetched from github.com/WordPress/WordPress (the official build mirror) at 7.1.5; wordpress-develop has the same file at src/license.txt. license.txt also lists bundled third-party components and their licenses.\nSteward detail: The WordPress open-source project (copyright held by contributors); WordPress Foundation holds the trademarks."
+ },
+ {
+  "id": "git",
+  "name": "Git",
+  "steward": "Git project (Software Freedom Conservancy)",
+  "category": "dev-tool",
+  "aliases": [
+   "Git"
+  ],
+  "repo": "https://github.com/git/git",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "GPL-2.0-only",
+    "source": "https://github.com/git/git/blob/v2.56.1/COPYING",
+    "quote": "the only valid version of the GPL as far as this project is concerned is _this_ particular version of the license (ie v2, not v2.2 or v3.x or whatever)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Using Git has no effect on the license of the code you keep in it. Embedding Git's own code in a distributed product brings GPL-2.0 obligations (libgit2 is a separate, differently licensed library).",
+  "notes": "Some files in the tree carry other compatible licenses.\nSteward detail: The Git project (a Software Freedom Conservancy member project); Junio C Hamano maintains it."
+ },
+ {
+  "id": "vscode",
+  "name": "Visual Studio Code (Code - OSS source)",
+  "steward": "Microsoft",
+  "category": "dev-tool",
+  "aliases": [
+   "Code - OSS",
+   "VS Code source",
+   "vscode"
+  ],
+  "repo": "https://github.com/microsoft/vscode",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/microsoft/vscode/blob/1.147.0/LICENSE.txt",
+    "quote": "MIT License",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "The source repository is MIT: you can build and redistribute your own editor from it (as VSCodium does). Microsoft's branded downloads are a different, proprietary product.",
+  "notes": "Microsoft-only components (the Marketplace, some extensions such as Remote and C# Dev Kit) are not in this repository and have their own terms."
+ },
+ {
+  "id": "vscode-microsoft",
+  "name": "Visual Studio Code (Microsoft builds)",
+  "steward": "Microsoft",
+  "category": "dev-tool",
+  "aliases": [
+   "VS Code",
+   "Visual Studio Code"
+  ],
+  "repo": null,
+  "edition_of": "vscode",
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "LicenseRef-Proprietary",
+    "source": "https://code.visualstudio.com/license",
+    "quote": null,
+    "verification_status": "Not re-verified",
+    "last_verified": null
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Free to use, but under Microsoft's product license, which includes telemetry and limits on redistribution; Marketplace terms restrict use of its extensions to Microsoft's products.",
+  "notes": "There is no LICENSE file at a tag for the branded builds; the source is Microsoft's license page, which was not reviewed in this pass."
+ },
+ {
+  "id": "docker-desktop",
+  "name": "Docker Desktop",
+  "steward": "Docker, Inc.",
+  "category": "dev-tool",
+  "aliases": [
+   "Docker Desktop"
+  ],
+  "repo": null,
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "LicenseRef-Docker-Desktop",
+    "source": "https://docs.docker.com/subscription/desktop-license/",
+    "quote": null,
+    "verification_status": "Not re-verified",
+    "last_verified": null
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Free for personal use, education, non-commercial open source and small businesses; larger organisations need a paid subscription. Docker Engine and the CLI (Moby) are Apache-2.0 and separate.",
+  "notes": "Proprietary and closed source, so there is no LICENSE file. The subscription terms took effect 2021-08-31 (earlier versions were free under a proprietary license); thresholds were not re-checked in this pass."
+ },
+ {
+  "id": "liquibase",
+  "name": "Liquibase Community",
+  "steward": "Liquibase Inc.",
+  "category": "dev-tool",
+  "aliases": [
+   "Liquibase",
+   "Liquibase Community",
+   "Liquibase OSS"
+  ],
+  "repo": "https://github.com/liquibase/liquibase",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "4.33"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/liquibase/liquibase/blob/v4.33.0/LICENSE.txt",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "5.0",
+     "to": null
+    },
+    "since": "2025-09-30",
+    "license_expression": "FSL-1.1-ALv2",
+    "change": {
+     "announcement": "https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl",
+     "commit": "https://github.com/liquibase/liquibase/commit/c574abc00bafd6bc55ed8e4ae7bbde25d0af4ed3"
+    },
+    "source": "https://github.com/liquibase/liquibase/blob/v5.0.1/LICENSE.txt",
+    "quote": "Functional Source License, Version 1.1, ALv2 Future License Abbreviation FSL-1.1-ALv2",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Liquibase 4.x stays Apache-2.0. From 5.0, FSL-1.1 allows internal use and use in your own products but not a competing commercial offering; each release becomes Apache-2.0 two years after it ships.",
+  "notes": "REVIEWER FLAG: the v5.0.0 tag (2025-09-29) carries a LICENSE.txt containing the 'Software License Subscription and Support Agreement' for Liquibase Secure (added in commit 4fde17c3, 2025-09-22), not FSL; the FSL text arrived in c574abc0 on 2025-09-30, after the tag, and is present from v5.0.1 (checked v5.0.1 to v5.0.4). The era follows the announcement (5.0 under FSL) and is sourced at v5.0.1; whether the 5.0.0 artifacts shipped with the wrong file was not checked. Contributions now require a CLA."
+ },
+ {
+  "id": "sentry",
+  "name": "Sentry (self-hosted)",
+  "steward": "Sentry",
+  "category": "observability",
+  "aliases": [
+   "Sentry",
+   "Sentry self-hosted"
+  ],
+  "repo": "https://github.com/getsentry/sentry",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "9.1"
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/getsentry/sentry/blob/9.1.2/LICENSE",
+    "quote": "Neither the name Sentry nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "10.0",
+     "to": "23.11.0"
+    },
+    "since": "2019-11-06",
+    "license_expression": "BUSL-1.1",
+    "change": {
+     "announcement": "https://blog.sentry.io/relicensing-sentry/",
+     "commit": "https://github.com/getsentry/sentry/commit/ca8674c533a0dffc48a177554479bb85fa05891b"
+    },
+    "source": "https://github.com/getsentry/sentry/blob/10.0.0/LICENSE",
+    "quote": "Business Source License 1.1 Parameters Licensor: Functional Software, Inc. Licensed Work: Sentry",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "23.11.1",
+     "to": "24.2.0"
+    },
+    "since": "2023-11-17",
+    "license_expression": "LicenseRef-FSL-1.0-Apache-2.0",
+    "change": {
+     "announcement": "https://blog.sentry.io/introducing-the-functional-source-license-freedom-without-free-riding/",
+     "commit": "https://github.com/getsentry/sentry/commit/d4d89e2fa93ad99f13d54d06d3e7df3e7753b2dc"
+    },
+    "source": "https://github.com/getsentry/sentry/blob/23.11.1/LICENSE.md",
+    "quote": "Functional Source License, Version 1.0, Apache 2.0 Change License ## Abbreviation FSL-1.0-Apache-2.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "24.3.0",
+     "to": null
+    },
+    "since": "2024-02-27",
+    "license_expression": "FSL-1.1-ALv2",
+    "change": {
+     "announcement": "https://open.sentry.io/licensing/",
+     "commit": "https://github.com/getsentry/sentry/commit/1760ab3c6bffb86c199bd9eb5a349e95e08d7833"
+    },
+    "source": "https://github.com/getsentry/sentry/blob/24.3.0/LICENSE.md",
+    "quote": "Functional Source License, Version 1.1, Apache 2.0 Future License ## Abbreviation FSL-1.1-Apache-2.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Self-hosting Sentry for your own applications is allowed; offering it as a competing commercial service is not. Each release becomes Apache-2.0 two years after it ships, and releases up to 9.1 are BSD-3-Clause.",
+  "notes": "Sentry's own abbreviation 'FSL-1.1-Apache-2.0' is the license SPDX lists as FSL-1.1-ALv2. FSL-1.0 has no SPDX ID and needs a license record (written here as LicenseRef-FSL-1.0-Apache-2.0). The BUSL era (2019 to 2023) used a three-year change date to Apache-2.0, updated with each release. The relicensing log's entry starts at the BUSL to FSL change; the earlier BSD to BUSL change (2019) is added here. The FSL-1.1 announcement link is Sentry's licensing page; no dated FSL-1.1 announcement post was found. Checked: 9.1.2, 10.0.0, 23.11.0, 23.11.1, 24.2.0, 24.3.0, 26.11.0. Codecov, relicensed alongside Sentry, is not modelled (see dropped).\nSteward detail: Functional Software, Inc. (dba Sentry)."
+ },
+ {
+  "id": "cal-com",
+  "name": "Cal.com (commercial edition)",
+  "steward": "Cal.com, Inc.",
+  "category": "application",
+  "aliases": [
+   "Cal.com",
+   "Calendso"
+  ],
+  "repo": "https://github.com/calcom/cal.diy",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "0.x"
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/calcom/cal.diy/blob/1891427f7f68640d12cde3ea0846983e4cc55165/LICENSE",
+    "quote": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "1.0",
+     "to": "6.3"
+    },
+    "since": "2021-09-20",
+    "license_expression": "AGPL-3.0-only AND LicenseRef-Proprietary",
+    "change": {
+     "announcement": "https://cal.com/blog/changing-to-agplv3-and-introducing-enterprise-edition",
+     "commit": "https://github.com/calcom/cal.diy/commit/5ad825544a7787f58db7c7e9e12da49c6a6a0ad0"
+    },
+    "source": "https://github.com/calcom/cal.diy/blob/v1.0/LICENSE",
+    "quote": "Content outside of the above mentioned directories or restrictions above is available under the \"AGPLv3\" license as defined below.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "6.4",
+     "to": null
+    },
+    "since": "2026-04-15",
+    "license_expression": "LicenseRef-Proprietary",
+    "change": {
+     "announcement": "https://cal.com/blog/calcom-v6-4",
+     "commit": "https://github.com/calcom/cal.diy/commit/ab21c7f805a089fa3a11ffd61c4a9aecc349c16c"
+    },
+    "source": "https://cal.com/blog/calcom-v6-4",
+    "quote": null,
+    "verification_status": "Not re-verified",
+    "last_verified": null
+   }
+  ],
+  "forks": [],
+  "editorial_view": "From v6.4 the commercial Cal.com codebase is closed source and available only under Cal.com's commercial terms. Earlier public releases were AGPL-3.0 outside the enterprise directories; the open code continues as Cal.diy under MIT.",
+  "notes": "The pre-1.0 Calendso code had no release tags, so the MIT era is sourced at commit 1891427f (parent of the AGPL commit) and labelled '0.x'. The AGPL-era LICENSE says the ee/ directories (later packages/features/ee and apps/api/v2/src/ee) are under a commercial license and everything else under 'AGPLv3' (no 'or later'), hence AGPL-3.0-only AND LicenseRef-Proprietary; checked at v1.0 and v6.2.0. The last public tag is v6.2.0 (2026-03-01); versions up to 6.3 are assumed to be in the AGPL era. The v6.4 era has no public LICENSE file (Not re-verified); its source is the announcement, which says the commercial codebase 'will no longer be publicly available'. The former calcom/cal.com repository now redirects to calcom/cal.diy."
+ },
+ {
+  "id": "cal-diy",
+  "name": "Cal.diy (community edition)",
+  "steward": "Cal.com, Inc.",
+  "category": "application",
+  "aliases": [
+   "Cal.diy"
+  ],
+  "repo": "https://github.com/calcom/cal.diy",
+  "edition_of": "cal-com",
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": "2026-04-15",
+    "license_expression": "MIT",
+    "source": "https://github.com/calcom/cal.diy/blob/ab21c7f805a089fa3a11ffd61c4a9aecc349c16c/LICENSE",
+    "quote": "MIT License Copyright (c) 2020-present Cal.com, Inc.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive MIT: you can self-host, modify and build on Cal.diy, including in closed products, keeping the notice.",
+  "notes": "Cal.diy has no release tags; the source is the relaunch commit ab21c7f8 (2026-04-15), and the LICENSE at the current HEAD (ae027bb7) is identical. The announcement (https://cal.com/blog/cal-diy-open-source-to-closed-source) says 'We changed Cal.diy's license from AGPL 3.0 to MIT.'"
+ },
+ {
+  "id": "tensorflow",
+  "name": "TensorFlow",
+  "steward": "Google",
+  "category": "ml-framework",
+  "aliases": [
+   "TensorFlow",
+   "tf"
+  ],
+  "repo": "https://github.com/tensorflow/tensorflow",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/tensorflow/tensorflow/blob/v2.21.0/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive Apache-2.0 with a patent grant: keep notices and mark changes.",
+  "notes": "Bundled third-party code is listed in the repository's third_party tree with its own licenses. Trained models are licensed separately from the framework."
+ },
+ {
+  "id": "pytorch",
+  "name": "PyTorch",
+  "steward": "PyTorch Foundation",
+  "category": "ml-framework",
+  "aliases": [
+   "PyTorch",
+   "torch"
+  ],
+  "repo": "https://github.com/pytorch/pytorch",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/pytorch/pytorch/blob/v2.15.0/LICENSE",
+    "quote": "3. Neither the names of Facebook, Deepmind Technologies, NYU, NEC Laboratories America",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Permissive BSD-3-Clause: keep notices; no patent grant is written into the license.",
+  "notes": "LICENSE combines the PyTorch and Caffe2 copyright lists under one BSD-3-Clause text; NOTICE and third_party list bundled code. The current data's description 'Apache-2.0 / BSD-3-Clause' is imprecise: the framework is BSD-3-Clause only.\nSteward detail: PyTorch Foundation (Linux Foundation); copyright held by Meta and other contributors."
+ },
+ {
+  "id": "transformers",
+  "name": "Hugging Face Transformers",
+  "steward": "Hugging Face",
+  "category": "ml-framework",
+  "aliases": [
+   "Transformers",
+   "Hugging Face Transformers",
+   "huggingface transformers"
+  ],
+  "repo": "https://github.com/huggingface/transformers",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/huggingface/transformers/blob/v5.24.0/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "The library is permissive Apache-2.0. Each model you download through it has its own license, which is usually the one that matters.",
+  "notes": "Model weights on the Hugging Face Hub are not covered by this LICENSE."
+ },
+ {
+  "id": "moby",
+  "name": "Docker Engine (Moby)",
+  "steward": "Docker, Inc.",
+  "category": "infrastructure",
+  "aliases": [
+   "Docker Engine",
+   "Moby",
+   "moby/moby",
+   "dockerd",
+   "Docker CE"
+  ],
+  "repo": "https://github.com/moby/moby",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/moby/moby/blob/docker-v29.10.0/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "The Docker Engine source is Apache-2.0, so it can be embedded, modified and shipped in commercial products with attribution and the NOTICE file. Docker Desktop is a separate product under its own subscription terms.",
+  "notes": "Sourced at tag docker-v29.10.0 (the repo now tags engine releases as docker-vX). Earliest tag v0.1.0 also carries Apache-2.0. Bare 'Docker' is deliberately not an alias because it is ambiguous with Docker Desktop, which is already in the dataset under separate terms.\nSteward detail: Docker, Inc. (Moby Project)."
+ },
+ {
+  "id": "nginx",
+  "name": "nginx",
+  "steward": "F5",
+  "category": "infrastructure",
+  "aliases": [
+   "nginx",
+   "NGINX Open Source",
+   "engine x"
+  ],
+  "repo": "https://github.com/nginx/nginx",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-2-Clause",
+    "source": "https://github.com/nginx/nginx/blob/release-1.31.10/LICENSE",
+    "quote": "Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "nginx open source is BSD-2-Clause: keep the copyright notice and disclaimer and you can modify and redistribute it freely. NGINX Plus is a separate commercial product.",
+  "notes": "LICENSE at release-1.31.10 has two conditions only (BSD-2-Clause). Copyright lines: Igor Sysoev (2002-2021) and Nginx, Inc. (2011-2026). The GitHub repo is the current canonical source; older history was on hg.nginx.org.\nSteward detail: F5, Inc. (owner of NGINX, Inc.)."
+ },
+ {
+  "id": "apache-httpd",
+  "name": "Apache HTTP Server",
+  "steward": "Apache Software Foundation",
+  "category": "infrastructure",
+  "aliases": [
+   "Apache HTTP Server",
+   "Apache httpd",
+   "httpd",
+   "Apache2"
+  ],
+  "repo": "https://github.com/apache/httpd",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": "2.0.35",
+     "to": "2.0.48"
+    },
+    "since": null,
+    "license_expression": "Apache-1.1",
+    "source": "https://github.com/apache/httpd/blob/2.0.48/LICENSE",
+    "quote": "The Apache Software License, Version 1.1",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "2.0.49",
+     "to": null
+    },
+    "since": "2004-02-07",
+    "license_expression": "Apache-2.0",
+    "change": {
+     "announcement": "https://github.com/apache/httpd/blob/2.0.49/LICENSE",
+     "commit": "https://github.com/apache/httpd/commit/26a06b809397e520856918171f7957b28d15d232"
+    },
+    "source": "https://github.com/apache/httpd/blob/2.4.71/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Every current httpd release is Apache-2.0. Only releases from before 2004 (2.0.48 and earlier, 1.3.29 and earlier) carry the older Apache License 1.1, whose advertising-style attribution clause is the main practical difference.",
+  "notes": "The 1.3 and 2.0 lines ran in parallel, so versions are not a single sequence: 1.3.31 was also relicensed to Apache-2.0 in 2004, but eras here follow the 2.x line. Era 1 starts at 2.0.35 (first 2.0 GA); 1.x releases before 2000 used Apache License 1.0 and are not modelled. The change commit (2004-02-07) is titled 'start with httpd-2.0 relicensing to Apache License, Version 2.0'. No project announcement was located; the 'announcement' URL is the LICENSE file of 2.0.49, the first release under Apache-2.0. 'since' is the commit date. The LICENSE file also lists bundled subcomponents (PCRE, APR-derived code) under their own terms."
+ },
+ {
+  "id": "apache-kafka",
+  "name": "Apache Kafka",
+  "steward": "Apache Software Foundation",
+  "category": "infrastructure",
+  "aliases": [
+   "Apache Kafka",
+   "Kafka"
+  ],
+  "repo": "https://github.com/apache/kafka",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/apache/kafka/blob/4.4.0/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Apache Kafka is Apache-2.0 throughout its history. Confluent's own components (Schema Registry, ksqlDB and others) are separate projects under the Confluent Community License, so check each component you deploy.",
+  "notes": "Sourced at 4.4.0; the earliest stable tag checked (0.8.0) is also Apache-2.0. Confluent Platform components are not part of this record."
+ },
+ {
+  "id": "ansible-core",
+  "name": "Ansible (ansible-core)",
+  "steward": "Red Hat, Inc. and Ansible contributors",
+  "category": "infrastructure",
+  "aliases": [
+   "Ansible",
+   "ansible-core",
+   "ansible-base"
+  ],
+  "repo": "https://github.com/ansible/ansible",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "GPL-3.0-or-later",
+    "source": "https://github.com/ansible/ansible/blob/v2.22.0/README.md",
+    "quote": "GNU General Public License v3.0 or later",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "ansible-core is GPL-3.0-or-later. Running playbooks does not make your playbooks GPL, but distributing modified Ansible code or modules that are derived from it brings GPL obligations.",
+  "notes": "The README at v2.22.0 states 'GNU General Public License v3.0 or later'; COPYING at the same tag is the GPLv3 text. Some module_utils files are BSD-2-Clause so third-party modules can import them. The community 'ansible' package bundles collections under their own licenses. Earliest tag checked (v0.9) also ships GPLv3 COPYING."
+ },
+ {
+  "id": "openssh-portable",
+  "name": "OpenSSH (portable)",
+  "steward": "OpenBSD project",
+  "category": "infrastructure",
+  "aliases": [
+   "OpenSSH",
+   "openssh-portable",
+   "sshd"
+  ],
+  "repo": "https://github.com/openssh/openssh-portable",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "SSH-OpenSSH",
+    "source": "https://github.com/openssh/openssh-portable/blob/V_10_6_P2/LICENCE",
+    "quote": "First, we will summarize and say that all components are under a BSD licence, or a licence more free than that.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "OpenSSH is a collection of BSD-style and more permissive terms with no GPL code, so it can be embedded and redistributed with the required notices.",
+  "notes": "The LICENCE file combines Tatu Ylonen's original terms, BSD-2/3-Clause, ISC-style and public-domain components; SPDX models this file as SSH-OpenSSH. Source is the portable GitHub mirror maintained by the OpenSSH developers, at tag V_10_6_P2.\nSteward detail: OpenBSD project (OpenSSH developers)."
+ },
+ {
+  "id": "systemd",
+  "name": "systemd",
+  "steward": "systemd project contributors",
+  "category": "operating-system",
+  "aliases": [
+   "systemd",
+   "systemd-udevd",
+   "libsystemd",
+   "journald"
+  ],
+  "repo": "https://github.com/systemd/systemd",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "182"
+    },
+    "since": null,
+    "license_expression": "GPL-2.0-or-later",
+    "source": "https://github.com/systemd/systemd/blob/e8854556417197e195196e94c74bc01ff5d064ff/README",
+    "quote": "GPLv2+ for all code, except sd-daemon.[ch] and sd-readahead.[ch] which are MIT",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "183",
+     "to": null
+    },
+    "since": "2012-04-11",
+    "license_expression": "LGPL-2.1-or-later",
+    "change": {
+     "announcement": "https://github.com/systemd/systemd/blob/v183/NEWS",
+     "commit": "https://github.com/systemd/systemd/commit/5430f7f2bc7330f3088b894166bf3524a067e3d8"
+    },
+    "source": "https://github.com/systemd/systemd/blob/v262.2/LICENSES/README.md",
+    "quote": "Unless otherwise noted, the systemd project sources are licensed under the terms and conditions of **LGPL-2.1-or-later**",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Since v183 systemd is LGPL-2.1-or-later, so linking libsystemd into proprietary software is allowed under LGPL terms. The udev programs remain GPL-2.0-or-later.",
+  "notes": "systemd states its license in README (and, today, LICENSES/README.md) rather than in a single LICENSE file; LICENSE.GPL2 and LICENSE.LGPL2.1 hold the texts. Era 1 is sourced at the parent of the relicensing commit (tag v182 is not on GitHub; GitHub tags jump from v3 to v183). The v183 NEWS entry says 'For almost all files the license is now LGPL2.1+, changed from the previous GPL2.0+'. Exceptions today: udev sources GPL-2.0-or-later, some MIT, MIT-0 and CC0-1.0 files, Linux uapi headers. 'since' is the steward's dated public announcement where one exists, otherwise the date the LICENSE-changing commit landed."
+ },
+ {
+  "id": "busybox",
+  "name": "BusyBox",
+  "steward": "BusyBox project",
+  "category": "operating-system",
+  "aliases": [
+   "BusyBox"
+  ],
+  "repo": "https://git.busybox.net/busybox",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "1.2"
+    },
+    "since": null,
+    "license_expression": "GPL-2.0-or-later",
+    "source": "https://github.com/mirror/busybox/blob/1_2_1/LICENSE",
+    "quote": "GNU GENERAL PUBLIC LICENSE Version 2, June 1991",
+    "verification_status": "Not re-verified",
+    "last_verified": null
+   },
+   {
+    "versions": {
+     "from": "1.3",
+     "to": null
+    },
+    "since": "2006-09-20",
+    "license_expression": "GPL-2.0-only",
+    "change": {
+     "announcement": "https://github.com/mirror/busybox/blob/1_3_0/docs/busybox.net/license.html",
+     "commit": "https://github.com/mirror/busybox/commit/94b383d4196f06e3de2f83631b7f9bb45780606d"
+    },
+    "source": "https://github.com/mirror/busybox/blob/1_36_1/LICENSE",
+    "quote": "Version 2 is the only version of this license which this version of BusyBox (or modified versions derived from this one) may be distributed under.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "BusyBox 1.3 and later are GPL-2.0-only: shipping it in a device means offering the corresponding source, and GPLv3 code cannot be mixed in. BusyBox is known for enforcement of these obligations, so plan compliance before shipping firmware.",
+  "notes": "Sources use the GitHub mirror (mirror/busybox) because git.busybox.net's web view returned 404; the official tag 1_38_0, cloned from git.busybox.net, has a LICENSE byte-identical to 1_36_1 on the mirror. Era 1 is Not re-verified: the LICENSE at 1_2_1 is the bare GPLv2 text with no version statement; the 'or later' reading comes from BusyBox's own license page (added in the 2006-09-20 commit), which says versions 1.2.2 and earlier 'included variants of the recommended GPL version 2 or (at your option) later versions boilerplate'. The 'announcement' is that page at tag 1_3_0. 'since' is the steward's dated public announcement where one exists, otherwise the date the LICENSE-changing commit landed.\nSteward detail: BusyBox project (maintainer Denys Vlasenko)."
+ },
+ {
+  "id": "jenkins",
+  "name": "Jenkins",
+  "steward": "Jenkins project (CD Foundation)",
+  "category": "dev-tool",
+  "aliases": [
+   "Jenkins",
+   "Jenkins CI"
+  ],
+  "repo": "https://github.com/jenkinsci/jenkins",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/jenkinsci/jenkins/blob/jenkins-2.591/LICENSE.txt",
+    "quote": "The MIT License Copyright (c) 2004-, Kohsuke Kawaguchi, Sun Microsystems, Inc., and a number of other of contributors",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Jenkins core is MIT, so it can be modified and redistributed with the notice. Plugins are separate projects and carry their own licenses.",
+  "notes": "Sourced at jenkins-2.591; the earliest tag checked (jenkins-1.409.1, after the 2011 Hudson fork) is also MIT."
+ },
+ {
+  "id": "gitlab-foss",
+  "name": "GitLab (FOSS edition)",
+  "steward": "GitLab Inc.",
+  "category": "dev-tool",
+  "aliases": [
+   "GitLab CE",
+   "GitLab FOSS",
+   "GitLab Community Edition",
+   "gitlab-foss"
+  ],
+  "repo": "https://gitlab.com/gitlab-org/gitlab-foss",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://gitlab.com/gitlab-org/gitlab-foss/-/blob/v19.6.1/LICENSE",
+    "quote": "Content outside of the above mentioned directories or restrictions above is available under the \"MIT Expat\" license as defined below.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "The FOSS edition's code is MIT. The main gitlab repository also contains ee/ code under the separate GitLab Enterprise Edition license, so build from gitlab-foss (or exclude ee/) if you need MIT-only code.",
+  "notes": "Fetched from gitlab.com raw at tag v19.6.1 of gitlab-foss, the read-only copy of GitLab with ee/ removed. The same LICENSE says doc/ is CC-BY-SA-4.0, ee/ and jh/ (where present) follow their own LICENSE files, and client-side JavaScript is MIT. Earlier tags were not individually checked; GitLab CE has been MIT since its start."
+ },
+ {
+  "id": "rust",
+  "name": "Rust",
+  "steward": "Rust Project",
+  "category": "compiler",
+  "aliases": [
+   "Rust",
+   "rustc",
+   "Rust toolchain",
+   "Rust standard library"
+  ],
+  "repo": "https://github.com/rust-lang/rust",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "0.4"
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/rust-lang/rust/blob/release-0.4/LICENSE.txt",
+    "quote": "Short version for non-lawyers: This work licensed under MIT-like terms.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "0.5",
+     "to": null
+    },
+    "since": "2012-12-04",
+    "license_expression": "MIT OR Apache-2.0",
+    "change": {
+     "announcement": "https://github.com/rust-lang/rust/blob/release-0.5/RELEASES.txt",
+     "commit": "https://github.com/rust-lang/rust/commit/00c856c0b1feac74df8b404fad94d74a0cf1624a"
+    },
+    "source": "https://github.com/rust-lang/rust/blob/1.100.0/COPYRIGHT",
+    "quote": "The Rust Project is dual-licensed under Apache 2.0 and MIT terms.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Rust (compiler and standard library) is MIT OR Apache-2.0 at your option, so binaries that include the standard library only need the usual notices.",
+  "notes": "COPYRIGHT at 1.100.0 says 'Except as otherwise noted, Rust is licensed under the Apache License, Version 2.0 ... or the MIT license ..., at your option'; LICENSE-APACHE and LICENSE-MIT hold the texts, and third-party code is tracked with REUSE. The 0.5 release notes say 'License changed from MIT to dual MIT/APL2'. Pre-1.0 history only matters for archival builds. 'since' is the steward's dated public announcement where one exists, otherwise the date the LICENSE-changing commit landed.\nSteward detail: The Rust Project (contributors keep copyright)."
+ },
+ {
+  "id": "go",
+  "name": "Go",
+  "steward": "Google LLC and The Go Authors",
+  "category": "compiler",
+  "aliases": [
+   "Golang",
+   "Go programming language",
+   "Go toolchain",
+   "golang/go"
+  ],
+  "repo": "https://github.com/golang/go",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/golang/go/blob/go1.27.4/LICENSE",
+    "quote": "Neither the name of Google LLC nor the names of its contributors may be used to endorse or promote products",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Go and its standard library are BSD-3-Clause; the runtime that is compiled into every Go binary needs only the notice.",
+  "notes": "Sourced at go1.27.4; go1 (2012) is also BSD-3-Clause (copyright line then read 'The Go Authors' with Google Inc.). Bare 'Go' is not an alias because it would match ordinary text. The Go repo also has a PATENTS grant file."
+ },
+ {
+  "id": "typescript",
+  "name": "TypeScript",
+  "steward": "Microsoft Corporation",
+  "category": "compiler",
+  "aliases": [
+   "TypeScript",
+   "tsc"
+  ],
+  "repo": "https://github.com/microsoft/TypeScript",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/microsoft/TypeScript/blob/v7.0.2/LICENSE.txt",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "TypeScript is Apache-2.0, and code you write in TypeScript or compile with tsc is not affected by its license.",
+  "notes": "Sourced at v7.0.2 (identical file at v6.0.3); earliest tag checked (v1.1) is also Apache-2.0. TypeScript 7 is the native (Go) port; its microsoft/typescript-go repository was not separately checked."
+ },
+ {
+  "id": "kotlin",
+  "name": "Kotlin",
+  "steward": "JetBrains",
+  "category": "compiler",
+  "aliases": [
+   "Kotlin",
+   "kotlinc",
+   "Kotlin compiler"
+  ],
+  "repo": "https://github.com/JetBrains/kotlin",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/JetBrains/kotlin/blob/v2.4.21/license/LICENSE.txt",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Kotlin's compiler and standard library are Apache-2.0, so apps that ship the Kotlin runtime need only Apache attribution.",
+  "notes": "LICENSE lives at license/LICENSE.txt; the license/third_party directory lists bundled components. Sourced at v2.4.21.\nSteward detail: JetBrains s.r.o. (with the Kotlin Foundation)."
+ },
+ {
+  "id": "swift",
+  "name": "Swift",
+  "steward": "Apple Inc. and the Swift project",
+  "category": "compiler",
+  "aliases": [
+   "Swift",
+   "swiftc",
+   "Swift language",
+   "Swift compiler"
+  ],
+  "repo": "https://github.com/swiftlang/swift",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": "2.2",
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0 WITH Swift-exception",
+    "source": "https://github.com/swiftlang/swift/blob/swift-6.4.3-RELEASE/LICENSE.txt",
+    "quote": "As an exception, if you use this Software to compile your source code and portions of this Software are embedded into the binary product",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Swift is Apache-2.0 with a runtime library exception, so apps that embed Swift runtime code do not need to carry Apache attribution for it.",
+  "notes": "Era starts at 2.2, the first open-source release (swift-2.2-RELEASE, Apache-2.0 with the same exception); Swift 1.x to 2.1 shipped only inside Apple's proprietary tools. The repo moved from apple/swift to swiftlang/swift."
+ },
+ {
+  "id": "dotnet-runtime",
+  "name": ".NET runtime",
+  "steward": ".NET Foundation",
+  "category": "language-runtime",
+  "aliases": [
+   ".NET runtime",
+   "dotnet/runtime",
+   "CoreCLR",
+   ".NET Core",
+   "dotnet runtime"
+  ],
+  "repo": "https://github.com/dotnet/runtime",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/dotnet/runtime/blob/v11.0.0/LICENSE.TXT",
+    "quote": "The MIT License (MIT) Copyright (c) .NET Foundation and Contributors",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "The open-source .NET runtime and base libraries are MIT. The older Windows-only .NET Framework is a different product under Microsoft's own terms.",
+  "notes": "dotnet/runtime starts at .NET 5 (v5.0.0 tag is MIT); its predecessors coreclr and corefx were MIT as well. Some Microsoft distributions (for example certain Windows-specific components) may carry additional terms.\nSteward detail: .NET Foundation (Microsoft leads development)."
+ },
+ {
+  "id": "ruby",
+  "name": "Ruby",
+  "steward": "Ruby core team",
+  "category": "language-runtime",
+  "aliases": [
+   "Ruby",
+   "CRuby",
+   "MRI",
+   "ruby/ruby"
+  ],
+  "repo": "https://github.com/ruby/ruby",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "1.9.2"
+    },
+    "since": null,
+    "license_expression": "Ruby OR GPL-2.0-only",
+    "source": "https://github.com/ruby/ruby/blob/v1_9_2_320/COPYING",
+    "quote": "You can redistribute it and/or modify it under either the terms of the GPL version 2 (see the file GPL), or the conditions below:",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "1.9.3",
+     "to": null
+    },
+    "since": "2010-09-15",
+    "license_expression": "Ruby OR BSD-2-Clause",
+    "change": {
+     "announcement": "https://github.com/ruby/ruby/blob/v1_9_3_0/NEWS",
+     "commit": "https://github.com/ruby/ruby/commit/2cd6800fd8437b1f862f3f5c44db877159271d17"
+    },
+    "source": "https://github.com/ruby/ruby/blob/v4.0.10/COPYING",
+    "quote": "You can redistribute it and/or modify it under either the terms of the 2-clause BSDL (see the file BSDL), or the conditions below:",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Since 1.9.3 Ruby can be used under BSD-2-Clause or the Ruby license, so embedding the interpreter in proprietary software is straightforward. Gems carry their own licenses.",
+  "notes": "The 1.9.3 NEWS says 'Ruby's License is changed from a dual license with GPLv2 to a dual license with 2-clause BSDL'. The commit landed 2010-09-15; 1.9.3-p0 shipped 2011-10-31. SPDX's 'Ruby' text matches the 1.9.3+ COPYING; using it for the pre-1.9.3 conditions is an approximation. Bundled third-party files (LEGAL lists them) have other terms. 'since' is the steward's dated public announcement where one exists, otherwise the date the LICENSE-changing commit landed.\nSteward detail: Yukihiro Matsumoto and the Ruby core team."
+ },
+ {
+  "id": "php",
+  "name": "PHP",
+  "steward": "The PHP Group",
+  "category": "language-runtime",
+  "aliases": [
+   "PHP",
+   "php-src",
+   "Zend Engine"
+  ],
+  "repo": "https://github.com/php/php-src",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": "5.1.2",
+     "to": "8.5"
+    },
+    "since": null,
+    "license_expression": "PHP-3.01 AND Zend-2.0",
+    "source": "https://github.com/php/php-src/blob/php-8.5.13/LICENSE",
+    "quote": "The PHP License, version 3.01",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "8.6",
+     "to": null
+    },
+    "since": "2026-04-12",
+    "license_expression": "BSD-3-Clause",
+    "change": {
+     "announcement": "https://wiki.php.net/rfc/php_license_update",
+     "commit": "https://github.com/php/php-src/commit/a6eaf954a9707691270b5e665ebac319a81138cd"
+    },
+    "source": "https://github.com/php/php-src/blob/php-8.6.0/LICENSE",
+    "quote": "3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "PHP 8.6 and later are BSD-3-Clause, replacing the PHP License 3.01 and the Zend Engine License 2.00, which are not GPL-compatible. PHP 8.5 and earlier remain under the old licenses.",
+  "notes": "Era 1: the root LICENSE is PHP License 3.01 and Zend/LICENSE at php-8.5.13 is 'The Zend Engine License, Version 2.00', hence the AND. Era 1 starts at 5.1.2 because 5.1.1 and 4.4.1 still carried PHP License 3.0 (4.4.2 also moved to 3.01); PHP 4.0 to 5.1.1 under 3.0, and PHP 3 under GPL or the PHP License, are not modelled. The RFC (Ben Ramsey, status Accepted, proposed for 'Next PHP 8.x') adopts the Modified BSD License as PHP License v4 and Zend Engine License v3. The commit (authored 2025-06-28, landed 2026-04-12) rewrites both LICENSE and Zend/LICENSE; php-8.6.0 was tagged 2026-11-17. Bundled extensions and libraries keep their own terms. 'since' is the commit landing date because the RFC is a proposal page, not a dated announcement.\nSteward detail: The PHP Group and Zend Technologies (Perforce Software)."
+ },
+ {
+  "id": "perl",
+  "name": "Perl",
+  "steward": "Larry Wall and the Perl 5 Porters",
+  "category": "language-runtime",
+  "aliases": [
+   "Perl",
+   "Perl 5",
+   "perl5"
+  ],
+  "repo": "https://github.com/Perl/perl5",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Artistic-1.0-Perl OR GPL-1.0-or-later",
+    "source": "https://github.com/Perl/perl5/blob/v5.44.0/README",
+    "quote": "the GNU General Public License as published by the Free Software Foundation; either version 1, or (at your option) any later version, or",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Perl can be used under the Artistic License or the GPL (version 1 or later), at your choice. The README adds that Perl scripts do not fall under the GPL unless their authors choose it.",
+  "notes": "The license statement is in README; Copying (GPL v1 text) and Artistic hold the texts. Sourced at v5.44.0. Perl 1 and 2 (1987-1988) used Larry Wall's earlier terms; the Artistic/GPL dual license dates from Perl 3 to 4 (1989-1991), so the null start is a simplification for pre-1991 releases. CPAN modules mostly use 'same terms as Perl itself' but check each."
+ },
+ {
+  "id": "deno",
+  "name": "Deno",
+  "steward": "Deno Land Inc. and the Deno authors",
+  "category": "language-runtime",
+  "aliases": [
+   "Deno"
+  ],
+  "repo": "https://github.com/denoland/deno",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/denoland/deno/blob/v2.9.8/LICENSE.md",
+    "quote": "MIT License Copyright 2018-2026 the Deno authors",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Deno is MIT; it embeds V8 (BSD-3-Clause) and many Rust crates under permissive licenses.",
+  "notes": "Sourced at v2.9.8; earliest tag v0.0.1 is also MIT (then 'Copyright (c) 2018 Ryan Dahl')."
+ },
+ {
+  "id": "bun",
+  "name": "Bun",
+  "steward": "Oven",
+  "category": "language-runtime",
+  "aliases": [
+   "Bun",
+   "bun.sh",
+   "oven-sh/bun"
+  ],
+  "repo": "https://github.com/oven-sh/bun",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/oven-sh/bun/blob/bun-v1.4.5/LICENSE.md",
+    "quote": "Bun itself is MIT-licensed.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Bun's own code is MIT, but the bun binary statically links JavaScriptCore and WebKit code under LGPL-2, so redistributing the binary brings LGPL relinking obligations.",
+  "notes": "LICENSE.md lists statically linked libraries: JavaScriptCore/WebKit (LGPL-2), tinycc (LGPL v2.1), zstd (BSD or GPLv2), and many MIT, BSD and Apache-2.0 components; Oven publishes its patched WebKit fork for relinking. Ownership: Bun's blog post 'Bun is joining Anthropic' (2025-12-02, https://bun.com/blog/bun-joins-anthropic) says Bun has been acquired by Anthropic. Earliest tags were not checked for license text.\nSteward detail: Oven (oven-sh), acquired by Anthropic in December 2025."
+ },
+ {
+  "id": "numpy",
+  "name": "NumPy",
+  "steward": "NumPy Developers",
+  "category": "framework",
+  "aliases": [
+   "NumPy"
+  ],
+  "repo": "https://github.com/numpy/numpy",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/numpy/numpy/blob/v2.5.5/LICENSE.txt",
+    "quote": "Neither the name of the NumPy Developers nor the names of any contributors may be used to endorse or promote products derived from this software",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "NumPy is BSD-3-Clause. Wheels from PyPI bundle an optimized BLAS/LAPACK (OpenBLAS) and other libraries whose licenses are listed in the wheel.",
+  "notes": "Sourced at v2.5.5. Binary wheels bundle OpenBLAS (BSD-3-Clause) and gfortran runtime libraries (GPL-3.0 with GCC runtime exception); NumPy includes these notices in the installed package."
+ },
+ {
+  "id": "pandas",
+  "name": "pandas",
+  "steward": "pandas development team",
+  "category": "framework",
+  "aliases": [
+   "pandas",
+   "pandas-dev"
+  ],
+  "repo": "https://github.com/pandas-dev/pandas",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/pandas-dev/pandas/blob/v3.1.1/LICENSE",
+    "quote": "BSD 3-Clause License",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "pandas is BSD-3-Clause, so it can be used and redistributed in commercial products with the notice.",
+  "notes": "Sourced at v3.1.1; v0.4.0 (2011) is also a BSD-style license (AQR Capital Management copyright). The LICENSES/ directory covers vendored code.\nSteward detail: pandas development team and open-source contributors."
+ },
+ {
+  "id": "scikit-learn",
+  "name": "scikit-learn",
+  "steward": "The scikit-learn developers",
+  "category": "ml-framework",
+  "aliases": [
+   "scikit-learn",
+   "sklearn"
+  ],
+  "repo": "https://github.com/scikit-learn/scikit-learn",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/scikit-learn/scikit-learn/blob/1.9.1/COPYING",
+    "quote": "BSD 3-Clause License",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "scikit-learn is BSD-3-Clause; models you train with it are not affected by its license.",
+  "notes": "Sourced at tag 1.9.1; 0.1 (2010) was already 'New BSD License'."
+ },
+ {
+  "id": "nextjs",
+  "name": "Next.js",
+  "steward": "Vercel",
+  "category": "framework",
+  "aliases": [
+   "Next.js",
+   "NextJS"
+  ],
+  "repo": "https://github.com/vercel/next.js",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/vercel/next.js/blob/v16.4.6/license.md",
+    "quote": "The MIT License (MIT) Copyright (c) 2025 Vercel, Inc.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Next.js is MIT and can be self-hosted anywhere. Vercel's hosting platform is a separate commercial service.",
+  "notes": "Sourced at v16.4.6. Early tags use a different file name; Next.js has been MIT since its 2016 release."
+ },
+ {
+  "id": "spring-framework",
+  "name": "Spring Framework",
+  "steward": "Broadcom",
+  "category": "framework",
+  "aliases": [
+   "Spring Framework",
+   "spring-framework",
+   "spring-core"
+  ],
+  "repo": "https://github.com/spring-projects/spring-framework",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/spring-projects/spring-framework/blob/v7.1.0/LICENSE.txt",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Spring Framework is Apache-2.0. Commercial support and extended releases for older versions are sold separately and do not change the license of the open-source code.",
+  "notes": "Sourced at v7.1.0. Spring Boot and other Spring projects are separate repositories (also Apache-2.0, not checked here).\nSteward detail: Broadcom Inc. (Spring team, VMware Tanzu)."
+ },
+ {
+  "id": "django",
+  "name": "Django",
+  "steward": "Django Software Foundation",
+  "category": "framework",
+  "aliases": [
+   "Django"
+  ],
+  "repo": "https://github.com/django/django",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/django/django/blob/6.1.3/LICENSE",
+    "quote": "Neither the name of Django nor the names of its contributors may be used to endorse or promote products derived from this software",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Django is BSD-3-Clause, so applications built on it can be closed source.",
+  "notes": "Sourced at 6.1.3; tag 1.0 (2008) has the same license. Django also bundles some third-party code listed in LICENSE.python and elsewhere."
+ },
+ {
+  "id": "ruby-on-rails",
+  "name": "Ruby on Rails",
+  "steward": "Rails Core Team",
+  "category": "framework",
+  "aliases": [
+   "Ruby on Rails",
+   "Rails",
+   "RoR"
+  ],
+  "repo": "https://github.com/rails/rails",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/rails/rails/blob/v8.1.4.1/MIT-LICENSE",
+    "quote": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Rails and its component gems are MIT, so applications built with Rails can be closed source.",
+  "notes": "Sourced at v8.1.4.1 (root MIT-LICENSE; each component gem such as railties has its own identical MIT-LICENSE).\nSteward detail: Rails Core Team (copyright David Heinemeier Hansson)."
+ },
+ {
+  "id": "svelte",
+  "name": "Svelte",
+  "steward": "Svelte contributors",
+  "category": "framework",
+  "aliases": [
+   "Svelte",
+   "SvelteJS"
+  ],
+  "repo": "https://github.com/sveltejs/svelte",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/sveltejs/svelte/blob/svelte@5.59.1/LICENSE.md",
+    "quote": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Svelte is MIT, and the compiled output it adds to your app carries no copyleft obligations.",
+  "notes": "Sourced at svelte@5.59.1 (monorepo tag format); v0.0.2 (2016) is also MIT. SvelteKit is a separate package in another repo."
+ },
+ {
+  "id": "tailwindcss",
+  "name": "Tailwind CSS",
+  "steward": "Tailwind Labs",
+  "category": "framework",
+  "aliases": [
+   "Tailwind CSS",
+   "Tailwind",
+   "tailwindcss"
+  ],
+  "repo": "https://github.com/tailwindlabs/tailwindcss",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/tailwindlabs/tailwindcss/blob/v4.3.5/LICENSE",
+    "quote": "MIT License Copyright (c) Tailwind Labs, Inc.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Tailwind CSS is MIT. Tailwind Plus (formerly Tailwind UI) components are sold under a separate commercial license.",
+  "notes": "Sourced at v4.3.5. Commercial component kits are not part of this repository."
+ },
+ {
+  "id": "electron",
+  "name": "Electron",
+  "steward": "OpenJS Foundation",
+  "category": "framework",
+  "aliases": [
+   "Electron",
+   "electron.js",
+   "atom-shell"
+  ],
+  "repo": "https://github.com/electron/electron",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "0.12.2"
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/electron/electron/blob/v0.12.2/LICENSE",
+    "quote": "Neither the name of Google Inc. nor the names of its",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "0.12.3",
+     "to": null
+    },
+    "since": "2014-05-04",
+    "license_expression": "MIT",
+    "change": {
+     "announcement": "https://web.archive.org/web/20141203040747/http://blog.atom.io/2014/05/06/atom-is-now-open-source.html",
+     "commit": "https://github.com/electron/electron/commit/f176b2c58f0a65f796053c2a25250ab17dfd3649"
+    },
+    "source": "https://github.com/electron/electron/blob/v45.4.1/LICENSE",
+    "quote": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Electron's own code is MIT, but every Electron app ships Chromium, Node.js, FFmpeg and other components, so app distributors must include those notices too (Electron generates LICENSES.chromium.html).",
+  "notes": "The LICENSE covers Electron's own code. As atom-shell, the pre-public repo used a Chromium-style BSD-3-Clause notice; commit f176b2c ('Switch to use MIT license.', 2014-05-04) changed it just before the project went public, and v0.12.3 is the first MIT tag. No separate Electron announcement was located; the announcement URL is GitHub's archived post of 2014-05-06 open-sourcing Atom under MIT, which does not name atom-shell. 'since' is the commit date.\nSteward detail: OpenJS Foundation (Electron project)."
+ },
+ {
+  "id": "flutter",
+  "name": "Flutter",
+  "steward": "Google LLC and The Flutter Authors",
+  "category": "framework",
+  "aliases": [
+   "Flutter",
+   "Flutter SDK"
+  ],
+  "repo": "https://github.com/flutter/flutter",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/flutter/flutter/blob/3.50.1/LICENSE",
+    "quote": "Neither the name of Google Inc. nor the names of its",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Flutter is BSD-3-Clause; apps built with it include the Flutter engine, whose bundled third-party notices are collected into the app's license page.",
+  "notes": "Sourced at tag 3.50.1. Early tags (0.0.6) carry the same BSD text under 'The Chromium Authors' copyright. The engine now lives in this repo; pub packages carry their own licenses."
+ },
+ {
+  "id": "akka",
+  "name": "Akka",
+  "steward": "Lightbend",
+  "category": "framework",
+  "aliases": [
+   "Akka",
+   "akka-actor",
+   "Akka core"
+  ],
+  "repo": "https://github.com/akka/akka",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "2.6"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/akka/akka/blob/v2.6.21/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "2.7",
+     "to": null
+    },
+    "since": "2022-09-07",
+    "license_expression": "BUSL-1.1",
+    "change": {
+     "announcement": "https://akka.io/blog/why-we-are-changing-the-license-for-akka",
+     "commit": "https://github.com/akka/akka/commit/adf1cd044b78ceba8030c94b9576ae5aff4bd1c6"
+    },
+    "source": "https://github.com/akka/akka/blob/v2.11.0/LICENSE",
+    "quote": "Licensor: Lightbend, Inc. Licensed Work: Akka 2.11.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [
+   {
+    "id": "apache-pekko",
+    "from_version": "2.6",
+    "since": "2022-10-24",
+    "reason": "relicensing"
+   }
+  ],
+  "editorial_view": "Akka 2.6.x and earlier stay Apache-2.0; 2.7 and later are BUSL-1.1, so production use needs a commercial license unless the narrow Play Framework grant applies. Each version converts to Apache-2.0 on its Change Date (2029-11-12 for 2.11.0). Apache Pekko is the Apache-2.0 fork of 2.6.",
+  "notes": "The announcement (Jonas Boner, 2022-09-07) now lives at akka.io (the old lightbend.com URL redirects there). 2.6.21 was released after the change and is still Apache-2.0. The BUSL Additional Use Grant covers only akka-streams as incorporated into Play Framework. The Change Date is updated per release (2.7.0 read 'TBD ( 3 years after 2.7.0 release )'). 'since' is the steward's dated public announcement where one exists, otherwise the date the LICENSE-changing commit landed.\nSteward detail: Lightbend, Inc. (Licensor named in Akka's LICENSE)."
+ },
+ {
+  "id": "apache-pekko",
+  "name": "Apache Pekko",
+  "steward": "Apache Software Foundation",
+  "category": "framework",
+  "aliases": [
+   "Apache Pekko",
+   "Pekko",
+   "pekko-actor"
+  ],
+  "repo": "https://github.com/apache/pekko",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/apache/pekko/blob/v2.0.0/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Pekko is Apache-2.0 and is the usual migration path for teams that want to stay on an open-source Akka-compatible toolkit.",
+  "notes": "The README at v2.0.0 says 'Pekko is a fork of Akka 2.6.x, prior to the Akka project's adoption of the Business Source License' and that it now contains some features from Akka 2.7.0 that are Apache-2.0 licensed. The Apache Incubator status page records 2022-10-24 'Project enters incubation', 2023-07-13 'Pekko Core 1.0.0 released' and graduation on 2024-03-20; the fork date used for Akka is the incubation date."
+ },
+ {
+  "id": "chromium",
+  "name": "Chromium",
+  "steward": "Google LLC and The Chromium Authors",
+  "category": "application",
+  "aliases": [
+   "Chromium",
+   "Chromium browser"
+  ],
+  "repo": "https://github.com/chromium/chromium",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "BSD-3-Clause",
+    "source": "https://github.com/chromium/chromium/blob/160.0.8180.1/LICENSE",
+    "quote": "Neither the name of Google LLC nor the names of its",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Chromium's own code is BSD-3-Clause, but a Chromium build includes many third-party components under other licenses (including LGPL and MPL code), so products built on it must carry all of those notices.",
+  "notes": "Sourced from the official GitHub mirror at tag 160.0.8180.1 (canonical host is chromium.googlesource.com). Tag 3.0.195.25 (2009) also carries the BSD license. Google Chrome is a separate product under Google's terms. Third-party code lives under third_party/ with its own license files."
+ },
+ {
+  "id": "firefox",
+  "name": "Firefox",
+  "steward": "Mozilla",
+  "category": "application",
+  "aliases": [
+   "Firefox",
+   "Mozilla Firefox",
+   "Gecko"
+  ],
+  "repo": "https://github.com/mozilla-firefox/firefox",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "12"
+    },
+    "since": null,
+    "license_expression": "MPL-1.1 OR GPL-2.0-or-later OR LGPL-2.1-or-later",
+    "source": "https://hg-edge.mozilla.org/releases/mozilla-release/raw-file/FIREFOX_12_0_RELEASE/toolkit/content/license.html",
+    "quote": "Most is available under any one of the following: the Mozilla Public License (MPL), the GNU General Public License (GPL) and the GNU Lesser General Public License (LGPL).",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "13",
+     "to": null
+    },
+    "since": "2012-02-28",
+    "license_expression": "MPL-2.0",
+    "change": {
+     "announcement": "https://bugzilla.mozilla.org/show_bug.cgi?id=716478",
+     "commit": "https://github.com/mozilla-firefox/firefox/commit/bb8c31494d708ed1c22f433205c2c1798ada74a0"
+    },
+    "source": "https://github.com/mozilla-firefox/firefox/blob/FIREFOX_160_0_1_RELEASE/toolkit/content/license.html.mako",
+    "quote": "most of the source code is available under the <a href=\"#mpl\">Mozilla Public License 2.0</a> (MPL).",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Firefox is MPL-2.0: file-level copyleft, so changes to Mozilla's files must be shared when distributed, while your own separate files can stay under your terms. The Firefox name and logo are trademarks not licensed by the MPL.",
+  "notes": "The root LICENSE only points to the about:license page (toolkit/content/license.html, now generated from license.html.mako) and disclaims trademark rights. Firefox 12.0's page states the MPL/GPL/LGPL tri-license (MPL 1.1); 13.0's states MPL 2.0, changed by commit bb8c314 (Bug 730814 'Update about:license to MPL 2', target milestone Firefox 13, milestone 13.0a1). Per-file headers moved in bulk later (commit cb6a072, Bug 716478 'MPL 2 upgrade: mozilla-central', 2012-05-21, which reached Firefox 15), so some files in 13 and 14 still carried tri-license headers. Era 1 was read from Mozilla's Mercurial host (hg-edge) because GitHub tags start at Firefox 46; its from=null covers Firefox 1.0 onward. The announcement is the Mozilla tracking bug (Bugzilla's web page blocked scripted access; the REST API confirmed it was resolved 2012-05-21). 'since' is the about:license commit date.\nSteward detail: Mozilla Foundation (via Mozilla Corporation)."
+ },
+ {
+  "id": "n8n",
+  "name": "n8n",
+  "steward": "n8n GmbH",
+  "category": "application",
+  "aliases": [
+   "n8n",
+   "n8n.io"
+  ],
+  "repo": "https://github.com/n8n-io/n8n",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "0.168"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0 AND LicenseRef-Commons-Clause",
+    "source": "https://github.com/n8n-io/n8n/blob/n8n@0.168.0/LICENSE.md",
+    "quote": "License: Apache 2.0 with Commons Clause",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "0.169",
+     "to": null
+    },
+    "since": "2022-03-17",
+    "license_expression": "LicenseRef-n8n-Sustainable-Use-1.0",
+    "change": {
+     "announcement": "https://blog.n8n.io/announcing-new-sustainable-use-license/",
+     "commit": "https://github.com/n8n-io/n8n/commit/521cf51e7cfb73ad60650b72206083d4c2666d29"
+    },
+    "source": "https://github.com/n8n-io/n8n/blob/n8n@3.3.0/LICENSE.md",
+    "quote": "Content outside of the above mentioned files or restrictions is available under the \"Sustainable Use License\" as defined below.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "n8n has never been under an OSI-approved license. Since 0.169 the Sustainable Use License allows internal business, personal and non-commercial use but not offering n8n to others commercially, and files marked .ee need a paid n8n Enterprise License.",
+  "notes": "Era 1 runs from the first public commit (2019-06-23, LICENSE already 'Apache 2.0 with Commons Clause', Licensor n8n GmbH from 2020) to 0.168.x; 0.169.0 is the first tag carrying the Sustainable Use License. The n8n Enterprise License for '.ee.' files was added on 2022-08-29 (LICENSE_EE.md) and is not modelled as a separate era because it does not change the license of the other code. The LICENSE also says content of branches other than master is not licensed. 'since' is the steward's dated public announcement where one exists, otherwise the date the LICENSE-changing commit landed."
+ },
+ {
+  "id": "apache-cassandra",
+  "name": "Apache Cassandra",
+  "steward": "Apache Software Foundation",
+  "category": "database",
+  "aliases": [
+   "Apache Cassandra",
+   "Cassandra"
+  ],
+  "repo": "https://github.com/apache/cassandra",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/apache/cassandra/blob/cassandra-5.0.9/LICENSE.txt",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Apache Cassandra is Apache-2.0, including for hosted or managed services.",
+  "notes": "Sourced at cassandra-5.0.9; the earliest tag checked (cassandra-0.4.1) is also Apache-2.0. The LICENSE lists bundled subcomponents."
+ },
+ {
+  "id": "mariadb-server",
+  "name": "MariaDB Server",
+  "steward": "MariaDB Foundation and MariaDB plc",
+  "category": "database",
+  "aliases": [
+   "MariaDB",
+   "MariaDB Server",
+   "mariadbd"
+  ],
+  "repo": "https://github.com/MariaDB/server",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "GPL-2.0-only",
+    "source": "https://github.com/MariaDB/server/blob/mariadb-13.2.1/README.md",
+    "quote": "MariaDB Server is licensed under version 2 of the GNU General Public License (GPLv2), without the \"any later version\" clause.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "MariaDB Server is GPL-2.0-only: using it over the network is fine, but distributing a modified or bundled server requires source. Client connectors are separate and mostly LGPL.",
+  "notes": "The README states GPLv2 without 'any later version', inherited from MySQL; COPYING at the same tag is the GPLv2 text. Earliest tag checked (mariadb-5.1.41) ships GPLv2 COPYING. MariaDB MaxScale (BUSL-1.1) and enterprise tools are separate products."
+ },
+ {
+  "id": "clickhouse",
+  "name": "ClickHouse",
+  "steward": "ClickHouse, Inc.",
+  "category": "database",
+  "aliases": [
+   "ClickHouse"
+  ],
+  "repo": "https://github.com/ClickHouse/ClickHouse",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/ClickHouse/ClickHouse/blob/v26.8.45.6-lts/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "ClickHouse is Apache-2.0, including for hosted services. ClickHouse Cloud features that are not in this repository are not covered.",
+  "notes": "Sourced at the LTS tag v26.8.45.6-lts; the first public tag checked (v1.1.54011-stable, 2016, copyright YANDEX LLC) is also Apache-2.0."
+ },
+ {
+  "id": "duckdb",
+  "name": "DuckDB",
+  "steward": "Stichting DuckDB Foundation",
+  "category": "database",
+  "aliases": [
+   "DuckDB"
+  ],
+  "repo": "https://github.com/duckdb/duckdb",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "MIT",
+    "source": "https://github.com/duckdb/duckdb/blob/v2.0.1/LICENSE",
+    "quote": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "DuckDB is MIT and held by a non-profit foundation, which keeps it outside a single company's control. Extensions can have their own licenses.",
+  "notes": "Sourced at v2.0.1 (copyright Stichting DuckDB Foundation); v0.1.0 (2018) is also MIT. Third-party code is listed under third_party/."
+ },
+ {
+  "id": "cockroachdb",
+  "name": "CockroachDB",
+  "steward": "Cockroach Labs",
+  "category": "database",
+  "aliases": [
+   "CockroachDB",
+   "Cockroach",
+   "crdb"
+  ],
+  "repo": "https://github.com/cockroachdb/cockroach",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "19.1"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/cockroachdb/cockroach/blob/v19.1.0/LICENSE",
+    "quote": "Source code in a given file is licensed under the APL and the copyright belongs to The Cockroach Authors unless otherwise noted",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "19.2",
+     "to": "24.2"
+    },
+    "since": "2019-06-04",
+    "license_expression": "BUSL-1.1",
+    "change": {
+     "announcement": "https://web.archive.org/web/20191224175137/https://www.cockroachlabs.com/blog/oss-relicensing-cockroachdb/",
+     "commit": "https://github.com/cockroachdb/cockroach/commit/2c4e2c6ac088591a25c67a5f34255805b277de78"
+    },
+    "source": "https://github.com/cockroachdb/cockroach/blob/v24.2.0/LICENSE",
+    "quote": "Source code in a given file is licensed under the BSL and the copyright belongs to The Cockroach Authors unless otherwise noted",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   },
+   {
+    "versions": {
+     "from": "24.3",
+     "to": null
+    },
+    "since": "2024-08-15",
+    "license_expression": "LicenseRef-CockroachDB-Software-License",
+    "change": {
+     "announcement": "https://www.cockroachlabs.com/blog/enterprise-license-announcement/",
+     "commit": "https://github.com/cockroachdb/cockroach/commit/c0274df57a9f8d0086577bcf74c81110db2cea22"
+    },
+    "source": "https://github.com/cockroachdb/cockroach/blob/v26.2.12/LICENSE",
+    "quote": "Agreement: This CockroachDB Software License.",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "CockroachDB up to 19.1 is Apache-2.0 (core only), 19.2 to 24.2 are BUSL-1.1, and current releases use the proprietary CockroachDB Software License, which requires a license key and telemetry for production use. Late patch releases of 23.1 to 24.2 also moved to the new license, so check the LICENSE in the exact patch you run.",
+  "notes": "Version boundaries are by release line, but patch releases cut after the 2024 change also carry the CockroachDB Software License: first such patches are v23.1.29, v23.2.16, v24.1.7 and v24.2.5 (each previous patch still says BSL). Since 2017 (v1.0, v1.1) the default build also included enterprise code under the CockroachDB Community License (CCL) in pkg/ccl; era 1 and era 2 expressions describe the default per-file license the LICENSE names, and CCL code is not modelled. At v1.0 the top-level LICENSE held the CCL agreement, which states the Community Edition is Apache-2.0. The 2019 announcement URL now returns 404 on cockroachlabs.com; it was verified through the Wayback Machine snapshot cited. The 2024 commit landed 2024-10-01; v24.3.0 was the first release under it. 'since' is the steward's dated public announcement where one exists, otherwise the date the LICENSE-changing commit landed."
+ },
+ {
+  "id": "couchbase-server",
+  "name": "Couchbase Server",
+  "steward": "Couchbase, Inc.",
+  "category": "database",
+  "aliases": [
+   "Couchbase Server",
+   "Couchbase"
+  ],
+  "repo": "https://github.com/couchbase/manifest",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": "6.6"
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/couchbase/kv_engine/blob/v6.6.5/engines/ep/src/kv_bucket.cc",
+    "quote": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+    "verification_status": "Not re-verified",
+    "last_verified": null
+   },
+   {
+    "versions": {
+     "from": "7.0",
+     "to": null
+    },
+    "since": "2021-03-26",
+    "license_expression": "BUSL-1.1",
+    "change": {
+     "announcement": "https://web.archive.org/web/20220922214215/https://www.couchbase.com/blog/couchbase-adopts-bsl-license/",
+     "commit": "https://github.com/couchbase/kv_engine/commit/13be2fd1ecf76495fb4d90dc648acf6da885a38e"
+    },
+    "source": "https://github.com/couchbase/kv_engine/blob/v8.0.3/licenses/BSL-Couchbase.txt",
+    "quote": "Business Source License 1.1 Licensor: Couchbase, Inc. Licensed Work: Couchbase Server Version 8.0",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Couchbase Server source from 7.0 is BUSL-1.1 with a grant that allows production use but bars commercial derivative or hosted offerings; 6.6 and earlier source is Apache-2.0. Prebuilt Community and Enterprise binaries come with their own license agreements.",
+  "notes": "Couchbase Server is assembled from many repositories (couchbase/manifest lists them); kv_engine, the data service, is used as the representative source and other repositories may differ. Era 1 is Not re-verified: before 7.0, kv_engine had no repository-level Apache LICENSE (its LICENSE was memcached's inherited Danga Interactive BSD notice), so Apache-2.0 rests on per-file headers such as the one cited. The change commit (2021-04-08) replaced that LICENSE with a statement naming BSL 1.1; licenses/BSL-Couchbase.txt followed on 2021-04-13 and is updated per release line (7.0, 7.1, 8.0). The announcement (Couchbase blog, 2021-03-26) returned 403 to scripted access and was verified through the Wayback snapshot cited. 'since' is the steward's dated public announcement where one exists, otherwise the date the LICENSE-changing commit landed."
+ },
+ {
+  "id": "prometheus",
+  "name": "Prometheus",
+  "steward": "Prometheus authors (CNCF)",
+  "category": "observability",
+  "aliases": [
+   "Prometheus",
+   "prometheus/prometheus"
+  ],
+  "repo": "https://github.com/prometheus/prometheus",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": null,
+     "to": null
+    },
+    "since": null,
+    "license_expression": "Apache-2.0",
+    "source": "https://github.com/prometheus/prometheus/blob/v3.16.0/LICENSE",
+    "quote": "Apache License Version 2.0, January 2004",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "Prometheus is Apache-2.0 under CNCF governance, so it can be embedded or offered as a hosted service.",
+  "notes": "Sourced at v3.16.0; tag 0.1.0 is also Apache-2.0. Exporters and client libraries are separate repositories.\nSteward detail: Prometheus Authors (CNCF project)."
+ },
+ {
+  "id": "curl",
+  "name": "curl",
+  "steward": "Daniel Stenberg and curl contributors",
+  "category": "dev-tool",
+  "aliases": [
+   "curl",
+   "libcurl"
+  ],
+  "repo": "https://github.com/curl/curl",
+  "edition_of": null,
+  "eras": [
+   {
+    "versions": {
+     "from": "7.10",
+     "to": null
+    },
+    "since": null,
+    "license_expression": "curl",
+    "source": "https://github.com/curl/curl/blob/curl-8_23_0/COPYING",
+    "quote": "Permission to use, copy, modify, and distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23"
+   }
+  ],
+  "forks": [],
+  "editorial_view": "curl and libcurl use the curl license, an MIT/X-style permissive license, so libcurl can be linked into proprietary software with the notice.",
+  "notes": "Era starts at 7.10 (2002-10-01). curl's own docs/HISTORY.md (at curl-8_23_0) records earlier changes: GPL until 4.9 (1998), then MPL, then 'MIT (or MPL)' from 7.5.2 (January 2001), and 'October 1: with the release of curl 7.10 it is released under the MIT license only'. Those pre-7.10 eras are not modelled. At tag curl-7_10 a stale LEGAL file still described the MPL/MIT dual license alongside the new COPYING; it was gone by 7.10.8. Sourced at curl-8_23_0."
+ }
+]

@@ -164,3 +164,23 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
 
+## GNU General Public License v1.0 or later — `GPL-1.0-or-later`
+
+- **osi_status:** approved
+- **fsf_status:** not_reviewed
+- **patent_grant:** varies
+- **copyleft_scope:** whole_work
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license']
+- steward_year: FSF / February 1989
+- allows: Copy, distribute and modify; under section 7 a recipient may follow version 1 or any later version published by the FSF
+- conditions: Keep notices and give recipients a copy of the license; mark modified files with what changed and the date; any work you distribute or publish that contains the Program must be licensed to all third parties under this license; object-code distribution must come with source, a three-year written offer, or (noncommercial only) the source information you received; interactive programs must show a copyright and no-warranty notice
+- copyleft_detail: Whole work; distribution or publication
+- gpl_compatibility: Compatible with GPLv2 and GPLv3 by choosing the later version (section 7)
+- notable_projects: Perl 5 (as the alternative to Artistic-1.0-Perl)
+- saas: Not triggered
+- **Editorial view – build_on:** Treat it as strong copyleft on distribution. Because of the or-later option you can follow GPL-2.0 or GPL-3.0 instead, which is how it combines with modern GPL code. For Perl, the Artistic alternative is also available.
+- **Editorial view – license_your_own:** Do not use for new work; choose GPL-3.0-or-later.
+- **Editorial view – jurisdiction:** US (general); verify locally
+- provenance: https://github.com/Perl/perl5/blob/v5.44.0/Copying ; https://github.com/Perl/perl5/blob/v5.44.0/README ; https://opensource.org/license/gpl-1-0 ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/GPL-1.0-or-later.html (list 3.29.0, 2026-09-16) | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
+
