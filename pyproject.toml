@@ -7,7 +7,12 @@ license = "Apache-2.0 AND CC-BY-4.0"
 license-files = ["LICENSE", "DATA-LICENSE", "NOTICE"]
 requires-python = ">=3.11"
 dependencies = ["fastmcp>=4.2,<5"]
+
 keywords = ["mcp", "license", "open-source", "spdx", "compliance", "ai-models"]
+
+[project.optional-dependencies]
+# The hosted endpoint (src/counselmode_licenses/http.py); the local stdio server does not need it.
+hosted = ["fastapi>=0.115"]
 
 [project.urls]
 Homepage = "https://counselmode.com"
