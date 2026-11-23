@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.8 (2026-11-23)
+
+- **New AI records from primary sources:** three licenses, `LicenseRef-Mistral-Ecosystem-Open-Weight` (Mistral Large 4:
+  MIT-style with a model-as-a-service gate, no revenue threshold), `LicenseRef-HAI-DEF` (Google's terms for MedGemma)
+  and `LicenseRef-Meta-SAM` (SAM 3.1, partially verified: the Hugging Face file is gated); and 31 model records,
+  including Mistral Large 3 and 4, Ministral 3, Magistral, MRL-era Mistral releases, EmbeddingGemma 2, MedGemma,
+  Gemma 4 assistant variants, DeepSeek V2 to V3.2 releases, OCR and Math models, and Meta's hosted Muse models (API
+  terms only). Now 132 licenses, 10 exceptions and 58 model records.
+- Unconfirmed and left out or flagged: DeepSeek-Prover-V2 (model card and repo say the DeepSeek License, the Hugging
+  Face file says MIT; the stricter one is recorded), Gemma Scope 2's terms, some DeepSeek release dates (repository
+  creation dates only).
+- Model aliases are unique within and across records (tested).
+
 ## 2.7 (2026-11-23)
 
 - **MCP server** (`counselmode-licenses`, FastMCP 4, Python 3.11+): `lookup_license`, `model_license`,

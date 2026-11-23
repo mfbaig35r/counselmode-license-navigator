@@ -353,3 +353,12 @@ def test_a_different_version_is_not_matched():
 def test_every_model_record_has_aliases():
     for m in ll.MODELS:
         assert m.get("aliases"), m["model"]
+
+
+def test_aliases_are_unique_within_and_across_model_records():
+    owner = {}
+    for i, m in enumerate(ll.MODELS):
+        normed = [ll.norm(a) for a in m["aliases"]]
+        assert len(normed) == len(set(normed)), ("duplicate alias in", m["model"])
+        for a in normed:
+            assert owner.setdefault(a, i) == i, (a, "is on two records")

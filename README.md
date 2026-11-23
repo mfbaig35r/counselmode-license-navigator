@@ -2,12 +2,12 @@
 
 Free, open-source answers to software, model and data license questions, inside the AI assistant you already use.
 
-- **What a license allows and requires**: 129 licenses in 12 families (permissive, copyleft, network copyleft,
+- **What a license allows and requires**: 132 licenses in 12 families (permissive, copyleft, network copyleft,
   source-available, noncommercial, ethical-source, AI model, content and data, hardware, proprietary) and 10 exceptions,
   keyed by SPDX ID.
 - **Whether two licenses combine**: 187 compatibility rulings, for distributed works and for SaaS.
 - **What your use triggers**: obligations and a risk level for internal use, SaaS, distribution and devices.
-- **Which license an AI model is under**: 27 records keyed by exact model and version (Gemma 4 is Apache-2.0; Gemma 1
+- **Which license an AI model is under**: 58 records keyed by exact model and version (Gemma 4 is Apache-2.0; Gemma 1
   to 3 are not).
 - **A first pass over a dependency list**: one license or SPDX expression per line, or a CSV with a license column.
 
@@ -45,7 +45,7 @@ progress.
 
 ## How much to trust it
 
-Each record says how it was checked (`provenance.verification_status`). Today 29 of 139 records, including the
+Each record says how it was checked (`provenance.verification_status`). Today 29 of the 139 records checked in phase 1, plus the new records added since, including the
 most-asked licenses, are fully verified against primary sources and 11 partially. Every record's obligations were
 checked against its license text; the other fields of the remaining records are not yet re-verified. The answers show
 this. Confirm anything that matters against the license text and, for decisions with real consequences, with a lawyer.

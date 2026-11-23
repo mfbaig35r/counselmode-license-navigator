@@ -472,5 +472,552 @@
    "Stable Diffusion 3",
    "Stable Diffusion 3.5"
   ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Mistral Large 4 (1T-A52B, BF16 and NVFP4; version 26.10)",
+  "license": "Mistral Ecosystem Open-Weight License",
+  "license_id": "LicenseRef-Mistral-Ecosystem-Open-Weight",
+  "release_date": "Oct. 6, 2026 (API Public Preview); Oct. 29, 2026 (weights on Hugging Face); Nov. 5, 2026 (GA per model card)",
+  "conditions": "Notice in all copies; Licensee or affiliate operating a Model-as-a-Service business needs a Mistral commercial license before any commercial use; internal use exempt; no revenue threshold",
+  "osi": "No (modified MIT)",
+  "source": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE ; https://docs.mistral.ai/models/mistral-large-4-0.md",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Mistral Large 4",
+   "Mistral Large 4 1T-A52B"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Mistral Large 3 (675B-A41B Instruct and Base, 2512)",
+  "license": "Apache License 2.0",
+  "license_id": "Apache-2.0",
+  "release_date": "Dec. 2, 2025 (API deprecated Oct. 31, 2026; API retirement Apr. 30, 2027; weights remain)",
+  "conditions": "Apache conditions",
+  "osi": "Yes (license)",
+  "source": "https://docs.mistral.ai/models/mistral-large-3-25-12.md ; https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "Mistral Large 3",
+   "Mistral Large 3 675B",
+   "Mistral-Large-3-675B-Instruct-2512"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Ministral 3 (3B, 8B, 14B; Base, Instruct and Reasoning, 2512)",
+  "license": "Apache License 2.0",
+  "license_id": "Apache-2.0",
+  "release_date": "Dec. 2, 2025",
+  "conditions": "Apache conditions",
+  "osi": "Yes (license)",
+  "source": "https://docs.mistral.ai/models/ministral-3-14b-25-12.md ; https://docs.mistral.ai/models/ministral-3-8b-25-12.md ; https://docs.mistral.ai/models/ministral-3-3b-25-12.md",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "Ministral 3",
+   "Ministral 3 3B",
+   "Ministral 3 8B",
+   "Ministral 3 14B"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Magistral Small 1.0 (2506), 1.1 (2507), 1.2 (2509), 24B",
+  "license": "Apache License 2.0",
+  "license_id": "Apache-2.0",
+  "release_date": "Jun. 10, 2025 (1.0); Jul. 24, 2025 (1.1); Sep. 18, 2025 (1.2). API: 1.0 and 1.1 retired Nov. 30, 2025; 1.2 deprecated Apr. 30, 2026, retirement Jul. 31, 2026; weights remain",
+  "conditions": "Apache conditions",
+  "osi": "Yes (license)",
+  "source": "https://docs.mistral.ai/models/magistral-small-1-2-25-09.md ; https://huggingface.co/mistralai/Magistral-Small-2509",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "Magistral Small",
+   "Magistral Small 1.0",
+   "Magistral Small 1.1",
+   "Magistral Small 1.2",
+   "Magistral-Small-2506",
+   "Magistral-Small-2507",
+   "Magistral-Small-2509"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Timestral 1.0 (5M, 28M, 123M, 209M)",
+  "license": "Mistral Modified MIT",
+  "license_id": "LicenseRef-Mistral-Modified-MIT",
+  "release_date": "Oct. 15, 2026",
+  "conditions": "No rights at all if global consolidated monthly revenue of your company or employer exceeds US$20M (preceding month); covers derivatives and combined works",
+  "osi": "No",
+  "source": "https://huggingface.co/mistralai/Timestral-209M/blob/main/LICENSE ; https://mistral.ai/news/timestral/",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "Timestral",
+   "Timestral 1.0",
+   "Timestral 5M",
+   "Timestral 28M",
+   "Timestral 123M",
+   "Timestral 209M"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Voxtral TTS 4B (Voxtral-4B-TTS-2603)",
+  "license": "Creative Commons Attribution-NonCommercial 4.0",
+  "license_id": "CC-BY-NC-4.0",
+  "release_date": "Mar. 23, 2026 (API deprecated Oct. 31, 2026; API retirement Apr. 30, 2027)",
+  "conditions": "Noncommercial only; Mistral states the model inherits CC BY-NC 4.0 from its bundled reference voices",
+  "osi": "No",
+  "source": "https://huggingface.co/mistralai/Voxtral-4B-TTS-2603 ; https://docs.mistral.ai/models/voxtral-tts-26-03.md",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Voxtral TTS",
+   "Voxtral TTS 4B",
+   "Voxtral-4B-TTS-2603",
+   "voxtral-tts-2603"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Leanstral (2603) and Leanstral 1.5 (119B-A6B)",
+  "license": "Apache License 2.0",
+  "license_id": "Apache-2.0",
+  "release_date": "Mar. 16, 2026 (Leanstral; API retired Jun. 30, 2026); Jun. 30, 2026 (Leanstral 1.5; API retirement Sep. 30, 2026); weights remain",
+  "conditions": "Apache conditions",
+  "osi": "Yes (license)",
+  "source": "https://docs.mistral.ai/models/leanstral-1-5.md ; https://docs.mistral.ai/models/leanstral-26-03.md ; https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "Leanstral",
+   "Leanstral 1.5",
+   "Leanstral-2603",
+   "Leanstral-1.5-119B-A6B"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Shieldstral 1.0 3B",
+  "license": "Apache License 2.0",
+  "license_id": "Apache-2.0",
+  "release_date": "Aug. 4, 2026 (Public Preview)",
+  "conditions": "Apache conditions",
+  "osi": "Yes (license)",
+  "source": "https://docs.mistral.ai/models/shieldstral-1-0.md ; https://huggingface.co/mistralai/Shieldstral-1.0-3B",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "Shieldstral",
+   "Shieldstral 1.0",
+   "Shieldstral 1.0 3B"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Mistral Small 2.0 (Mistral-Small-Instruct-2409, 22B)",
+  "license": "Mistral AI Research License",
+  "license_id": "LicenseRef-MRL",
+  "release_date": "Sep. 17, 2024 (API retired Nov. 30, 2025)",
+  "conditions": "Research / non-commercial only; commercial license required",
+  "osi": "No",
+  "source": "https://docs.mistral.ai/models/mistral-small-2-0-24-09.md ; https://huggingface.co/mistralai/Mistral-Small-Instruct-2409",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Mistral Small 2409",
+   "Mistral Small 2.0",
+   "Mistral-Small-Instruct-2409"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Ministral 8B (Ministral-8B-Instruct-2410)",
+  "license": "Mistral AI Research License",
+  "license_id": "LicenseRef-MRL",
+  "release_date": "Oct. 9, 2024 per Mistral docs (API deprecated Dec. 2, 2025; retired Dec. 31, 2025)",
+  "conditions": "Research / non-commercial only; commercial license required",
+  "osi": "No",
+  "source": "https://docs.mistral.ai/models/ministral-8b-24-1.md ; https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Ministral 8B",
+   "Ministral 8B 2410",
+   "Ministral-8B-Instruct-2410"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Pixtral Large (Pixtral-Large-Instruct-2411, 124B)",
+  "license": "Mistral AI Research License",
+  "license_id": "LicenseRef-MRL",
+  "release_date": "Nov. 18, 2024 (API retirement May 31, 2026)",
+  "conditions": "Research / non-commercial only; commercial license required",
+  "osi": "No",
+  "source": "https://docs.mistral.ai/models/pixtral-large-24-11.md ; https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Pixtral Large",
+   "Pixtral Large 2411",
+   "Pixtral-Large-Instruct-2411"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Codestral 25.01 (codestral-2501)",
+  "license": "API terms (hosted only)",
+  "license_id": "LicenseRef-SaaS-ToS",
+  "release_date": "Jan. 13, 2025 (deprecated Nov. 6, 2025; retired Nov. 30, 2025)",
+  "conditions": "Hosted only; no downloadable weights. Governed by the vendor's API / product terms, not a model license",
+  "osi": "No",
+  "source": "https://docs.mistral.ai/models/codestral-25-01.md",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Codestral 25.01",
+   "codestral-2501"
+  ]
+ },
+ {
+  "vendor": "Mistral AI",
+  "model": "Codestral 25.08 (codestral-2508)",
+  "license": "API terms (hosted only)",
+  "license_id": "LicenseRef-SaaS-ToS",
+  "release_date": "Jul. 30, 2025",
+  "conditions": "Hosted only; no downloadable weights. Governed by the vendor's API / product terms, not a model license; distinct from the open-weight Codestral 22B v0.1 (MNPL)",
+  "osi": "No",
+  "source": "https://docs.mistral.ai/models/codestral-25-08.md",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Codestral 25.08",
+   "codestral-2508"
+  ]
+ },
+ {
+  "vendor": "Google",
+  "model": "EmbeddingGemma 2",
+  "license": "Apache License 2.0",
+  "license_id": "Apache-2.0",
+  "release_date": "Oct. 6, 2026",
+  "conditions": "Apache conditions (not under the Gemma Terms of Use, unlike EmbeddingGemma 308M)",
+  "osi": "Yes (license)",
+  "source": "https://ai.google.dev/gemma/docs/releases ; https://huggingface.co/google/embeddinggemma-2",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "EmbeddingGemma 2"
+  ]
+ },
+ {
+  "vendor": "Google",
+  "model": "MedGemma 1 (4B pt/it, 27B text-it, 27B multimodal-it) and MedGemma 1.5 4B",
+  "license": "Health AI Developer Foundations Terms of Use",
+  "license_id": "LicenseRef-HAI-DEF",
+  "release_date": "May 20, 2025 (4B and 27B text); Jul. 9, 2025 (27B multimodal); Jan. 13, 2026 (MedGemma 1.5 4B)",
+  "conditions": "HAI-DEF Prohibited Use Policy and Section 3.2 restrictions flow down; seek health regulatory authorization where applicable; distillation = Model Derivative; Google may terminate over medical-device-manufacturer risk",
+  "osi": "No",
+  "source": "https://developers.google.com/health-ai-developer-foundations/terms ; https://developers.google.com/health-ai-developer-foundations/medgemma/model-card ; https://ai.google.dev/gemma/docs/releases",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "MedGemma",
+   "MedGemma 1",
+   "MedGemma 1.5",
+   "MedGemma 4B",
+   "MedGemma 27B"
+  ]
+ },
+ {
+  "vendor": "Google",
+  "model": "Gemma Scope 2 (SAEs and transcoders for Gemma 3 270M to 27B)",
+  "license": "Creative Commons Attribution 4.0",
+  "license_id": "CC-BY-4.0",
+  "release_date": "Dec. 19, 2025",
+  "conditions": "Attribution; the Gemma 3 models the SAEs attach to remain under the Gemma Terms of Use",
+  "osi": "No",
+  "source": "https://huggingface.co/google/gemma-scope-2 ; https://ai.google.dev/gemma/docs/releases",
+  "last_verified": "2026-11-23",
+  "verification_status": "Partially verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Gemma Scope 2"
+  ]
+ },
+ {
+  "vendor": "Google",
+  "model": "Gemma 4 MTP assistant (drafter) models (E2B, E4B, 26B A4B, 31B, 12B; incl. QAT variants)",
+  "license": "Apache License 2.0",
+  "license_id": "Apache-2.0",
+  "release_date": "Apr. 16, 2026 (E2B, E4B, 26B A4B, 31B); 12B assistant with Gemma 4 12B Unified, Jun. 3, 2026",
+  "conditions": "Apache conditions",
+  "osi": "Yes (license)",
+  "source": "https://ai.google.dev/gemma/docs/releases ; https://huggingface.co/google/gemma-4-31B-it-assistant ; https://ai.google.dev/gemma/docs/gemma_4_license",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "Gemma 4 MTP",
+   "Gemma 4 assistant",
+   "Gemma 4 drafter"
+  ]
+ },
+ {
+  "vendor": "Meta",
+  "model": "Muse Wonder 1.0 (muse-wonder-1.0; Muse Wonder Full in Muse Code)",
+  "license": "API terms (hosted only)",
+  "license_id": "LicenseRef-SaaS-ToS",
+  "release_date": "Oct. 12, 2026 (preview)",
+  "conditions": "Hosted only; no downloadable weights. Governed by the vendor's API / product terms, not a model license (Meta Model API / Muse Code)",
+  "osi": "No",
+  "source": "https://dev.meta.ai/docs/models.md ; https://research.meta.ai/blog/muse-wonder",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Muse Wonder",
+   "Muse Wonder 1.0",
+   "Muse Wonder Full"
+  ]
+ },
+ {
+  "vendor": "Meta",
+  "model": "Muse Ember 1.0 (muse-ember-1.0)",
+  "license": "API terms (hosted only)",
+  "license_id": "LicenseRef-SaaS-ToS",
+  "release_date": "Nov. 9, 2026",
+  "conditions": "Hosted only; no downloadable weights. Governed by the vendor's API / product terms, not a model license (Meta Model API / Muse Code)",
+  "osi": "No",
+  "source": "https://dev.meta.ai/docs/models.md ; https://research.meta.ai/blog/muse-ember",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Muse Ember",
+   "Muse Ember 1.0"
+  ]
+ },
+ {
+  "vendor": "Meta",
+  "model": "Muse Image 1.0 (muse-image-1.0)",
+  "license": "API terms (hosted only)",
+  "license_id": "LicenseRef-SaaS-ToS",
+  "release_date": "Jul. 7, 2026 (Meta AI products); API date not stated",
+  "conditions": "Hosted only; no downloadable weights. Governed by the vendor's API / product terms, not a model license (Meta Model API and Meta AI products)",
+  "osi": "No",
+  "source": "https://dev.meta.ai/docs/models.md ; https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Muse Image",
+   "Muse Image 1.0"
+  ]
+ },
+ {
+  "vendor": "Meta",
+  "model": "Muse Voice Transcribe 1.0 (muse-voice-transcribe-1.0)",
+  "license": "API terms (hosted only)",
+  "license_id": "LicenseRef-SaaS-ToS",
+  "release_date": "Sep. 1, 2026",
+  "conditions": "Hosted only; no downloadable weights. Governed by the vendor's API / product terms, not a model license (Meta Model API, Meta AI for Mac, Muse Code)",
+  "osi": "No",
+  "source": "https://dev.meta.ai/docs/models.md ; https://research.meta.ai/blog/introducing-muse-voice-transcribe",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "Muse Voice Transcribe",
+   "Muse Voice Transcribe 1.0"
+  ]
+ },
+ {
+  "vendor": "Meta",
+  "model": "SAM 3.1 (open checkpoints, facebook/sam3.1)",
+  "license": "SAM License",
+  "license_id": "LicenseRef-Meta-SAM",
+  "release_date": "Mar. 27, 2026 (weights); also hosted as sam-3.1 on Meta Model API, where API terms apply",
+  "conditions": "Distribute only under the SAM License with a copy; trade-control, ITAR and military-use bars; acknowledge in publications; IP suit against Meta ends licence; Meta may amend terms",
+  "osi": "No",
+  "source": "https://github.com/facebookresearch/sam3/blob/main/LICENSE ; https://github.com/facebookresearch/sam3/blob/main/RELEASE_SAM3p1.md ; https://dev.meta.ai/docs/models.md",
+  "last_verified": "2026-11-23",
+  "verification_status": "Partially verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "SAM 3.1"
+  ]
+ },
+ {
+  "vendor": "DeepSeek",
+  "model": "DeepSeek-V2, V2-Lite, V2-Chat-0628",
+  "license": "DeepSeek License Agreement v1.0 (Oct. 23, 2023); code MIT",
+  "license_id": "LicenseRef-DeepSeek",
+  "release_date": "May 6, 2024 (V2); May 16, 2024 (V2-Lite)",
+  "conditions": "Commercial use permitted; Attachment A use restrictions flow down",
+  "osi": "No",
+  "source": "https://github.com/deepseek-ai/DeepSeek-V2 ; https://huggingface.co/deepseek-ai/DeepSeek-V2/blob/main/LICENSE",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "DeepSeek-V2",
+   "DeepSeek-V2-Lite",
+   "DeepSeek-V2-Chat-0628"
+  ]
+ },
+ {
+  "vendor": "DeepSeek",
+  "model": "DeepSeek-V2.5 and V2.5-1210",
+  "license": "DeepSeek License Agreement v1.0 (Oct. 23, 2023); code MIT",
+  "license_id": "LicenseRef-DeepSeek",
+  "release_date": "Sep. 5, 2024 (V2.5); Dec. 10, 2024 (V2.5-1210)",
+  "conditions": "Commercial use permitted; Attachment A use restrictions flow down",
+  "osi": "No",
+  "source": "https://api-docs.deepseek.com/news/news0905 ; https://api-docs.deepseek.com/news/news1210 ; https://huggingface.co/deepseek-ai/DeepSeek-V2.5/blob/main/LICENSE",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "DeepSeek-V2.5",
+   "DeepSeek-V2.5-1210"
+  ]
+ },
+ {
+  "vendor": "DeepSeek",
+  "model": "DeepSeek-Coder-V2 (Base, Instruct, Lite, Instruct-0724)",
+  "license": "DeepSeek License Agreement v1.0 (Oct. 23, 2023); code MIT",
+  "license_id": "LicenseRef-DeepSeek",
+  "release_date": "Jun. 2024 (GitHub and Hugging Face repos created Jun. 14, 2024); Instruct-0724 later",
+  "conditions": "Commercial use permitted; Attachment A use restrictions flow down",
+  "osi": "No",
+  "source": "https://github.com/deepseek-ai/DeepSeek-Coder-V2 ; https://github.com/deepseek-ai/DeepSeek-Coder-V2/blob/main/LICENSE-MODEL",
+  "last_verified": "2026-11-23",
+  "verification_status": "Partially verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "DeepSeek-Coder-V2",
+   "DeepSeek-Coder-V2-Lite",
+   "DeepSeek-Coder-V2-Instruct-0724"
+  ]
+ },
+ {
+  "vendor": "DeepSeek",
+  "model": "DeepSeek-VL2 (Tiny, Small, base)",
+  "license": "DeepSeek License Agreement v1.0 (Oct. 23, 2023); code MIT",
+  "license_id": "LicenseRef-DeepSeek",
+  "release_date": "Dec. 13, 2024 (GitHub and Hugging Face repos created)",
+  "conditions": "Commercial use permitted; Attachment A use restrictions flow down",
+  "osi": "No",
+  "source": "https://github.com/deepseek-ai/DeepSeek-VL2 ; https://github.com/deepseek-ai/DeepSeek-VL2/blob/main/LICENSE-MODEL",
+  "last_verified": "2026-11-23",
+  "verification_status": "Partially verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "DeepSeek-VL2"
+  ]
+ },
+ {
+  "vendor": "DeepSeek",
+  "model": "DeepSeek-V3.2-Speciale",
+  "license": "MIT",
+  "license_id": "MIT",
+  "release_date": "Dec. 1, 2025 (weights on Hugging Face; API access was a temporary endpoint to Dec. 15, 2025)",
+  "conditions": "MIT notice",
+  "osi": "Yes (license)",
+  "source": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Speciale ; https://api-docs.deepseek.com/news/news251201",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "DeepSeek-V3.2-Speciale"
+  ]
+ },
+ {
+  "vendor": "DeepSeek",
+  "model": "DeepSeek-OCR",
+  "license": "MIT",
+  "license_id": "MIT",
+  "release_date": "Oct. 20, 2025",
+  "conditions": "MIT notice",
+  "osi": "Yes (license)",
+  "source": "https://huggingface.co/deepseek-ai/DeepSeek-OCR ; https://github.com/deepseek-ai/DeepSeek-OCR",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "DeepSeek-OCR"
+  ]
+ },
+ {
+  "vendor": "DeepSeek",
+  "model": "DeepSeek-OCR-2",
+  "license": "Apache License 2.0",
+  "license_id": "Apache-2.0",
+  "release_date": "Jan. 27, 2026",
+  "conditions": "Apache conditions",
+  "osi": "Yes (license)",
+  "source": "https://huggingface.co/deepseek-ai/DeepSeek-OCR-2 ; https://github.com/deepseek-ai/DeepSeek-OCR-2",
+  "last_verified": "2026-11-23",
+  "verification_status": "Verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "DeepSeek-OCR-2"
+  ]
+ },
+ {
+  "vendor": "DeepSeek",
+  "model": "DeepSeekMath-V2 (DeepSeek-Math-V2)",
+  "license": "Apache License 2.0",
+  "license_id": "Apache-2.0",
+  "release_date": "Nov. 27, 2025 (GitHub and Hugging Face repos created)",
+  "conditions": "Apache conditions",
+  "osi": "Yes (license)",
+  "source": "https://huggingface.co/deepseek-ai/DeepSeek-Math-V2 ; https://github.com/deepseek-ai/DeepSeek-Math-V2",
+  "last_verified": "2026-11-23",
+  "verification_status": "Partially verified (primary)",
+  "caveat": false,
+  "aliases": [
+   "DeepSeekMath-V2"
+  ]
+ },
+ {
+  "vendor": "DeepSeek",
+  "model": "DeepSeek-Prover-V2 (7B, 671B)",
+  "license": "DeepSeek License Agreement v1.0 (per model card); conflicting MIT LICENSE file in Hugging Face repos",
+  "license_id": "LicenseRef-DeepSeek",
+  "release_date": "Apr. 30, 2025 (GitHub and Hugging Face repos created)",
+  "conditions": "Conflict: README and GitHub LICENSE-MODEL say the DeepSeek Model License; the Hugging Face repos ship an MIT LICENSE and no license tag. Treat as DeepSeek License (stricter) until DeepSeek clarifies",
+  "osi": "No",
+  "source": "https://github.com/deepseek-ai/DeepSeek-Prover-V2/blob/main/LICENSE-MODEL ; https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B/blob/main/LICENSE",
+  "last_verified": "2026-11-23",
+  "verification_status": "Partially verified (primary)",
+  "caveat": true,
+  "aliases": [
+   "DeepSeek-Prover-V2",
+   "DeepSeek-Prover-V2-7B",
+   "DeepSeek-Prover-V2-671B"
+  ]
  }
 ]

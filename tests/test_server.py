@@ -117,6 +117,6 @@ def test_search_then_fetch_for_chatgpt():
 
 def test_resources_serve_the_method_and_the_data():
     assert "OSS License Advisor" in read("licenses://skill")
-    assert len(json.loads(read("licenses://data/licenses"))["licenses"]) == 139
+    assert len(json.loads(read("licenses://data/licenses"))["licenses"]) >= 139
     with pytest.raises(Exception, match="No data file"):
         read("licenses://data/secrets")

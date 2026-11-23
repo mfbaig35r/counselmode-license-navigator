@@ -415,3 +415,66 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://13k.eu/en/policy/open-weight-licenses/ (secondary) | verification: Secondary only | last_verified: 2026-11-18 | volatile: True
 
+## Mistral Ecosystem Open-Weight License — `LicenseRef-Mistral-Ecosystem-Open-Weight`
+
+- **osi_status:** not_approved
+- **fsf_status:** not_reviewed
+- **patent_grant:** none
+- **copyleft_scope:** use_restriction
+- **triggers:** ['service_offering', 'commercial_use', 'distribution']
+- **obligations:** ['attribution', 'maas_gate']
+- steward_year: Mistral AI / 2026 (attribution notice "2026 - Mistral"; first used for Mistral Large 4, weights published Oct. 29, 2026)
+- allows: Modified MIT grant: use, copy, modify, merge, publish, distribute, sublicense and sell; run, deploy, further train and create derivative works. "Model" covers weights, parameters, configuration files and documentation
+- conditions: Keep the copyright and permission notice in all copies or substantial portions. If the Licensee or any of its affiliates operates a Model-as-a-Service business, it must sign a separate commercial license with Mistral before using the Model or its derivatives for any commercial purpose. Exempt from that gate: internal use (not made available to third parties) and use through Mistral's official products
+- copyleft_detail: MaaS gate reaches the Model and its derivative works; no revenue or user threshold; no acceptable-use policy; no naming or "built with" rule
+- gpl_compatibility: N/A
+- notable_projects: Mistral Large 4 (1T-A52B, BF16 and NVFP4 repos; model version 26.10)
+- saas: MaaS needs a Mistral commercial license. MaaS = giving a third party inference or post-training access (e.g. API, hosted endpoint) with meaningful control over inputs, parameters or training data; excludes end-user products where model capabilities are embedded in specific features or harnesses, and mere relaying of requests to models hosted by others
+- notes: Distinct from Mistral Modified MIT (US$20M monthly-revenue bar on all use): there is no revenue test here; the gate turns on operating a MaaS business. The LICENSE text carries no version number.
+- **Editorial view – build_on:** Product, internal and research use need only the notice. Cloud, inference-API and fine-tuning-platform operators (or groups with such an affiliate) need a Mistral agreement before commercial use.
+- **Editorial view – license_your_own:** N/A
+- **Editorial view – jurisdiction:** US (general); verify locally
+- provenance: https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE ; https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B-NVFP4/blob/main/LICENSE ; https://docs.mistral.ai/models/mistral-large-4-0.md ; https://mistral.ai/news/mistral-large-4-oss/ ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: True
+
+## Health AI Developer Foundations Terms of Use (HAI-DEF) — `LicenseRef-HAI-DEF`
+
+- **osi_status:** not_approved
+- **fsf_status:** not_reviewed
+- **patent_grant:** none
+- **copyleft_scope:** use_restriction
+- **triggers:** ['prohibited_use', 'distribution', 'service_offering']
+- **obligations:** ['attribution', 'notice_file', 'state_changes', 'usage_policy']
+- steward_year: Google / 2024 (last modified Nov. 15, 2024)
+- allows: Use, reproduce, modify, Distribute, perform or display HAI-DEF models and Model Derivatives under the Terms; commercial use not excluded. HAI-DEF recipe, inference, training and utility code is Apache-2.0
+- conditions: Section 3.2 use restrictions (HAI-DEF Prohibited Use Policy; no use that could lead a Health Regulatory Authority to deem Google a medical-device "manufacturer"; lawful use) must be included as an enforceable provision in downstream agreements; give recipients a copy of the Terms; seek Health Regulatory Authorization where applicable; mark modified files; NOTICE text file with non-hosted distributions; Google may restrict use remotely; licensee indemnifies Google
+- copyleft_detail: Restrictions flow down to Model Derivatives, defined to include models trained by distillation or on synthetic outputs; Outputs themselves are not Model Derivatives
+- gpl_compatibility: N/A
+- notable_projects: MedGemma 1 (4B pt/it, 27B text-it, 27B multimodal-it) and MedGemma 1.5 4B; other models listed at developers.google.com/health-ai-developer-foundations
+- saas: Allowed; a Hosted Service counts as Distribution, so flow-down conditions apply (NOTICE file not required for hosted)
+- notes: Separate from the Gemma Terms of Use although MedGemma is built on Gemma 3. Google claims no ownership of Outputs. California law, Santa Clara County courts.
+- **Editorial view – build_on:** Commercial use allowed with no user or revenue cap; clinical deployment needs your own regulatory authorization, and Google may terminate if it risks being treated as a device manufacturer.
+- **Editorial view – license_your_own:** N/A
+- **Editorial view – jurisdiction:** US (general); verify locally
+- provenance: https://developers.google.com/health-ai-developer-foundations/terms ; https://developers.google.com/health-ai-developer-foundations/medgemma/model-card ; https://huggingface.co/google/medgemma-1.5-4b-it ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: True
+
+## SAM License (Meta Segment Anything) — `LicenseRef-Meta-SAM`
+
+- **osi_status:** not_approved
+- **fsf_status:** not_reviewed
+- **patent_grant:** none
+- **copyleft_scope:** use_restriction
+- **triggers:** ['distribution', 'prohibited_use']
+- **obligations:** ['attribution', 'same_license', 'usage_policy', 'patent_retaliation']
+- steward_year: Meta / 2025 (last updated Nov. 19, 2025)
+- allows: Non-exclusive, worldwide, royalty-free licence to use, reproduce, distribute, copy, create derivative works of and modify the SAM Materials (code and trained weights); commercial use not excluded
+- conditions: Distribute SAM Materials and derivatives only under this Agreement, with a copy of it; acknowledge SAM in research publications; comply with laws and Trade Controls; no reverse engineering; no ITAR-controlled or prohibited end uses (military or warfare, nuclear, espionage, guns or illegal weapons); IP litigation against Meta ends the licence; indemnify Meta
+- copyleft_detail: Derivative works may be distributed only under the terms of this Agreement
+- gpl_compatibility: N/A
+- notable_projects: SAM 3 and SAM 3.1 (Mar. 27, 2026) code and checkpoints (github.com/facebookresearch/sam3; huggingface.co/facebook/sam3.1)
+- saas: Not addressed expressly; use restrictions apply to any use. Meta's own hosted SAM 3.1 on Meta Model API is governed by API terms instead
+- notes: Meta may modify the Agreement at any time, effective immediately; continued use counts as acceptance. Licensee owns its own derivatives as between it and Meta.
+- **Editorial view – build_on:** Commercial use appears permitted, but derivatives must carry the same Agreement, trade-control and military-use bars flow with it, and Meta can amend the terms unilaterally.
+- **Editorial view – license_your_own:** N/A
+- **Editorial view – jurisdiction:** US (general); verify locally
+- provenance: https://github.com/facebookresearch/sam3/blob/main/LICENSE ; https://github.com/facebookresearch/sam3/blob/main/README.md ; https://github.com/facebookresearch/sam3/blob/main/RELEASE_SAM3p1.md ; https://huggingface.co/facebook/sam3.1 ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: True
+
