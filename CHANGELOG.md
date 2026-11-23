@@ -6,6 +6,7 @@
   would contradict the data. Its Change Log tab is preserved below under "2.0 to 2.3". The reference docs in
   `references/` are the human-readable view, generated from `data/`.
 - NOTICE names CounselMode LLC; package metadata lists it as author.
+- The hosted endpoint's permanent address: https://licenses.counselmode.com/mcp.
 
 ## 2.10 (2026-11-23)
 

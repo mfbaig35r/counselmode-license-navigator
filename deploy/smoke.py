@@ -1,6 +1,6 @@
 """Smoke-test a running License Navigator over HTTP: the endpoint, the tools, and that no file is reachable.
 
-uv run python deploy/smoke.py https://counselmode-licenses.vercel.app
+uv run python deploy/smoke.py https://licenses.counselmode.com
 """
 
 from __future__ import annotations

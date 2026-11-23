@@ -22,10 +22,8 @@ For a full compliance screening with a report, see [CounselMode](https://counsel
 ChatGPT or Grok:
 
 ```
-https://counselmode-licenses.vercel.app/mcp
+https://licenses.counselmode.com/mcp
 ```
-
-(A permanent address comes with the public release.)
 
 **As a local MCP server** (Python 3.11+), for Claude Code, Claude Desktop, Cursor and any other MCP client:
 
