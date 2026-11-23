@@ -1,0 +1,40 @@
+[project]
+name = "counselmode-licenses"
+version = "2.7.0"
+description = "Software, model and data license answers inside your AI assistant: an MCP server and agent skill. Not legal advice."
+readme = "README.md"
+license = "Apache-2.0 AND CC-BY-4.0"
+license-files = ["LICENSE", "DATA-LICENSE", "NOTICE"]
+requires-python = ">=3.11"
+dependencies = ["fastmcp>=4.2,<5"]
+keywords = ["mcp", "license", "open-source", "spdx", "compliance", "ai-models"]
+
+[project.urls]
+Homepage = "https://counselmode.com"
+
+[project.scripts]
+counselmode-licenses = "counselmode_licenses.server:main"
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/counselmode_licenses"]
+
+# The skill folder is the single copy of the data and lookup logic; the wheel carries it inside the package.
+[tool.hatch.build.targets.wheel.force-include]
+"oss-license-advisor" = "counselmode_licenses/skill"
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "oss-license-advisor", "tests", "docs", "README.md", "CHANGELOG.md", "LICENSE", "DATA-LICENSE", "NOTICE"]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.8"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

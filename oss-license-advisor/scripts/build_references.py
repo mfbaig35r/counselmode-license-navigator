@@ -21,7 +21,16 @@ HEADER = "Facts are sourced per record; **Editorial view** lines are CounselMode
 
 def render_record(r: dict) -> str:
     lines = [f"## {r['name']} — `{r['id']}`", ""]
-    for key in ("base", "effect", "osi_status", "fsf_status", "patent_grant", "copyleft_scope", "triggers", "obligations"):
+    for key in (
+        "base",
+        "effect",
+        "osi_status",
+        "fsf_status",
+        "patent_grant",
+        "copyleft_scope",
+        "triggers",
+        "obligations",
+    ):
         if r.get(key) not in (None, [], ""):
             lines.append(f"- **{key}:** {r.get(key)}")
     for key, value in (r.get("facts") or {}).items():
@@ -54,7 +63,9 @@ def build() -> dict[str, str]:
     with open(os.path.join(ROOT, "data", "models.json"), encoding="utf-8") as f:
         models = json.load(f)
     for name, title, intro, rows in TABLES(context, models):
-        docs[os.path.join(ROOT, "references", name)] = f"# {title}\n\n" + (f"{intro}\n\n" if intro else "") + table(rows)
+        docs[os.path.join(ROOT, "references", name)] = (
+            f"# {title}\n\n" + (f"{intro}\n\n" if intro else "") + table(rows)
+        )
     return docs
 
 
@@ -62,8 +73,12 @@ def TABLES(context: dict, models: list) -> list[tuple[str, str, str, list[dict]]
     return [
         ("case-law.md", "Case law", "Verify statuses on the docket before publication.", context["case_law"]),
         ("regulatory-overlay.md", "Regulatory overlay", "", context["regulatory"]),
-        ("model-map.md", "AI model \u2192 license map (keyed by model version)",
-         "Always read the license shipped with the exact checkpoint.", models),
+        (
+            "model-map.md",
+            "AI model \u2192 license map (keyed by model version)",
+            "Always read the license shipped with the exact checkpoint.",
+            models,
+        ),
     ]
 
 
@@ -83,7 +98,10 @@ def main(argv: list[str]) -> int:
     if "--check" in argv:
         stale = []
         for path, text in docs.items():
-            current = open(path, encoding="utf-8").read() if os.path.exists(path) else None
+            current = None
+            if os.path.exists(path):
+                with open(path, encoding="utf-8") as f:
+                    current = f.read()
             if current != text:
                 stale.append(os.path.relpath(path, ROOT))
         if stale:

@@ -36,39 +36,87 @@ GROUPS = {label: set(g["members"]) for label, g in _load("compat_groups.json")["
 
 # The only values `obligations` and `triggers` may hold (docs/schema.md defines each). MCP tool schemas and the tests
 # read them from here.
-OBLIGATIONS = frozenset({
-    "attribution", "notice_file", "state_changes", "source_disclosure", "same_license", "network_source_offer",
-    "relinking", "installation_info", "patent_retaliation", "noncommercial_only", "no_competing_service",
-    "mau_revenue_cap", "maas_gate", "naming_rule", "usage_policy", "no_derivatives", "reference_only",
-    "no_production_use",
-})
-TRIGGERS = frozenset({
-    "distribution", "network_interaction", "service_offering", "competing_use", "commercial_use", "threshold",
-    "prohibited_use", "any_use",
-})
+OBLIGATIONS = frozenset(
+    {
+        "attribution",
+        "notice_file",
+        "state_changes",
+        "source_disclosure",
+        "same_license",
+        "network_source_offer",
+        "relinking",
+        "installation_info",
+        "patent_retaliation",
+        "noncommercial_only",
+        "no_competing_service",
+        "mau_revenue_cap",
+        "maas_gate",
+        "naming_rule",
+        "usage_policy",
+        "no_derivatives",
+        "reference_only",
+        "no_production_use",
+    }
+)
+TRIGGERS = frozenset(
+    {
+        "distribution",
+        "network_interaction",
+        "service_offering",
+        "competing_use",
+        "commercial_use",
+        "threshold",
+        "prohibited_use",
+        "any_use",
+    }
+)
 SCENARIOS = {
     "internal": set(),
-    "saas": {"network_interaction", "service_offering", "competing_use", "threshold", "prohibited_use", "any_use",
-             "commercial_use"},
+    "saas": {
+        "network_interaction",
+        "service_offering",
+        "competing_use",
+        "threshold",
+        "prohibited_use",
+        "any_use",
+        "commercial_use",
+    },
     "distribute": {"distribution", "competing_use", "threshold", "prohibited_use", "any_use", "commercial_use"},
     "device": {"distribution", "threshold", "prohibited_use", "any_use", "commercial_use"},
 }
 FAMILY_RISK = {
-    "public_domain": "LOW", "permissive": "LOW", "content_data": "REVIEW", "weak_copyleft": "MEDIUM",
-    "strong_copyleft": "HIGH", "network_copyleft": "HIGH", "source_available": "HIGH", "noncommercial": "BLOCK",
-    "ethical_source": "HIGH", "ai_model_licenses": "REVIEW", "hardware": "REVIEW", "proprietary": "REVIEW",
+    "public_domain": "LOW",
+    "permissive": "LOW",
+    "content_data": "REVIEW",
+    "weak_copyleft": "MEDIUM",
+    "strong_copyleft": "HIGH",
+    "network_copyleft": "HIGH",
+    "source_available": "HIGH",
+    "noncommercial": "BLOCK",
+    "ethical_source": "HIGH",
+    "ai_model_licenses": "REVIEW",
+    "hardware": "REVIEW",
+    "proprietary": "REVIEW",
     "exception": "REVIEW",
 }
 ORDER = ["LOW", "REVIEW", "MEDIUM", "HIGH", "BLOCK", "UNKNOWN"]
 DISCLAIMER = (
     "\n[Caveat] Check each record's provenance.verification_status and caveat flag; Secondary-only and Not re-verified"
-    " entries must be confirmed against the official text.\n[Disclaimer] " + DB["disclaimer"] + " Data generated "
-    + DB["generated"] + "; jurisdiction: US (general) with EU overlay."
+    " entries must be confirmed against the official text.\n[Disclaimer] "
+    + DB["disclaimer"]
+    + " Data generated "
+    + DB["generated"]
+    + "; jurisdiction: US (general) with EU overlay."
 )
 
 
 def norm(s: str) -> str:
     return re.sub(r"[^a-z0-9.+]", "", s.lower())
+
+
+def words(s: str) -> str:
+    """Lowercase words with every other separator turned into one space ("Llama 3.1 8B" -> "llama 3.1 8b")."""
+    return re.sub(r"[^a-z0-9.+]+", " ", s.lower()).strip()
 
 
 _BY_ID = {norm(r["id"]): r for r in LIC}
@@ -130,13 +178,28 @@ def lookup(query: str) -> dict:
     out = {"query": query, "match": res["match"], "results": res["records"][:5]}
     if res["match"] == "candidates" and len(res["records"]) > 1:
         out["note"] = f"{len(res['records'])} licenses match; give the exact SPDX ID: " + ", ".join(
-            r["id"] for r in res["records"][:12])
+            r["id"] for r in res["records"][:12]
+        )
     return out
 
 
 def model(query: str) -> list[dict]:
+    """Model records for a query, matched on each record's `aliases` (the version names people type), never on free
+    text: "Gemma" finds every Gemma record, "Llama 3.1 8B Instruct" finds Llama 3.x, but "Mistral Large 2.1" does not
+    match "Mistral Large 2" (a version boundary). A vendor name returns that vendor's records."""
     q = norm(query)
-    return [m for m in MODELS if q and (q in norm(m["model"]) or q in norm(m["vendor"]))]
+    if not q:
+        return []
+    q_words = words(query)
+
+    def hit(alias: str) -> bool:
+        a, a_words = norm(alias), words(alias)
+        # Same or broader ("Gemma" for "Gemma 4"), or more specific at a word break ("Llama 3.1 8B" for "Llama 3.1").
+        return a.startswith(q) or (q_words.startswith(a_words) and q_words[len(a_words) :][:1] in ("", " "))
+
+    return [
+        m for m in MODELS if any(hit(a) for a in m.get("aliases") or [m["model"]]) or norm(m["vendor"]).startswith(q)
+    ]
 
 
 def compat(inbound: str, outbound: str) -> dict:
@@ -144,9 +207,12 @@ def compat(inbound: str, outbound: str) -> dict:
     ri, ro = unique(inbound), unique(outbound)
     if ri is None or ro is None:
         bad = [(q, resolve(q)) for q, r in ((inbound, ri), (outbound, ro)) if r is None]
-        return {"error": "; ".join(
-            f"{q!r} is {'ambiguous: ' + ', '.join(x['id'] for x in res['records'][:8]) if res['records'] else 'unknown'}"
-            for q, res in bad)}
+        return {
+            "error": "; ".join(
+                f"{q!r} is {'ambiguous: ' + ', '.join(x['id'] for x in res['records'][:8]) if res['records'] else 'unknown'}"
+                for q, res in bad
+            )
+        }
     tuples = [t for t in COMP if ri["id"] in GROUPS.get(t["inbound"], ()) and ro["id"] in GROUPS.get(t["outbound"], ())]
     return {"inbound": ri["id"], "outbound": ro["id"], "tuples": tuples}
 
@@ -157,13 +223,22 @@ def obligations(query: str, scenario: str) -> dict:
     r = unique(query)
     if r is None:
         res = resolve(query)
-        return {"error": f"{query!r} is " + (
-            "ambiguous: " + ", ".join(x["id"] for x in res["records"][:8]) if res["records"] else "not in the database")}
+        return {
+            "error": f"{query!r} is "
+            + (
+                "ambiguous: " + ", ".join(x["id"] for x in res["records"][:8])
+                if res["records"]
+                else "not in the database"
+            )
+        }
     return {
-        "id": r["id"], "scenario": scenario,
+        "id": r["id"],
+        "scenario": scenario,
         "triggers_hit": sorted(set(r.get("triggers", [])) & SCENARIOS[scenario]),
-        "obligations": r.get("obligations", []), "risk": family_risk(r, scenario),
-        "editorial_view": r.get("editorial_view"), "provenance": r["provenance"],
+        "obligations": r.get("obligations", []),
+        "risk": family_risk(r, scenario),
+        "editorial_view": r.get("editorial_view"),
+        "provenance": r["provenance"],
     }
 
 
@@ -221,7 +296,12 @@ def expression_risk(expr: str, scenario: str) -> tuple[str, str, object]:
 
 def read_components(path: str) -> list[tuple[str, str]]:
     with open(path, encoding="utf-8") as f:
-        lines = f.read().splitlines()
+        return parse_components(f.read().splitlines())
+
+
+def parse_components(lines: list[str]) -> list[tuple[str, str]]:
+    """(component, license) pairs from one license or SPDX expression per line, or CSV/TSV with a license column."""
+    lines = [line for line in lines if line.strip()]
     if lines and ("," in lines[0] or "\t" in lines[0]):
         rows = csv.DictReader(lines, delimiter="\t" if "\t" in lines[0] else ",")
         key = next((x for x in rows.fieldnames if "licen" in x.lower()), rows.fieldnames[0])
@@ -249,7 +329,9 @@ def main(argv: list[str]) -> int:
     args = [a for i, a in enumerate(argv[1:], 1) if not a.startswith("--") and argv[i - 1] != "--scenario"]
     if cmd == "lookup":
         out = lookup(" ".join(args))
-        _print(out if out["results"] else "Not in database - classify manually against references/ and the official text.")
+        _print(
+            out if out["results"] else "Not in database - classify manually against references/ and the official text."
+        )
         print(DISCLAIMER)
         return 0 if out["results"] else 1
     if cmd == "model":

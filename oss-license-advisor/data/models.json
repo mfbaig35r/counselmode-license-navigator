@@ -10,7 +10,12 @@
   "source": "https://ai.google.dev/gemma/terms",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": true
+  "caveat": true,
+  "aliases": [
+   "Gemma 1",
+   "Gemma 2",
+   "Gemma 3"
+  ]
  },
  {
   "vendor": "Google",
@@ -23,7 +28,14 @@
   "source": "https://ai.google.dev/gemma/docs/releases",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Gemma 4",
+   "Gemma 4 E2B",
+   "Gemma 4 E4B",
+   "Gemma 4 26B A4B",
+   "Gemma 4 31B"
+  ]
  },
  {
   "vendor": "Google",
@@ -36,7 +48,10 @@
   "source": "https://ai.google.dev/gemma/docs/releases",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Gemma 4 12B Unified"
+  ]
  },
  {
   "vendor": "Meta",
@@ -49,7 +64,10 @@
   "source": "https://www.llama.com",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": true
+  "caveat": true,
+  "aliases": [
+   "Llama 2"
+  ]
  },
  {
   "vendor": "Meta",
@@ -62,7 +80,13 @@
   "source": "https://www.llama.com",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": true
+  "caveat": true,
+  "aliases": [
+   "Llama 3",
+   "Llama 3.1",
+   "Llama 3.2",
+   "Llama 3.3"
+  ]
  },
  {
   "vendor": "Meta",
@@ -75,7 +99,12 @@
   "source": "https://developer.meta.com/ai/llama4/license (license text); EU multimodal carve-out is in the Llama 4 AUP",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Llama 4",
+   "Llama 4 Scout",
+   "Llama 4 Maverick"
+  ]
  },
  {
   "vendor": "Meta",
@@ -88,7 +117,13 @@
   "source": "https://dev.meta.ai/docs/models.md ; https://ai.meta.com/blog/introducing-muse-spark-msl/",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": true
+  "caveat": true,
+  "aliases": [
+   "Muse Spark",
+   "Muse Spark 1.1",
+   "Muse Spark 1.2",
+   "Muse Spark 1.3"
+  ]
  },
  {
   "vendor": "Meta",
@@ -101,7 +136,11 @@
   "source": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Muse Glimmer",
+   "Muse Glimmer 30B"
+  ]
  },
  {
   "vendor": "Meta",
@@ -114,7 +153,11 @@
   "source": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/blob/main/LICENSE.md",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Muse Spark Open",
+   "Muse Spark Open 816B-A42B"
+  ]
  },
  {
   "vendor": "Moonshot AI",
@@ -127,7 +170,12 @@
   "source": "https://github.com/moonshotai/Kimi-K2/blob/main/LICENSE",
   "last_verified": "2026-11-18",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Kimi K2",
+   "Kimi K2-Thinking",
+   "Kimi K2.5"
+  ]
  },
  {
   "vendor": "Moonshot AI",
@@ -140,7 +188,10 @@
   "source": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE",
   "last_verified": "2026-11-18",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Kimi K3"
+  ]
  },
  {
   "vendor": "Mistral AI",
@@ -153,7 +204,11 @@
   "source": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Devstral 2",
+   "Devstral 2 123B"
+  ]
  },
  {
   "vendor": "Mistral AI",
@@ -166,7 +221,11 @@
   "source": "https://mistral.ai/news/devstral-2-vibe-cli",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Devstral Small 2",
+   "Devstral Small 2 24B"
+  ]
  },
  {
   "vendor": "Mistral AI",
@@ -179,7 +238,10 @@
   "source": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/blob/main/LICENSE",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Mistral Medium 3.5"
+  ]
  },
  {
   "vendor": "Mistral AI",
@@ -192,7 +254,13 @@
   "source": "Per-model Hugging Face cards (mistralai/Mistral-7B-v0.1, Mixtral-8x7B-v0.1, Mixtral-8x22B-Instruct-v0.1, Mistral-Small-24B-Instruct-2501, Mistral-Small-4-119B-2603)",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Mistral 7B",
+   "Mixtral",
+   "Mistral Small 3",
+   "Mistral Small 4"
+  ]
  },
  {
   "vendor": "Mistral AI",
@@ -205,7 +273,11 @@
   "source": "https://huggingface.co/mistralai/Codestral-22B-v0.1 ; https://mistral.ai/news/codestral",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": true
+  "caveat": true,
+  "aliases": [
+   "Codestral 22B",
+   "Codestral 22B v0.1"
+  ]
  },
  {
   "vendor": "Mistral AI",
@@ -218,7 +290,10 @@
   "source": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407 ; https://mistral.ai/news/mistral-large-2407",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": true
+  "caveat": true,
+  "aliases": [
+   "Mistral Large 2"
+  ]
  },
  {
   "vendor": "NVIDIA",
@@ -231,7 +306,13 @@
   "source": "https://www.linuxfoundation.org/press/linux-foundation-releases-openmdw-1.1-nvidia-adopts-openmdw-for-cosmos-isaac-gr00t-ising-and-nemotron-ai-model-families",
   "last_verified": "2026-11-18",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Cosmos",
+   "Isaac GR00T",
+   "Ising",
+   "Nemotron"
+  ]
  },
  {
   "vendor": "OpenAI",
@@ -244,7 +325,12 @@
   "source": "https://huggingface.co/openai/gpt-oss-120b ; https://openai.com/index/gpt-oss-model-card",
   "last_verified": "2026-11-18",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "gpt-oss",
+   "gpt-oss-20b",
+   "gpt-oss-120b"
+  ]
  },
  {
   "vendor": "DeepSeek",
@@ -257,7 +343,12 @@
   "source": "https://huggingface.co/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-MODEL",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "DeepSeek-V3",
+   "DeepSeek-V3 Base",
+   "DeepSeek-V3 Chat"
+  ]
  },
  {
   "vendor": "DeepSeek",
@@ -270,7 +361,14 @@
   "source": "https://api-docs.deepseek.com/news/news250325 ; https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "DeepSeek-R1",
+   "DeepSeek-R1-0528",
+   "DeepSeek-V3-0324",
+   "DeepSeek-V3.1",
+   "DeepSeek-V3.2"
+  ]
  },
  {
   "vendor": "DeepSeek",
@@ -283,7 +381,15 @@
   "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
   "last_verified": "2026-11-23",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "DeepSeek-V4",
+   "DeepSeek-V4 Pro",
+   "DeepSeek-V4 Flash",
+   "DeepSeek-V4 Base",
+   "DeepSeek-V4.1",
+   "DeepSeek-V4.1 Flash"
+  ]
  },
  {
   "vendor": "Alibaba",
@@ -296,7 +402,10 @@
   "source": "https://13k.eu/en/policy/open-weight-licenses/ (secondary)",
   "last_verified": null,
   "verification_status": "Secondary only",
-  "caveat": true
+  "caveat": true,
+  "aliases": [
+   "Qwen3.8-27B"
+  ]
  },
  {
   "vendor": "Alibaba",
@@ -309,7 +418,10 @@
   "source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/blob/main/LICENSE",
   "last_verified": "2026-11-18",
   "verification_status": "Verified (primary)",
-  "caveat": false
+  "caveat": false,
+  "aliases": [
+   "Qwen3.8-2.4T-A95B"
+  ]
  },
  {
   "vendor": "Alibaba",
@@ -322,7 +434,10 @@
   "source": "https://13k.eu/en/policy/open-weight-licenses/ (secondary)",
   "last_verified": null,
   "verification_status": "Secondary only",
-  "caveat": true
+  "caveat": true,
+  "aliases": [
+   "Qwen3.8-Flash-Next"
+  ]
  },
  {
   "vendor": "Microsoft",
@@ -335,7 +450,11 @@
   "source": "Model cards",
   "last_verified": null,
   "verification_status": "Not re-verified",
-  "caveat": true
+  "caveat": true,
+  "aliases": [
+   "Phi-3",
+   "Phi-4"
+  ]
  },
  {
   "vendor": "Stability AI",
@@ -348,6 +467,10 @@
   "source": "https://stability.ai/license",
   "last_verified": null,
   "verification_status": "Not re-verified",
-  "caveat": true
+  "caveat": true,
+  "aliases": [
+   "Stable Diffusion 3",
+   "Stable Diffusion 3.5"
+  ]
  }
 ]

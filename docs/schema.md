@@ -80,7 +80,9 @@ from these files by `scripts/build_references.py`; a test fails if they drift.
 ## models.json
 
 A list of `{vendor, model, license, license_id, release_date, conditions, osi, source, last_verified,
-verification_status, caveat}`, keyed by exact model and version. Never infer a model's license from its vendor.
+verification_status, caveat, aliases}`, keyed by exact model and version. `aliases` lists the version names people
+type ("Llama 3.1", "Gemma 4 E2B"); lookups match on them, at version boundaries, never on free text. Every record
+must have them (tested). Never infer a model's license from its vendor.
 
 ## aliases.json
 

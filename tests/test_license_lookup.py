@@ -21,7 +21,7 @@ IDS = {r["id"] for r in ll.LIC}
 
 
 def cli(*args, cwd=None):
-    return subprocess.run([sys.executable, str(SCRIPT), *args], capture_output=True, text=True, cwd=cwd)
+    return subprocess.run([sys.executable, str(SCRIPT), *args], check=False, capture_output=True, text=True, cwd=cwd)
 
 
 # Resolution: exact first, never a silent guess.
@@ -41,8 +41,14 @@ def test_every_alias_resolves_to_its_target(alias, target):
 
 @pytest.mark.parametrize(
     "deprecated,current",
-    [("GPL-3.0", "GPL-3.0-only"), ("GPL-3.0+", "GPL-3.0-or-later"), ("GPL-2.0", "GPL-2.0-only"),
-     ("LGPL-2.1", "LGPL-2.1-only"), ("LGPL-3.0+", "LGPL-3.0-or-later"), ("AGPL-3.0", "AGPL-3.0-only")],
+    [
+        ("GPL-3.0", "GPL-3.0-only"),
+        ("GPL-3.0+", "GPL-3.0-or-later"),
+        ("GPL-2.0", "GPL-2.0-only"),
+        ("LGPL-2.1", "LGPL-2.1-only"),
+        ("LGPL-3.0+", "LGPL-3.0-or-later"),
+        ("AGPL-3.0", "AGPL-3.0-only"),
+    ],
 )
 def test_deprecated_spdx_ids_mean_the_only_or_or_later_form(deprecated, current):
     assert ll.unique(deprecated)["id"] == current
@@ -84,17 +90,29 @@ def test_obligations_refuse_an_ambiguous_or_unknown_license():
 
 def _old_family_risk(r, sc):
     """The v2.3 rule, kept to prove the explicit table changed no rating."""
-    risk = {"public_domain": "LOW", "permissive": "LOW", "content_documentation_font_adjacent_data_licenses": "REVIEW",
-            "weak_copyleft": "MEDIUM", "strong_copyleft": "HIGH", "network_copyleft": "HIGH",
-            "source_available": "HIGH", "noncommercial_restricted_purpose": "BLOCK", "ethical_source": "HIGH",
-            "ai_model_licenses": "REVIEW", "hardware": "REVIEW",
-            "proprietary_commercial_free_but_not_for_business_unlicensed": "REVIEW"}
+    risk = {
+        "public_domain": "LOW",
+        "permissive": "LOW",
+        "content_documentation_font_adjacent_data_licenses": "REVIEW",
+        "weak_copyleft": "MEDIUM",
+        "strong_copyleft": "HIGH",
+        "network_copyleft": "HIGH",
+        "source_available": "HIGH",
+        "noncommercial_restricted_purpose": "BLOCK",
+        "ethical_source": "HIGH",
+        "ai_model_licenses": "REVIEW",
+        "hardware": "REVIEW",
+        "proprietary_commercial_free_but_not_for_business_unlicensed": "REVIEW",
+    }
     f = r["family"]
     base = next((v for k, v in risk.items() if f.startswith(k.split("_")[0])), "REVIEW")
     trig = set(r.get("triggers", []))
     if sc == "internal":
-        return "BLOCK" if "commercial_use" in trig else (
-            "REVIEW" if base in ("REVIEW", "HIGH") and f.startswith(("ai", "ethical", "propriet")) else "LOW")
+        return (
+            "BLOCK"
+            if "commercial_use" in trig
+            else ("REVIEW" if base in ("REVIEW", "HIGH") and f.startswith(("ai", "ethical", "propriet")) else "LOW")
+        )
     if not (trig & ll.SCENARIOS[sc]) and base in ("MEDIUM", "HIGH"):
         return "LOW"
     if sc == "device" and "installation_info" in r.get("obligations", []):
@@ -105,7 +123,8 @@ def _old_family_risk(r, sc):
 @pytest.mark.parametrize("scenario", ["saas", "distribute", "device"])
 def test_risk_table_matches_the_v2_3_rule_for_every_license(scenario):
     assert {r["id"]: ll.family_risk(r, scenario) for r in ll.LIC} == {
-        r["id"]: _old_family_risk(r, scenario) for r in ll.LIC}
+        r["id"]: _old_family_risk(r, scenario) for r in ll.LIC
+    }
 
 
 def test_every_family_has_an_explicit_risk():
@@ -132,7 +151,7 @@ def test_compat_with_spdx_ids_finds_only_the_right_groups():
 
 def test_every_compat_tuple_is_reachable_by_license_ids():
     for t in ll.COMP:
-        i, o = sorted(ll.GROUPS[t["inbound"]])[0], sorted(ll.GROUPS[t["outbound"]])[0]
+        i, o = min(ll.GROUPS[t["inbound"]]), min(ll.GROUPS[t["outbound"]])
         assert t in ll.compat(i, o)["tuples"], (t["inbound"], t["outbound"])
 
 
@@ -195,9 +214,14 @@ def test_triage_csv_and_exit_code(tmp_path):
 
 @pytest.mark.parametrize(
     "args,code",
-    [(["lookup", "ALv2"], 0), (["lookup", "nope-9"], 1), (["model", "Gemma", "4"], 0),
-     (["compat", "MIT", "GPL-3.0-only"], 0), (["obligations", "AGPL-3.0-only", "--scenario", "saas"], 0),
-     (["obligations", "GPL", "--scenario", "saas"], 1)],
+    [
+        (["lookup", "ALv2"], 0),
+        (["lookup", "nope-9"], 1),
+        (["model", "Gemma", "4"], 0),
+        (["compat", "MIT", "GPL-3.0-only"], 0),
+        (["obligations", "AGPL-3.0-only", "--scenario", "saas"], 0),
+        (["obligations", "GPL", "--scenario", "saas"], 1),
+    ],
 )
 def test_cli_commands_end_with_the_disclaimer(args, code):
     done = cli(*args)
@@ -230,16 +254,29 @@ def test_data_files_are_valid_json():
 
 def test_reference_docs_are_generated_from_the_data():
     """The per-family docs, case law, regulatory overlay and model map are built from data/: never hand-edited."""
-    done = subprocess.run([sys.executable, str(SKILL / "scripts" / "build_references.py"), "--check"],
-                          capture_output=True, text=True)
+    done = subprocess.run(
+        [sys.executable, str(SKILL / "scripts" / "build_references.py"), "--check"],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
     assert done.returncode == 0, done.stdout
 
 
 def test_verification_statuses_use_the_known_values():
-    known = ("Verified (primary)", "Partially verified (primary)", "Secondary only", "Not re-verified", "Note only",
-             "Not on SPDX exceptions list")
+    known = (
+        "Verified (primary)",
+        "Partially verified (primary)",
+        "Secondary only",
+        "Not re-verified",
+        "Note only",
+        "Not on SPDX exceptions list",
+    )
     for r in ll.LIC:
-        assert r["provenance"]["verification_status"].startswith(known), (r["id"], r["provenance"]["verification_status"])
+        assert r["provenance"]["verification_status"].startswith(known), (
+            r["id"],
+            r["provenance"]["verification_status"],
+        )
 
 
 @pytest.mark.parametrize(
@@ -278,7 +315,41 @@ def test_the_schema_doc_defines_every_vocabulary_value():
         assert f"`{value}`" in doc, value
 
 
-@pytest.mark.parametrize("license_id,value", [("CC-BY-ND-4.0", "no_derivatives"), ("CC-BY-NC-ND-4.0", "no_derivatives"),
-                                              ("LicenseRef-MS-RSL", "reference_only"), ("BUSL-1.1", "no_production_use")])
+@pytest.mark.parametrize(
+    "license_id,value",
+    [
+        ("CC-BY-ND-4.0", "no_derivatives"),
+        ("CC-BY-NC-ND-4.0", "no_derivatives"),
+        ("LicenseRef-MS-RSL", "reference_only"),
+        ("BUSL-1.1", "no_production_use"),
+    ],
+)
 def test_restrictions_are_recorded(license_id, value):
     assert value in ll.unique(license_id)["obligations"]
+
+
+@pytest.mark.parametrize(
+    "query,expected",
+    [
+        ("Gemma 4", {"Apache-2.0"}),  # not the Gemma 1-3 record, whose note mentions Gemma 4
+        ("Gemma 3 27B", {"LicenseRef-Gemma"}),
+        ("Llama 3.1", {"LicenseRef-Llama-3.x"}),
+        ("Llama 3.1 8B Instruct", {"LicenseRef-Llama-3.x"}),
+        ("llama-3.1-70b", {"LicenseRef-Llama-3.x"}),
+        ("DeepSeek-V3.1", {"MIT"}),  # not the original V3 checkpoint's license
+        ("DeepSeek-V3", {"LicenseRef-DeepSeek", "MIT"}),  # both: the license depends on the checkpoint
+        ("Mistral Large 2", {"LicenseRef-MRL"}),
+    ],
+)
+def test_model_matching_respects_versions(query, expected):
+    assert {m["license_id"] for m in ll.model(query)} == expected
+
+
+def test_a_different_version_is_not_matched():
+    assert ll.model("Mistral Large 2.1") == []
+    assert ll.model("Llama 5") == []
+
+
+def test_every_model_record_has_aliases():
+    for m in ll.MODELS:
+        assert m.get("aliases"), m["model"]

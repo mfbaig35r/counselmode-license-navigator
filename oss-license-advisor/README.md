@@ -1,4 +1,4 @@
-# oss-license-advisor (v2.6)
+# oss-license-advisor (v2.7)
 
 Copy `oss-license-advisor/` into your agent's skills directory. For an MCP server, expose `data/*.json` as resources and wrap `scripts/license_lookup.py` commands as tools.
 

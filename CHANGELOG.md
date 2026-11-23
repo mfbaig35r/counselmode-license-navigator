@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.7 (2026-11-23)
+
+- **MCP server** (`counselmode-licenses`, FastMCP 4, Python 3.11+): `lookup_license`, `model_license`,
+  `check_compatibility`, `license_obligations`, `triage_dependencies` (up to 500 rows; a failing gate points to
+  CounselMode's full screening), plus `search` and `fetch` for ChatGPT's deep research. All read-only; every result
+  carries provenance and the disclaimer. The wheel bundles the skill folder, so the data and logic exist once.
+- **Fixed: model lookups matched free text.** "Gemma 4" also returned the Gemma 1-3 record (its note mentions Gemma 4)
+  and "Llama 3.1" found nothing. Model records now carry `aliases`, matched at version boundaries: "Llama 3.1 8B
+  Instruct" finds Llama 3.x, "Mistral Large 2.1" does not match "Mistral Large 2", "DeepSeek-V3" returns both the
+  original checkpoint's license and the later MIT one.
+
 ## 2.6 (2026-11-23)
 
 - **Three new obligation values** for restrictions the vocabulary could not express: `no_derivatives` (CC BY-ND, CC
