@@ -62,9 +62,8 @@ with real consequences, with a lawyer.
 | `oss-license-advisor/data/` | The data (source of truth); see `docs/schema.md` |
 | `oss-license-advisor/references/` | Human-readable write-ups per license family, plus case law, regulation, choosing a license |
 | `oss-license-advisor/scripts/license_lookup.py` | Lookup, model, compatibility, obligations and triage |
-| `oss-license-advisor/assets/` | A shareable workbook (a v2.3 snapshot) |
 | `tests/` | `uv run --with pytest pytest tests` |
 
 ## License
 
-Code: [Apache-2.0](LICENSE). Data, references and workbook: [CC BY 4.0](DATA-LICENSE). See [NOTICE](NOTICE).
+Code: [Apache-2.0](LICENSE). Data and references: [CC BY 4.0](DATA-LICENSE). See [NOTICE](NOTICE).

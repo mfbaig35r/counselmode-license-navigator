@@ -2,8 +2,8 @@ CounselMode License Navigator
 Copyright 2026 CounselMode LLC
 
 The code (src, deploy, tests and oss-license-advisor/scripts) is licensed under the Apache License 2.0 (LICENSE).
-The data (oss-license-advisor/data), the reference text (oss-license-advisor/references, SKILL.md) and the workbook
-(oss-license-advisor/assets) are licensed under Creative Commons Attribution 4.0 International (DATA-LICENSE).
+The data (oss-license-advisor/data) and the reference text (oss-license-advisor/references, SKILL.md) are licensed under
+Creative Commons Attribution 4.0 International (DATA-LICENSE).
 
 License identifiers, names and SPDX list membership come from the SPDX License List, version 3.29.0, by the SPDX
 Workgroup, a Linux Foundation project, retrieved from https://spdx.org/licenses/. We use a subset of it

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.11 (2026-11-23)
+
+- **The workbook is no longer distributed.** It was a v2.3 snapshot that predated every correction since; shipping it
+  would contradict the data. Its Change Log tab is preserved below under "2.0 to 2.3". The reference docs in
+  `references/` are the human-readable view, generated from `data/`.
+- NOTICE names CounselMode LLC; package metadata lists it as author.
+
 ## 2.10 (2026-11-23)
 
 - **`choose_license`** (MCP tool and `choose` command): which license to release your own software, model weights or
@@ -114,6 +121,56 @@ First version prepared for open release as the CounselMode License Navigator.
 Known state of the data: 115 of 139 license records are "Not re-verified" and 129 have obligations auto-derived from
 the license text. Every answer reports a record's verification status; treat unverified records accordingly.
 
-## 2.3 (2026-11-18)
+## 2.0 to 2.3 (2026-11-18 and earlier)
 
-Earlier history is in the workbook's Change Log tab (`oss-license-advisor/assets/`).
+From the workbook's Change Log tab (the workbook is no longer distributed; see 2.11).
+
+1. Neo4j v. PureThink note corrected (licensor added Commons Clause; licensees cannot strip it); dates and appeal dismissal added (6-Source-Available; Case Law)
+2. FSL SPDX IDs corrected to FSL-1.1-ALv2 / FSL-1.1-MIT (6-Source-Available)
+3. Gemma mapped per version (Gemma 4 = Apache-2.0) (9-AI Model Licenses; Model Map; Common Projects)
+4. Meta Muse models added (Glimmer Apache-2.0; Spark Open Muse Model License; Spark proprietary) (9-AI; Model Map)
+5. MinIO maintenance/abandonment documented; maintenance-status column added (Common Projects; Use-Case; Relicensing Log)
+6. Vizio nuance added (Dec. 23, 2025 ruling; trial status) (Use-Case; Case Law)
+7. Compatibility matrix: GPL narrowing labels harmonized; LGPL split into 2.1 and 3.0; model row filled; Apache/MIT/OpenMDW model row added (Compatibility Matrix)
+8. Artistic-2.0 patent grant corrected to express (2-Permissive)
+9. AGPL "§13/§13" typo fixed (5-Network Copyleft)
+10. Double-counted OSL-3.0 and non-license rows removed from license counts (moved to Model Map) (5-Network; 9-AI)
+11. Blank outbound cells filled (Perimeter, Shield, Prosperity, CDLA-Sharing) (6; 7; 10)
+12. Added Unicode-3.0, BSD-2-Clause-Patent, PHP-3.01, Ms-PL, OFL-1.1, CAL-1.0, CC-BY-NC-SA/ND, GFDL-1.3, ODC-By, PDDL, CERN-OHL P/W/S (Various)
+13. New families: Ethical Source; Hardware; Exceptions tab (WITH expressions) (8; 11; 13)
+14. Added Kimi K2/K3, Mistral Modified MIT, OpenMDW-1.1, Muse Model License (9-AI)
+15. Added Docker Desktop, Anaconda, Oracle Java SE (12-Proprietary)
+16. New tabs: Model Map, Case Law, Regulatory Overlay, Relicensing Log, Change Log (New)
+17. Provenance and volatility columns; "Editorial view" labels on judgment columns (All family tabs)
+18. Cal.com corrected: commercial edition went closed source; community code relaunched as Cal.diy (MIT) (Relicensing Log)
+19. Glossary and diligence checklist expanded (Glossary; Checklist)
+20. Structured data (licenses.json, compatibility.json, models.json, aliases.json) generated for agent use (Skill package)
+21. v2.1: Doe v. GitHub updated to 9th Cir. decision (Sept. 16, 2026); AI coding-assistant scenario revised (Case Law; Use-Case)
+22. v2.1: Gemma 4 12B Unified split out (June 3, 2026) (Model Map)
+23. v2.1: Neo4j judgment date corrected (findings July 22, 2024; judgment Aug. 15, 2024) (6-Source-Available; Case Law)
+24. v2.1: Vizio wording softened to a trial-court pretrial order SFC calls irrelevant (Use-Case; Case Law)
+25. v2.1: Volatile flag made rule-based (AI, source-available, noncommercial, ethical, proprietary/vendor ToS always Yes) (All family tabs)
+26. v2.1: Provenance split into Source / Verification status / Last verified; SPDX list status column added (All family tabs)
+27. v2.1: Maintenance status defaults changed from "Active" to "Unknown (not verified)" (Common Projects)
+28. v2.1: One row per SPDX ID; compound and non-ID values replaced with clean IDs or LicenseRefs; MS-PL casing fixed (All family tabs)
+29. v2.1: Compatibility matrix: Apache->MIT now Conditional; Apache->LGPL-2.1+ uses narrowing wording; model rows made consistent (N/A for code-license columns) (Compatibility Matrix)
+30. v2.1: Hippocratic 3.0 outbound filled; Overview OpenMDW wording fixed (8-Ethical Source; Overview)
+31. v2.1: ID and verification columns added to Exceptions, Case Law, Regulatory, Model Map (Reference tabs)
+32. v2.1: Model Map verified against primary sources for Llama 4, gpt-oss, DeepSeek V4, Qwen3.8-Max, Mistral Medium 3.5; remaining secondary rows flagged with caveat (Model Map)
+33. v2.2: All non-LicenseRef IDs checked against SPDX License List 3.29.0 (2026-09-16); 10 IDs not on the list re-keyed to LicenseRef- (PolyForm Shield/Perimeter, Prosperity-3.0, FCL-1.0-ALv2/MIT, OpenMDW-1.1, BigScience RAIL x2, CreativeML-OpenRAIL-M, MS-RSL); old IDs and ScanCode keys kept as aliases (All family tabs; aliases.json)
+34. v2.2: Hippocratic 3.0 keyed to listed ID Hippocratic-3.0-core (modules not expressible) (8-Ethical Source)
+35. v2.2: "Assumed listed" replaced by Listed / Not on SPDX list status tied to the snapshot; build fails on any ID neither confirmed listed nor confirmed absent (All family tabs)
+36. v2.2: Custom exceptions use AdditionRef- (SPDX 3.0); OpenSSL exception treated as a note; listed exceptions verified against SPDX exceptions list 3.29.0 (13-Exceptions)
+37. v2.2: Model Map: Codestral / Mistral Large 2 split; Muse Spark keyed to LicenseRef-SaaS-ToS; OSAID moved to Glossary; OpenMDW-1.1 keyed to LicenseRef-OpenMDW-1.1; Qwen3.8-Max and Qwen Community 1.0 records added so all model IDs join (Model Map; 9-AI)
+38. v2.2: Common Projects: SPDX expression column added; multi-product rows split; build fails if any expression token does not join to a license record or listed exception (Common Projects)
+39. v2.2: Compatibility: Apache-2.0 into proprietary distributed now Conditional; MPL-2.0 rows use "combined work becomes" wording (Compatibility Matrix)
+40. v2.2: Blank "Last verified" exported as null in all JSON files (Data export)
+41. v2.3: Hippocratic 3.0 split: Hippocratic-3.0-core only for core text with no modules; LicenseRef-Hippocratic-3.0-modules (generic) and LicenseRef-Hippocratic-3.0-FULL added; MCP warning on core ID (8-Ethical Source; licenses.json)
+42. v2.3: CreativeML-OpenRAIL-M re-confirmed absent from SPDX 3.29.0 (no RAIL license listed); old ID and Hugging Face key kept as aliases with warning (9-AI; aliases.json)
+43. v2.3: FFmpeg split into default (LGPL-2.1-or-later) and --enable-gpl (GPL-2.0-or-later) build rows; Android kernel expression now uses WITH Linux-syscall-note (Common Projects)
+44. v2.3: Split project rows (Redis 7.4/8, Valkey, Elasticsearch, OpenSearch, Terraform, OpenTofu) given row-specific descriptions; per-row expression verification status added (Common Projects; context.json)
+45. v2.3: DeepSeek split by checkpoint: original V3 (Dec. 2024) under DeepSeek License Agreement v1.0; R1 / V3-0324 onward MIT; verified against model cards (Model Map; 9-AI)
+46. v2.3: OpenSSL linking note re-keyed Note- (not AdditionRef-); note records carry record_type=note and null expression (13-Exceptions; licenses.json)
+48. v2.3.1: Model-weights matrix row split into Apache-2.0 / OpenMDW-1.1 (Conditional, both carry termination terms) and MIT (Yes); no mixed-value cells (Compatibility Matrix)
+49. v2.3.1: Hippocratic-3.0-core row rewritten to describe core terms only; module language kept on the modules / FULL rows (8-Ethical Source)
+47. v2.3: Matrix legend defines "Yes" as notice-only conditions and "Conditional" as substantive terms; Apache-2.0 model weights into proprietary now Conditional (Compatibility Matrix)
