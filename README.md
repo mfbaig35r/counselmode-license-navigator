@@ -45,10 +45,11 @@ progress.
 
 ## How much to trust it
 
-Each record says how it was checked (`provenance.verification_status`). Today 29 of the 139 records checked in phase 1, plus the new records added since, including the
-most-asked licenses, are fully verified against primary sources and 11 partially. Every record's obligations were
-checked against its license text; the other fields of the remaining records are not yet re-verified. The answers show
-this. Confirm anything that matters against the license text and, for decisions with real consequences, with a lawyer.
+Each record says how it was checked (`provenance.verification_status`). Today 23 of 142 license records,
+including the most-asked ones, are fully verified against primary sources and 12 partially. Every record's
+obligations were checked against its license text; the other fields of the remaining records are not yet
+re-verified. The answers show this. Confirm anything that matters against the license text and, for decisions
+with real consequences, with a lawyer.
 
 ## Layout
 
