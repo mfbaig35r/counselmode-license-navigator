@@ -63,8 +63,9 @@ against its license text.
   dates. New verification status `Partially verified (primary)` with a `verification_note`.
 - Reference docs (`references/`) are generated from `data/` by `scripts/build_references.py`; a test fails on drift.
 
-Known state: 29 records verified against primary sources, 11 partially, 2 secondary only, 95 not re-verified beyond
-their obligations. Editorial views for the 26 most-asked records await owner review.
+Known state: 21 license records fully verified against primary sources, 11 partially, 2 secondary only (8 exception
+records carry an earlier "verified" status that confirms only their SPDX listing); the rest not re-verified beyond
+their obligations. (Corrected in 2.8: this line first said 29 by counting those 8 exceptions.) Editorial views for the 26 most-asked records await owner review.
 
 ## 2.4 (2026-11-23)
 
