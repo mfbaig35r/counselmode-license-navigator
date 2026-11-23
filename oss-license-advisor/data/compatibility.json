@@ -1,0 +1,1498 @@
+[
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Public domain / CC0 / 0BSD / Unlicense",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes (notice-only: keep copyright and license text)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT / BSD-2 / BSD-3 / ISC / zlib",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (Apache-2.0 terms, NOTICE and change-marking stay with that component)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes LGPL-3.0; not possible if project is LGPL-2.1-only)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes GPL-3.0)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (Apache-2.0 terms, NOTICE and change-marking stay with that component)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (MPL files stay MPL)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (MPL files stay MPL)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes LGPL-2.1-or-later via MPL-2.0 Secondary License; not if marked \"Incompatible With Secondary Licenses\")",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes LGPL-3.0 via MPL-2.0 Secondary License; not if marked \"Incompatible With Secondary Licenses\")",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes GPL-2.0-only via MPL-2.0 Secondary License; not if marked \"Incompatible With Secondary Licenses\")",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes GPL-2.0-or-later via MPL-2.0 Secondary License; not if marked \"Incompatible With Secondary Licenses\")",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes GPL-3.0 via MPL-2.0 Secondary License; not if marked \"Incompatible With Secondary Licenses\")",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes AGPL-3.0 via MPL-2.0 Secondary License; not if marked \"Incompatible With Secondary Licenses\")",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (publish modified MPL files)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MPL-2.0",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (library stays LGPL; allow relinking)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes (if LGPL-2.1-or-later)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes (combined work under GPL-2.0)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (dynamic linking, relinking, no reverse-engineering ban)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-2.1 (or later)",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (library stays LGPL-3.0; allow relinking)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO (unless LGPL-2.1 project is \"or later\")",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes GPL-3.0)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (relinking + Installation Information for User Products)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "LGPL-3.0",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (module stays EPL)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Only if GPL Secondary License designated",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Only if Secondary License designated",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Only if Secondary License designated",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Only if designated",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Only if designated",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Only if designated",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (module-level source)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "EPL-2.0",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (file/module stays)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "CDDL-1.0 / EPL-1.0 / MPL-1.1",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO (whole work becomes GPLv2)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes GPL-2.0-only)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-only",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes (no distribution)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-2.0-or-later",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "yes_narrows",
+  "conditions": "Yes (combined work becomes GPL-3.0)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes (\u00a713)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "GPL-3.0",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes (no distribution)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes (combined; AGPL part keeps \u00a713)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "AGPL-3.0",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "no",
+  "conditions": "NO if modified & user-facing (must offer source); unmodified internal use OK",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (per license; no competing service)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "conditional",
+  "conditions": "Conditional (cannot offer the software itself as a service)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "no",
+  "conditions": "NO (commercial)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Noncommercial (PolyForm NC, CC-BY-NC)",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "no",
+  "conditions": "NO (commercial)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; your code can be under any license",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; your code can be under any license",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; your code can be under any license",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; your code can be under any license",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; your code can be under any license",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; your code can be under any license",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; your code can be under any license",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; your code can be under any license",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; your code can be under any license",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (AUP, attribution, MAU/revenue caps, MaaS gates, flow-down)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "conditional",
+  "conditions": "Conditional (AUP, thresholds; Mistral Modified MIT bars all use above US$20M monthly group revenue)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply (OpenMDW not FSF-reviewed)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply (OpenMDW not FSF-reviewed)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply (OpenMDW not FSF-reviewed)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply (OpenMDW not FSF-reviewed)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply (OpenMDW not FSF-reviewed)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply (OpenMDW not FSF-reviewed)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply (OpenMDW not FSF-reviewed)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply (OpenMDW not FSF-reviewed)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply (OpenMDW not FSF-reviewed)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "conditional",
+  "conditions": "Conditional (license terms stay with the weights: Apache-2.0 NOTICE, change-marking and patent termination; OpenMDW notices and defensive termination)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "Apache-2.0 / OpenMDW-1.1 model weights",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "MIT / BSD",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "Apache-2.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "MPL-2.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "LGPL-2.1+",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "LGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "GPL-2.0-only",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "GPL-2.0+",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "GPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "AGPL-3.0",
+  "context": "distribution_combined_work",
+  "result": "not_applicable",
+  "conditions": "N/A - weights keep their own license; notices apply",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "Proprietary (distributed)",
+  "context": "distribution_combined_work",
+  "result": "yes",
+  "conditions": "Yes (notice-only: keep copyright and license text)",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ },
+ {
+  "inbound": "MIT model weights",
+  "outbound": "Proprietary SaaS (not distributed)",
+  "context": "saas_not_distributed",
+  "result": "yes",
+  "conditions": "Yes",
+  "source": "CounselMode reading of FSF/OSI positions; editorial view"
+ }
+]

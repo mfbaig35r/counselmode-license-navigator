@@ -1,0 +1,152 @@
+{
+ "note": "Each compatibility.json inbound/outbound label and the license IDs it covers. compat() matches on these IDs, never on the label text.",
+ "groups": {
+  "Public domain / CC0 / 0BSD / Unlicense": {
+   "members": [
+    "LicenseRef-Public-Domain",
+    "CC0-1.0",
+    "0BSD",
+    "Unlicense"
+   ]
+  },
+  "MIT / BSD": {
+   "members": [
+    "MIT",
+    "BSD-2-Clause",
+    "BSD-3-Clause"
+   ]
+  },
+  "MIT / BSD-2 / BSD-3 / ISC / zlib": {
+   "members": [
+    "MIT",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Zlib"
+   ]
+  },
+  "Apache-2.0": {
+   "members": [
+    "Apache-2.0"
+   ]
+  },
+  "MPL-2.0": {
+   "members": [
+    "MPL-2.0"
+   ]
+  },
+  "EPL-2.0": {
+   "members": [
+    "EPL-2.0"
+   ]
+  },
+  "CDDL-1.0 / EPL-1.0 / MPL-1.1": {
+   "members": [
+    "CDDL-1.0",
+    "EPL-1.0",
+    "MPL-1.1"
+   ]
+  },
+  "LGPL-2.1 (or later)": {
+   "members": [
+    "LGPL-2.1-only",
+    "LGPL-2.1-or-later"
+   ],
+   "note": "LGPL-2.1 code under either the -only or the -or-later grant."
+  },
+  "LGPL-2.1+": {
+   "members": [
+    "LGPL-2.1-or-later"
+   ]
+  },
+  "LGPL-3.0": {
+   "members": [
+    "LGPL-3.0-only",
+    "LGPL-3.0-or-later"
+   ]
+  },
+  "GPL-2.0-only": {
+   "members": [
+    "GPL-2.0-only"
+   ]
+  },
+  "GPL-2.0-or-later": {
+   "members": [
+    "GPL-2.0-or-later"
+   ]
+  },
+  "GPL-2.0+": {
+   "members": [
+    "GPL-2.0-or-later"
+   ]
+  },
+  "GPL-3.0": {
+   "members": [
+    "GPL-3.0-only",
+    "GPL-3.0-or-later"
+   ]
+  },
+  "AGPL-3.0": {
+   "members": [
+    "AGPL-3.0-only",
+    "AGPL-3.0-or-later"
+   ]
+  },
+  "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2": {
+   "members": [
+    "SSPL-1.0",
+    "BUSL-1.1",
+    "Elastic-2.0",
+    "LicenseRef-RSALv2"
+   ]
+  },
+  "Noncommercial (PolyForm NC, CC-BY-NC)": {
+   "members": [
+    "PolyForm-Noncommercial-1.0.0",
+    "CC-BY-NC-4.0",
+    "CC-BY-NC-SA-4.0",
+    "CC-BY-NC-ND-4.0"
+   ]
+  },
+  "Custom AI model licenses (Llama, Gemma 1-3, RAIL, Muse, Kimi K3, Mistral Modified MIT)": {
+   "members": [
+    "LicenseRef-Llama-4",
+    "LicenseRef-Llama-3.x",
+    "LicenseRef-Llama-2",
+    "LicenseRef-Gemma",
+    "LicenseRef-CreativeML-OpenRAIL-M",
+    "LicenseRef-BigScience-OpenRAIL-M",
+    "LicenseRef-BigScience-BLOOM-RAIL-1.0",
+    "LicenseRef-Meta-Muse-Model-License",
+    "LicenseRef-Moonshot-Kimi-K3",
+    "LicenseRef-Mistral-Modified-MIT"
+   ]
+  },
+  "Apache-2.0 / OpenMDW-1.1 model weights": {
+   "members": [
+    "Apache-2.0",
+    "LicenseRef-OpenMDW-1.1"
+   ],
+   "note": "Model weights only; the software tuples for Apache-2.0 are under 'Apache-2.0'."
+  },
+  "MIT model weights": {
+   "members": [
+    "MIT"
+   ],
+   "note": "Model weights only; MIT software is under the MIT groups."
+  },
+  "Proprietary (distributed)": {
+   "members": [
+    "LicenseRef-Proprietary"
+   ],
+   "note": "Your own closed product, shipped to users."
+  },
+  "Proprietary SaaS (not distributed)": {
+   "members": [
+    "LicenseRef-Proprietary",
+    "LicenseRef-SaaS-ToS"
+   ],
+   "note": "Your own closed product, run as a service and not shipped."
+  }
+ }
+}

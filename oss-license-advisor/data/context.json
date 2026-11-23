@@ -1,0 +1,841 @@
+{
+ "case_law": [
+  {
+   "ID": "case-jacobsen-v-katzer",
+   "Case": "Jacobsen v. Katzer",
+   "Court / citation": "535 F.3d 1373 (Fed. Cir. 2008)",
+   "Date(s)": "Aug. 13, 2008",
+   "Holding / status": "Artistic License terms are enforceable copyright conditions; breach can support infringement remedies",
+   "Why it matters": "Foundation for OSS license enforceability in U.S.",
+   "Verification status": "Not re-verified (well-established)",
+   "Last verified": null
+  },
+  {
+   "ID": "case-neo4j-inc-v-purethink-llc",
+   "Case": "Neo4j, Inc. v. PureThink, LLC",
+   "Court / citation": "N.D. Cal. No. 5:18-cv-07182; 9th Cir. (unpublished memo); 9th Cir. No. 24-5538",
+   "Date(s)": "Feb. 18, 2022 (9th Cir. memo, preliminary injunction); July 22, 2024 (findings: US$597,000 damages, permanent injunction); Aug. 15, 2024 (judgment entered); Dec. 10, 2025 (9th Cir. No. 24-5538 dismissed on stipulated voluntary dismissal); Dec. 15, 2025 (satisfaction of judgment)",
+   "Holding / status": "Licensor may combine AGPL with Commons Clause; AGPL \u00a77/\u00a710 bar further restrictions only by licensees (\"you\"), so licensees cannot strip licensor-imposed terms. Non-precedential; no appellate merits ruling on \u00a77",
+   "Why it matters": "Do not assume \"AGPL + rider\" can be cleaned to plain AGPL",
+   "Verification status": "Verified (primary)",
+   "Last verified": "2026-11-18"
+  },
+  {
+   "ID": "case-software-freedom-conservancy-v-vizio-inc",
+   "Case": "Software Freedom Conservancy v. Vizio, Inc.",
+   "Court / citation": "Cal. Super. Ct., Orange County, No. 30-2021-01226723-CU-BC-CJC",
+   "Date(s)": "Dec. 23, 2025 (minute order); trial reportedly began Aug. 10, 2026",
+   "Holding / status": "Pretrial order: GPLv2/LGPLv2.1 require source that can be obtained and modified (incl. installation scripts), but not enabling reinstallation such that the device continues to function properly. Third-party-beneficiary enforcement by purchasers remains at issue. No post-trial judgment found",
+   "Why it matters": "Consumer (third-party beneficiary) enforcement; GPLv2 vs GPLv3 installation duties",
+   "Verification status": "Verified (primary) for Dec. 2025 order; trial status secondary",
+   "Last verified": "2026-11-18"
+  },
+  {
+   "ID": "case-artifex-software-inc-v-hancom-inc",
+   "Case": "Artifex Software, Inc. v. Hancom, Inc.",
+   "Court / citation": "N.D. Cal. No. 3:16-cv-06982",
+   "Date(s)": "Apr. 2017 (motion to dismiss denied); settled 2017-2018",
+   "Holding / status": "Court accepted that GPL could be enforced as a contract as well as a license (dual-licensed Ghostscript)",
+   "Why it matters": "Contract damages theory for GPL non-compliance",
+   "Verification status": "Not re-verified",
+   "Last verified": null
+  },
+  {
+   "ID": "case-entr-ouvert-v-orange",
+   "Case": "Entr'ouvert v. Orange",
+   "Court / citation": "Cour d'appel de Paris",
+   "Date(s)": "Feb. 14, 2024",
+   "Holding / status": "Orange held liable for GPLv2 violation (LASSO library) as copyright infringement; damages reported in the high six figures (EUR)",
+   "Why it matters": "EU enforcement; large damages for GPL non-compliance",
+   "Verification status": "Not re-verified",
+   "Last verified": null
+  },
+  {
+   "ID": "case-doe-v-github-inc",
+   "Case": "Doe v. GitHub, Inc.",
+   "Court / citation": "9th Cir. No. 24-7700 (published opinion); N.D. Cal. No. 4:22-cv-06823",
+   "Date(s)": "Sept. 16, 2026",
+   "Holding / status": "Affirmed dismissal of DMCA \u00a71202(b) claim: Copilot/Codex outputs lacking CMI are new works, and \u00a71202(b) requires removing or altering CMI from copies of existing works. \"Identicality\" is a misnomer - an evidentiary gloss, not an element; near-verbatim reproduction without CMI can support an inference of removal. \"Input\" (training-data) theory forfeited, not decided. Contract claims reported pending in district court",
+   "Why it matters": "Narrows DMCA attribution claims against AI coding tools; retrieval-style systems may be treated differently; copyright and license claims unaffected",
+   "Verification status": "Verified (primary)",
+   "Last verified": "2026-11-18"
+  },
+  {
+   "ID": "case-versata-software-v-ameriprise-financial",
+   "Case": "Versata Software v. Ameriprise Financial",
+   "Court / citation": "Tex. state court / W.D. Tex.",
+   "Date(s)": "2014-2015",
+   "Holding / status": "GPL issues raised by a downstream licensee in a commercial dispute; resolved without definitive GPL ruling",
+   "Why it matters": "GPL as a counterclaim risk in commercial software disputes",
+   "Verification status": "Not re-verified",
+   "Last verified": null
+  }
+ ],
+ "regulatory": [
+  {
+   "ID": "reg-eu-ai-act-art53-2",
+   "Instrument": "AI Act - GPAI open-source exemption (Arts. 53(2), 54(6))",
+   "Jurisdiction": "EU",
+   "Key dates": "GPAI obligations apply from Aug. 2, 2025",
+   "OSS-relevant rule": "Exempts only technical documentation (53(1)(a)), downstream information (53(1)(b)) and the authorised-representative duty for non-EU providers. Requires a free and open-source license allowing access, use, modification and distribution without monetisation, plus public weights, architecture and usage information. Copyright policy and training-data summary duties still apply. No exemption for GPAI models with systemic risk.",
+   "Diligence / compliance action": "Do not assume an \"open-weight\" model qualifies: per Commission guidelines (July 18, 2025), scale-based restrictions and separate commercial licenses for certain uses are not \"free and open-source.\"",
+   "Source": "https://ai-act-service-desk.ec.europa.eu/en/faq ; Article 53",
+   "Verification status": "Verified (primary)",
+   "Last verified": "2026-11-18"
+  },
+  {
+   "ID": "reg-eu-cra-2024-2847",
+   "Instrument": "Cyber Resilience Act (Reg. (EU) 2024/2847)",
+   "Jurisdiction": "EU",
+   "Key dates": "In force Dec. 10, 2024; reporting obligations Sept. 11, 2026; full application Dec. 11, 2027; open-source steward reporting Dec. 11, 2027",
+   "OSS-relevant rule": "Manufacturers must report actively exploited vulnerabilities and severe incidents (24h early warning / 72h notification / final report). Creates \"open-source software steward\" role with lighter obligations",
+   "Diligence / compliance action": "Confirm whether target is a manufacturer or OSS steward; vulnerability handling process; SBOM; reporting readiness",
+   "Source": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+   "Verification status": "Verified (primary)",
+   "Last verified": "2026-11-18"
+  },
+  {
+   "ID": "reg-us-omb-m-26-05",
+   "Instrument": "OMB M-26-05 (Adopting a Risk-based Approach to Software and Hardware Security)",
+   "Jurisdiction": "U.S. federal",
+   "Key dates": "Jan. 23, 2026",
+   "OSS-relevant rule": "Rescinds M-22-18 and M-23-16; Common Form attestation no longer required government-wide; agencies keep software/hardware inventories and may require SBOMs by contract",
+   "Diligence / compliance action": "Check each solicitation/contract for attestation or SBOM clauses",
+   "Source": "https://www.whitehouse.gov/wp-content/uploads/2026/01/M-26-05-Adopting-a-Risk-based-Approach-to-Software-and-Hardware-Security.pdf",
+   "Verification status": "Verified (primary)",
+   "Last verified": "2026-11-18"
+  }
+ ],
+ "relicensing": [
+  {
+   "Project": "MongoDB",
+   "From": "AGPL-3.0",
+   "To": "SSPL-1.0",
+   "Date": "Oct. 2018",
+   "Notes / fork": "Debian/Fedora dropped MongoDB",
+   "Source": "Vendor announcement (not re-verified)"
+  },
+  {
+   "Project": "Elasticsearch / Kibana",
+   "From": "Apache-2.0",
+   "To": "SSPL-1.0 / Elastic-2.0; AGPL-3.0 option added 2024",
+   "Date": "Jan. 2021; Aug. 2024",
+   "Notes / fork": "OpenSearch fork (Apache-2.0)",
+   "Source": "Not re-verified"
+  },
+  {
+   "Project": "Grafana",
+   "From": "Apache-2.0",
+   "To": "AGPL-3.0",
+   "Date": "Apr. 2021",
+   "Notes / fork": "",
+   "Source": "Not re-verified"
+  },
+  {
+   "Project": "MinIO",
+   "From": "Apache-2.0",
+   "To": "AGPL-3.0; community edition then wound down",
+   "Date": "2021; maintenance mode Dec. 3, 2025; archived Apr. 25, 2026",
+   "Notes / fork": "pgsty/minio fork; vendor product AIStor (proprietary)",
+   "Source": "https://github.com/minio/minio (verified 2026-11-18)"
+  },
+  {
+   "Project": "HashiCorp Terraform, Vault, Consul",
+   "From": "MPL-2.0",
+   "To": "BUSL-1.1",
+   "Date": "Aug. 2023",
+   "Notes / fork": "OpenTofu (MPL-2.0), OpenBao forks",
+   "Source": "Not re-verified"
+  },
+  {
+   "Project": "Redis",
+   "From": "BSD-3-Clause",
+   "To": "RSALv2 / SSPL; AGPL-3.0 option added (Redis 8)",
+   "Date": "Mar. 2024; 2025",
+   "Notes / fork": "Valkey fork (BSD-3-Clause)",
+   "Source": "Not re-verified"
+  },
+  {
+   "Project": "Sentry",
+   "From": "BUSL-1.1",
+   "To": "FSL-1.1",
+   "Date": "2023",
+   "Notes / fork": "",
+   "Source": "Not re-verified"
+  },
+  {
+   "Project": "Liquibase Community",
+   "From": "Apache-2.0",
+   "To": "FSL-1.1-ALv2 (each version reverts to Apache-2.0 after 2 years); CLA now required",
+   "Date": "Sept. 30, 2025 (v5.0)",
+   "Notes / fork": "",
+   "Source": "https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl (verified 2026-11-18)"
+  },
+  {
+   "Project": "Cal.com",
+   "From": "MIT -> AGPL-3.0 (2021)",
+   "To": "Commercial edition closed source; community code relaunched as Cal.diy under MIT",
+   "Date": "2026 (date per vendor blog; confirm)",
+   "Notes / fork": "Reviewer's \"back to MIT on Apr. 15, 2026\" is incomplete: the commercial product went closed-source",
+   "Source": "https://cal.com/blog/calcom-v6-4 (verified 2026-11-18)"
+  },
+  {
+   "Project": "Google Gemma",
+   "From": "Gemma Terms of Use",
+   "To": "Apache-2.0 (Gemma 4 onward)",
+   "Date": "Mar. 31, 2026",
+   "Notes / fork": "Gemma 1-3 remain on Gemma Terms",
+   "Source": "https://ai.google.dev/gemma/docs/releases (verified 2026-11-18)"
+  },
+  {
+   "Project": "Meta open models",
+   "From": "Llama Community Licenses",
+   "To": "Apache-2.0 (Muse Glimmer); Muse Model License (Muse Spark Open)",
+   "Date": "Aug. 10, 2026; Oct. 15, 2026",
+   "Notes / fork": "Flagship Muse Spark proprietary",
+   "Source": "Meta research blog / Hugging Face (verified 2026-11-18)"
+  },
+  {
+   "Project": "Moonshot Kimi",
+   "From": "Modified MIT (K2)",
+   "To": "Kimi K3 License",
+   "Date": "Jul. 2026",
+   "Notes / fork": "Moves from attribution-only to MaaS commercial gate",
+   "Source": "Hugging Face license (verified 2026-11-18)"
+  }
+ ],
+ "projects": [
+  {
+   "project": "Linux kernel",
+   "category": "Operating system",
+   "license_description": "GPL-2.0-only WITH Linux-syscall-note",
+   "license_expression": "GPL-2.0-only WITH Linux-syscall-note",
+   "family": "Strong copyleft",
+   "implication": "User-space apps unaffected; kernel modules and modifications distributed must be GPLv2 with source.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Android (AOSP)",
+   "category": "Operating system",
+   "license_description": "Apache-2.0 (userland); kernel GPL-2.0-only WITH Linux-syscall-note (same as Linux kernel row)",
+   "license_expression": "Apache-2.0 AND GPL-2.0-only WITH Linux-syscall-note",
+   "family": "Permissive + strong",
+   "implication": "OEMs can ship proprietary userland changes; Google Mobile Services are separately licensed.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "FreeBSD",
+   "category": "Operating system",
+   "license_description": "BSD-2-Clause",
+   "license_expression": "BSD-2-Clause",
+   "family": "Permissive",
+   "implication": "Basis for proprietary products (PlayStation OS, macOS components, Netflix CDN).",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "OpenBSD",
+   "category": "Operating system",
+   "license_description": "ISC / BSD",
+   "license_expression": "ISC AND BSD-2-Clause",
+   "family": "Permissive",
+   "implication": "Permissive; OpenSSH is BSD/ISC.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Darwin / XNU",
+   "category": "Operating system",
+   "license_description": "APSL-2.0",
+   "license_expression": "APSL-2.0",
+   "family": "Weak copyleft (network)",
+   "implication": "macOS itself is proprietary EULA.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Windows",
+   "category": "Operating system",
+   "license_description": "Proprietary EULA",
+   "license_expression": "LicenseRef-Proprietary",
+   "family": "Proprietary",
+   "implication": "Licensed per device/core; check virtualization rights.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "glibc",
+   "category": "C library",
+   "license_description": "LGPL-2.1-or-later",
+   "license_expression": "LGPL-2.1-or-later",
+   "family": "Weak copyleft",
+   "implication": "Dynamic linking from any app is fine.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "musl libc",
+   "category": "C library",
+   "license_description": "MIT",
+   "license_expression": "MIT",
+   "family": "Permissive",
+   "implication": "Easy static linking.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "GCC runtime (libgcc, libstdc++)",
+   "category": "Compiler runtime",
+   "license_description": "GPL-3.0-or-later WITH GCC-exception-3.1",
+   "license_expression": "GPL-3.0-or-later WITH GCC-exception-3.1",
+   "family": "Strong + exception",
+   "implication": "Compiled programs not affected.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "LLVM / Clang",
+   "category": "Compiler",
+   "license_description": "Apache-2.0 WITH LLVM-exception",
+   "license_expression": "Apache-2.0 WITH LLVM-exception",
+   "family": "Permissive",
+   "implication": "Very permissive.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "OpenJDK",
+   "category": "Language runtime",
+   "license_description": "GPL-2.0-only WITH Classpath-exception-2.0",
+   "license_expression": "GPL-2.0-only WITH Classpath-exception-2.0",
+   "family": "Weak (exception)",
+   "implication": "Run any app; Oracle JDK builds have separate commercial terms.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "CPython",
+   "category": "Language runtime",
+   "license_description": "PSF-2.0",
+   "license_expression": "PSF-2.0",
+   "family": "Permissive",
+   "implication": "Low risk.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Node.js",
+   "category": "Language runtime",
+   "license_description": "MIT",
+   "license_expression": "MIT",
+   "family": "Permissive",
+   "implication": "npm packages vary - scan dependency tree.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "React / Vue / Angular",
+   "category": "UI frameworks",
+   "license_description": "MIT",
+   "license_expression": "MIT",
+   "family": "Permissive",
+   "implication": "Low risk.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Qt",
+   "category": "UI framework",
+   "license_description": "LGPL-3.0 / GPL-3.0 / Commercial",
+   "license_expression": "LGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Proprietary",
+   "family": "Dual",
+   "implication": "LGPLv3 obligations or buy commercial license (common on embedded).",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "FFmpeg (default build)",
+   "category": "Media library",
+   "license_description": "LGPL-2.1-or-later",
+   "license_expression": "LGPL-2.1-or-later",
+   "family": "Weak copyleft",
+   "implication": "Default configure output; dynamic linking with relinking ability preserves proprietary app status.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "FFmpeg (--enable-gpl build)",
+   "category": "Media library",
+   "license_description": "GPL-2.0-or-later (GPL-3.0-or-later with --enable-version3 + GPLv3 parts; --enable-nonfree builds are not redistributable)",
+   "license_expression": "GPL-2.0-or-later",
+   "family": "Strong copyleft",
+   "implication": "Whole distributed binary becomes GPL; check configure flags in every shipped build.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "OpenSSL 3.x",
+   "category": "Crypto library",
+   "license_description": "Apache-2.0",
+   "license_expression": "Apache-2.0",
+   "family": "Permissive",
+   "implication": "OpenSSL 1.x used the old OpenSSL/SSLeay license (GPL-incompatible).",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "PostgreSQL",
+   "category": "Database",
+   "license_description": "PostgreSQL",
+   "license_expression": "PostgreSQL",
+   "family": "Permissive",
+   "implication": "Low risk.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "MySQL",
+   "category": "Database",
+   "license_description": "GPL-2.0-only (+FOSS exception) / Commercial",
+   "license_expression": "GPL-2.0-only OR LicenseRef-Proprietary",
+   "family": "Dual",
+   "implication": "Client libraries: check connector licenses; MariaDB is GPL-2.0.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "SQLite",
+   "category": "Database",
+   "license_description": "Public domain",
+   "license_expression": "LicenseRef-Public-Domain",
+   "family": "Public domain",
+   "implication": "No obligations.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "MongoDB",
+   "category": "Database",
+   "license_description": "SSPL-1.0",
+   "license_expression": "SSPL-1.0",
+   "family": "Source-available",
+   "implication": "Do not offer as a DBaaS; app backends fine.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Redis 7.4",
+   "category": "Database",
+   "license_description": "RSALv2 or SSPL-1.0 (licensee choice)",
+   "license_expression": "LicenseRef-RSALv2 OR SSPL-1.0",
+   "family": "Source-available",
+   "implication": "Neither option is open source; SSPL network clause bites if you offer it as a service.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Redis 8",
+   "category": "Database",
+   "license_description": "RSALv2, SSPL-1.0 or AGPL-3.0 (licensee choice)",
+   "license_expression": "LicenseRef-RSALv2 OR SSPL-1.0 OR AGPL-3.0-only",
+   "family": "Source-available / network copyleft option",
+   "implication": "AGPL-3.0 option is OSI-approved; modified versions offered over a network must provide source.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Valkey",
+   "category": "Database",
+   "license_description": "BSD-3-Clause",
+   "license_expression": "BSD-3-Clause",
+   "family": "Permissive",
+   "implication": "Linux Foundation fork of Redis 7.2.4; permissive terms, keep notices.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Elasticsearch / Kibana",
+   "category": "Search",
+   "license_description": "Elastic License 2.0, SSPL-1.0 or AGPL-3.0 (licensee choice; AGPL added Aug. 2024)",
+   "license_expression": "Elastic-2.0 OR SSPL-1.0 OR AGPL-3.0-only",
+   "family": "Source-available / network copyleft option",
+   "implication": "ELv2 bars offering as a managed service; AGPL option requires source for network users of modified versions.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "OpenSearch",
+   "category": "Search",
+   "license_description": "Apache-2.0",
+   "license_expression": "Apache-2.0",
+   "family": "Permissive",
+   "implication": "Fork of Elasticsearch 7.10.2; Apache terms (NOTICE, change-marking).",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Terraform (1.6+)",
+   "category": "Infrastructure",
+   "license_description": "BUSL-1.1 (since Aug. 2023)",
+   "license_expression": "BUSL-1.1",
+   "family": "Source-available",
+   "implication": "Production use allowed except competitive offerings per HashiCorp Additional Use Grant; each version converts to MPL-2.0 after the change date.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "OpenTofu",
+   "category": "Infrastructure",
+   "license_description": "MPL-2.0",
+   "license_expression": "MPL-2.0",
+   "family": "Weak copyleft",
+   "implication": "Linux Foundation fork of Terraform 1.5; modified MPL files must be shared.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Kubernetes",
+   "category": "Infrastructure",
+   "license_description": "Apache-2.0",
+   "license_expression": "Apache-2.0",
+   "family": "Permissive",
+   "implication": "Low risk.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Grafana",
+   "category": "Observability",
+   "license_description": "AGPL-3.0",
+   "license_expression": "AGPL-3.0-only",
+   "family": "Network copyleft",
+   "implication": "Modifying and exposing to users triggers source offer.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "MinIO",
+   "category": "Storage",
+   "license_description": "AGPL-3.0",
+   "license_expression": "AGPL-3.0-only",
+   "family": "Network copyleft",
+   "implication": "AGPL label unchanged, but the bigger diligence fact is abandonment: admin console removed May 2025; maintenance mode Dec. 3, 2025; repo archived Apr. 25, 2026; unpatched CVEs in final release. Development continues in closed-source AIStor.",
+   "maintenance_status": "ARCHIVED: community repo archived Apr. 25, 2026; last community release Oct. 15, 2025; no community security fixes; forks (e.g., pgsty) and AIStor (proprietary)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "WordPress",
+   "category": "CMS",
+   "license_description": "GPL-2.0-or-later",
+   "license_expression": "GPL-2.0-or-later",
+   "family": "Strong copyleft",
+   "implication": "Themes/plugins PHP code generally treated as GPL derivatives.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Git",
+   "category": "Dev tool",
+   "license_description": "GPL-2.0-only",
+   "license_expression": "GPL-2.0-only",
+   "family": "Strong copyleft",
+   "implication": "Using the tool has no effect on your code.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "VS Code (source, Code - OSS)",
+   "category": "Dev tool",
+   "license_description": "Source: MIT; Microsoft builds: proprietary",
+   "license_expression": "MIT",
+   "family": "Mixed",
+   "implication": "VSCodium distributes MIT builds.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "VS Code (Microsoft builds)",
+   "category": "Dev tool",
+   "license_description": "Source: MIT; Microsoft builds: proprietary",
+   "license_expression": "LicenseRef-Proprietary",
+   "family": "Mixed",
+   "implication": "VSCodium distributes MIT builds.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "TensorFlow",
+   "category": "ML frameworks",
+   "license_description": "Apache-2.0 / BSD-3-Clause",
+   "license_expression": "Apache-2.0",
+   "family": "Permissive",
+   "implication": "Low risk.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "PyTorch",
+   "category": "ML frameworks",
+   "license_description": "Apache-2.0 / BSD-3-Clause",
+   "license_expression": "BSD-3-Clause",
+   "family": "Permissive",
+   "implication": "Low risk.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Hugging Face Transformers",
+   "category": "ML library",
+   "license_description": "Apache-2.0",
+   "license_expression": "Apache-2.0",
+   "family": "Permissive",
+   "implication": "Each model on the Hub has its own license.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Llama 3.x",
+   "category": "LLM",
+   "license_description": "Llama Community License",
+   "license_expression": "LicenseRef-Llama-3.x",
+   "family": "AI model license",
+   "implication": "See AI tab and Model Map.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Llama 4",
+   "category": "LLM",
+   "license_description": "Llama Community License",
+   "license_expression": "LicenseRef-Llama-4",
+   "family": "AI model license",
+   "implication": "See AI tab and Model Map.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "gpt-oss (OpenAI)",
+   "category": "LLM",
+   "license_description": "Apache-2.0",
+   "license_expression": "Apache-2.0",
+   "family": "Permissive",
+   "implication": "Open weights with usage policy guidance.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "DeepSeek-R1",
+   "category": "LLM",
+   "license_description": "MIT",
+   "license_expression": "MIT",
+   "family": "Permissive",
+   "implication": "Code and weights MIT.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Gemma 1-3",
+   "category": "LLM",
+   "license_description": "Gemma Terms of Use",
+   "license_expression": "LicenseRef-Gemma",
+   "family": "AI model license",
+   "implication": "Gemma Terms of Use; prohibited use policy flows down.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Stable Diffusion 3.5",
+   "category": "Image model",
+   "license_description": "Stability AI Community License",
+   "license_expression": "LicenseRef-Stability-Community",
+   "family": "AI model license",
+   "implication": "Free below US$1M revenue.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Gemma 4",
+   "category": "LLM",
+   "license_description": "Apache-2.0",
+   "license_expression": "Apache-2.0",
+   "family": "Permissive",
+   "implication": "First Gemma family under Apache-2.0 (Mar. 31, 2026).",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Muse Glimmer 30B (Meta)",
+   "category": "LLM",
+   "license_description": "Apache-2.0",
+   "license_expression": "Apache-2.0",
+   "family": "Permissive",
+   "implication": "Released Aug. 10, 2026; Meta usage policy published alongside.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Muse Spark Open (Meta)",
+   "category": "LLM",
+   "license_description": "Muse Model License",
+   "license_expression": "LicenseRef-Meta-Muse-Model-License",
+   "family": "AI model license",
+   "implication": "Attribution + MaaS gate above US$20M revenue.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Muse Spark (Meta)",
+   "category": "LLM",
+   "license_description": "Proprietary (API / Meta products)",
+   "license_expression": "LicenseRef-SaaS-ToS",
+   "family": "Proprietary",
+   "implication": "No weights released.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Kimi K3 (Moonshot)",
+   "category": "LLM",
+   "license_description": "Kimi K3 License",
+   "license_expression": "LicenseRef-Moonshot-Kimi-K3",
+   "family": "AI model license",
+   "implication": "MaaS gate + display clause.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Devstral 2 123B (Mistral)",
+   "category": "LLM",
+   "license_description": "Mistral Modified MIT",
+   "license_expression": "LicenseRef-Mistral-Modified-MIT",
+   "family": "AI model license",
+   "implication": "No rights above US$20M monthly group revenue.",
+   "maintenance_status": "Deprecated May 22, 2026 (API)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "NVIDIA Nemotron / Cosmos (new releases)",
+   "category": "LLM",
+   "license_description": "OpenMDW-1.1",
+   "license_expression": "LicenseRef-OpenMDW-1.1",
+   "family": "Permissive (model)",
+   "implication": "Adopted May-June 2026.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Cal.diy (community)",
+   "category": "Application",
+   "license_description": "Cal.diy: MIT; Cal.com commercial: closed source",
+   "license_expression": "MIT",
+   "family": "Permissive / proprietary",
+   "implication": "Commercial codebase no longer public; community edition relaunched as Cal.diy under MIT (2026).",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Cal.com (commercial)",
+   "category": "Application",
+   "license_description": "Cal.diy: MIT; Cal.com commercial: closed source",
+   "license_expression": "LicenseRef-Proprietary",
+   "family": "Permissive / proprietary",
+   "implication": "Commercial codebase no longer public; community edition relaunched as Cal.diy under MIT (2026).",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Docker Desktop",
+   "category": "Dev tool",
+   "license_description": "Proprietary subscription",
+   "license_expression": "LicenseRef-Docker-Desktop",
+   "family": "Proprietary",
+   "implication": "Paid for larger organizations; Engine is Apache-2.0.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  },
+  {
+   "project": "Liquibase Community 5.0+",
+   "category": "Dev tool",
+   "license_description": "FSL-1.1-ALv2",
+   "license_expression": "FSL-1.1-ALv2",
+   "family": "Source-available",
+   "implication": "Converts to Apache-2.0 two years after each release.",
+   "maintenance_status": "Unknown (not verified)",
+   "expression_verification_status": "Not verified against project LICENSE file",
+   "expression_verified_against_license_file": false
+  }
+ ],
+ "spdx_snapshot": {
+  "version": "3.29.0 (2026-09-16)",
+  "source": "https://spdx.org/licenses and https://spdx.org/licenses/exceptions-index.html",
+  "reKeyed": {
+   "PolyForm-Shield-1.0.0": "LicenseRef-PolyForm-Shield-1.0.0",
+   "PolyForm-Perimeter-1.0.0": "LicenseRef-PolyForm-Perimeter-1.0.0",
+   "FCL-1.0-ALv2": "LicenseRef-FCL-1.0-ALv2",
+   "FCL-1.0-MIT": "LicenseRef-FCL-1.0-MIT",
+   "Prosperity-3.0": "LicenseRef-Prosperity-3.0",
+   "MS-RSL": "LicenseRef-MS-RSL",
+   "CreativeML-OpenRAIL-M": "LicenseRef-CreativeML-OpenRAIL-M",
+   "BigScience-OpenRAIL-M": "LicenseRef-BigScience-OpenRAIL-M",
+   "BigScience-BLOOM-RAIL-1.0": "LicenseRef-BigScience-BLOOM-RAIL-1.0",
+   "OpenMDW-1.1": "LicenseRef-OpenMDW-1.1"
+  }
+ }
+}
