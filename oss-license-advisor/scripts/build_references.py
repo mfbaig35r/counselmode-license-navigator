@@ -73,6 +73,7 @@ def TABLES(context: dict, models: list) -> list[tuple[str, str, str, list[dict]]
     return [
         ("case-law.md", "Case law", "Verify statuses on the docket before publication.", context["case_law"]),
         ("regulatory-overlay.md", "Regulatory overlay", "", context["regulatory"]),
+        ("relicensing-log.md", "Relicensing log", "", context["relicensing"]),
         (
             "model-map.md",
             "AI model \u2192 license map (keyed by model version)",

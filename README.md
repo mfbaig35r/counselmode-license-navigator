@@ -40,8 +40,8 @@ claude mcp add licenses -- uvx counselmode-licenses        # Claude Code
 For Claude Desktop, Cursor and others, run the command `uvx counselmode-licenses` (or `pip install counselmode-licenses`
 and run `counselmode-licenses`) as a stdio server. Tools: `lookup_license`, `model_license`, `check_compatibility`,
 `license_obligations`, `triage_dependencies`, `search` and `fetch`; the method is the resource `licenses://skill` and
-the data files are `licenses://data/<name>`. A hosted endpoint with no sign-in, for ChatGPT, Claude.ai and Grok, is in
-progress.
+the data files are `licenses://data/<name>`. A hosted endpoint with no sign-in, for ChatGPT, Claude.ai and Grok, is at
+`https://counselmode-licenses.vercel.app/mcp` (testing; a permanent address comes with the public release).
 
 ## How much to trust it
 

@@ -24,8 +24,8 @@
    "ID": "case-software-freedom-conservancy-v-vizio-inc",
    "Case": "Software Freedom Conservancy v. Vizio, Inc.",
    "Court / citation": "Cal. Super. Ct., Orange County, No. 30-2021-01226723-CU-BC-CJC",
-   "Date(s)": "Mar. 26, 2024 (third-party-beneficiary status held a triable issue); Dec. 23, 2025 (minute order granting Vizio's summary adjudication); trial reportedly scheduled for Aug. 10, 2026 (unconfirmed)",
-   "Holding / status": "Pretrial summary-adjudication order: GPLv2/LGPLv2.1 require source to be provided so it can be obtained and modified (source is defined to include installation scripts), but impose no duty to enable reinstallation of modified software such that the TVs continue to function properly. Whether purchasers can enforce as third-party beneficiaries remains a triable issue. Trial court ruling, not precedential. No post-trial judgment found",
+   "Date(s)": "Mar. 26, 2024 (third-party-beneficiary status held a triable issue); Dec. 23, 2025 (minute order granting Vizio's summary adjudication); trial set for Jan. 12, 2026 was vacated Jan. 8, 2026, then reset for Aug. 10-19, 2026; on Aug. 9, 2026 SFC moved its listed trial date to \"late 2026\" (party statement; court docket not checked)",
+   "Holding / status": "Pretrial summary-adjudication order: GPLv2/LGPLv2.1 require source to be provided so it can be obtained and modified (source is defined to include installation scripts), but impose no duty to enable reinstallation of modified software such that the TVs continue to function properly. Whether purchasers can enforce as third-party beneficiaries remains a triable issue. Trial court ruling, not precedential. As of Nov. 23, 2026 SFC lists the case as ongoing with trial expected in late 2026; no verdict, judgment or settlement has been reported (per SFC, a party; docket not checked)",
    "Why it matters": "Consumer (third-party beneficiary) enforcement; GPLv2 vs GPLv3 installation duties",
    "Verification status": "Verified (primary) for 2024 and Dec. 2025 orders; trial status secondary only",
    "Last verified": "2026-11-23"
@@ -111,57 +111,57 @@
    "Project": "MongoDB",
    "From": "AGPL-3.0",
    "To": "SSPL-1.0",
-   "Date": "Oct. 2018",
-   "Notes / fork": "Debian/Fedora dropped MongoDB",
-   "Source": "Vendor announcement (not re-verified)"
+   "Date": "Oct. 16, 2018",
+   "Notes / fork": "Debian (Dec. 5, 2018) and Fedora (Jan. 15, 2019) ruled SSPL unacceptable; Debian removed mongodb from testing Feb. 18, 2019",
+   "Source": "https://www.mongodb.com/press/mongodb-issues-new-server-side-public-license-for-mongodb-community-server; https://github.com/mongodb/mongo/commit/5851c894963cb2d675f2c0628e2dc782e23e65a9; https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=915537; https://lists.fedorahosted.org/archives/list/legal@lists.fedoraproject.org/thread/IQIOBOGWJ247JGKX2WD6N27TZNZZNM6C/; https://tracker.debian.org/pkg/mongodb"
   },
   {
    "Project": "Elasticsearch / Kibana",
    "From": "Apache-2.0",
    "To": "SSPL-1.0 / Elastic-2.0; AGPL-3.0 option added 2024",
-   "Date": "Jan. 2021; Aug. 2024",
-   "Notes / fork": "OpenSearch fork (Apache-2.0)",
-   "Source": "Not re-verified"
+   "Date": "Jan. 14, 2021 (effective 7.11); Aug. 29, 2024 (AGPL)",
+   "Notes / fork": "OpenSearch fork (Apache-2.0), announced Jan. 21, 2021, launched Apr. 12, 2021 from Elasticsearch/Kibana 7.10.2",
+   "Source": "https://www.elastic.co/blog/licensing-change; https://www.elastic.co/blog/elastic-license-v2; https://www.elastic.co/blog/elasticsearch-is-open-source-again; https://github.com/elastic/elasticsearch/commit/a92a647b9f17d1bddf5c707490a19482c273eda3; https://github.com/elastic/elasticsearch/commit/a59c182f9f7e9d1bf3d6eecbc0e44f24ff91d053; https://github.com/elastic/kibana/commit/b6287708f687d4e3288851052c0c6ae4ade8ce60; https://aws.amazon.com/blogs/opensource/stepping-up-for-a-truly-open-source-elasticsearch/; https://aws.amazon.com/blogs/opensource/introducing-opensearch/"
   },
   {
    "Project": "Grafana",
    "From": "Apache-2.0",
    "To": "AGPL-3.0",
-   "Date": "Apr. 2021",
-   "Notes / fork": "",
-   "Source": "Not re-verified"
+   "Date": "Apr. 20, 2021",
+   "Notes / fork": "Loki and Tempo relicensed at the same time; plugins, agents and certain libraries stay Apache-2.0",
+   "Source": "https://grafana.com/blog/2021/04/20/grafana-loki-tempo-relicensing-to-agplv3/; https://github.com/grafana/grafana/commit/8db3eb90ae8c20e1a2bbbad300e0683def9bf8fb"
   },
   {
    "Project": "MinIO",
    "From": "Apache-2.0",
    "To": "AGPL-3.0; community edition then wound down",
-   "Date": "2021; maintenance mode Dec. 3, 2025; archived Apr. 25, 2026",
-   "Notes / fork": "pgsty/minio fork; vendor product AIStor (proprietary)",
-   "Source": "https://github.com/minio/minio (verified 2026-11-18)"
+   "Date": "Apr. 2021; maintenance mode Dec. 3, 2025; archived Apr. 25, 2026",
+   "Notes / fork": "Community fork pgsty/minio, renamed pgsty/silo (Silo) on Aug. 6, 2026 (AGPL-3.0); vendor product AIStor (commercial license, with a no-cost 'AIStor Free' tier)",
+   "Source": "https://github.com/minio/minio/commit/069432566fcfac1f1053677cc925ddafd750730a; https://github.com/minio/minio/commit/27742d469462e1561c776f88ca7a1f26816d69e2; https://github.com/minio/minio; https://github.com/pgsty/silo"
   },
   {
    "Project": "HashiCorp Terraform, Vault, Consul",
    "From": "MPL-2.0",
    "To": "BUSL-1.1",
-   "Date": "Aug. 2023",
-   "Notes / fork": "OpenTofu (MPL-2.0), OpenBao forks",
-   "Source": "Not re-verified"
+   "Date": "Aug. 10, 2023",
+   "Notes / fork": "OpenTofu (Terraform fork, MPL-2.0, Linux Foundation, Sept. 20, 2023); OpenBao (Vault fork, MPL-2.0, now OpenSSF). BUSL licensor changed to IBM in Mar. 2026; APIs, SDKs and most libraries stayed MPL-2.0",
+   "Source": "https://www.hashicorp.com/blog/hashicorp-adopts-business-source-license; https://github.com/hashicorp/terraform/commit/b145fbcaadf0fa7d0e7040eac641d9aef2a26433; https://github.com/hashicorp/terraform/blob/main/LICENSE; https://github.com/hashicorp/terraform/commit/4eba7c0596a06779c3d365dfd0ebef162e308f3c; https://www.linuxfoundation.org/press/announcing-opentofu; https://openbao.org/; https://github.com/openbao/openbao"
   },
   {
    "Project": "Redis",
    "From": "BSD-3-Clause",
-   "To": "RSALv2 / SSPL; AGPL-3.0 option added (Redis 8)",
-   "Date": "Mar. 2024; 2025",
-   "Notes / fork": "Valkey fork (BSD-3-Clause)",
-   "Source": "Not re-verified"
+   "To": "RSALv2 / SSPL (Redis 7.4); AGPL-3.0 option added (Redis 8)",
+   "Date": "Mar. 20, 2024; May 1, 2025",
+   "Notes / fork": "Valkey fork (BSD-3-Clause), Linux Foundation, Mar. 28, 2024, from Redis 7.2.4",
+   "Source": "https://redis.io/blog/redis-adopts-dual-source-available-licensing/; https://redis.io/blog/agplv3/; https://github.com/redis/redis/commit/0b34396924eca4edc524469886dc5be6c77ec4ed; https://github.com/redis/redis/commit/d65102861f51af48241f607afa678c4c2a0f894c; https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community"
   },
   {
    "Project": "Sentry",
    "From": "BUSL-1.1",
-   "To": "FSL-1.1",
-   "Date": "2023",
-   "Notes / fork": "",
-   "Source": "Not re-verified"
+   "To": "FSL-1.0-Apache-2.0, upgraded to FSL-1.1-Apache-2.0",
+   "Date": "Nov. 17, 2023; Feb. 27, 2024 (FSL-1.1)",
+   "Notes / fork": "Codecov relicensed to FSL at the same time; each release converts to Apache-2.0 after two years",
+   "Source": "https://blog.sentry.io/introducing-the-functional-source-license-freedom-without-free-riding/; https://github.com/getsentry/sentry/commit/d4d89e2fa93ad99f13d54d06d3e7df3e7753b2dc; https://github.com/getsentry/sentry/commit/1760ab3c6bffb86c199bd9eb5a349e95e08d7833"
   },
   {
    "Project": "Liquibase Community",
@@ -169,39 +169,39 @@
    "To": "FSL-1.1-ALv2 (each version reverts to Apache-2.0 after 2 years); CLA now required",
    "Date": "Sept. 30, 2025 (v5.0)",
    "Notes / fork": "",
-   "Source": "https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl (verified 2026-11-18)"
+   "Source": "https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl; https://github.com/liquibase/liquibase/commit/c574abc00bafd6bc55ed8e4ae7bbde25d0af4ed3; https://github.com/liquibase/liquibase/releases/tag/v5.0.0"
   },
   {
    "Project": "Cal.com",
-   "From": "MIT -> AGPL-3.0 (2021)",
+   "From": "MIT -> AGPL-3.0 (Sept. 2021)",
    "To": "Commercial edition closed source; community code relaunched as Cal.diy under MIT",
-   "Date": "2026 (date per vendor blog; confirm)",
-   "Notes / fork": "Reviewer's \"back to MIT on Apr. 15, 2026\" is incomplete: the commercial product went closed-source",
-   "Source": "https://cal.com/blog/calcom-v6-4 (verified 2026-11-18)"
+   "Date": "Apr. 15, 2026",
+   "Notes / fork": "Not a simple return to MIT: the commercial edition's code is no longer public; the former calcom/cal.com repo now redirects to calcom/cal.diy (MIT)",
+   "Source": "https://cal.com/blog/calcom-v6-4; https://github.com/calcom/cal.diy/commit/ab21c7f805a089fa3a11ffd61c4a9aecc349c16c; https://github.com/calcom/cal.diy/commit/5ad825544a7787f58db7c7e9e12da49c6a6a0ad0; https://github.com/calcom/cal.diy"
   },
   {
    "Project": "Google Gemma",
    "From": "Gemma Terms of Use",
    "To": "Apache-2.0 (Gemma 4 onward)",
-   "Date": "Mar. 31, 2026",
+   "Date": "Apr. 2, 2026 (announced; release notes list Mar. 31, 2026)",
    "Notes / fork": "Gemma 1-3 remain on Gemma Terms",
-   "Source": "https://ai.google.dev/gemma/docs/releases (verified 2026-11-18)"
+   "Source": "https://opensource.googleblog.com/2026/03/gemma-4-expanding-the-gemmaverse-with-apache-20.html; https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/; https://gemma.ai/models/releases/; https://huggingface.co/google/gemma-4-31B-it; https://huggingface.co/google/gemma-3-27b-it"
   },
   {
    "Project": "Meta open models",
    "From": "Llama Community Licenses",
    "To": "Apache-2.0 (Muse Glimmer); Muse Model License (Muse Spark Open)",
    "Date": "Aug. 10, 2026; Oct. 15, 2026",
-   "Notes / fork": "Flagship Muse Spark proprietary",
-   "Source": "Meta research blog / Hugging Face (verified 2026-11-18)"
+   "Notes / fork": "Muse Spark launched Apr. 8, 2026 without open weights; Muse Spark Open is its open-weights version under the custom Muse Model License (not OSI open source: 'Built with Muse Spark Open' attribution, usage policy, separate agreement for Model-as-a-Service businesses over US$20M revenue)",
+   "Source": "https://huggingface.co/meta-models/Muse-Glimmer-30B; https://ai.meta.com/research/publications/muse-glimmer-30b-an-on-device-agentic-model/; https://huggingface.co/blog/muse-glimmer; https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B; https://dev.meta.ai/resources/blog/build-with-muse-spark-open; https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/"
   },
   {
    "Project": "Moonshot Kimi",
    "From": "Modified MIT (K2)",
    "To": "Kimi K3 License",
-   "Date": "Jul. 2026",
-   "Notes / fork": "Moves from attribution-only to MaaS commercial gate",
-   "Source": "Hugging Face license (verified 2026-11-18)"
+   "Date": "Jul. 27, 2026 (open weights)",
+   "Notes / fork": "Keeps K2's attribution clause and adds a separate-agreement requirement for Model-as-a-Service businesses above US$20M revenue in any 12 months; internal use exempt. K2.x models stay on Modified MIT",
+   "Source": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE; https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/LICENSE; https://huggingface.co/moonshotai/Kimi-K3/commits/main"
   }
  ],
  "projects": [

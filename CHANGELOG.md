@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.9 (2026-11-23)
+
+- **Relicensing log checked against primary sources** (project announcements, license-file history, fork
+  announcements): 7 confirmed with exact dates, 5 corrected. MinIO's fork is now pgsty/silo; Sentry moved to FSL-1.0 in
+  Nov. 2023 and FSL-1.1 in Feb. 2024; Cal.com's dates fixed; Gemma 4's announcement date; Meta's Muse Spark Open is an
+  open-weights release under its own license, not "proprietary". `relicensing-log.md` is now generated from the data.
+- **Vizio:** the Aug. 10, 2026 trial did not go ahead; per SFC's own case page (a party statement, not the court
+  docket, which could not be read) it is now expected in late 2026, with no verdict, judgment or settlement reported.
+- **Hosted endpoint live** at https://counselmode-licenses.vercel.app/mcp (no sign-in), behind a per-IP flood limit.
+
 ## 2.8 (2026-11-23)
 
 - **New AI records from primary sources:** three licenses, `LicenseRef-Mistral-Ecosystem-Open-Weight` (Mistral Large 4:
