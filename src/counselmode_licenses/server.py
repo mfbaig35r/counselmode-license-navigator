@@ -10,6 +10,7 @@ import sys
 from collections import Counter
 from importlib.metadata import PackageNotFoundError, version
 from typing import Annotated, Literal
+from urllib.parse import quote
 
 from fastmcp import FastMCP
 from fastmcp.exceptions import ResourceError, ToolError
@@ -61,6 +62,15 @@ def _era_range(era: dict) -> str:
     if lo is None and hi is None:
         return "all versions"
     return f"{lo or 'up'} to {hi}" if hi else f"{lo} and later"
+
+
+def _page(record: dict) -> str:
+    """The license's plain-English page on counselmode.com, which links on to its sources."""
+    return f"{SITE}/licenses/{quote(record['id'], safe='')}"
+
+
+def _project_page(p: dict) -> str:
+    return f"{SITE}/licenses/projects/{p['id']}"
 
 
 def _model_id(m: dict) -> str:
@@ -246,11 +256,11 @@ def _search(ll, query: str, limit: int = 10) -> list[dict]:
             results.append({"id": id_, "title": title, "url": url})
 
     for r in resolved["records"] if resolved["match"] != "candidates" else []:
-        add(r["id"], r["name"], _url(r))
+        add(r["id"], r["name"], _page(r))
     for m in ll.model(query):
         add(_model_id(m), f"{m['vendor']} {m['model']}: {m['license']}", _url(m))
     for p in ll.project(query):
-        add(f"project:{p['id']}", f"{p['name']}: {p['eras'][-1]['license_expression']}", p["repo"])
+        add(f"project:{p['id']}", f"{p['name']}: {p['eras'][-1]['license_expression']}", _project_page(p))
     words = [w for w in re.findall(r"[a-z0-9.+-]+", query.lower()) if len(w) > 1]
     scored = []
     for r in ll.LIC:
@@ -259,7 +269,7 @@ def _search(ll, query: str, limit: int = 10) -> list[dict]:
         if score:
             scored.append((-score, len(r["id"]), r))
     for _, _, r in sorted(scored, key=lambda x: (x[0], x[1])):
-        add(r["id"], r["name"], _url(r))
+        add(r["id"], r["name"], _page(r))
     return results
 
 
@@ -277,8 +287,12 @@ def _fetch(ll, id_: str, disclaimer: str) -> dict:
             "title": p["name"],
             "text": f"{p['name']} (steward: {p['steward']})\n\nLicense by version:\n{eras}\n\n"
             f"Editorial view: {p['editorial_view']}\n\n{disclaimer}",
-            "url": p["repo"],
-            "metadata": {"category": p["category"], "current_license": p["eras"][-1]["license_expression"]},
+            "url": _project_page(p),
+            "metadata": {
+                "category": p["category"],
+                "current_license": p["eras"][-1]["license_expression"],
+                "repo": p["repo"],
+            },
         }
     if id_.startswith("model:"):
         m = next((m for m in ll.MODELS if _model_id(m) == id_), None)
@@ -304,8 +318,9 @@ def _fetch(ll, id_: str, disclaimer: str) -> dict:
         "id": record["id"],
         "title": record["name"],
         "text": references().render_record(record) + f"\n\n{disclaimer}",
-        "url": _url(record),
+        "url": _page(record),
         "metadata": {
+            "source": _url(record),
             "family": record["family"],
             "verification_status": p.get("verification_status"),
             "last_verified": p.get("last_verified"),

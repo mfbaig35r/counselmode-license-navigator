@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.13.2 (2026-11-23)
+
+- `search` and `fetch` link each license and project to its plain-English page on counselmode.com
+  (counselmode.com/licenses/<id>, /licenses/projects/<id>), which links on to the primary sources; a license's
+  primary source is in `metadata.source`, a project's repository in `metadata.repo`. Model records keep their source.
+
 ## 2.13.1 (2026-11-23)
 
 - **Every record stands on its own.** 32 fields in 20 records only pointed at another record ("As BSD-2", "As

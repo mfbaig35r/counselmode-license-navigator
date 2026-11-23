@@ -113,9 +113,14 @@ def test_triage_rejects_empty_and_oversized_input():
 
 def test_search_then_fetch_for_chatgpt():
     hits = call("search", query="GPLv3")["results"]
-    assert hits[0]["id"] == "GPL-3.0-only" and hits[0]["url"].startswith("http")
+    assert hits[0]["id"] == "GPL-3.0-only" and hits[0]["url"] == "https://counselmode.com/licenses/GPL-3.0-only"
     doc = call("fetch", id=hits[0]["id"])
-    assert doc["title"] and "Not legal advice." in doc["text"] and doc["url"].startswith("http")
+    assert (
+        doc["title"]
+        and "Not legal advice." in doc["text"]
+        and doc["url"].startswith("https://counselmode.com/licenses/")
+    )
+    assert doc["metadata"]["source"].startswith("http")
     assert doc["metadata"]["verification_status"]
     models = [h for h in call("search", query="Gemma")["results"] if h["id"].startswith("model:")]
     assert models
