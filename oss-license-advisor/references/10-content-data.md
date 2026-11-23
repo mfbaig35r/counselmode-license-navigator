@@ -8,7 +8,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** excluded
 - **copyleft_scope:** varies
-- **obligations:** ['state_changes']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes']
 - steward_year: Creative Commons / 2013
 - allows: Share and adapt for any purpose
 - conditions: Attribution, indicate changes, no additional restrictions/DRM
@@ -27,6 +28,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** varies
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'same_license']
 - steward_year: Creative Commons / 2013
 - allows: As CC-BY
 - conditions: Adaptations under same/compatible license (one-way compatible with GPLv3)
@@ -45,6 +48,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** varies
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes']
 - steward_year: Creative Commons / 2013
 - allows: Share verbatim
 - conditions: No derivatives
@@ -63,6 +68,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** not_reviewed
 - **patent_grant:** none
 - **copyleft_scope:** varies
+- **triggers:** ['distribution']
+- **obligations:** ['attribution']
 - steward_year: Linux Foundation / 2021
 - allows: Use, modify, share data; results/outputs unrestricted
 - conditions: Provide license text when sharing data
@@ -81,7 +88,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** not_reviewed
 - **patent_grant:** none
 - **copyleft_scope:** varies
-- **obligations:** ['same_license']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'same_license']
 - steward_year: Linux Foundation / 2017
 - allows: Use and share data
 - conditions: Shared data modifications under same terms
@@ -100,7 +108,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** not_reviewed
 - **patent_grant:** none
 - **copyleft_scope:** varies
-- **obligations:** ['same_license']
+- **triggers:** ['distribution', 'network_interaction']
+- **obligations:** ['attribution', 'same_license', 'source_disclosure']
 - steward_year: Open Knowledge Foundation / 2009
 - allows: Use, share, adapt databases
 - conditions: Attribution; share-alike for adapted databases; keep open
@@ -119,6 +128,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** varies
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'same_license', 'source_disclosure']
 - steward_year: FSF / 2008
 - allows: Copy, modify, distribute documentation
 - conditions: Copyleft on modified versions; invariant sections and cover texts rules; transparent copy requirement
@@ -137,6 +148,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** varies
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'same_license', 'source_disclosure']
 - steward_year: FSF / 2008
 - allows: Copy, modify, distribute documentation
 - conditions: Copyleft on modified versions; invariant sections and cover texts rules; transparent copy requirement
@@ -155,6 +168,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** not_reviewed
 - **patent_grant:** none
 - **copyleft_scope:** varies
+- **triggers:** ['distribution', 'network_interaction']
+- **obligations:** ['attribution']
 - steward_year: Open Knowledge Foundation / 2010
 - allows: Use, share, adapt databases
 - conditions: Attribution

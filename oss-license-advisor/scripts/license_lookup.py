@@ -93,8 +93,13 @@ def family_risk(record: dict, scenario: str) -> str:
     base = FAMILY_RISK.get(family, "REVIEW")
     triggers = set(record.get("triggers", []))
     if scenario == "internal":
-        if "commercial_use" in triggers:
+        # Internal use is blocked by an actual use restriction, not by a commercial-use trigger (which only says what
+        # sets obligations off). Size- or revenue-bounded licenses depend on who you are.
+        bounded = "mau_revenue_cap" in record.get("obligations", []) or "threshold" in triggers
+        if "noncommercial_only" in record.get("obligations", []) or (family == "noncommercial" and not bounded):
             return "BLOCK"
+        if bounded:
+            return "REVIEW"
         if base in ("REVIEW", "HIGH") and family.startswith(("ai", "ethical", "propriet")):
             return "REVIEW"
         return "LOW"

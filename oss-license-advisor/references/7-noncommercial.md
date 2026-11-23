@@ -8,7 +8,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** express
 - **copyleft_scope:** use_restriction
-- **triggers:** ['commercial_use']
+- **triggers:** ['commercial_use', 'distribution']
+- **obligations:** ['attribution', 'noncommercial_only', 'patent_retaliation']
 - steward_year: PolyForm Project / 2019
 - allows: Noncommercial use (personal, research, nonprofits, government)
 - conditions: Any commercial use requires separate license
@@ -27,7 +28,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** express
 - **copyleft_scope:** use_restriction
-- **triggers:** ['commercial_use']
+- **triggers:** ['threshold', 'distribution']
+- **obligations:** ['attribution', 'mau_revenue_cap', 'patent_retaliation']
 - steward_year: PolyForm Project / 2019
 - allows: Use by individuals and businesses below thresholds (<100 people, <US$1M revenue)
 - conditions: Larger organizations need commercial license
@@ -46,7 +48,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** express
 - **copyleft_scope:** use_restriction
-- **triggers:** ['commercial_use']
+- **triggers:** ['commercial_use', 'distribution']
+- **obligations:** ['attribution', 'noncommercial_only', 'patent_retaliation']
 - steward_year: License Zero / 2019
 - allows: Noncommercial use + 30-day commercial trial
 - conditions: Commercial use beyond trial requires license
@@ -65,8 +68,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['commercial_use']
-- **obligations:** ['noncommercial_only']
+- **triggers:** ['commercial_use', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'same_license', 'noncommercial_only']
 - steward_year: Sun Microsystems / 2003
 - allows: Research and educational use of Java source
 - conditions: No commercial/production use
@@ -85,8 +88,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['commercial_use']
-- **obligations:** ['attribution', 'noncommercial_only']
+- **triggers:** ['commercial_use', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'noncommercial_only']
 - steward_year: Creative Commons / 2013
 - allows: Share and adapt for noncommercial purposes with attribution
 - conditions: No commercial use; attribution
@@ -106,7 +109,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['commercial_use']
+- **triggers:** ['any_use', 'commercial_use', 'distribution']
+- **obligations:** ['patent_retaliation']
 - steward_year: Microsoft / 2007
 - allows: View source for reference only (e.g., debugging)
 - conditions: No modification or redistribution
@@ -126,8 +130,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['commercial_use']
-- **obligations:** ['attribution', 'same_license', 'noncommercial_only']
+- **triggers:** ['commercial_use', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'same_license', 'noncommercial_only']
 - steward_year: Creative Commons / 2013
 - allows: Noncommercial share and adapt
 - conditions: No commercial use; attribution; adaptations under same license
@@ -146,8 +150,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['commercial_use']
-- **obligations:** ['noncommercial_only']
+- **triggers:** ['commercial_use', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'noncommercial_only']
 - steward_year: Creative Commons / 2013
 - allows: Noncommercial verbatim sharing
 - conditions: No commercial use; no derivatives

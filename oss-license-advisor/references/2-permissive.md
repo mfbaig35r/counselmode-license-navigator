@@ -8,6 +8,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
+- **triggers:** ['distribution']
 - **obligations:** ['attribution']
 - steward_year: MIT / 1987
 - allows: Use, copy, modify, merge, publish, distribute, sublicense, sell
@@ -20,7 +21,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – build_on:** Very low risk: include notice in your attribution/NOTICES file or "About" screen.
 - **Editorial view – license_your_own:** Most popular OSS license; maximizes adoption, allows proprietary forks.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://opensource.org/license/mit; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## BSD 2-Clause "Simplified" — `BSD-2-Clause`
 
@@ -28,7 +29,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
-- **obligations:** ['attribution', 'source_disclosure']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution']
 - steward_year: UC Berkeley / 1990s
 - allows: Redistribution and use in source and binary, with or without modification
 - conditions: Retain notice in source; reproduce notice in binary documentation
@@ -39,7 +41,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – build_on:** Very low risk; reproduce notice in docs for binary distribution.
 - **Editorial view – license_your_own:** Functionally equivalent to MIT.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://opensource.org/license/bsd-2-clause; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## BSD 3-Clause "New/Revised" — `BSD-3-Clause`
 
@@ -47,7 +49,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
-- **obligations:** ['naming_rule']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'naming_rule']
 - steward_year: UC Berkeley / 1999
 - allows: As BSD-2
 - conditions: As BSD-2 + no use of names of copyright holder/contributors to endorse
@@ -58,7 +61,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – build_on:** Very low risk; do not use author names for endorsement.
 - **Editorial view – license_your_own:** Common for academic and corporate projects.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://opensource.org/license/bsd-3-clause; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://www.gnu.org/licenses/bsd.html; https://spdx.org/licenses/ | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## BSD 4-Clause "Original" — `BSD-4-Clause`
 
@@ -66,7 +69,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
-- **obligations:** ['attribution', 'naming_rule']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution']
 - steward_year: UC Berkeley / 1980s
 - allows: As BSD-3
 - conditions: Adds "advertising clause": ads must acknowledge the university/authors
@@ -86,6 +90,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
+- **triggers:** ['distribution']
 - **obligations:** ['attribution']
 - steward_year: Internet Systems Consortium / 1990s
 - allows: Use, copy, modify, distribute for any purpose
@@ -105,19 +110,20 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** express
 - **copyleft_scope:** none
-- **obligations:** ['notice_file', 'state_changes']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'notice_file', 'state_changes', 'patent_retaliation']
 - steward_year: Apache Software Foundation / 2004
 - allows: Copyright and patent license to use, modify, distribute, sublicense
 - conditions: Include license; preserve NOTICE file contents; mark modified files ("state changes"); no trademark rights
 - copyleft_detail: None
 - gpl_compatibility: Compatible with GPLv3 only; INCOMPATIBLE with GPLv2-only
-- notable_projects: Kubernetes, Android (AOSP userland), TensorFlow, Spark, Kafka, Swift, many LLMs (Mistral 7B, Qwen, gpt-oss, OLMo)
+- notable_projects: Kubernetes, Android (AOSP userland), TensorFlow, Spark, Kafka, Swift (with Runtime Library Exception), many LLMs (Mistral 7B, gpt-oss, OLMo; some Qwen releases only)
 - saas: No obligations
 - notes: Watch GPLv2-only combinations (e.g., Linux kernel modules).
 - **Editorial view – build_on:** Low risk; must carry NOTICE files forward and flag modified files. Patent termination if you assert patents against the work.
 - **Editorial view – license_your_own:** Preferred corporate permissive license thanks to explicit patent grant and contribution terms (§5).
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.apache.org/licenses/LICENSE-2.0.txt; https://www.apache.org/licenses/GPL-compatibility.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## Apache License 1.1 — `Apache-1.1`
 
@@ -125,7 +131,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
-- **obligations:** ['naming_rule']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'naming_rule']
 - steward_year: ASF / 2000
 - allows: Permissive
 - conditions: Attribution in end-user docs; naming restriction
@@ -145,7 +152,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
-- **obligations:** ['attribution', 'state_changes', 'source_disclosure']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes']
 - steward_year: J. Gailly & M. Adler / 1995
 - allows: Any purpose including commercial
 - conditions: Do not misrepresent origin; mark altered versions; keep notice in source
@@ -164,7 +172,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
-- **obligations:** ['source_disclosure']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution']
 - steward_year: Boost / 2003
 - allows: Use, reproduce, display, distribute, derive
 - conditions: Notice required in source only; not required in machine-executable object code
@@ -184,6 +193,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
+- **triggers:** ['distribution']
 - **obligations:** ['attribution']
 - steward_year: PostgreSQL Global Dev. Group / 1996
 - allows: Use, copy, modify, distribute for any purpose without fee
@@ -203,6 +213,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
+- **triggers:** ['distribution']
 - **obligations:** ['attribution', 'state_changes']
 - steward_year: PSF / 2001
 - allows: Permissive
@@ -222,7 +233,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** express
 - **copyleft_scope:** none
-- **obligations:** ['state_changes', 'patent_retaliation']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'patent_retaliation']
 - steward_year: Perl Foundation / 2006
 - allows: Use, modify, distribute; special rules for "Modified Versions"
 - conditions: Modified versions must be clearly marked or made freely available; patent termination
@@ -242,7 +254,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
-- **obligations:** ['attribution', 'naming_rule']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution']
 - steward_year: UIUC / 2004
 - allows: Permissive (MIT + BSD hybrid)
 - conditions: Keep notices; no endorsement
@@ -261,6 +274,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** express
 - **copyleft_scope:** none
+- **triggers:** ['distribution']
 - **obligations:** ['attribution']
 - steward_year: Oracle / 2014
 - allows: Copyright and patent license
@@ -280,6 +294,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** express
 - **copyleft_scope:** none
+- **triggers:** ['distribution']
 - **obligations:** ['attribution']
 - steward_year: Blue Oak Council / 2019
 - allows: Copyright and patent license, plain language
@@ -299,6 +314,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** express
 - **copyleft_scope:** none
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'notice_file', 'patent_retaliation']
 - steward_year: Kuali / 2007
 - allows: Apache-2.0 variant
 - conditions: Narrowed patent grant for universities
@@ -317,6 +334,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** express
 - **copyleft_scope:** none
+- **triggers:** ['distribution']
 - **obligations:** ['attribution', 'patent_retaliation']
 - steward_year: China (Mulan community) / 2019
 - allows: Copyright and patent license; bilingual Chinese/English
@@ -336,7 +354,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** express
 - **copyleft_scope:** none
-- **obligations:** ['patent_retaliation']
+- **triggers:** ['distribution', 'network_interaction']
+- **obligations:** ['attribution', 'state_changes', 'patent_retaliation']
 - steward_year: L. Rosen / 2005
 - allows: Permissive with patent grant
 - conditions: Attribution; patent termination; jurisdiction clause
@@ -355,7 +374,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
-- **obligations:** ['attribution', 'naming_rule']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution']
 - steward_year: X Consortium / 1990s
 - allows: MIT-style
 - conditions: Keep notice; name-use restriction
@@ -374,7 +394,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
-- **obligations:** ['attribution', 'naming_rule']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution']
 - steward_year: Unicode, Inc. / 2023
 - allows: Use, copy, modify, distribute data files and software
 - conditions: Keep copyright and permission notice; no use of holder names in advertising
@@ -393,6 +414,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** express
 - **copyleft_scope:** none
+- **triggers:** ['distribution']
 - **obligations:** ['attribution']
 - steward_year: Cable Labs / 2017
 - allows: BSD-2 plus express patent license
@@ -412,6 +434,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
+- **triggers:** ['distribution']
 - **obligations:** ['attribution', 'naming_rule']
 - steward_year: PHP Group / 2006
 - allows: Permissive

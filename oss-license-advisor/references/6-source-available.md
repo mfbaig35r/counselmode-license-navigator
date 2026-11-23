@@ -5,44 +5,44 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 ## Server Side Public License v1 — `SSPL-1.0`
 
 - **osi_status:** withdrawn
-- **fsf_status:** nonfree
+- **fsf_status:** not_reviewed
 - **patent_grant:** express
-- **copyleft_scope:** use_restriction
-- **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['source_disclosure', 'same_license', 'no_competing_service']
+- **copyleft_scope:** network
+- **triggers:** ['distribution', 'service_offering']
+- **obligations:** ['source_disclosure', 'same_license', 'installation_info']
 - steward_year: MongoDB / 2018
-- allows: Use, modify, distribute (AGPLv3-based)
+- allows: Use, modify, distribute (GPLv3-based per MongoDB; s.13 replaced)
 - conditions: §13: offering the program "as a service" requires releasing source of the ENTIRE service stack (management, UI, APIs, monitoring, backup, hosting software) under SSPL
 - copyleft_detail: Entire service infrastructure
 - gpl_compatibility: Incompatible with GPL/AGPL
-- notable_projects: MongoDB (since 2018), Elasticsearch/Kibana (2021-2024, now also AGPL option), Graylog (historic)
-- saas: Core restriction
+- notable_projects: MongoDB (since Oct. 16, 2018), Elasticsearch/Kibana (since 2021; SSPL still offered alongside AGPL-3.0 and ELv2), Graylog (current)
+- saas: Core condition: s.13 Service Source Code release
 - notes: Not OSI-approved; considered source-available.
 - **Editorial view – build_on:** Internal use and use as a backend for your own app are generally OK; offering the software itself as a hosted service to third parties is effectively prohibited unless you buy a commercial license. Debian, Fedora, RHEL exclude SSPL software.
 - **Editorial view – license_your_own:** Vendor anti-cloud defense; not open source.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True
+- provenance: https://www.mongodb.com/legal/licensing/server-side-public-license ; https://www.mongodb.com/legal/licensing/server-side-public-license/faq ; https://opensource.org/blog/the-sspl-is-not-an-open-source-license ; https://www.gnu.org/licenses/license-list.html ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: True
 
 ## Business Source License 1.1 — `BUSL-1.1`
 
 - **osi_status:** not_approved
-- **fsf_status:** nonfree
+- **fsf_status:** not_reviewed
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
 - **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['source_disclosure', 'no_competing_service']
+- **obligations:** ['attribution', 'same_license', 'no_competing_service']
 - steward_year: MariaDB / 2016-2017
 - allows: Copy, modify, non-production use; vendor-defined "Additional Use Grant" may allow production use
 - conditions: Production use limited by Additional Use Grant (often "not a competing offering"); each version converts to a "Change License" (GPLv2+ compatible, e.g., Apache-2.0/MPL-2.0) on Change Date (max 4 years)
 - copyleft_detail: Usage restriction until Change Date
 - gpl_compatibility: Not compatible until conversion
-- notable_projects: MariaDB MaxScale, CockroachDB (historic), HashiCorp Terraform/Vault/Consul (since Aug 2023), Sentry (historic), Couchbase
+- notable_projects: MariaDB MaxScale, CockroachDB (historic; now CockroachDB Software License), HashiCorp Terraform/Vault/Consul (BUSL; Licensor now IBM), Sentry (historic; now FSL), Couchbase Server components
 - saas: Restricted per Additional Use Grant
 - notes: Change Date mechanics: older releases become open source.
 - **Editorial view – build_on:** Read the Additional Use Grant carefully - it defines what is allowed. Competing-service restrictions; forks appeared (OpenTofu from Terraform, OpenBao from Vault).
 - **Editorial view – license_your_own:** Delayed open source; protects vendor monetization window.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True
+- provenance: https://mariadb.com/bsl11/ ; https://opensource.org/api/licenses ; https://www.gnu.org/licenses/license-list.html ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: True
 
 ## Elastic License 2.0 — `Elastic-2.0`
 
@@ -50,8 +50,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** express
 - **copyleft_scope:** use_restriction
-- **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['attribution', 'no_competing_service']
+- **triggers:** ['service_offering', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'patent_retaliation', 'no_competing_service']
 - steward_year: Elastic / 2021
 - allows: Use, copy, distribute, modify, create derivatives
 - conditions: No providing as hosted/managed service with substantial set of features; no circumventing license keys; no removing notices
@@ -71,8 +71,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['no_competing_service', 'noncommercial_only']
+- **triggers:** ['service_offering', 'competing_use', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'patent_retaliation', 'no_competing_service']
 - steward_year: Redis / 2022 (core 2024)
 - allows: Use, modify, distribute
 - conditions: No commercializing as a database product/managed service; no circumventing license keys
@@ -89,14 +89,14 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 ## Functional Source License [FSL-1.1-ALv2] — `FSL-1.1-ALv2`
 
 - **osi_status:** not_approved
-- **fsf_status:** nonfree
+- **fsf_status:** not_reviewed
 - **patent_grant:** express
 - **copyleft_scope:** use_restriction
 - **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['no_competing_service']
+- **obligations:** ['attribution', 'no_competing_service', 'patent_retaliation']
 - steward_year: Sentry / 2023
 - allows: Any purpose except "Competing Use"
-- conditions: No competing commercial product/service; each version converts to Apache-2.0 or MIT after 2 years
+- conditions: No Competing Use (commercial product/service that substitutes for the Software or a licensor product existing at release, or offers substantially similar functionality); each version additionally licensed under Apache License, Version 2.0 on the second anniversary of its release
 - copyleft_detail: Usage restriction; 2-year conversion
 - gpl_compatibility: Not compatible until conversion
 - notable_projects: Sentry, Codecov, Liquibase Community 5.0+ (FSL-1.1-ALv2 since Sept. 30, 2025)
@@ -104,27 +104,27 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – build_on:** Low-moderate unless you compete with the licensor.
 - **Editorial view – license_your_own:** "Fair Source" option with short conversion period.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: https://spdx.org/licenses ; https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl | verification: Verified (primary) | last_verified: 2026-11-18 | volatile: True
+- provenance: https://github.com/getsentry/fsl.software/blob/main/FSL-1.1-ALv2.template.md ; https://fsl.software/ ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) ; https://opensource.org/api/licenses ; https://www.gnu.org/licenses/license-list.html | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: True
 
 ## Functional Source License [FSL-1.1-MIT] — `FSL-1.1-MIT`
 
 - **osi_status:** not_approved
-- **fsf_status:** nonfree
+- **fsf_status:** not_reviewed
 - **patent_grant:** express
 - **copyleft_scope:** use_restriction
 - **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['no_competing_service']
+- **obligations:** ['attribution', 'no_competing_service', 'patent_retaliation']
 - steward_year: Sentry / 2023
 - allows: Any purpose except "Competing Use"
-- conditions: No competing commercial product/service; each version converts to Apache-2.0 or MIT after 2 years
+- conditions: No Competing Use (commercial product/service that substitutes for the Software or a licensor product existing at release, or offers substantially similar functionality); each version additionally licensed under MIT license on the second anniversary of its release
 - copyleft_detail: Usage restriction; 2-year conversion
 - gpl_compatibility: Not compatible until conversion
-- notable_projects: Sentry, Codecov, Liquibase Community 5.0+ (FSL-1.1-ALv2 since Sept. 30, 2025)
+- notable_projects: None verified for the MIT variant (Sentry, Codecov and Liquibase use FSL-1.1-ALv2)
 - saas: Restricted only for competing use
 - **Editorial view – build_on:** Low-moderate unless you compete with the licensor.
 - **Editorial view – license_your_own:** "Fair Source" option with short conversion period.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: https://spdx.org/licenses ; https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl | verification: Verified (primary) | last_verified: 2026-11-18 | volatile: True
+- provenance: https://github.com/getsentry/fsl.software/blob/main/FSL-1.1-MIT.template.md ; https://fsl.software/ ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) ; https://opensource.org/api/licenses ; https://www.gnu.org/licenses/license-list.html | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: True
 
 ## Commons Clause (rider) — `LicenseRef-Commons-Clause`
 
@@ -132,8 +132,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** varies
 - **copyleft_scope:** use_restriction
-- **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['source_disclosure']
+- **triggers:** ['service_offering', 'commercial_use', 'competing_use', 'distribution']
+- **obligations:** ['attribution', 'no_competing_service']
 - steward_year: FOSSA/Heather Meeker / 2018
 - allows: Base license terms (e.g., Apache) minus right to "Sell"
 - conditions: Cannot sell the software or a service whose value derives substantially from it
@@ -153,8 +153,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** express
 - **copyleft_scope:** use_restriction
-- **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['no_competing_service']
+- **triggers:** ['competing_use', 'service_offering', 'distribution']
+- **obligations:** ['attribution', 'patent_retaliation', 'no_competing_service']
 - steward_year: PolyForm Project / 2019
 - allows: Any purpose except providing products that compete with licensor
 - conditions: Non-compete
@@ -173,8 +173,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** express
 - **copyleft_scope:** use_restriction
-- **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['no_competing_service']
+- **triggers:** ['competing_use', 'service_offering', 'distribution']
+- **obligations:** ['attribution', 'patent_retaliation', 'no_competing_service']
 - steward_year: PolyForm Project / 2019
 - allows: As Shield but narrower (cannot compete with the software itself)
 - conditions: Non-compete
@@ -193,8 +193,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['no_competing_service']
+- **triggers:** ['service_offering', 'competing_use', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'no_competing_service']
 - steward_year: Confluent / 2018
 - allows: Use, modify, distribute
 - conditions: No offering as SaaS competing with Confluent (e.g., KSQL as a service)
@@ -213,7 +213,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** express
 - **copyleft_scope:** use_restriction
-- **triggers:** ['competing_use', 'service_offering']
+- **triggers:** ['competing_use', 'service_offering', 'distribution']
+- **obligations:** ['attribution', 'same_license', 'patent_retaliation', 'no_competing_service']
 - steward_year: Keygen / 2024
 - allows: FSL-like plus license-key protected features
 - conditions: Competing-use restriction; 2-year conversion
@@ -232,7 +233,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** express
 - **copyleft_scope:** use_restriction
-- **triggers:** ['competing_use', 'service_offering']
+- **triggers:** ['competing_use', 'service_offering', 'distribution']
+- **obligations:** ['attribution', 'same_license', 'patent_retaliation', 'no_competing_service']
 - steward_year: Keygen / 2024
 - allows: FSL-like plus license-key protected features
 - conditions: Competing-use restriction; 2-year conversion
@@ -251,8 +253,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['no_competing_service']
+- **triggers:** ['service_offering', 'competing_use', 'distribution']
+- **obligations:** ['attribution', 'no_competing_service']
 - steward_year: Timescale / 2018
 - allows: Use internally and in your own SaaS
 - conditions: No offering TimescaleDB as a DBaaS

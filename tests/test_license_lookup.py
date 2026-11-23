@@ -102,7 +102,7 @@ def _old_family_risk(r, sc):
     return base
 
 
-@pytest.mark.parametrize("scenario", list(ll.SCENARIOS))
+@pytest.mark.parametrize("scenario", ["saas", "distribute", "device"])
 def test_risk_table_matches_the_v2_3_rule_for_every_license(scenario):
     assert {r["id"]: ll.family_risk(r, scenario) for r in ll.LIC} == {
         r["id"]: _old_family_risk(r, scenario) for r in ll.LIC}
@@ -226,3 +226,36 @@ def test_no_firm_attribution_anywhere():
 def test_data_files_are_valid_json():
     for path in (SKILL / "data").glob("*.json"):
         json.loads(path.read_text(encoding="utf-8"))
+
+
+def test_reference_docs_are_generated_from_the_data():
+    """The per-family docs, case law, regulatory overlay and model map are built from data/: never hand-edited."""
+    done = subprocess.run([sys.executable, str(SKILL / "scripts" / "build_references.py"), "--check"],
+                          capture_output=True, text=True)
+    assert done.returncode == 0, done.stdout
+
+
+def test_verification_statuses_use_the_known_values():
+    known = ("Verified (primary)", "Partially verified (primary)", "Secondary only", "Not re-verified", "Note only",
+             "Not on SPDX exceptions list")
+    for r in ll.LIC:
+        assert r["provenance"]["verification_status"].startswith(known), (r["id"], r["provenance"]["verification_status"])
+
+
+@pytest.mark.parametrize(
+    "license_id,risk",
+    [
+        ("MIT", "LOW"),
+        ("GPL-3.0-only", "LOW"),
+        ("PolyForm-Noncommercial-1.0.0", "BLOCK"),
+        ("CC-BY-NC-4.0", "BLOCK"),
+        ("LicenseRef-MS-RSL", "BLOCK"),  # reference-only: no noncommercial_only value, blocked as a noncommercial license
+        ("LicenseRef-MRL", "BLOCK"),  # research only
+        ("PolyForm-Small-Business-1.0.0", "REVIEW"),  # depends on the user's size
+        ("LicenseRef-Llama-4", "REVIEW"),
+        ("LicenseRef-Commons-Clause", "LOW"),  # restricts selling, not internal use
+        ("LicenseRef-Moonshot-Modified-MIT", "REVIEW"),  # name display above a threshold
+    ],
+)
+def test_internal_use_is_blocked_by_a_use_restriction_not_a_commercial_trigger(license_id, risk):
+    assert ll.family_risk(ll.unique(license_id), "internal") == risk

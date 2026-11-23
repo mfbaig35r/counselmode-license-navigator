@@ -3,72 +3,72 @@
   {
    "ID": "case-jacobsen-v-katzer",
    "Case": "Jacobsen v. Katzer",
-   "Court / citation": "535 F.3d 1373 (Fed. Cir. 2008)",
+   "Court / citation": "535 F.3d 1373 (Fed. Cir. 2008) (No. 2008-1001), on appeal from N.D. Cal. No. 06-cv-1905",
    "Date(s)": "Aug. 13, 2008",
-   "Holding / status": "Artistic License terms are enforceable copyright conditions; breach can support infringement remedies",
+   "Holding / status": "Artistic License terms are enforceable copyright conditions (not mere covenants), so use outside them can be copyright infringement. Preliminary-injunction appeal; vacated and remanded",
    "Why it matters": "Foundation for OSS license enforceability in U.S.",
-   "Verification status": "Not re-verified (well-established)",
-   "Last verified": null
+   "Verification status": "Verified (primary)",
+   "Last verified": "2026-11-23"
   },
   {
    "ID": "case-neo4j-inc-v-purethink-llc",
    "Case": "Neo4j, Inc. v. PureThink, LLC",
-   "Court / citation": "N.D. Cal. No. 5:18-cv-07182; 9th Cir. (unpublished memo); 9th Cir. No. 24-5538",
-   "Date(s)": "Feb. 18, 2022 (9th Cir. memo, preliminary injunction); July 22, 2024 (findings: US$597,000 damages, permanent injunction); Aug. 15, 2024 (judgment entered); Dec. 10, 2025 (9th Cir. No. 24-5538 dismissed on stipulated voluntary dismissal); Dec. 15, 2025 (satisfaction of judgment)",
-   "Holding / status": "Licensor may combine AGPL with Commons Clause; AGPL \u00a77/\u00a710 bar further restrictions only by licensees (\"you\"), so licensees cannot strip licensor-imposed terms. Non-precedential; no appellate merits ruling on \u00a77",
+   "Court / citation": "N.D. Cal. No. 5:18-cv-07182-EJD; 9th Cir. No. 21-16029 (unpublished memo); 9th Cir. No. 24-5538",
+   "Date(s)": "May 18, 2021 (N.D. Cal. partial summary judgment on \u00a77/\u00a710); Feb. 18, 2022 (9th Cir. memo affirming preliminary injunction); July 22, 2024 (findings: US$597,000 actual damages, permanent injunction); Aug. 15, 2024 (judgment: plus $57,288 prejudgment interest, less stipulated $26,000); Dec. 10, 2025 (9th Cir. No. 24-5538 dismissed on stipulated voluntary dismissal); Dec. 15, 2025 (satisfaction of judgment)",
+   "Holding / status": "District court: a licensor may combine AGPLv3 with the Commons Clause; AGPL \u00a77/\u00a710 bar further restrictions only by licensees (\"you\"), so licensees cannot strip licensor-imposed terms. Liability ran on Lanham Act and DMCA \u00a71202(b) claims. Non-precedential: the 9th Cir. memo endorsed the \u00a77 reading only in affirming a preliminary injunction; no appellate merits ruling on \u00a77",
    "Why it matters": "Do not assume \"AGPL + rider\" can be cleaned to plain AGPL",
    "Verification status": "Verified (primary)",
-   "Last verified": "2026-11-18"
+   "Last verified": "2026-11-23"
   },
   {
    "ID": "case-software-freedom-conservancy-v-vizio-inc",
    "Case": "Software Freedom Conservancy v. Vizio, Inc.",
    "Court / citation": "Cal. Super. Ct., Orange County, No. 30-2021-01226723-CU-BC-CJC",
-   "Date(s)": "Dec. 23, 2025 (minute order); trial reportedly began Aug. 10, 2026",
-   "Holding / status": "Pretrial order: GPLv2/LGPLv2.1 require source that can be obtained and modified (incl. installation scripts), but not enabling reinstallation such that the device continues to function properly. Third-party-beneficiary enforcement by purchasers remains at issue. No post-trial judgment found",
+   "Date(s)": "Mar. 26, 2024 (third-party-beneficiary status held a triable issue); Dec. 23, 2025 (minute order granting Vizio's summary adjudication); trial reportedly scheduled for Aug. 10, 2026 (unconfirmed)",
+   "Holding / status": "Pretrial summary-adjudication order: GPLv2/LGPLv2.1 require source to be provided so it can be obtained and modified (source is defined to include installation scripts), but impose no duty to enable reinstallation of modified software such that the TVs continue to function properly. Whether purchasers can enforce as third-party beneficiaries remains a triable issue. Trial court ruling, not precedential. No post-trial judgment found",
    "Why it matters": "Consumer (third-party beneficiary) enforcement; GPLv2 vs GPLv3 installation duties",
-   "Verification status": "Verified (primary) for Dec. 2025 order; trial status secondary",
-   "Last verified": "2026-11-18"
+   "Verification status": "Verified (primary) for 2024 and Dec. 2025 orders; trial status secondary only",
+   "Last verified": "2026-11-23"
   },
   {
    "ID": "case-artifex-software-inc-v-hancom-inc",
    "Case": "Artifex Software, Inc. v. Hancom, Inc.",
-   "Court / citation": "N.D. Cal. No. 3:16-cv-06982",
-   "Date(s)": "Apr. 2017 (motion to dismiss denied); settled 2017-2018",
-   "Holding / status": "Court accepted that GPL could be enforced as a contract as well as a license (dual-licensed Ghostscript)",
+   "Court / citation": "N.D. Cal. No. 3:16-cv-06982-JSC",
+   "Date(s)": "Apr. 25, 2017 (motion to dismiss denied); Sept. 12, 2017 (partial summary judgment on contract remedies denied); Jan. 17, 2018 (stipulated dismissal with prejudice after confidential settlement)",
+   "Holding / status": "At the pleading stage, the court held that Artifex adequately alleged the GPL formed an enforceable contract and that the contract claim was not preempted by copyright, alongside a copyright claim (dual-licensed Ghostscript). It later refused to rule out contract damages as a matter of law. No merits ruling; settled",
    "Why it matters": "Contract damages theory for GPL non-compliance",
-   "Verification status": "Not re-verified",
-   "Last verified": null
+   "Verification status": "Verified (primary) for the 2017 orders; dismissal date from docket mirror (PacerMonitor)",
+   "Last verified": "2026-11-23"
   },
   {
    "ID": "case-entr-ouvert-v-orange",
    "Case": "Entr'ouvert v. Orange",
-   "Court / citation": "Cour d'appel de Paris",
+   "Court / citation": "Cour d'appel de Paris, p\u00f4le 5, ch. 1, RG n\u00b0 22/18071 (on remand after Cass. 1re civ., Oct. 5, 2022, n\u00b0 21-15.386)",
    "Date(s)": "Feb. 14, 2024",
-   "Holding / status": "Orange held liable for GPLv2 violation (LASSO library) as copyright infringement; damages reported in the high six figures (EUR)",
+   "Holding / status": "Orange and Orange Business Services held liable for copyright infringement (contrefa\u00e7on) of the LASSO library by violating GPLv2 (arts. 2, 3, 4, 10) and the author's attribution right; ordered to pay EUR 800,000 in damages (500,000 economic loss, 150,000 moral harm, 150,000 infringer profits) plus EUR 60,000 in procedural costs",
    "Why it matters": "EU enforcement; large damages for GPL non-compliance",
-   "Verification status": "Not re-verified",
-   "Last verified": null
+   "Verification status": "Secondary only (two matching full-text copies of the judgment: Interoperable Europe, Legalis; the court's own copy was not reached)",
+   "Last verified": "2026-11-23"
   },
   {
    "ID": "case-doe-v-github-inc",
    "Case": "Doe v. GitHub, Inc.",
-   "Court / citation": "9th Cir. No. 24-7700 (published opinion); N.D. Cal. No. 4:22-cv-06823",
+   "Court / citation": "9th Cir. No. 24-7700 (published opinion; \u00a7 1292(b) interlocutory appeal); N.D. Cal. No. 4:22-cv-06823-JST",
    "Date(s)": "Sept. 16, 2026",
-   "Holding / status": "Affirmed dismissal of DMCA \u00a71202(b) claim: Copilot/Codex outputs lacking CMI are new works, and \u00a71202(b) requires removing or altering CMI from copies of existing works. \"Identicality\" is a misnomer - an evidentiary gloss, not an element; near-verbatim reproduction without CMI can support an inference of removal. \"Input\" (training-data) theory forfeited, not decided. Contract claims reported pending in district court",
-   "Why it matters": "Narrows DMCA attribution claims against AI coding tools; retrieval-style systems may be treated differently; copyright and license claims unaffected",
+   "Holding / status": "Affirmed dismissal of DMCA \u00a71202(b) claim: on plaintiffs' own allegations, Copilot/Codex create new works rather than removing or altering CMI from copies of existing works. \"Identicality\" is a misnomer - an evidentiary gloss, not an element; substantial (even non-identical) reproduction without CMI can support an inference of removal. Plaintiffs had standing. \"Input\" (training-data) theory forfeited, not decided. Contract claims remain pending in district court",
+   "Why it matters": "Narrows DMCA attribution claims against AI coding tools; retrieval-style systems may be treated differently; the court expressed no view on copyright infringement, and license (contract) claims continue",
    "Verification status": "Verified (primary)",
-   "Last verified": "2026-11-18"
+   "Last verified": "2026-11-23"
   },
   {
    "ID": "case-versata-software-v-ameriprise-financial",
    "Case": "Versata Software v. Ameriprise Financial",
-   "Court / citation": "Tex. state court / W.D. Tex.",
-   "Date(s)": "2014-2015",
-   "Holding / status": "GPL issues raised by a downstream licensee in a commercial dispute; resolved without definitive GPL ruling",
-   "Why it matters": "GPL as a counterclaim risk in commercial software disputes",
-   "Verification status": "Not re-verified",
-   "Last verified": null
+   "Court / citation": "Travis County, Tex. (53rd Judicial District Court); W.D. Tex. Nos. 1:14-cv-00012-SS and 1:14-cv-00221-SS",
+   "Date(s)": "Nov. 13, 2012 (filed); Mar. 11, 2014 (W.D. Tex. preemption ruling and remand); Apr. 25, 2014 (dismissed with prejudice on joint motion)",
+   "Holding / status": "Customer's counterclaim that the vendor breached GPLv2 (embedded XimpleWare VTD-XML) held not preempted by the Copyright Act, because the source-disclosure promise is an extra element. Third-party-beneficiary standing not decided. Case dismissed with prejudice on joint motion; no merits ruling on the GPL",
+   "Why it matters": "GPL as a counterclaim risk in commercial software disputes; GPL obligations can be litigated as state-law contract claims",
+   "Verification status": "Verified (primary)",
+   "Last verified": "2026-11-23"
   }
  ],
  "regulatory": [
@@ -76,34 +76,34 @@
    "ID": "reg-eu-ai-act-art53-2",
    "Instrument": "AI Act - GPAI open-source exemption (Arts. 53(2), 54(6))",
    "Jurisdiction": "EU",
-   "Key dates": "GPAI obligations apply from Aug. 2, 2025",
-   "OSS-relevant rule": "Exempts only technical documentation (53(1)(a)), downstream information (53(1)(b)) and the authorised-representative duty for non-EU providers. Requires a free and open-source license allowing access, use, modification and distribution without monetisation, plus public weights, architecture and usage information. Copyright policy and training-data summary duties still apply. No exemption for GPAI models with systemic risk.",
-   "Diligence / compliance action": "Do not assume an \"open-weight\" model qualifies: per Commission guidelines (July 18, 2025), scale-based restrictions and separate commercial licenses for certain uses are not \"free and open-source.\"",
-   "Source": "https://ai-act-service-desk.ec.europa.eu/en/faq ; Article 53",
+   "Key dates": "GPAI obligations (Chapter V, incl. Arts. 53-54) apply from Aug. 2, 2025 (Art. 113, third para., point (b)); GPAI models placed on the market before Aug. 2, 2025 must comply by Aug. 2, 2027 (Art. 111(3)); Commission fining powers over GPAI providers (Art. 101) apply from Aug. 2, 2026 (Art. 113, second para.). These dates are unchanged by the Digital Omnibus on AI (Reg. (EU) 2026/1744).",
+   "OSS-relevant rule": "Art. 53(2) exempts only technical documentation (53(1)(a)) and information for downstream providers (53(1)(b)); Art. 54(6) exempts the authorised-representative duty for non-EU providers. Conditions: release under a free and open-source licence allowing access, usage, modification and distribution of the model, with parameters (including weights), model-architecture information and model-usage information made publicly available. Under recital 103, components provided against a price or otherwise monetised do not benefit. Copyright policy (53(1)(c)), training-content summary (53(1)(d)) and cooperation with the Commission and authorities (53(3)) still apply. Neither exemption applies to GPAI models with systemic risk, which also carry Art. 55 duties.",
+   "Diligence / compliance action": "Do not assume an \"open-weight\" model qualifies: the Commission guidelines (C(2025) 7719, adopted Nov. 19, 2025; content approved July 18, 2025) treat non-commercial or research-only limits, distribution bans, user-scale thresholds and separate commercial licences for specific uses as disqualifying, and dual licensing or mandatory paid access as monetisation. The guidelines are not binding.",
+   "Source": "http://data.europa.eu/eli/reg/2024/1689/oj ; http://data.europa.eu/eli/reg/2026/1744/oj ; Commission guidelines C(2025) 7719: https://digital-strategy.ec.europa.eu/en/library/guidelines-scope-obligations-providers-general-purpose-ai-models-under-ai-act",
    "Verification status": "Verified (primary)",
-   "Last verified": "2026-11-18"
+   "Last verified": "2026-11-23"
   },
   {
    "ID": "reg-eu-cra-2024-2847",
    "Instrument": "Cyber Resilience Act (Reg. (EU) 2024/2847)",
    "Jurisdiction": "EU",
-   "Key dates": "In force Dec. 10, 2024; reporting obligations Sept. 11, 2026; full application Dec. 11, 2027; open-source steward reporting Dec. 11, 2027",
-   "OSS-relevant rule": "Manufacturers must report actively exploited vulnerabilities and severe incidents (24h early warning / 72h notification / final report). Creates \"open-source software steward\" role with lighter obligations",
-   "Diligence / compliance action": "Confirm whether target is a manufacturer or OSS steward; vulnerability handling process; SBOM; reporting readiness",
-   "Source": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+   "Key dates": "In force Dec. 10, 2024 (Art. 71(1); OJ 20.11.2024); Art. 14 reporting applies from Sept. 11, 2026 (Art. 71(2)), including to products placed on the market before Dec. 11, 2027 (Art. 69(3)); Chapter IV (conformity assessment bodies) from June 11, 2026; full application Dec. 11, 2027 (Art. 71(2)). Steward obligations (Art. 24, including reporting under Art. 24(3)) have no separate date; on our reading of Art. 71(2) they apply from Dec. 11, 2027 (no article states this directly).",
+   "OSS-relevant rule": "Manufacturers must notify actively exploited vulnerabilities and severe incidents simultaneously to the coordinating CSIRT and ENISA via the single reporting platform (Art. 14): early warning within 24h; notification within 72h; final report within 14 days after a corrective or mitigating measure is available (vulnerabilities) or within one month after the incident notification (severe incidents). Manufacturers must also inform impacted users (Art. 14(8)). Micro and small enterprises are not fined for missing the 24h deadline (Art. 64(10)(a)). Art. 3(14) defines the \"open-source software steward\": a legal person, other than a manufacturer, that provides sustained support for free and open-source software intended for commercial activities. Under Art. 24 a steward must keep a documented cybersecurity policy, cooperate with market surveillance authorities, report under Art. 14(1) to the extent involved in development, and report under Art. 14(3) and (8) for severe incidents affecting its own development infrastructure. Stewards face no administrative fines (Art. 64(10)(b)).",
+   "Diligence / compliance action": "Confirm, product by product, whether the target is a manufacturer or an open-source software steward; vulnerability handling process; SBOM covering at least top-level dependencies (Annex I, Part II(1)); 24h/72h reporting readiness from Sept. 11, 2026, including for products already on the market",
+   "Source": "http://data.europa.eu/eli/reg/2024/2847/oj",
    "Verification status": "Verified (primary)",
-   "Last verified": "2026-11-18"
+   "Last verified": "2026-11-23"
   },
   {
    "ID": "reg-us-omb-m-26-05",
    "Instrument": "OMB M-26-05 (Adopting a Risk-based Approach to Software and Hardware Security)",
    "Jurisdiction": "U.S. federal",
    "Key dates": "Jan. 23, 2026",
-   "OSS-relevant rule": "Rescinds M-22-18 and M-23-16; Common Form attestation no longer required government-wide; agencies keep software/hardware inventories and may require SBOMs by contract",
+   "OSS-relevant rule": "Rescinds M-22-18 and M-23-16, so the Secure Software Development Attestation Form (Common Form) is no longer required government-wide, though agencies may still choose to use it; agencies must keep complete software and hardware inventories and set risk-based assurance policies, and may adopt contract terms requiring a current SBOM on request (for cloud platforms, of the runtime production environment)",
    "Diligence / compliance action": "Check each solicitation/contract for attestation or SBOM clauses",
    "Source": "https://www.whitehouse.gov/wp-content/uploads/2026/01/M-26-05-Adopting-a-Risk-based-Approach-to-Software-and-Hardware-Security.pdf",
    "Verification status": "Verified (primary)",
-   "Last verified": "2026-11-18"
+   "Last verified": "2026-11-23"
   }
  ],
  "relicensing": [

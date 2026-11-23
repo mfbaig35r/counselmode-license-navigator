@@ -41,7 +41,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -82,7 +81,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -123,7 +121,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -139,9 +136,7 @@
    "patent_note": "No",
    "copyleft_scope": "none",
    "triggers": [],
-   "obligations": [
-    "attribution"
-   ],
+   "obligations": [],
    "facts": {
     "steward_year": "Rob Landley / 2013 (toybox)",
     "allows": "Use, copy, modify, distribute for any purpose, with or without fee",
@@ -166,7 +161,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -207,7 +201,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -248,7 +241,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -259,11 +251,13 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; GPL-compatible. FSF lists it as the Expat License (and X11) and discourages the ambiguous name \"MIT License\".",
    "patent_grant": "none",
    "patent_note": "No (implied license arguments only)",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
     "attribution"
    ],
@@ -284,14 +278,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://opensource.org/license/mit; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -302,14 +295,15 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; GPL-compatible (FSF lists it as the \"FreeBSD license\").",
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
-    "attribution",
-    "source_disclosure"
+    "attribution"
    ],
    "facts": {
     "steward_year": "UC Berkeley / 1990s",
@@ -328,14 +322,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://opensource.org/license/bsd-2-clause; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -346,12 +339,15 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; GPL-compatible (FSF: \"Modified BSD license\").",
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
+    "attribution",
     "naming_rule"
    ],
    "facts": {
@@ -371,14 +367,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://opensource.org/license/bsd-3-clause; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://www.gnu.org/licenses/bsd.html; https://spdx.org/licenses/",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -393,10 +388,11 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
-    "attribution",
-    "naming_rule"
+    "attribution"
    ],
    "facts": {
     "steward_year": "UC Berkeley / 1980s",
@@ -422,7 +418,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -437,7 +432,9 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
     "attribution"
    ],
@@ -465,7 +462,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -476,14 +472,18 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; compatible with GPLv3, not with GPLv2 (FSF cites patent termination and indemnification provisions).",
    "patent_grant": "express",
    "patent_note": "Yes (\u00a73) with patent-retaliation termination if you sue over patents",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
+    "attribution",
     "notice_file",
-    "state_changes"
+    "state_changes",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Apache Software Foundation / 2004",
@@ -491,7 +491,7 @@
     "conditions": "Include license; preserve NOTICE file contents; mark modified files (\"state changes\"); no trademark rights",
     "copyleft_detail": "None",
     "gpl_compatibility": "Compatible with GPLv3 only; INCOMPATIBLE with GPLv2-only",
-    "notable_projects": "Kubernetes, Android (AOSP userland), TensorFlow, Spark, Kafka, Swift, many LLMs (Mistral 7B, Qwen, gpt-oss, OLMo)",
+    "notable_projects": "Kubernetes, Android (AOSP userland), TensorFlow, Spark, Kafka, Swift (with Runtime Library Exception), many LLMs (Mistral 7B, gpt-oss, OLMo; some Qwen releases only)",
     "saas": "No obligations",
     "notes": "Watch GPLv2-only combinations (e.g., Linux kernel modules)."
    },
@@ -502,14 +502,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.apache.org/licenses/LICENSE-2.0.txt; https://www.apache.org/licenses/GPL-compatibility.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -524,8 +523,11 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
+    "attribution",
     "naming_rule"
    ],
    "facts": {
@@ -552,7 +554,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -567,11 +568,12 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
     "attribution",
-    "state_changes",
-    "source_disclosure"
+    "state_changes"
    ],
    "facts": {
     "steward_year": "J. Gailly & M. Adler / 1995",
@@ -597,7 +599,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -612,9 +613,11 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
-    "source_disclosure"
+    "attribution"
    ],
    "facts": {
     "steward_year": "Boost / 2003",
@@ -640,7 +643,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -655,7 +657,9 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
     "attribution"
    ],
@@ -683,7 +687,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -698,7 +701,9 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
     "attribution",
     "state_changes"
@@ -727,7 +732,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -742,9 +746,13 @@
    "patent_grant": "express",
    "patent_note": "Yes - express patent license from each Contributor, terminates if you sue alleging infringement",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
+    "attribution",
     "state_changes",
+    "source_disclosure",
     "patent_retaliation"
    ],
    "facts": {
@@ -771,7 +779,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -786,10 +793,11 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
-    "attribution",
-    "naming_rule"
+    "attribution"
    ],
    "facts": {
     "steward_year": "UIUC / 2004",
@@ -815,7 +823,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -830,7 +837,9 @@
    "patent_grant": "express",
    "patent_note": "Yes",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
     "attribution"
    ],
@@ -858,7 +867,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -873,7 +881,9 @@
    "patent_grant": "express",
    "patent_note": "Yes",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
     "attribution"
    ],
@@ -901,7 +911,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -916,8 +925,15 @@
    "patent_grant": "express",
    "patent_note": "Yes (narrower)",
    "copyleft_scope": "none",
-   "triggers": [],
-   "obligations": [],
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "notice_file",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "Kuali / 2007",
     "allows": "Apache-2.0 variant",
@@ -942,7 +958,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -957,7 +972,9 @@
    "patent_grant": "express",
    "patent_note": "Yes",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
     "attribution",
     "patent_retaliation"
@@ -986,7 +1003,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1001,8 +1017,13 @@
    "patent_grant": "express",
    "patent_note": "Yes",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution",
+    "network_interaction"
+   ],
    "obligations": [
+    "attribution",
+    "state_changes",
     "patent_retaliation"
    ],
    "facts": {
@@ -1029,7 +1050,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1044,10 +1064,11 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
-    "attribution",
-    "naming_rule"
+    "attribution"
    ],
    "facts": {
     "steward_year": "X Consortium / 1990s",
@@ -1073,7 +1094,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1088,10 +1108,11 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
-    "attribution",
-    "naming_rule"
+    "attribution"
    ],
    "facts": {
     "steward_year": "Unicode, Inc. / 2023",
@@ -1117,7 +1138,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1132,7 +1152,9 @@
    "patent_grant": "express",
    "patent_note": "Yes (express)",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
     "attribution"
    ],
@@ -1160,7 +1182,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1175,7 +1196,9 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "none",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
     "attribution",
     "naming_rule"
@@ -1204,7 +1227,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1215,7 +1237,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; weak copyleft; compatible with GPLv2 and GPLv3. FSF recommends LGPLv3 for special circumstances only.",
    "patent_grant": "none",
    "patent_note": "No express grant",
    "copyleft_scope": "file_or_library",
@@ -1223,7 +1245,10 @@
     "distribution"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
     "source_disclosure",
+    "same_license",
     "relinking"
    ],
    "facts": {
@@ -1232,7 +1257,7 @@
     "conditions": "Modifications to the library must be LGPL with source; distributed works must permit user modification of library and reverse engineering for debugging; provide relinking ability (shared library or object files)",
     "copyleft_detail": "Library-level; triggered by distribution",
     "gpl_compatibility": "Compatible with GPLv2/v3 (can convert to GPL)",
-    "notable_projects": "glibc, FFmpeg (default build), Qt (LGPL option), GTK",
+    "notable_projects": "None verified as LGPL-2.1-only; glibc, FFmpeg (default build) and GTK are \"or later\"; current Qt is LGPL-3.0-only",
     "saas": "Not triggered by SaaS (no network clause)",
     "notes": "Mobile app stores and static linking make compliance harder (iOS)."
    },
@@ -1243,14 +1268,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.gnu.org/licenses/lgpl-2.1.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1261,7 +1285,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; weak copyleft; compatible with GPLv2 and GPLv3. FSF recommends LGPLv3 for special circumstances only.",
    "patent_grant": "none",
    "patent_note": "No express grant",
    "copyleft_scope": "file_or_library",
@@ -1269,7 +1293,10 @@
     "distribution"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
     "source_disclosure",
+    "same_license",
     "relinking"
    ],
    "facts": {
@@ -1278,7 +1305,7 @@
     "conditions": "Modifications to the library must be LGPL with source; distributed works must permit user modification of library and reverse engineering for debugging; provide relinking ability (shared library or object files)",
     "copyleft_detail": "Library-level; triggered by distribution",
     "gpl_compatibility": "Compatible with GPLv2/v3 (can convert to GPL)",
-    "notable_projects": "glibc, FFmpeg (default build), Qt (LGPL option), GTK",
+    "notable_projects": "glibc, FFmpeg (default build), GTK",
     "saas": "Not triggered by SaaS (no network clause)",
     "notes": "Mobile app stores and static linking make compliance harder (iOS)."
    },
@@ -1289,14 +1316,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.gnu.org/licenses/lgpl-2.1.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1307,7 +1333,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; weak copyleft; compatible with GPLv3, not with GPLv2 by itself. FSF recommends it for special circumstances only.",
    "patent_grant": "express",
    "patent_note": "Yes (via GPLv3 \u00a711)",
    "copyleft_scope": "file_or_library",
@@ -1315,6 +1341,11 @@
     "distribution"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
+    "relinking",
     "installation_info"
    ],
    "facts": {
@@ -1323,7 +1354,7 @@
     "conditions": "As 2.1, plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions",
     "copyleft_detail": "Library-level; distribution",
     "gpl_compatibility": "Compatible with GPLv3; INCOMPATIBLE with GPLv2-only",
-    "notable_projects": "GNU libraries, some Qt modules",
+    "notable_projects": "Qt (Qt Base and other modules, LGPL-3.0-only option)",
     "saas": "Not triggered by SaaS",
     "notes": "Many embedded vendors avoid (L)GPLv3 due to anti-tivoization."
    },
@@ -1334,14 +1365,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.gnu.org/licenses/lgpl-3.0.txt; https://www.gnu.org/licenses/gpl-3.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1352,7 +1382,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; weak copyleft; compatible with GPLv3, not with GPLv2 by itself. FSF recommends it for special circumstances only.",
    "patent_grant": "express",
    "patent_note": "Yes (via GPLv3 \u00a711)",
    "copyleft_scope": "file_or_library",
@@ -1360,6 +1390,11 @@
     "distribution"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
+    "relinking",
     "installation_info"
    ],
    "facts": {
@@ -1368,7 +1403,7 @@
     "conditions": "As 2.1, plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions",
     "copyleft_detail": "Library-level; distribution",
     "gpl_compatibility": "Compatible with GPLv3; INCOMPATIBLE with GPLv2-only",
-    "notable_projects": "GNU libraries, some Qt modules",
+    "notable_projects": "GNU libraries (unverified; no project checked)",
     "saas": "Not triggered by SaaS",
     "notes": "Many embedded vendors avoid (L)GPLv3 due to anti-tivoization."
    },
@@ -1379,14 +1414,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.gnu.org/licenses/lgpl-3.0.txt; https://www.gnu.org/licenses/gpl-3.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1397,7 +1431,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; indirectly GPL-compatible via \u00a73.3 (GPL-2.0, LGPL-2.1, AGPL-3.0 and later) unless marked \"Incompatible With Secondary Licenses\".",
    "patent_grant": "express",
    "patent_note": "Yes (with patent retaliation)",
    "copyleft_scope": "file_or_library",
@@ -1406,13 +1440,15 @@
    ],
    "obligations": [
     "attribution",
-    "same_license"
+    "source_disclosure",
+    "same_license",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Mozilla / 2012",
     "allows": "Use and combine in \"Larger Works\" under any license",
     "conditions": "Source of MPL-covered files (and modifications to them) must be available under MPL; keep notices",
-    "copyleft_detail": "FILE-level; distribution of executable form",
+    "copyleft_detail": "File-level; applies to distribution in Source Code Form (\u00a73.1) and Executable Form (\u00a73.2)",
     "gpl_compatibility": "Compatible with GPL/LGPL/AGPL via \"Secondary License\" (unless marked \"Incompatible With Secondary Licenses\")",
     "notable_projects": "Firefox, Thunderbird, LibreOffice (MPL/LGPL), Terraform providers, OpenTofu",
     "saas": "Not triggered by SaaS",
@@ -1425,14 +1461,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.mozilla.org/media/MPL/2.0/index.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1450,7 +1485,13 @@
    "triggers": [
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "Mozilla / 1999",
     "allows": "As MPL-2.0",
@@ -1475,7 +1516,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1494,7 +1534,10 @@
     "distribution"
    ],
    "obligations": [
-    "source_disclosure"
+    "attribution",
+    "source_disclosure",
+    "same_license",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Eclipse Foundation / 2017",
@@ -1520,7 +1563,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1538,7 +1580,12 @@
    "triggers": [
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "source_disclosure",
+    "same_license",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "Eclipse / 2004",
     "allows": "As EPL-2.0",
@@ -1563,7 +1610,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1581,7 +1627,13 @@
    "triggers": [
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "Sun Microsystems / 2004",
     "allows": "MPL-style",
@@ -1606,7 +1658,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1624,7 +1675,12 @@
    "triggers": [
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "source_disclosure",
+    "same_license",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "IBM / 2001",
     "allows": "Predecessor to EPL",
@@ -1649,7 +1705,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1667,7 +1722,12 @@
    "triggers": [
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "source_disclosure",
+    "same_license",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "Microsoft / 2005",
     "allows": "Use and combine",
@@ -1692,7 +1752,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1710,7 +1769,12 @@
    "triggers": [
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license"
+   ],
    "facts": {
     "steward_year": "CEA/CNRS/Inria (France) / 2006",
     "allows": "LGPL-like for French law",
@@ -1735,7 +1799,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1751,11 +1814,17 @@
    "patent_note": "Yes",
    "copyleft_scope": "file_or_library",
    "triggers": [
-    "distribution"
+    "distribution",
+    "network_interaction"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
     "source_disclosure",
-    "network_source_offer"
+    "same_license",
+    "network_source_offer",
+    "patent_retaliation",
+    "naming_rule"
    ],
    "facts": {
     "steward_year": "Apple / 2003",
@@ -1781,7 +1850,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1828,7 +1896,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1848,6 +1915,7 @@
    ],
    "obligations": [
     "attribution",
+    "same_license",
     "naming_rule"
    ],
    "facts": {
@@ -1874,7 +1942,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1885,7 +1952,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; copyleft. FSF: GPLv2 by itself is not compatible with GPLv3; \"or later\" code can be combined under GPLv3.",
    "patent_grant": "none",
    "patent_note": "No express grant (implied; \u00a77 \"liberty or death\")",
    "copyleft_scope": "whole_work",
@@ -1893,6 +1960,8 @@
     "distribution"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
     "source_disclosure",
     "same_license"
    ],
@@ -1913,14 +1982,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.gnu.org/licenses/gpl-2.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/; https://spdx.org/licenses/Linux-syscall-note.html",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1931,14 +1999,19 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; copyleft. FSF: GPLv2 by itself is not compatible with GPLv3; \"or later\" code can be combined under GPLv3.",
    "patent_grant": "varies",
    "patent_note": "Depends on chosen version",
    "copyleft_scope": "whole_work",
    "triggers": [
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license"
+   ],
    "facts": {
     "steward_year": "FSF / 1991",
     "allows": "As GPLv2, recipient may choose later versions",
@@ -1956,14 +2029,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.gnu.org/licenses/gpl-2.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -1974,7 +2046,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; copyleft; FSF-recommended. Not compatible with GPLv2 by itself (GPLv2-or-later code can be combined under GPLv3).",
    "patent_grant": "express",
    "patent_note": "Yes (\u00a711)",
    "copyleft_scope": "whole_work",
@@ -1982,6 +2054,10 @@
     "distribution"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
     "installation_info"
    ],
    "facts": {
@@ -1990,7 +2066,7 @@
     "conditions": "As GPLv2 plus: Installation Information for \"User Products\" (anti-tivoization), anti-DRM (\u00a73), express patent license & anti-discrimination patent deal terms (\u00a711), 30-day cure for first violation (\u00a78)",
     "copyleft_detail": "Whole work; \"convey\" (distribution)",
     "gpl_compatibility": "Compatible with Apache-2.0, LGPLv3, AGPLv3 (combination); INCOMPATIBLE with GPLv2-only",
-    "notable_projects": "Bash, GCC, GIMP, Ansible, Samba",
+    "notable_projects": "Most GNU projects (Bash, GCC, GIMP; also Ansible, Samba) are GPL-3.0-or-later, not -only: check each project's license notice",
     "saas": "Not triggered by SaaS (the \"SaaS loophole\")",
     "notes": ""
    },
@@ -2001,14 +2077,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.gnu.org/licenses/gpl-3.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2019,7 +2094,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; copyleft; FSF-recommended. Not compatible with GPLv2 by itself (GPLv2-or-later code can be combined under GPLv3).",
    "patent_grant": "express",
    "patent_note": "Yes (\u00a711)",
    "copyleft_scope": "whole_work",
@@ -2027,6 +2102,10 @@
     "distribution"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
     "installation_info"
    ],
    "facts": {
@@ -2046,14 +2125,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.gnu.org/licenses/gpl-3.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2069,9 +2147,12 @@
    "patent_note": "Yes",
    "copyleft_scope": "whole_work",
    "triggers": [
-    "distribution"
+    "distribution",
+    "network_interaction"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
     "source_disclosure",
     "same_license",
     "network_source_offer"
@@ -2100,7 +2181,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2116,11 +2196,16 @@
    "patent_note": "Yes",
    "copyleft_scope": "whole_work",
    "triggers": [
-    "distribution"
+    "distribution",
+    "network_interaction"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
+    "source_disclosure",
     "same_license",
-    "network_source_offer"
+    "network_source_offer",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "L. Rosen / 2005",
@@ -2146,7 +2231,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2164,7 +2248,11 @@
    "triggers": [
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "source_disclosure",
+    "same_license"
+   ],
    "facts": {
     "steward_year": "CEA/CNRS/Inria / 2013",
     "allows": "GPL-like under French law",
@@ -2189,7 +2277,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2207,7 +2294,10 @@
    "triggers": [
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "source_disclosure"
+   ],
    "facts": {
     "steward_year": "Sleepycat / Oracle",
     "allows": "Use Berkeley DB",
@@ -2232,7 +2322,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2243,7 +2332,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; copyleft; FSF recommends it for software commonly run over a network. Not compatible with GPLv2; combinable with GPLv3 under \u00a713 of each.",
    "patent_grant": "express",
    "patent_note": "Yes",
    "copyleft_scope": "network",
@@ -2252,7 +2341,12 @@
     "network_interaction"
    ],
    "obligations": [
-    "network_source_offer"
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
+    "network_source_offer",
+    "installation_info"
    ],
    "facts": {
     "steward_year": "FSF / 2007 (Affero v1: 2002)",
@@ -2260,8 +2354,8 @@
     "conditions": "As GPLv3 plus \u00a713: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version",
     "copyleft_detail": "Whole work; distribution AND remote network interaction with modified version",
     "gpl_compatibility": "Compatible with GPLv3: combination permitted by GPLv3 \u00a713 and AGPLv3 \u00a713; the AGPL part keeps its network clause",
-    "notable_projects": "Mastodon, Nextcloud, Grafana (since 2021), MinIO, Elasticsearch & Kibana (AGPL option since 2024), Redis 8 (AGPL option 2025), iText, Ghostscript",
-    "saas": "TRIGGERED",
+    "notable_projects": "Grafana, Elasticsearch & Kibana (AGPL option alongside SSPL and ELv2), Redis 8 (AGPLv3 option alongside RSALv2 and SSPLv1), MinIO (repository no longer maintained)",
+    "saas": "Triggered when a modified version is offered to users interacting with it over a network (\u00a713)",
     "notes": "Scope of \"interacting remotely\" and what counts as the \"Program\" in a microservice architecture is debated."
    },
    "editorial_view": {
@@ -2271,14 +2365,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-1.0-only.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2289,7 +2382,7 @@
    "osi_status": "approved",
    "osi_note": "Yes",
    "fsf_status": "free",
-   "fsf_note": "Yes",
+   "fsf_note": "Free; copyleft; FSF recommends it for software commonly run over a network. Not compatible with GPLv2; combinable with GPLv3 under \u00a713 of each.",
    "patent_grant": "express",
    "patent_note": "Yes",
    "copyleft_scope": "network",
@@ -2298,7 +2391,12 @@
     "network_interaction"
    ],
    "obligations": [
-    "network_source_offer"
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
+    "network_source_offer",
+    "installation_info"
    ],
    "facts": {
     "steward_year": "FSF / 2007 (Affero v1: 2002)",
@@ -2306,8 +2404,8 @@
     "conditions": "As GPLv3 plus \u00a713: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version",
     "copyleft_detail": "Whole work; distribution AND remote network interaction with modified version",
     "gpl_compatibility": "Compatible with GPLv3: combination permitted by GPLv3 \u00a713 and AGPLv3 \u00a713; the AGPL part keeps its network clause",
-    "notable_projects": "Mastodon, Nextcloud, Grafana (since 2021), MinIO, Elasticsearch & Kibana (AGPL option since 2024), Redis 8 (AGPL option 2025), iText, Ghostscript",
-    "saas": "TRIGGERED",
+    "notable_projects": "Mastodon, iText, Ghostscript, Nextcloud (mixed; some files AGPL-3.0-only)",
+    "saas": "Triggered when a modified version is offered to users interacting with it over a network (\u00a713)",
     "notes": "Scope of \"interacting remotely\" and what counts as the \"Program\" in a microservice architecture is debated."
    },
    "editorial_view": {
@@ -2317,14 +2415,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-1.0-only.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": false,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2341,10 +2438,17 @@
    "copyleft_scope": "network",
    "triggers": [
     "distribution",
-    "network_interaction"
+    "network_interaction",
+    "any_use"
    ],
    "obligations": [
-    "source_disclosure"
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
+    "network_source_offer",
+    "patent_retaliation",
+    "naming_rule"
    ],
    "facts": {
     "steward_year": "Technical Pursuit / 2007",
@@ -2370,7 +2474,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2390,7 +2493,13 @@
     "network_interaction"
    ],
    "obligations": [
-    "attribution"
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
+    "network_source_offer",
+    "patent_retaliation",
+    "naming_rule"
    ],
    "facts": {
     "steward_year": "Socialtext / 2007",
@@ -2416,7 +2525,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2436,7 +2544,12 @@
     "network_interaction"
    ],
    "obligations": [
-    "network_source_offer"
+    "attribution",
+    "source_disclosure",
+    "same_license",
+    "network_source_offer",
+    "installation_info",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Holochain / 2019",
@@ -2462,7 +2575,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2472,28 +2584,28 @@
    "family_tab": "6-Source-Available",
    "osi_status": "withdrawn",
    "osi_note": "No (submission withdrawn 2019)",
-   "fsf_status": "nonfree",
+   "fsf_status": "not_reviewed",
    "fsf_note": "No",
    "patent_grant": "express",
-   "patent_note": "Yes (from AGPL base)",
-   "copyleft_scope": "use_restriction",
+   "patent_note": "Yes (s.11, inherited from GPLv3 base)",
+   "copyleft_scope": "network",
    "triggers": [
-    "competing_use",
+    "distribution",
     "service_offering"
    ],
    "obligations": [
     "source_disclosure",
     "same_license",
-    "no_competing_service"
+    "installation_info"
    ],
    "facts": {
     "steward_year": "MongoDB / 2018",
-    "allows": "Use, modify, distribute (AGPLv3-based)",
+    "allows": "Use, modify, distribute (GPLv3-based per MongoDB; s.13 replaced)",
     "conditions": "\u00a713: offering the program \"as a service\" requires releasing source of the ENTIRE service stack (management, UI, APIs, monitoring, backup, hosting software) under SSPL",
     "copyleft_detail": "Entire service infrastructure",
     "gpl_compatibility": "Incompatible with GPL/AGPL",
-    "notable_projects": "MongoDB (since 2018), Elasticsearch/Kibana (2021-2024, now also AGPL option), Graylog (historic)",
-    "saas": "Core restriction",
+    "notable_projects": "MongoDB (since Oct. 16, 2018), Elasticsearch/Kibana (since 2021; SSPL still offered alongside AGPL-3.0 and ELv2), Graylog (current)",
+    "saas": "Core condition: s.13 Service Source Code release",
     "notes": "Not OSI-approved; considered source-available."
    },
    "editorial_view": {
@@ -2503,14 +2615,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.mongodb.com/legal/licensing/server-side-public-license ; https://www.mongodb.com/legal/licensing/server-side-public-license/faq ; https://opensource.org/blog/the-sspl-is-not-an-open-source-license ; https://www.gnu.org/licenses/license-list.html ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": true,
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2520,7 +2631,7 @@
    "family_tab": "6-Source-Available",
    "osi_status": "not_approved",
    "osi_note": "No",
-   "fsf_status": "nonfree",
+   "fsf_status": "not_reviewed",
    "fsf_note": "No",
    "patent_grant": "none",
    "patent_note": "No",
@@ -2530,7 +2641,8 @@
     "service_offering"
    ],
    "obligations": [
-    "source_disclosure",
+    "attribution",
+    "same_license",
     "no_competing_service"
    ],
    "facts": {
@@ -2539,7 +2651,7 @@
     "conditions": "Production use limited by Additional Use Grant (often \"not a competing offering\"); each version converts to a \"Change License\" (GPLv2+ compatible, e.g., Apache-2.0/MPL-2.0) on Change Date (max 4 years)",
     "copyleft_detail": "Usage restriction until Change Date",
     "gpl_compatibility": "Not compatible until conversion",
-    "notable_projects": "MariaDB MaxScale, CockroachDB (historic), HashiCorp Terraform/Vault/Consul (since Aug 2023), Sentry (historic), Couchbase",
+    "notable_projects": "MariaDB MaxScale, CockroachDB (historic; now CockroachDB Software License), HashiCorp Terraform/Vault/Consul (BUSL; Licensor now IBM), Sentry (historic; now FSL), Couchbase Server components",
     "saas": "Restricted per Additional Use Grant",
     "notes": "Change Date mechanics: older releases become open source."
    },
@@ -2550,14 +2662,14 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://mariadb.com/bsl11/ ; https://opensource.org/api/licenses ; https://www.gnu.org/licenses/license-list.html ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16)",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": true,
-    "spdx_list_status": "Listed (SPDX 3.29.0)"
+    "spdx_list_status": "Listed (SPDX 3.29.0)",
+    "verification_note": "steward_year dates and HashiCorp switch date not primary-verified"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2573,11 +2685,13 @@
    "patent_note": "Yes (limited)",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "competing_use",
-    "service_offering"
+    "service_offering",
+    "distribution"
    ],
    "obligations": [
     "attribution",
+    "state_changes",
+    "patent_retaliation",
     "no_competing_service"
    ],
    "facts": {
@@ -2604,7 +2718,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2620,12 +2733,15 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
+    "service_offering",
     "competing_use",
-    "service_offering"
+    "distribution"
    ],
    "obligations": [
-    "no_competing_service",
-    "noncommercial_only"
+    "attribution",
+    "state_changes",
+    "patent_retaliation",
+    "no_competing_service"
    ],
    "facts": {
     "steward_year": "Redis / 2022 (core 2024)",
@@ -2651,7 +2767,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2661,22 +2776,24 @@
    "family_tab": "6-Source-Available",
    "osi_status": "not_approved",
    "osi_note": "No",
-   "fsf_status": "nonfree",
+   "fsf_status": "not_reviewed",
    "fsf_note": "No",
    "patent_grant": "express",
-   "patent_note": "Yes (Apache variant)",
+   "patent_note": "Yes (FSL Patents clause, both variants; ends if you sue over patents)",
    "copyleft_scope": "use_restriction",
    "triggers": [
     "competing_use",
     "service_offering"
    ],
    "obligations": [
-    "no_competing_service"
+    "attribution",
+    "no_competing_service",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Sentry / 2023",
     "allows": "Any purpose except \"Competing Use\"",
-    "conditions": "No competing commercial product/service; each version converts to Apache-2.0 or MIT after 2 years",
+    "conditions": "No Competing Use (commercial product/service that substitutes for the Software or a licensor product existing at release, or offers substantially similar functionality); each version additionally licensed under Apache License, Version 2.0 on the second anniversary of its release",
     "copyleft_detail": "Usage restriction; 2-year conversion",
     "gpl_compatibility": "Not compatible until conversion",
     "notable_projects": "Sentry, Codecov, Liquibase Community 5.0+ (FSL-1.1-ALv2 since Sept. 30, 2025)",
@@ -2690,14 +2807,14 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "https://spdx.org/licenses ; https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl",
-    "verification_status": "Verified (primary)",
-    "last_verified": "2026-11-18",
+    "source": "https://github.com/getsentry/fsl.software/blob/main/FSL-1.1-ALv2.template.md ; https://fsl.software/ ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) ; https://opensource.org/api/licenses ; https://www.gnu.org/licenses/license-list.html",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": true,
-    "spdx_list_status": "Listed (SPDX 3.29.0)"
+    "spdx_list_status": "Listed (SPDX 3.29.0)",
+    "verification_note": "steward_year not primary-verified"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2707,25 +2824,27 @@
    "family_tab": "6-Source-Available",
    "osi_status": "not_approved",
    "osi_note": "No",
-   "fsf_status": "nonfree",
+   "fsf_status": "not_reviewed",
    "fsf_note": "No",
    "patent_grant": "express",
-   "patent_note": "Yes (Apache variant)",
+   "patent_note": "Yes (FSL Patents clause, both variants; ends if you sue over patents)",
    "copyleft_scope": "use_restriction",
    "triggers": [
     "competing_use",
     "service_offering"
    ],
    "obligations": [
-    "no_competing_service"
+    "attribution",
+    "no_competing_service",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Sentry / 2023",
     "allows": "Any purpose except \"Competing Use\"",
-    "conditions": "No competing commercial product/service; each version converts to Apache-2.0 or MIT after 2 years",
+    "conditions": "No Competing Use (commercial product/service that substitutes for the Software or a licensor product existing at release, or offers substantially similar functionality); each version additionally licensed under MIT license on the second anniversary of its release",
     "copyleft_detail": "Usage restriction; 2-year conversion",
     "gpl_compatibility": "Not compatible until conversion",
-    "notable_projects": "Sentry, Codecov, Liquibase Community 5.0+ (FSL-1.1-ALv2 since Sept. 30, 2025)",
+    "notable_projects": "None verified for the MIT variant (Sentry, Codecov and Liquibase use FSL-1.1-ALv2)",
     "saas": "Restricted only for competing use",
     "notes": ""
    },
@@ -2736,14 +2855,14 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "https://spdx.org/licenses ; https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl",
-    "verification_status": "Verified (primary)",
-    "last_verified": "2026-11-18",
+    "source": "https://github.com/getsentry/fsl.software/blob/main/FSL-1.1-MIT.template.md ; https://fsl.software/ ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) ; https://opensource.org/api/licenses ; https://www.gnu.org/licenses/license-list.html",
+    "verification_status": "Partially verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": true,
-    "spdx_list_status": "Listed (SPDX 3.29.0)"
+    "spdx_list_status": "Listed (SPDX 3.29.0)",
+    "verification_note": "steward_year not primary-verified"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2759,11 +2878,14 @@
    "patent_note": "Depends on base",
    "copyleft_scope": "use_restriction",
    "triggers": [
+    "service_offering",
+    "commercial_use",
     "competing_use",
-    "service_offering"
+    "distribution"
    ],
    "obligations": [
-    "source_disclosure"
+    "attribution",
+    "no_competing_service"
    ],
    "facts": {
     "steward_year": "FOSSA/Heather Meeker / 2018",
@@ -2789,7 +2911,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2806,9 +2927,12 @@
    "copyleft_scope": "use_restriction",
    "triggers": [
     "competing_use",
-    "service_offering"
+    "service_offering",
+    "distribution"
    ],
    "obligations": [
+    "attribution",
+    "patent_retaliation",
     "no_competing_service"
    ],
    "facts": {
@@ -2835,7 +2959,6 @@
     "spdx_list_status": "Not on SPDX list (SPDX 3.29.0) - re-keyed from PolyForm-Shield-1.0.0"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2852,9 +2975,12 @@
    "copyleft_scope": "use_restriction",
    "triggers": [
     "competing_use",
-    "service_offering"
+    "service_offering",
+    "distribution"
    ],
    "obligations": [
+    "attribution",
+    "patent_retaliation",
     "no_competing_service"
    ],
    "facts": {
@@ -2881,7 +3007,6 @@
     "spdx_list_status": "Not on SPDX list (SPDX 3.29.0) - re-keyed from PolyForm-Perimeter-1.0.0"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2897,10 +3022,13 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
+    "service_offering",
     "competing_use",
-    "service_offering"
+    "distribution"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
     "no_competing_service"
    ],
    "facts": {
@@ -2927,7 +3055,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2944,9 +3071,15 @@
    "copyleft_scope": "use_restriction",
    "triggers": [
     "competing_use",
-    "service_offering"
+    "service_offering",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "same_license",
+    "patent_retaliation",
+    "no_competing_service"
+   ],
    "facts": {
     "steward_year": "Keygen / 2024",
     "allows": "FSL-like plus license-key protected features",
@@ -2971,7 +3104,6 @@
     "spdx_list_status": "Not on SPDX list (SPDX 3.29.0) - re-keyed from FCL-1.0-ALv2"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -2988,9 +3120,15 @@
    "copyleft_scope": "use_restriction",
    "triggers": [
     "competing_use",
-    "service_offering"
+    "service_offering",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "same_license",
+    "patent_retaliation",
+    "no_competing_service"
+   ],
    "facts": {
     "steward_year": "Keygen / 2024",
     "allows": "FSL-like plus license-key protected features",
@@ -3015,7 +3153,6 @@
     "spdx_list_status": "Not on SPDX list (SPDX 3.29.0) - re-keyed from FCL-1.0-MIT"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3031,10 +3168,12 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
+    "service_offering",
     "competing_use",
-    "service_offering"
+    "distribution"
    ],
    "obligations": [
+    "attribution",
     "no_competing_service"
    ],
    "facts": {
@@ -3061,7 +3200,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3077,9 +3215,14 @@
    "patent_note": "Yes",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "commercial_use"
+    "commercial_use",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "noncommercial_only",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "PolyForm Project / 2019",
     "allows": "Noncommercial use (personal, research, nonprofits, government)",
@@ -3104,7 +3247,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3120,9 +3262,14 @@
    "patent_note": "Yes",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "commercial_use"
+    "threshold",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "mau_revenue_cap",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "PolyForm Project / 2019",
     "allows": "Use by individuals and businesses below thresholds (<100 people, <US$1M revenue)",
@@ -3147,7 +3294,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3163,9 +3309,14 @@
    "patent_note": "Yes",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "commercial_use"
+    "commercial_use",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "noncommercial_only",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "License Zero / 2019",
     "allows": "Noncommercial use + 30-day commercial trial",
@@ -3190,7 +3341,6 @@
     "spdx_list_status": "Not on SPDX list (SPDX 3.29.0) - re-keyed from Prosperity-3.0"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3206,9 +3356,13 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "commercial_use"
+    "commercial_use",
+    "distribution"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
+    "same_license",
     "noncommercial_only"
    ],
    "facts": {
@@ -3235,7 +3389,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3251,10 +3404,12 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "commercial_use"
+    "commercial_use",
+    "distribution"
    ],
    "obligations": [
     "attribution",
+    "state_changes",
     "noncommercial_only"
    ],
    "facts": {
@@ -3281,7 +3436,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3297,9 +3451,13 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "commercial_use"
+    "any_use",
+    "commercial_use",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "Microsoft / 2007",
     "allows": "View source for reference only (e.g., debugging)",
@@ -3324,7 +3482,6 @@
     "spdx_list_status": "Not on SPDX list (SPDX 3.29.0) - re-keyed from MS-RSL"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3340,10 +3497,12 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "commercial_use"
+    "commercial_use",
+    "distribution"
    ],
    "obligations": [
     "attribution",
+    "state_changes",
     "same_license",
     "noncommercial_only"
    ],
@@ -3371,7 +3530,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3387,9 +3545,12 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "commercial_use"
+    "commercial_use",
+    "distribution"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
     "noncommercial_only"
    ],
    "facts": {
@@ -3416,7 +3577,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3432,10 +3592,13 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "prohibited_use"
+    "prohibited_use",
+    "distribution"
    ],
    "obligations": [
-    "source_disclosure"
+    "attribution",
+    "state_changes",
+    "usage_policy"
    ],
    "facts": {
     "steward_year": "Organization for Ethical Source / 2019",
@@ -3461,7 +3624,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3477,9 +3639,17 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "prohibited_use"
+    "prohibited_use",
+    "any_use",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "same_license",
+    "patent_retaliation",
+    "usage_policy"
+   ],
    "facts": {
     "steward_year": "Organization for Ethical Source / 2021",
     "allows": "Grant under the HL3 core text only (no modules selected)",
@@ -3504,7 +3674,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": [
     "Matches only the HL3 core text with no modules. Module-bearing HL3 is a different text: use LicenseRef-Hippocratic-3.0-<MODULES> or LicenseRef-Hippocratic-3.0-modules."
    ]
@@ -3522,9 +3691,14 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "prohibited_use"
+    "prohibited_use",
+    "any_use",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "usage_policy"
+   ],
    "facts": {
     "steward_year": "996.ICU community / 2019",
     "allows": "MIT-style grant",
@@ -3549,7 +3723,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3565,9 +3738,13 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "prohibited_use"
+    "prohibited_use",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "usage_policy"
+   ],
    "facts": {
     "steward_year": "Douglas Crockford / 2002",
     "allows": "MIT text plus \"The Software shall be used for Good, not Evil.\"",
@@ -3592,7 +3769,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3608,9 +3784,17 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "prohibited_use"
+    "prohibited_use",
+    "any_use",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "same_license",
+    "patent_retaliation",
+    "usage_policy"
+   ],
    "facts": {
     "steward_year": "Organization for Ethical Source / 2021",
     "allows": "Modular grant: HL3 core text plus selectable ethical modules",
@@ -3635,7 +3819,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": [
     "HL3 obligations depend on the module set; read the project LICENSE and record the module string."
    ]
@@ -3653,9 +3836,17 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "prohibited_use"
+    "prohibited_use",
+    "any_use",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "same_license",
+    "patent_retaliation",
+    "usage_policy"
+   ],
    "facts": {
     "steward_year": "Organization for Ethical Source / 2021",
     "allows": "Modular grant: HL3 core text plus all modules",
@@ -3680,7 +3871,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": [
     "HL3 obligations depend on the module set; read the project LICENSE and record the module string."
    ]
@@ -3692,7 +3882,7 @@
    "family_tab": "9-AI Model Licenses",
    "osi_status": "not_approved",
    "osi_note": "No",
-   "fsf_status": "nonfree",
+   "fsf_status": "not_reviewed",
    "fsf_note": "No",
    "patent_grant": "none",
    "patent_note": "No",
@@ -3703,14 +3893,17 @@
     "distribution"
    ],
    "obligations": [
+    "attribution",
+    "notice_file",
     "naming_rule",
     "usage_policy",
-    "mau_revenue_cap"
+    "mau_revenue_cap",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Meta / Apr 2025",
-    "allows": "Use, reproduce, distribute, create derivatives of Llama 4 models and outputs",
-    "conditions": "Acceptable Use Policy; >700M MAU (as of release date) requires separate license from Meta; \"Built with Llama\" display; derivative model names must begin with \"Llama\"; include license copy; EU-domiciled entities excluded for multimodal rights (verify)",
+    "allows": "Use, reproduce, distribute, copy, create derivative works of, and modify the Llama Materials (grant does not cover outputs as such)",
+    "conditions": "AUP; >700M MAU on release date requires Meta license; \"Built with Llama\"; models trained on Llama Materials or outputs and distributed must begin with \"Llama\"; include Agreement copy; Notice file; EU-domiciled individuals/companies get no s.1(a) rights for multimodal models (AUP), end users of products excepted; IP-litigation termination",
     "copyleft_detail": "Model weights & derivatives (incl. fine-tunes)",
     "gpl_compatibility": "N/A (not OSS)",
     "notable_projects": "Llama 4 Scout / Maverick",
@@ -3724,14 +3917,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "https://developer.meta.com/ai/llama4/license; EU multimodal clause sits in the AUP",
+    "source": "https://www.llama.com/llama4/license/ ; https://www.llama.com/llama4/use-policy/ ; https://www.gnu.org/licenses/license-list.html ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16)",
     "verification_status": "Verified (primary)",
-    "last_verified": "2026-11-18",
+    "last_verified": "2026-11-23",
     "volatile": true,
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3752,14 +3944,17 @@
     "distribution"
    ],
    "obligations": [
+    "attribution",
+    "notice_file",
     "naming_rule",
     "usage_policy",
-    "mau_revenue_cap"
+    "mau_revenue_cap",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Meta / 2024",
     "allows": "As above; 3.1+ expressly allows using outputs to improve other models (with naming rule)",
-    "conditions": "700M MAU threshold; AUP; \"Built with Llama\"; derivative names begin with \"Llama\" (3.1+); Llama 3.2 multimodal rights not granted to EU-domiciled individuals/companies",
+    "conditions": "700M MAU; AUP; Llama 3: \"Built with Meta Llama 3\", derivative names begin \"Llama 3\", no use of outputs to improve other LLMs; 3.1-3.3: \"Built with Llama\", names begin \"Llama\"; Notice file; 3.2 multimodal: no s.1(a) rights for EU-domiciled individuals/companies (AUP), end users excepted",
     "copyleft_detail": "Weights & derivatives",
     "gpl_compatibility": "N/A",
     "notable_projects": "Llama 3.1 8B/70B/405B, Llama 3.2, Llama 3.3 70B",
@@ -3773,14 +3968,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://www.llama.com/llama3/license/ ; https://www.llama.com/llama3_1/license/ ; https://www.llama.com/llama3_2/license/ ; https://www.llama.com/llama3_3/license/ ; https://www.llama.com/llama3_2/use-policy/ ; https://www.gnu.org/licenses/license-list.html ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": true,
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3801,8 +3995,11 @@
     "distribution"
    ],
    "obligations": [
+    "attribution",
+    "notice_file",
     "usage_policy",
-    "mau_revenue_cap"
+    "mau_revenue_cap",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Meta / Jul 2023",
@@ -3828,38 +4025,39 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
    "id": "LicenseRef-Gemma",
-   "name": "Gemma Terms of Use (Gemma 1, 2, 3 and variants only)",
+   "name": "Gemma Terms of Use (models listed in its Appendix only)",
    "family": "ai_model_licenses",
    "family_tab": "9-AI Model Licenses",
    "osi_status": "not_approved",
    "osi_note": "No",
-   "fsf_status": "nonfree",
+   "fsf_status": "not_reviewed",
    "fsf_note": "No",
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "threshold",
     "prohibited_use",
-    "distribution"
+    "distribution",
+    "service_offering"
    ],
    "obligations": [
     "attribution",
+    "notice_file",
+    "state_changes",
     "usage_policy"
    ],
    "facts": {
-    "steward_year": "Google / 2024",
+    "steward_year": "Google / 2024 (current text last modified Apr. 1, 2026)",
     "allows": "Use, reproduce, modify, distribute Gemma models and \"Model Derivatives\" (incl. distilled models)",
     "conditions": "Gemma Prohibited Use Policy (flows down); must pass on terms; Google may restrict use it reasonably believes violates terms; notices",
     "copyleft_detail": "Weights, derivatives, and models trained on outputs (distillation)",
     "gpl_compatibility": "N/A",
-    "notable_projects": "Gemma, Gemma 2, Gemma 3 and their variants. NOT Gemma 4, which is Apache-2.0 (released Mar. 31, 2026)",
-    "saas": "Allowed subject to policy",
+    "notable_projects": "Models in the ToU Appendix (Gemma 1/1.1/2/3/3n, CodeGemma, PaliGemma 1/2, ShieldGemma 1/2, RecurrentGemma, EmbeddingGemma, T5Gemma 1/2, VaultGemma, FunctionGemma, TranslateGemma, DataGemma, Gemma Scope, Gemma-APS). NOT Gemma 4 or EmbeddingGemma 2 (Apache-2.0)",
+    "saas": "Allowed; hosting counts as Distribution, so s.3.1 flow-down conditions apply (Notice file exempt for hosted)",
     "notes": "Per-version mapping required: Gemma 4 is the first Gemma family released under OSI-approved Apache-2.0. See Model Map."
    },
    "editorial_view": {
@@ -3869,14 +4067,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "https://ai.google.dev/gemma/docs/releases ; https://opensource.googleblog.com/2026/03/gemma-4-expanding-the-gemmaverse-with-apache-20.html",
+    "source": "https://ai.google.dev/gemma/terms ; https://ai.google.dev/gemma/prohibited_use_policy ; https://ai.google.dev/gemma/docs/releases ; https://ai.google.dev/gemma/docs/gemma_4_license ; https://www.gnu.org/licenses/license-list.html ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16)",
     "verification_status": "Verified (primary)",
-    "last_verified": "2026-11-18",
+    "last_verified": "2026-11-23",
     "volatile": true,
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3892,11 +4089,14 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "threshold",
-    "prohibited_use",
-    "distribution"
+    "distribution",
+    "service_offering",
+    "prohibited_use"
    ],
    "obligations": [
+    "attribution",
+    "state_changes",
+    "patent_retaliation",
     "usage_policy"
    ],
    "facts": {
@@ -3923,7 +4123,6 @@
     "spdx_list_status": "Not on SPDX list (SPDX 3.29.0) - re-keyed from CreativeML-OpenRAIL-M"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": [
     "Not on SPDX License List 3.29.0 (no RAIL license is listed). \"CreativeML-OpenRAIL-M\" / Hugging Face \"creativeml-openrail-m\" resolve here via aliases."
    ]
@@ -3941,11 +4140,16 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "threshold",
-    "prohibited_use",
-    "distribution"
+    "distribution",
+    "service_offering",
+    "prohibited_use"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "patent_retaliation",
+    "usage_policy"
+   ],
    "facts": {
     "steward_year": "BigScience / 2022",
     "allows": "As OpenRAIL-M",
@@ -3970,7 +4174,6 @@
     "spdx_list_status": "Not on SPDX list (SPDX 3.29.0) - re-keyed from BigScience-OpenRAIL-M"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -3986,11 +4189,16 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "threshold",
-    "prohibited_use",
-    "distribution"
+    "distribution",
+    "service_offering",
+    "prohibited_use"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "patent_retaliation",
+    "usage_policy"
+   ],
    "facts": {
     "steward_year": "BigScience / 2022",
     "allows": "As OpenRAIL-M",
@@ -4015,7 +4223,6 @@
     "spdx_list_status": "Not on SPDX list (SPDX 3.29.0) - re-keyed from BigScience-BLOOM-RAIL-1.0"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4033,11 +4240,18 @@
    "triggers": [
     "threshold",
     "prohibited_use",
-    "distribution"
+    "distribution",
+    "service_offering",
+    "commercial_use"
    ],
    "obligations": [
+    "attribution",
+    "notice_file",
+    "state_changes",
+    "naming_rule",
     "usage_policy",
-    "mau_revenue_cap"
+    "mau_revenue_cap",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Stability AI / 2024",
@@ -4063,7 +4277,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4081,11 +4294,16 @@
    "triggers": [
     "threshold",
     "prohibited_use",
-    "distribution"
+    "distribution",
+    "commercial_use"
    ],
    "obligations": [
+    "attribution",
+    "notice_file",
+    "state_changes",
     "mau_revenue_cap",
-    "maas_gate"
+    "naming_rule",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Alibaba Cloud / 2023-2024",
@@ -4111,7 +4329,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4121,21 +4338,26 @@
    "family_tab": "9-AI Model Licenses",
    "osi_status": "not_approved",
    "osi_note": "No",
-   "fsf_status": "nonfree",
+   "fsf_status": "not_reviewed",
    "fsf_note": "No",
-   "patent_grant": "none",
+   "patent_grant": "express",
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "threshold",
     "prohibited_use",
-    "distribution"
+    "distribution",
+    "service_offering"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "usage_policy",
+    "patent_retaliation"
+   ],
    "facts": {
-    "steward_year": "DeepSeek / 2023-2024",
+    "steward_year": "DeepSeek / Oct. 23, 2023 (v1.0)",
     "allows": "Use, modify, distribute, commercial use",
-    "conditions": "Use-based restrictions (RAIL-style) flow down",
+    "conditions": "Attachment A use restrictions (incl. any military use, fully automated decisions adversely affecting legal rights) flow down as enforceable terms; copy of License to recipients; modified-file notices; retain notices; DeepSeek may restrict use remotely",
     "copyleft_detail": "Use restrictions flow down",
     "gpl_compatibility": "N/A",
     "notable_projects": "Original DeepSeek-V3 Base/Chat (Dec. 26, 2024), DeepSeek-V2/V2.5, Coder, Coder-V2, VL2 weights (code under MIT). DeepSeek-R1 (Jan. 20, 2025), V3-0324 (Mar. 2025) and later V3.x/V4.x weights are MIT, not this license.",
@@ -4149,41 +4371,44 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "https://huggingface.co/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-MODEL",
+    "source": "https://huggingface.co/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-MODEL ; https://huggingface.co/deepseek-ai/DeepSeek-V3/blob/main/README.md ; https://api-docs.deepseek.com/news/news250120 ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16)",
     "verification_status": "Verified (primary)",
-    "last_verified": "2026-11-18",
+    "last_verified": "2026-11-23",
     "volatile": true,
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
    "id": "LicenseRef-MRL",
-   "name": "Mistral Research License / Non-Production License [LicenseRef-MRL]",
+   "name": "Mistral AI Research License (MRL-0.1)",
    "family": "ai_model_licenses",
    "family_tab": "9-AI Model Licenses",
    "osi_status": "not_approved",
    "osi_note": "No",
-   "fsf_status": "nonfree",
+   "fsf_status": "not_reviewed",
    "fsf_note": "No",
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "threshold",
-    "prohibited_use",
+    "commercial_use",
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "noncommercial_only",
+    "notice_file",
+    "state_changes",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "Mistral AI / 2024",
-    "allows": "Research, testing, personal use",
+    "allows": "Research Purposes only: personal, scientific or academic research that is non-profit and non-commercial; applies to Models, Derivatives and Outputs",
     "conditions": "No production/commercial use without commercial license",
     "copyleft_detail": "Purpose restriction",
     "gpl_compatibility": "N/A",
-    "notable_projects": "Codestral (MNPL), Mistral Large 2 (MRL). NB: Mistral now uses three regimes: Apache-2.0 (most open models, e.g., Devstral Small 2, Mistral Small 4), Modified MIT with US$20M monthly-revenue bar (Devstral 2, Mistral Medium 3.5), and MRL/MNPL",
+    "notable_projects": "MNPL: Codestral 22B v0.1 (May 29, 2024). MRL: Mistral Large 2 (2407) and 2.1 (2411), Mistral Small 2409, Ministral 8B 2410, Pixtral Large 2411. Mistral regimes now include Apache-2.0, Modified MIT, Mistral Ecosystem Open-Weight License (Mistral Large 4), MRL/MNPL, and API-only models",
     "saas": "Restricted",
     "notes": "\"Mistral = Apache\" is not a safe rule; map each model version."
    },
@@ -4194,41 +4419,44 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://mistral.ai/licenses/MRL-0.1.md ; https://docs.mistral.ai/getting-started/models/ ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": true,
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
    "id": "LicenseRef-MNPL",
-   "name": "Mistral Research License / Non-Production License [LicenseRef-MNPL]",
+   "name": "Mistral AI Non-Production License (MNPL-0.1)",
    "family": "ai_model_licenses",
    "family_tab": "9-AI Model Licenses",
    "osi_status": "not_approved",
    "osi_note": "No",
-   "fsf_status": "nonfree",
+   "fsf_status": "not_reviewed",
    "fsf_note": "No",
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "threshold",
-    "prohibited_use",
+    "commercial_use",
     "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "noncommercial_only",
+    "notice_file",
+    "state_changes",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "Mistral AI / 2024",
-    "allows": "Research, testing, personal use",
+    "allows": "Testing, research, Personal or evaluation purposes in Non-Production Environments; no supply in the course of commercial activity (incl. SaaS)",
     "conditions": "No production/commercial use without commercial license",
     "copyleft_detail": "Purpose restriction",
     "gpl_compatibility": "N/A",
-    "notable_projects": "Codestral (MNPL), Mistral Large 2 (MRL). NB: Mistral now uses three regimes: Apache-2.0 (most open models, e.g., Devstral Small 2, Mistral Small 4), Modified MIT with US$20M monthly-revenue bar (Devstral 2, Mistral Medium 3.5), and MRL/MNPL",
+    "notable_projects": "MNPL: Codestral 22B v0.1 (May 29, 2024). MRL: Mistral Large 2 (2407) and 2.1 (2411), Mistral Small 2409, Ministral 8B 2410, Pixtral Large 2411. Mistral regimes now include Apache-2.0, Modified MIT, Mistral Ecosystem Open-Weight License (Mistral Large 4), MRL/MNPL, and API-only models",
     "saas": "Restricted",
     "notes": "\"Mistral = Apache\" is not a safe rule; map each model version."
    },
@@ -4239,14 +4467,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "Hand-compiled Nov. 2026",
-    "verification_status": "Not re-verified",
-    "last_verified": null,
+    "source": "https://mistral.ai/licences/MNPL-0.1.md ; https://docs.mistral.ai/getting-started/models/ ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16)",
+    "verification_status": "Verified (primary)",
+    "last_verified": "2026-11-23",
     "volatile": true,
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4262,11 +4489,19 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "threshold",
-    "prohibited_use",
-    "distribution"
+    "distribution",
+    "service_offering",
+    "prohibited_use"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution",
+    "notice_file",
+    "state_changes",
+    "naming_rule",
+    "usage_policy",
+    "maas_gate",
+    "patent_retaliation"
+   ],
    "facts": {
     "steward_year": "TII / 2023-2024",
     "allows": "Use and distribute",
@@ -4291,7 +4526,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4309,13 +4543,15 @@
    "triggers": [
     "threshold",
     "prohibited_use",
-    "distribution"
+    "distribution",
+    "service_offering"
    ],
    "obligations": [
     "attribution",
+    "naming_rule",
     "usage_policy",
-    "mau_revenue_cap",
-    "maas_gate"
+    "maas_gate",
+    "mau_revenue_cap"
    ],
    "facts": {
     "steward_year": "Meta / Oct. 15, 2026",
@@ -4341,7 +4577,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4357,13 +4592,13 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
+    "distribution",
     "threshold",
-    "prohibited_use",
-    "distribution"
+    "commercial_use"
    ],
    "obligations": [
     "attribution",
-    "mau_revenue_cap"
+    "naming_rule"
    ],
    "facts": {
     "steward_year": "Moonshot AI / 2025",
@@ -4389,7 +4624,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4405,13 +4639,16 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
+    "distribution",
+    "service_offering",
     "threshold",
-    "prohibited_use",
-    "distribution"
+    "commercial_use"
    ],
    "obligations": [
+    "attribution",
+    "maas_gate",
     "mau_revenue_cap",
-    "maas_gate"
+    "naming_rule"
    ],
    "facts": {
     "steward_year": "Moonshot AI / July 2026",
@@ -4437,7 +4674,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4447,19 +4683,18 @@
    "family_tab": "9-AI Model Licenses",
    "osi_status": "not_approved",
    "osi_note": "No",
-   "fsf_status": "nonfree",
+   "fsf_status": "not_reviewed",
    "fsf_note": "No",
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
     "threshold",
-    "prohibited_use",
     "distribution"
    ],
    "obligations": [
-    "mau_revenue_cap",
-    "maas_gate"
+    "attribution",
+    "mau_revenue_cap"
    ],
    "facts": {
     "steward_year": "Mistral AI / Dec. 2025",
@@ -4467,7 +4702,7 @@
     "conditions": "No rights at all if global consolidated monthly revenue of your company (or your employer) exceeds US$20M for the preceding month; applies to derivatives and combined works; above threshold use Mistral commercial license or hosted service",
     "copyleft_detail": "Revenue-based bar on all use (incl. internal)",
     "gpl_compatibility": "N/A",
-    "notable_projects": "Devstral 2 123B (deprecated May 22, 2026), Mistral Medium 3.5",
+    "notable_projects": "Devstral 2 123B (API deprecated May 22, 2026, retired Jul. 31, 2026; weights remain), Mistral Medium 3.5 (API deprecated Oct. 31, 2026, retires Apr. 30, 2027), Timestral 1.0 (5M-209M)",
     "saas": "Barred above threshold",
     "notes": "Unlike Kimi/Muse thresholds, this is not limited to MaaS."
    },
@@ -4478,14 +4713,13 @@
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE ; https://help.mistral.ai/en/articles/347393",
+    "source": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE ; https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/blob/main/LICENSE ; https://docs.mistral.ai/getting-started/models/ ; https://help.mistral.ai/en/articles/347393 ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16)",
     "verification_status": "Verified (primary)",
-    "last_verified": "2026-11-18",
+    "last_verified": "2026-11-23",
     "volatile": true,
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4501,12 +4735,11 @@
    "patent_note": "Yes (patent, database, trade secret included)",
    "copyleft_scope": "use_restriction",
    "triggers": [
-    "threshold",
-    "prohibited_use",
     "distribution"
    ],
    "obligations": [
-    "attribution"
+    "attribution",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "Linux Foundation / May 28, 2026 (1.0: 2025)",
@@ -4532,7 +4765,6 @@
     "spdx_list_status": "Not on SPDX list (SPDX 3.29.0) - re-keyed from OpenMDW-1.1"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4548,13 +4780,16 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
+    "distribution",
+    "service_offering",
     "threshold",
-    "prohibited_use",
-    "distribution"
+    "commercial_use"
    ],
    "obligations": [
-    "mau_revenue_cap",
-    "maas_gate"
+    "attribution",
+    "naming_rule",
+    "maas_gate",
+    "mau_revenue_cap"
    ],
    "facts": {
     "steward_year": "Alibaba (Qwen) / 2026",
@@ -4580,7 +4815,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4596,13 +4830,14 @@
    "patent_note": "No",
    "copyleft_scope": "use_restriction",
    "triggers": [
+    "distribution",
+    "service_offering",
     "threshold",
-    "prohibited_use",
-    "distribution"
+    "commercial_use"
    ],
    "obligations": [
     "attribution",
-    "mau_revenue_cap",
+    "naming_rule",
     "maas_gate"
    ],
    "facts": {
@@ -4629,7 +4864,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4644,8 +4878,11 @@
    "patent_grant": "excluded",
    "patent_note": "No (patents not covered)",
    "copyleft_scope": "varies",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
+    "attribution",
     "state_changes"
    ],
    "facts": {
@@ -4672,7 +4909,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4687,8 +4923,14 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
-   "obligations": [],
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "same_license"
+   ],
    "facts": {
     "steward_year": "Creative Commons / 2013",
     "allows": "As CC-BY",
@@ -4713,7 +4955,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4728,8 +4969,13 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
-   "obligations": [],
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "state_changes"
+   ],
    "facts": {
     "steward_year": "Creative Commons / 2013",
     "allows": "Share verbatim",
@@ -4754,7 +5000,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4769,8 +5014,12 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
-   "obligations": [],
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution"
+   ],
    "facts": {
     "steward_year": "Linux Foundation / 2021",
     "allows": "Use, modify, share data; results/outputs unrestricted",
@@ -4795,7 +5044,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4810,8 +5058,12 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
+    "attribution",
+    "state_changes",
     "same_license"
    ],
    "facts": {
@@ -4838,7 +5090,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4853,9 +5104,14 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
+   "triggers": [
+    "distribution",
+    "network_interaction"
+   ],
    "obligations": [
-    "same_license"
+    "attribution",
+    "same_license",
+    "source_disclosure"
    ],
    "facts": {
     "steward_year": "Open Knowledge Foundation / 2009",
@@ -4881,7 +5137,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4896,8 +5151,15 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
-   "obligations": [],
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "same_license",
+    "source_disclosure"
+   ],
    "facts": {
     "steward_year": "FSF / 2008",
     "allows": "Copy, modify, distribute documentation",
@@ -4922,7 +5184,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4937,8 +5198,15 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
-   "obligations": [],
+   "triggers": [
+    "distribution"
+   ],
+   "obligations": [
+    "attribution",
+    "state_changes",
+    "same_license",
+    "source_disclosure"
+   ],
    "facts": {
     "steward_year": "FSF / 2008",
     "allows": "Copy, modify, distribute documentation",
@@ -4963,7 +5231,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -4978,8 +5245,13 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
-   "obligations": [],
+   "triggers": [
+    "distribution",
+    "network_interaction"
+   ],
+   "obligations": [
+    "attribution"
+   ],
    "facts": {
     "steward_year": "Open Knowledge Foundation / 2010",
     "allows": "Use, share, adapt databases",
@@ -5004,7 +5276,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5045,7 +5316,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5060,9 +5330,13 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
-    "attribution"
+    "attribution",
+    "state_changes",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "CERN / 2020",
@@ -5088,7 +5362,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5103,9 +5376,15 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
-    "source_disclosure"
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "CERN / 2020",
@@ -5131,7 +5410,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5146,9 +5424,15 @@
    "patent_grant": "none",
    "patent_note": "No",
    "copyleft_scope": "varies",
-   "triggers": [],
+   "triggers": [
+    "distribution"
+   ],
    "obligations": [
-    "source_disclosure"
+    "attribution",
+    "state_changes",
+    "source_disclosure",
+    "same_license",
+    "patent_retaliation"
    ],
    "facts": {
     "steward_year": "CERN / 2020",
@@ -5174,7 +5458,6 @@
     "spdx_list_status": "Listed (SPDX 3.29.0)"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5217,7 +5500,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5235,9 +5517,7 @@
    "triggers": [
     "any_use"
    ],
-   "obligations": [
-    "no_competing_service"
-   ],
+   "obligations": [],
    "facts": {
     "steward_year": "Vendor-specific",
     "allows": "Access, not a copy; subscription rights",
@@ -5262,7 +5542,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5305,7 +5584,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5348,7 +5626,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5366,9 +5643,7 @@
    "triggers": [
     "any_use"
    ],
-   "obligations": [
-    "noncommercial_only"
-   ],
+   "obligations": [],
    "facts": {
     "steward_year": "Vendor-specific",
     "allows": "Use at no cost",
@@ -5393,7 +5668,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5436,7 +5710,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5479,7 +5752,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5522,7 +5794,6 @@
     "spdx_list_status": "SPDX special value"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5565,7 +5836,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5581,9 +5851,14 @@
    "patent_note": "No",
    "copyleft_scope": "contract",
    "triggers": [
-    "any_use"
+    "any_use",
+    "threshold",
+    "commercial_use"
    ],
-   "obligations": [],
+   "obligations": [
+    "mau_revenue_cap",
+    "no_competing_service"
+   ],
    "facts": {
     "steward_year": "Docker, Inc. / 2021 change",
     "allows": "Free for personal use, education, noncommercial OSS and small businesses (fewer than 250 employees AND less than US$10M annual revenue - verify current thresholds)",
@@ -5608,8 +5883,9 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
-   "warnings": []
+   "warnings": [
+    "Government entities (broadly defined, including government-funded entities) need a paid subscription regardless of size (Docker Subscription Service Agreement, last updated Aug. 26, 2026)."
+   ]
   },
   {
    "id": "LicenseRef-Anaconda-ToS",
@@ -5624,13 +5900,18 @@
    "patent_note": "No",
    "copyleft_scope": "contract",
    "triggers": [
-    "any_use"
+    "any_use",
+    "threshold",
+    "commercial_use"
    ],
-   "obligations": [],
+   "obligations": [
+    "mau_revenue_cap",
+    "no_competing_service"
+   ],
    "facts": {
-    "steward_year": "Anaconda, Inc. / 2020, revised 2024",
-    "allows": "Free use of Anaconda Distribution and default package channels for individuals and small organizations (threshold: fewer than 200 employees - verify)",
-    "conditions": "Larger organizations need a paid license; applies to default repository access, not to conda-forge packages",
+    "steward_year": "Anaconda, Inc. / 2020; terms dated July 15, 2025",
+    "allows": "Free use of Anaconda Distribution and default channels for organizations with 200 or fewer employees or contractors (including affiliates), personal noncommercial use, and eligible academic and nonprofit research organizations",
+    "conditions": "Larger organizations need a paid license. The record's conda-forge carve-out is not stated in the July 15, 2025 terms: confirm before relying on it",
     "copyleft_detail": "N/A",
     "gpl_compatibility": "N/A",
     "notable_projects": "Anaconda Distribution, repo.anaconda.com defaults channel",
@@ -5651,12 +5932,11 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
    "id": "LicenseRef-Oracle-OTN",
-   "name": "Oracle Java SE (OTN / Java SE Universal Subscription) [LicenseRef-Oracle-OTN]",
+   "name": "Oracle Technology Network License for Java SE (OTN) [LicenseRef-Oracle-OTN]",
    "family": "proprietary",
    "family_tab": "12-Proprietary",
    "osi_status": "not_approved",
@@ -5667,9 +5947,13 @@
    "patent_note": "No",
    "copyleft_scope": "contract",
    "triggers": [
-    "any_use"
+    "any_use",
+    "commercial_use",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution"
+   ],
    "facts": {
     "steward_year": "Oracle / 2019 OTN; 2021 NFTC; 2023 per-employee pricing",
     "allows": "Oracle JDK free for development/personal use under OTN; NFTC allows free production use of recent LTS releases for a limited period (verify per version)",
@@ -5694,12 +5978,13 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
-   "warnings": []
+   "warnings": [
+    "Time-sensitive (read on Oracle's Java downloads page, Nov. 23, 2026): JDK 21 updates from 21.0.13 moved from NFTC to OTN in Oct. 2026; JDK 17 updates from 17.0.13 in Oct. 2024; JDK 8 and 11 are OTN. Production use needs a paid Java SE subscription."
+   ]
   },
   {
    "id": "LicenseRef-Oracle-NFTC",
-   "name": "Oracle Java SE (OTN / Java SE Universal Subscription) [LicenseRef-Oracle-NFTC]",
+   "name": "Oracle No-Fee Terms and Conditions (NFTC) [LicenseRef-Oracle-NFTC]",
    "family": "proprietary",
    "family_tab": "12-Proprietary",
    "osi_status": "not_approved",
@@ -5710,18 +5995,21 @@
    "patent_note": "No",
    "copyleft_scope": "contract",
    "triggers": [
-    "any_use"
+    "any_use",
+    "distribution"
    ],
-   "obligations": [],
+   "obligations": [
+    "attribution"
+   ],
    "facts": {
-    "steward_year": "Oracle / 2019 OTN; 2021 NFTC; 2023 per-employee pricing",
-    "allows": "Oracle JDK free for development/personal use under OTN; NFTC allows free production use of recent LTS releases for a limited period (verify per version)",
-    "conditions": "Commercial production use of Oracle JDK builds outside NFTC requires Java SE Universal Subscription, priced per total employee count (since Jan. 2023)",
+    "steward_year": "Oracle / 2021",
+    "allows": "Free use, including production, and free redistribution of unmodified Oracle JDK binaries released under NFTC",
+    "conditions": "No modification or reverse engineering; keep Oracle's notices. Each JDK release is under NFTC only for a limited period; later updates move to OTN",
     "copyleft_detail": "N/A",
     "gpl_compatibility": "N/A",
-    "notable_projects": "Oracle JDK 8/11/17/21 builds",
+    "notable_projects": "Oracle JDK releases within their NFTC period (e.g. JDK 25)",
     "saas": "N/A",
-    "notes": "OpenJDK itself is GPL-2.0 WITH Classpath-exception-2.0."
+    "notes": "Time-sensitive (read on Oracle's Java downloads page, Nov. 23, 2026): JDK 25 stays under NFTC until Sept. 2028; JDK 27 until March 2027; JDK 21 updates moved to OTN in Oct. 2026."
    },
    "editorial_view": {
     "build_on": "HIGH audit exposure: Oracle actively audits; per-employee metric scales with acquirer headcount. Mitigate by using OpenJDK builds (Temurin, Corretto, Zulu).",
@@ -5737,7 +6025,6 @@
     "spdx_list_status": "Not on SPDX list - LicenseRef"
    },
    "caveat": true,
-   "obligations_derived": "auto-derived from text; review before relying",
    "warnings": []
   },
   {
@@ -5765,7 +6052,9 @@
     "volatile": false,
     "expression_valid_in": "SPDX 2.3 and 3.0"
    },
-   "warnings": []
+   "warnings": [],
+   "obligations": [],
+   "triggers": []
   },
   {
    "record_type": "exception",
@@ -5792,7 +6081,9 @@
     "volatile": false,
     "expression_valid_in": "SPDX 2.3 and 3.0"
    },
-   "warnings": []
+   "warnings": [],
+   "obligations": [],
+   "triggers": []
   },
   {
    "record_type": "exception",
@@ -5819,7 +6110,9 @@
     "volatile": false,
     "expression_valid_in": "SPDX 2.3 and 3.0"
    },
-   "warnings": []
+   "warnings": [],
+   "obligations": [],
+   "triggers": []
   },
   {
    "record_type": "exception",
@@ -5830,10 +6123,10 @@
    "family_tab": "13-Exceptions",
    "caveat": true,
    "base": "Apache-2.0",
-   "effect": "Waives attribution for compiled runtime portions; fixes GPLv2 compatibility",
+   "effect": "Waives Apache-2.0 sections 4(a), 4(b) and 4(d) for portions compiled into your object code; for software combined with GPLv2 code, Apache terms may be deemed waived only if a court finds a conflict",
    "facts": {
     "notable_projects": "LLVM, Clang, libc++",
-    "notes": "Very permissive; GPLv2-compatible."
+    "notes": "Very permissive. Not unconditionally GPLv2-compatible: the GPLv2 clause is a conditional waiver."
    },
    "editorial_view": {
     "practical_effect": "Very permissive; GPLv2-compatible.",
@@ -5846,7 +6139,9 @@
     "volatile": false,
     "expression_valid_in": "SPDX 2.3 and 3.0"
    },
-   "warnings": []
+   "warnings": [],
+   "obligations": [],
+   "triggers": []
   },
   {
    "record_type": "note",
@@ -5875,6 +6170,12 @@
    },
    "warnings": [
     "Note only: not an SPDX expression; do not place this key in an expression."
+   ],
+   "obligations": [
+    "source_disclosure"
+   ],
+   "triggers": [
+    "distribution"
    ]
   },
   {
@@ -5902,7 +6203,9 @@
     "volatile": false,
     "expression_valid_in": "SPDX 2.3 and 3.0"
    },
-   "warnings": []
+   "warnings": [],
+   "obligations": [],
+   "triggers": []
   },
   {
    "record_type": "exception",
@@ -5929,7 +6232,9 @@
     "volatile": false,
     "expression_valid_in": "SPDX 2.3 and 3.0"
    },
-   "warnings": []
+   "warnings": [],
+   "obligations": [],
+   "triggers": []
   },
   {
    "record_type": "exception",
@@ -5956,7 +6261,9 @@
     "volatile": false,
     "expression_valid_in": "SPDX 2.3 and 3.0"
    },
-   "warnings": []
+   "warnings": [],
+   "obligations": [],
+   "triggers": []
   },
   {
    "record_type": "exception",
@@ -5983,7 +6290,9 @@
     "volatile": false,
     "expression_valid_in": "SPDX 2.3 and 3.0"
    },
-   "warnings": []
+   "warnings": [],
+   "obligations": [],
+   "triggers": []
   },
   {
    "record_type": "exception",
@@ -6010,7 +6319,15 @@
     "volatile": false,
     "expression_valid_in": "SPDX 3.0 only (AdditionRef-); in SPDX 2.3 use a single LicenseRef- for the whole licence terms"
    },
-   "warnings": []
+   "warnings": [
+    "Deprecated by Oracle: it does not apply to MySQL Client Libraries from MySQL 8.0.4 (Jan. 24, 2018) onward, which use Universal-FOSS-exception-1.0 (from an Internet Archive copy of Oracle's exception page, Jan. 3, 2025)."
+   ],
+   "obligations": [
+    "source_disclosure"
+   ],
+   "triggers": [
+    "distribution"
+   ]
   }
  ]
 }

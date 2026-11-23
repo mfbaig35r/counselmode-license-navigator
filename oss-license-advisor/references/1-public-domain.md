@@ -65,7 +65,6 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** none
 - **copyleft_scope:** none
-- **obligations:** ['attribution']
 - steward_year: Rob Landley / 2013 (toybox)
 - allows: Use, copy, modify, distribute for any purpose, with or without fee
 - conditions: None (no attribution required)

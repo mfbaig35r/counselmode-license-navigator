@@ -9,19 +9,19 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
-- **obligations:** ['source_disclosure', 'relinking']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'relinking']
 - steward_year: FSF / 1999
 - allows: Use library in any program, including proprietary
 - conditions: Modifications to the library must be LGPL with source; distributed works must permit user modification of library and reverse engineering for debugging; provide relinking ability (shared library or object files)
 - copyleft_detail: Library-level; triggered by distribution
 - gpl_compatibility: Compatible with GPLv2/v3 (can convert to GPL)
-- notable_projects: glibc, FFmpeg (default build), Qt (LGPL option), GTK
+- notable_projects: None verified as LGPL-2.1-only; glibc, FFmpeg (default build) and GTK are "or later"; current Qt is LGPL-3.0-only
 - saas: Not triggered by SaaS (no network clause)
 - notes: Mobile app stores and static linking make compliance harder (iOS).
 - **Editorial view – build_on:** Moderate. Prefer dynamic linking; static linking requires providing object files for relinking. Do not prohibit reverse engineering in your EULA for the combined work.
 - **Editorial view – license_your_own:** For libraries you want widely used incl. by proprietary apps, while keeping library improvements open.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.gnu.org/licenses/lgpl-2.1.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## GNU LGPL v2.1 [LGPL-2.1-or-later] — `LGPL-2.1-or-later`
 
@@ -30,19 +30,19 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
-- **obligations:** ['source_disclosure', 'relinking']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'relinking']
 - steward_year: FSF / 1999
 - allows: Use library in any program, including proprietary
 - conditions: Modifications to the library must be LGPL with source; distributed works must permit user modification of library and reverse engineering for debugging; provide relinking ability (shared library or object files)
 - copyleft_detail: Library-level; triggered by distribution
 - gpl_compatibility: Compatible with GPLv2/v3 (can convert to GPL)
-- notable_projects: glibc, FFmpeg (default build), Qt (LGPL option), GTK
+- notable_projects: glibc, FFmpeg (default build), GTK
 - saas: Not triggered by SaaS (no network clause)
 - notes: Mobile app stores and static linking make compliance harder (iOS).
 - **Editorial view – build_on:** Moderate. Prefer dynamic linking; static linking requires providing object files for relinking. Do not prohibit reverse engineering in your EULA for the combined work.
 - **Editorial view – license_your_own:** For libraries you want widely used incl. by proprietary apps, while keeping library improvements open.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.gnu.org/licenses/lgpl-2.1.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## GNU LGPL v3 [LGPL-3.0-only] — `LGPL-3.0-only`
 
@@ -51,19 +51,19 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
-- **obligations:** ['installation_info']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'relinking', 'installation_info']
 - steward_year: FSF / 2007
 - allows: As LGPL-2.1 (implemented as GPLv3 + additional permissions)
 - conditions: As 2.1, plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions
 - copyleft_detail: Library-level; distribution
 - gpl_compatibility: Compatible with GPLv3; INCOMPATIBLE with GPLv2-only
-- notable_projects: GNU libraries, some Qt modules
+- notable_projects: Qt (Qt Base and other modules, LGPL-3.0-only option)
 - saas: Not triggered by SaaS
 - notes: Many embedded vendors avoid (L)GPLv3 due to anti-tivoization.
 - **Editorial view – build_on:** Moderate-high for embedded/consumer devices: must allow users to install modified library (Installation Information).
 - **Editorial view – license_your_own:** As 2.1, with modern patent terms.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.gnu.org/licenses/lgpl-3.0.txt; https://www.gnu.org/licenses/gpl-3.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## GNU LGPL v3 [LGPL-3.0-or-later] — `LGPL-3.0-or-later`
 
@@ -72,19 +72,19 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
-- **obligations:** ['installation_info']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'relinking', 'installation_info']
 - steward_year: FSF / 2007
 - allows: As LGPL-2.1 (implemented as GPLv3 + additional permissions)
 - conditions: As 2.1, plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions
 - copyleft_detail: Library-level; distribution
 - gpl_compatibility: Compatible with GPLv3; INCOMPATIBLE with GPLv2-only
-- notable_projects: GNU libraries, some Qt modules
+- notable_projects: GNU libraries (unverified; no project checked)
 - saas: Not triggered by SaaS
 - notes: Many embedded vendors avoid (L)GPLv3 due to anti-tivoization.
 - **Editorial view – build_on:** Moderate-high for embedded/consumer devices: must allow users to install modified library (Installation Information).
 - **Editorial view – license_your_own:** As 2.1, with modern patent terms.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.gnu.org/licenses/lgpl-3.0.txt; https://www.gnu.org/licenses/gpl-3.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## Mozilla Public License 2.0 — `MPL-2.0`
 
@@ -93,11 +93,11 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
-- **obligations:** ['attribution', 'same_license']
+- **obligations:** ['attribution', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: Mozilla / 2012
 - allows: Use and combine in "Larger Works" under any license
 - conditions: Source of MPL-covered files (and modifications to them) must be available under MPL; keep notices
-- copyleft_detail: FILE-level; distribution of executable form
+- copyleft_detail: File-level; applies to distribution in Source Code Form (§3.1) and Executable Form (§3.2)
 - gpl_compatibility: Compatible with GPL/LGPL/AGPL via "Secondary License" (unless marked "Incompatible With Secondary Licenses")
 - notable_projects: Firefox, Thunderbird, LibreOffice (MPL/LGPL), Terraform providers, OpenTofu
 - saas: Not triggered by SaaS
@@ -105,7 +105,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – build_on:** Low-moderate: only modified MPL files must be published. Keep your proprietary code in separate files.
 - **Editorial view – license_your_own:** Balanced choice: protects your files while allowing proprietary combination.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.mozilla.org/media/MPL/2.0/index.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## Mozilla Public License 1.1 — `MPL-1.1`
 
@@ -114,6 +114,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: Mozilla / 1999
 - allows: As MPL-2.0
 - conditions: File-level copyleft
@@ -133,7 +134,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
-- **obligations:** ['source_disclosure']
+- **obligations:** ['attribution', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: Eclipse Foundation / 2017
 - allows: Use, combine with separate modules under other licenses
 - conditions: Modifications to EPL "Program" (module-level) must be EPL with source; commercial distributors indemnify contributors
@@ -153,6 +154,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
+- **obligations:** ['attribution', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: Eclipse / 2004
 - allows: As EPL-2.0
 - conditions: Module-level copyleft; choice-of-law (NY)
@@ -172,6 +174,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: Sun Microsystems / 2004
 - allows: MPL-style
 - conditions: File-level copyleft
@@ -192,6 +195,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
+- **obligations:** ['attribution', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: IBM / 2001
 - allows: Predecessor to EPL
 - conditions: Module-level copyleft
@@ -211,6 +215,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
+- **obligations:** ['attribution', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: Microsoft / 2005
 - allows: Use and combine
 - conditions: File-level copyleft
@@ -230,6 +235,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license']
 - steward_year: CEA/CNRS/Inria (France) / 2006
 - allows: LGPL-like for French law
 - conditions: Component-level copyleft
@@ -248,8 +254,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** express
 - **copyleft_scope:** file_or_library
-- **triggers:** ['distribution']
-- **obligations:** ['source_disclosure', 'network_source_offer']
+- **triggers:** ['distribution', 'network_interaction']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'network_source_offer', 'patent_retaliation', 'naming_rule']
 - steward_year: Apple / 2003
 - allows: Use, modify
 - conditions: File-level copyleft; "external deployment" (network) triggers source obligation
@@ -290,7 +296,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** file_or_library
 - **triggers:** ['distribution']
-- **obligations:** ['attribution', 'naming_rule']
+- **obligations:** ['attribution', 'same_license', 'naming_rule']
 - steward_year: SIL International / 2007
 - allows: Use, embed, modify, bundle and redistribute fonts with any software
 - conditions: Fonts may not be sold standalone; modified fonts must be OFL and cannot use Reserved Font Names; keep notices

@@ -35,10 +35,10 @@ An MCP server, local and hosted, is in progress.
 
 ## How much to trust it
 
-Each record says how it was checked (`provenance.verification_status`). Today 20 of 139 records are verified against
-primary sources and the rest are not yet re-verified; obligations on most records were derived automatically from the
-license text. The answers show this. Confirm anything that matters against the license text and, for decisions with
-real consequences, with a lawyer.
+Each record says how it was checked (`provenance.verification_status`). Today 29 of 139 records, including the
+most-asked licenses, are fully verified against primary sources and 11 partially. Every record's obligations were
+checked against its license text; the other fields of the remaining records are not yet re-verified. The answers show
+this. Confirm anything that matters against the license text and, for decisions with real consequences, with a lawyer.
 
 ## Layout
 

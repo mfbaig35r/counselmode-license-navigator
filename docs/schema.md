@@ -20,7 +20,7 @@ licenses in 12 families, and 10 exceptions).
 | `obligations_derived` | Set when obligations were derived automatically from the text: review before relying |
 | `facts` | `steward_year`, `allows`, `conditions`, `copyleft_detail`, `gpl_compatibility`, `notable_projects`, `saas`, `notes` |
 | `editorial_view` | CounselMode's judgment, not legal advice: `build_on`, `license_your_own`, `practical_effect`, `jurisdiction`, `attribution` |
-| `provenance` | `source`, `verification_status` (`Verified (primary)`, `Secondary only`, `Not re-verified`, ...), `last_verified`, `volatile` (always true for AI model, source-available, noncommercial, ethical-source and proprietary records), `spdx_list_status`, `expression_valid_in` |
+| `provenance` | `source`, `verification_status` (`Verified (primary)`: every fact checked against a primary source; `Partially verified (primary)`: checked, with at least one detail not confirmable, named in `verification_note`; `Secondary only`; `Not re-verified`), `last_verified`, `volatile` (always true for AI model, source-available, noncommercial, ethical-source and proprietary records), `spdx_list_status`, `expression_valid_in` |
 | `caveat` | True when the record should be confirmed against the official text |
 | `warnings` | Record-specific cautions to show the user |
 
@@ -33,6 +33,9 @@ license), `conditional` (substantive terms carry over), `no`, `not_applicable`.
 
 `compat_groups.json`: `{note, groups: {label: {members: [license IDs], note?}}}`. Every label used in
 `compatibility.json` is here, and every member is a record in `licenses.json` (both tested).
+
+The per-family docs in `references/`, plus `case-law.md`, `regulatory-overlay.md` and `model-map.md`, are generated
+from these files by `scripts/build_references.py`; a test fails if they drift.
 
 ## models.json
 

@@ -32,9 +32,9 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 ## LLVM exception — `LLVM-exception`
 
 - **base:** Apache-2.0
-- **effect:** Waives attribution for compiled runtime portions; fixes GPLv2 compatibility
+- **effect:** Waives Apache-2.0 sections 4(a), 4(b) and 4(d) for portions compiled into your object code; for software combined with GPLv2 code, Apache terms may be deemed waived only if a court finds a conflict
 - notable_projects: LLVM, Clang, libc++
-- notes: Very permissive; GPLv2-compatible.
+- notes: Very permissive. Not unconditionally GPLv2-compatible: the GPLv2 clause is a conditional waiver.
 - **Editorial view – practical_effect:** Very permissive; GPLv2-compatible.
 - provenance: https://spdx.org/licenses/exceptions-index.html (SPDX 3.29.0) | verification: Verified (primary) - on SPDX 3.29.0 exceptions list | last_verified: 2026-11-18 | volatile: False
 
@@ -42,6 +42,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 
 - **base:** GPL-2.0 / GPL-3.0
 - **effect:** Permits linking GPL code with OpenSSL 1.x (whose old license was GPL-incompatible)
+- **triggers:** ['distribution']
+- **obligations:** ['source_disclosure']
 - notable_projects: wget, older GPL network tools
 - notes: Less relevant since OpenSSL 3.0 moved to Apache-2.0 (GPLv3-compatible; still GPLv2-incompatible).
 - **Editorial view – practical_effect:** Less relevant since OpenSSL 3.0 moved to Apache-2.0 (GPLv3-compatible; still GPLv2-incompatible).
@@ -87,6 +89,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 
 - **base:** GPL-2.0-only
 - **effect:** Earlier Oracle exception for FOSS applications using MySQL client libraries
+- **triggers:** ['distribution']
+- **obligations:** ['source_disclosure']
 - notable_projects: Older MySQL client libraries
 - notes: Proprietary distribution still requires commercial license.
 - **Editorial view – practical_effect:** Proprietary distribution still requires commercial license.

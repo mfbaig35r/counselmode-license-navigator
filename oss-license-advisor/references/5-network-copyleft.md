@@ -9,19 +9,19 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** network
 - **triggers:** ['distribution', 'network_interaction']
-- **obligations:** ['network_source_offer']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'network_source_offer', 'installation_info']
 - steward_year: FSF / 2007 (Affero v1: 2002)
 - allows: As GPLv3
 - conditions: As GPLv3 plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version
 - copyleft_detail: Whole work; distribution AND remote network interaction with modified version
 - gpl_compatibility: Compatible with GPLv3: combination permitted by GPLv3 §13 and AGPLv3 §13; the AGPL part keeps its network clause
-- notable_projects: Mastodon, Nextcloud, Grafana (since 2021), MinIO, Elasticsearch & Kibana (AGPL option since 2024), Redis 8 (AGPL option 2025), iText, Ghostscript
-- saas: TRIGGERED
+- notable_projects: Grafana, Elasticsearch & Kibana (AGPL option alongside SSPL and ELv2), Redis 8 (AGPLv3 option alongside RSALv2 and SSPLv1), MinIO (repository no longer maintained)
+- saas: Triggered when a modified version is offered to users interacting with it over a network (§13)
 - notes: Scope of "interacting remotely" and what counts as the "Program" in a microservice architecture is debated.
 - **Editorial view – build_on:** VERY HIGH for SaaS/cloud products. Many companies ban AGPL dependencies outright (e.g., Google policy). Unmodified internal use is generally safe; modifying and exposing over a network triggers source release.
 - **Editorial view – license_your_own:** Used by open-core vendors to force cloud providers to share or buy commercial license.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-1.0-only.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## GNU Affero GPL v3.0 [AGPL-3.0-or-later] — `AGPL-3.0-or-later`
 
@@ -30,19 +30,19 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** network
 - **triggers:** ['distribution', 'network_interaction']
-- **obligations:** ['network_source_offer']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'network_source_offer', 'installation_info']
 - steward_year: FSF / 2007 (Affero v1: 2002)
 - allows: As GPLv3
 - conditions: As GPLv3 plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version
 - copyleft_detail: Whole work; distribution AND remote network interaction with modified version
 - gpl_compatibility: Compatible with GPLv3: combination permitted by GPLv3 §13 and AGPLv3 §13; the AGPL part keeps its network clause
-- notable_projects: Mastodon, Nextcloud, Grafana (since 2021), MinIO, Elasticsearch & Kibana (AGPL option since 2024), Redis 8 (AGPL option 2025), iText, Ghostscript
-- saas: TRIGGERED
+- notable_projects: Mastodon, iText, Ghostscript, Nextcloud (mixed; some files AGPL-3.0-only)
+- saas: Triggered when a modified version is offered to users interacting with it over a network (§13)
 - notes: Scope of "interacting remotely" and what counts as the "Program" in a microservice architecture is debated.
 - **Editorial view – build_on:** VERY HIGH for SaaS/cloud products. Many companies ban AGPL dependencies outright (e.g., Google policy). Unmodified internal use is generally safe; modifying and exposing over a network triggers source release.
 - **Editorial view – license_your_own:** Used by open-core vendors to force cloud providers to share or buy commercial license.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-1.0-only.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## Reciprocal Public License 1.5 — `RPL-1.5`
 
@@ -50,8 +50,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** express
 - **copyleft_scope:** network
-- **triggers:** ['distribution', 'network_interaction']
-- **obligations:** ['source_disclosure']
+- **triggers:** ['distribution', 'network_interaction', 'any_use']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'network_source_offer', 'patent_retaliation', 'naming_rule']
 - steward_year: Technical Pursuit / 2007
 - allows: Use, modify
 - conditions: Must publish source of modifications even for internal/private deployment
@@ -71,7 +71,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** network
 - **triggers:** ['distribution', 'network_interaction']
-- **obligations:** ['attribution']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'network_source_offer', 'patent_retaliation', 'naming_rule']
 - steward_year: Socialtext / 2007
 - allows: MPL-1.1 based
 - conditions: Network use counts as distribution; prominent attribution (logo) display requirement
@@ -91,7 +91,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** network
 - **triggers:** ['distribution', 'network_interaction']
-- **obligations:** ['network_source_offer']
+- **obligations:** ['attribution', 'source_disclosure', 'same_license', 'network_source_offer', 'installation_info', 'patent_retaliation']
 - steward_year: Holochain / 2019
 - allows: Use, modify, distribute
 - conditions: Copyleft triggered by distribution AND by providing use to third parties over a network; must also give users access to their own data (user-data autonomy)

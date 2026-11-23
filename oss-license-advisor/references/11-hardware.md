@@ -8,7 +8,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** not_reviewed
 - **patent_grant:** none
 - **copyleft_scope:** varies
-- **obligations:** ['attribution']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'patent_retaliation']
 - steward_year: CERN / 2020
 - allows: Use, modify, make and distribute hardware designs and products
 - conditions: Keep notices; no copyleft
@@ -27,7 +28,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** not_reviewed
 - **patent_grant:** none
 - **copyleft_scope:** varies
-- **obligations:** ['source_disclosure']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: CERN / 2020
 - allows: As P
 - conditions: Modifications to covered sources must be shared when products are conveyed; external components exempt
@@ -46,7 +48,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** not_reviewed
 - **patent_grant:** none
 - **copyleft_scope:** varies
-- **obligations:** ['source_disclosure']
+- **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: CERN / 2020
 - allows: As P
 - conditions: Complete design sources of the whole product must be made available when products are conveyed

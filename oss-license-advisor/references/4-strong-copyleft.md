@@ -9,7 +9,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** whole_work
 - **triggers:** ['distribution']
-- **obligations:** ['source_disclosure', 'same_license']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license']
 - steward_year: FSF / 1991
 - allows: Run, study, modify, distribute
 - conditions: Distributing the program or "work based on the program" requires licensing the whole under GPLv2 with complete corresponding source (or written offer, 3 years); no additional restrictions
@@ -21,7 +21,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – build_on:** HIGH if you distribute: shipping proprietary code combined/linked with GPL code can require releasing your source. Internal use and SaaS do not trigger. Termination on violation is automatic (cure under GPLv3-style commitments many projects adopted).
 - **Editorial view – license_your_own:** Maximizes reciprocity; deters proprietary forks; enables dual licensing (GPL + commercial).
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.gnu.org/licenses/gpl-2.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/; https://spdx.org/licenses/Linux-syscall-note.html | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## GNU GPL v2.0 or later — `GPL-2.0-or-later`
 
@@ -30,6 +30,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** varies
 - **copyleft_scope:** whole_work
 - **triggers:** ['distribution']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license']
 - steward_year: FSF / 1991
 - allows: As GPLv2, recipient may choose later versions
 - conditions: As GPLv2
@@ -40,7 +41,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – build_on:** As above.
 - **Editorial view – license_your_own:** Gives flexibility to move to GPLv3.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.gnu.org/licenses/gpl-2.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## GNU GPL v3.0 [GPL-3.0-only] — `GPL-3.0-only`
 
@@ -49,18 +50,18 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** whole_work
 - **triggers:** ['distribution']
-- **obligations:** ['installation_info']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'installation_info']
 - steward_year: FSF / 2007
 - allows: As GPLv2
 - conditions: As GPLv2 plus: Installation Information for "User Products" (anti-tivoization), anti-DRM (§3), express patent license & anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)
 - copyleft_detail: Whole work; "convey" (distribution)
 - gpl_compatibility: Compatible with Apache-2.0, LGPLv3, AGPLv3 (combination); INCOMPATIBLE with GPLv2-only
-- notable_projects: Bash, GCC, GIMP, Ansible, Samba
+- notable_projects: Most GNU projects (Bash, GCC, GIMP; also Ansible, Samba) are GPL-3.0-or-later, not -only: check each project's license notice
 - saas: Not triggered by SaaS (the "SaaS loophole")
 - **Editorial view – build_on:** HIGH for distributed products; plus consumer-device vendors must provide keys/installation info.
 - **Editorial view – license_your_own:** Strongest "distribution" copyleft with modern patent terms.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.gnu.org/licenses/gpl-3.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## GNU GPL v3.0 [GPL-3.0-or-later] — `GPL-3.0-or-later`
 
@@ -69,7 +70,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** whole_work
 - **triggers:** ['distribution']
-- **obligations:** ['installation_info']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'installation_info']
 - steward_year: FSF / 2007
 - allows: As GPLv2
 - conditions: As GPLv2 plus: Installation Information for "User Products" (anti-tivoization), anti-DRM (§3), express patent license & anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)
@@ -80,7 +81,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – build_on:** HIGH for distributed products; plus consumer-device vendors must provide keys/installation info.
 - **Editorial view – license_your_own:** Strongest "distribution" copyleft with modern patent terms.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
+- provenance: https://www.gnu.org/licenses/gpl-3.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## European Union Public Licence 1.2 — `EUPL-1.2`
 
@@ -88,8 +89,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** express
 - **copyleft_scope:** whole_work
-- **triggers:** ['distribution']
-- **obligations:** ['source_disclosure', 'same_license', 'network_source_offer']
+- **triggers:** ['distribution', 'network_interaction']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'network_source_offer']
 - steward_year: European Commission / 2017
 - allows: Use, modify, distribute, communicate to public
 - conditions: Derivatives under EUPL or a listed compatible license; source must be provided; covers "communication to the public" (arguably network use)
@@ -109,8 +110,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** free
 - **patent_grant:** express
 - **copyleft_scope:** whole_work
-- **triggers:** ['distribution']
-- **obligations:** ['same_license', 'network_source_offer']
+- **triggers:** ['distribution', 'network_interaction']
+- **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'network_source_offer', 'patent_retaliation']
 - steward_year: L. Rosen / 2005
 - allows: Use, modify, distribute
 - conditions: Derivatives under OSL; "External Deployment" (network use) counts as distribution
@@ -130,6 +131,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** express
 - **copyleft_scope:** whole_work
 - **triggers:** ['distribution']
+- **obligations:** ['attribution', 'source_disclosure', 'same_license']
 - steward_year: CEA/CNRS/Inria / 2013
 - allows: GPL-like under French law
 - conditions: Whole-work copyleft
@@ -149,6 +151,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** whole_work
 - **triggers:** ['distribution']
+- **obligations:** ['attribution', 'source_disclosure']
 - steward_year: Sleepycat / Oracle
 - allows: Use Berkeley DB
 - conditions: Source of software using Berkeley DB must be made available on distribution

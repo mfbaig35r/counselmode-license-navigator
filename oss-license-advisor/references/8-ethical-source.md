@@ -8,8 +8,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['prohibited_use']
-- **obligations:** ['source_disclosure']
+- **triggers:** ['prohibited_use', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'usage_policy']
 - steward_year: Organization for Ethical Source / 2019
 - allows: Permissive-style grant
 - conditions: Use must not violate human-rights principles (UN Declaration) as defined in the license; termination on violation
@@ -29,7 +29,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['prohibited_use']
+- **triggers:** ['prohibited_use', 'any_use', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'same_license', 'patent_retaliation', 'usage_policy']
 - steward_year: Organization for Ethical Source / 2021
 - allows: Grant under the HL3 core text only (no modules selected)
 - conditions: Core terms only: comply with the human-rights standards and enforcement provisions in the HL3 core text; termination on violation (not re-verified against firstdonoharm.dev)
@@ -49,7 +50,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['prohibited_use']
+- **triggers:** ['prohibited_use', 'any_use', 'distribution']
+- **obligations:** ['attribution', 'usage_policy']
 - steward_year: 996.ICU community / 2019
 - allows: MIT-style grant
 - conditions: Licensee must comply with labor laws (working-hours rules) in its jurisdiction
@@ -68,7 +70,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['prohibited_use']
+- **triggers:** ['prohibited_use', 'distribution']
+- **obligations:** ['attribution', 'usage_policy']
 - steward_year: Douglas Crockford / 2002
 - allows: MIT text plus "The Software shall be used for Good, not Evil."
 - conditions: Vague use restriction
@@ -88,7 +91,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['prohibited_use']
+- **triggers:** ['prohibited_use', 'any_use', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'same_license', 'patent_retaliation', 'usage_policy']
 - steward_year: Organization for Ethical Source / 2021
 - allows: Modular grant: HL3 core text plus selectable ethical modules
 - conditions: Core terms plus the selected modules (e.g., BDS, CL, ECO, EXTR, FFD, LAW, MEDIA, MIL, MY, SOC, SUP, SV, TAL, USTA, XUAR); obligations depend on the module set
@@ -108,7 +112,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['prohibited_use']
+- **triggers:** ['prohibited_use', 'any_use', 'distribution']
+- **obligations:** ['attribution', 'state_changes', 'same_license', 'patent_retaliation', 'usage_policy']
 - steward_year: Organization for Ethical Source / 2021
 - allows: Modular grant: HL3 core text plus all modules
 - conditions: Core terms plus every module

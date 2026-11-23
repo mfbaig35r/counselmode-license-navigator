@@ -29,7 +29,6 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** varies
 - **copyleft_scope:** contract
 - **triggers:** ['any_use']
-- **obligations:** ['no_competing_service']
 - steward_year: Vendor-specific
 - allows: Access, not a copy; subscription rights
 - conditions: Acceptable use, data terms, SLAs, termination
@@ -88,7 +87,6 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** contract
 - **triggers:** ['any_use']
-- **obligations:** ['noncommercial_only']
 - steward_year: Vendor-specific
 - allows: Use at no cost
 - conditions: Usually no modification, no redistribution, sometimes noncommercial only
@@ -185,7 +183,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** contract
-- **triggers:** ['any_use']
+- **triggers:** ['any_use', 'threshold', 'commercial_use']
+- **obligations:** ['mau_revenue_cap', 'no_competing_service']
 - steward_year: Docker, Inc. / 2021 change
 - allows: Free for personal use, education, noncommercial OSS and small businesses (fewer than 250 employees AND less than US$10M annual revenue - verify current thresholds)
 - conditions: Larger organizations need a paid subscription (Pro/Team/Business)
@@ -205,10 +204,11 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** contract
-- **triggers:** ['any_use']
-- steward_year: Anaconda, Inc. / 2020, revised 2024
-- allows: Free use of Anaconda Distribution and default package channels for individuals and small organizations (threshold: fewer than 200 employees - verify)
-- conditions: Larger organizations need a paid license; applies to default repository access, not to conda-forge packages
+- **triggers:** ['any_use', 'threshold', 'commercial_use']
+- **obligations:** ['mau_revenue_cap', 'no_competing_service']
+- steward_year: Anaconda, Inc. / 2020; terms dated July 15, 2025
+- allows: Free use of Anaconda Distribution and default channels for organizations with 200 or fewer employees or contractors (including affiliates), personal noncommercial use, and eligible academic and nonprofit research organizations
+- conditions: Larger organizations need a paid license. The record's conda-forge carve-out is not stated in the July 15, 2025 terms: confirm before relying on it
 - copyleft_detail: N/A
 - gpl_compatibility: N/A
 - notable_projects: Anaconda Distribution, repo.anaconda.com defaults channel
@@ -219,13 +219,14 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: From prior knowledge; thresholds change - verify vendor terms before reliance | verification: Not re-verified | last_verified: None | volatile: True
 
-## Oracle Java SE (OTN / Java SE Universal Subscription) [LicenseRef-Oracle-OTN] — `LicenseRef-Oracle-OTN`
+## Oracle Technology Network License for Java SE (OTN) [LicenseRef-Oracle-OTN] — `LicenseRef-Oracle-OTN`
 
 - **osi_status:** not_approved
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** contract
-- **triggers:** ['any_use']
+- **triggers:** ['any_use', 'commercial_use', 'distribution']
+- **obligations:** ['attribution']
 - steward_year: Oracle / 2019 OTN; 2021 NFTC; 2023 per-employee pricing
 - allows: Oracle JDK free for development/personal use under OTN; NFTC allows free production use of recent LTS releases for a limited period (verify per version)
 - conditions: Commercial production use of Oracle JDK builds outside NFTC requires Java SE Universal Subscription, priced per total employee count (since Jan. 2023)
@@ -239,21 +240,22 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: From prior knowledge; thresholds change - verify vendor terms before reliance | verification: Not re-verified | last_verified: None | volatile: True
 
-## Oracle Java SE (OTN / Java SE Universal Subscription) [LicenseRef-Oracle-NFTC] — `LicenseRef-Oracle-NFTC`
+## Oracle No-Fee Terms and Conditions (NFTC) [LicenseRef-Oracle-NFTC] — `LicenseRef-Oracle-NFTC`
 
 - **osi_status:** not_approved
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** contract
-- **triggers:** ['any_use']
-- steward_year: Oracle / 2019 OTN; 2021 NFTC; 2023 per-employee pricing
-- allows: Oracle JDK free for development/personal use under OTN; NFTC allows free production use of recent LTS releases for a limited period (verify per version)
-- conditions: Commercial production use of Oracle JDK builds outside NFTC requires Java SE Universal Subscription, priced per total employee count (since Jan. 2023)
+- **triggers:** ['any_use', 'distribution']
+- **obligations:** ['attribution']
+- steward_year: Oracle / 2021
+- allows: Free use, including production, and free redistribution of unmodified Oracle JDK binaries released under NFTC
+- conditions: No modification or reverse engineering; keep Oracle's notices. Each JDK release is under NFTC only for a limited period; later updates move to OTN
 - copyleft_detail: N/A
 - gpl_compatibility: N/A
-- notable_projects: Oracle JDK 8/11/17/21 builds
+- notable_projects: Oracle JDK releases within their NFTC period (e.g. JDK 25)
 - saas: N/A
-- notes: OpenJDK itself is GPL-2.0 WITH Classpath-exception-2.0.
+- notes: Time-sensitive (read on Oracle's Java downloads page, Nov. 23, 2026): JDK 25 stays under NFTC until Sept. 2028; JDK 27 until March 2027; JDK 21 updates moved to OTN in Oct. 2026.
 - **Editorial view – build_on:** HIGH audit exposure: Oracle actively audits; per-employee metric scales with acquirer headcount. Mitigate by using OpenJDK builds (Temurin, Corretto, Zulu).
 - **Editorial view – license_your_own:** N/A
 - **Editorial view – jurisdiction:** US (general); verify locally
