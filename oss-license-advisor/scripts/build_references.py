@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild the per-family reference docs (references/<n>-<family>.md) from data/licenses.json.
+"""Rebuild the reference docs in references/ from the files in data/.
 
   build_references.py           write the docs
   build_references.py --check   exit 1 if any doc differs from the data (run in tests)
@@ -64,6 +64,8 @@ def build() -> dict[str, str]:
         models = json.load(f)
     with open(os.path.join(ROOT, "data", "choosing.json"), encoding="utf-8") as f:
         docs[os.path.join(ROOT, "references", "choosing-a-license.md")] = render_choosing(json.load(f)["goals"])
+    with open(os.path.join(ROOT, "data", "compatibility.json"), encoding="utf-8") as f:
+        docs[os.path.join(ROOT, "references", "compatibility-matrix.md")] = render_matrix(json.load(f))
     for name, title, intro, rows in TABLES(context, models):
         docs[os.path.join(ROOT, "references", name)] = (
             f"# {title}\n\n" + (f"{intro}\n\n" if intro else "") + table(rows)
@@ -101,6 +103,27 @@ def render_choosing(goals: list[dict]) -> str:
         )
     intro = "Generated from data/choosing.json; the choose_license tool also checks each one against code you include."
     return f"# Choosing an outbound license (editorial view)\n\n{intro}\n\n" + table(rows)
+
+
+def render_matrix(tuples: list[dict]) -> str:
+    """One row per inbound group, one column per project license, in the order they first appear in the data."""
+    inbound = list(dict.fromkeys(t["inbound"] for t in tuples))
+    outbound = list(dict.fromkeys(t["outbound"] for t in tuples))
+    ruling = {(t["inbound"], t["outbound"]): t for t in tuples}
+    corner = "Inbound component license \u2193 / Your project license \u2192"
+    rows = []
+    for i in inbound:
+        row = {corner: i}
+        for o in outbound:
+            t = ruling.get((i, o))
+            row[o] = t and t["conditions"] + ("" if t["verification_status"].startswith("Verified") else " \u2020")
+        rows.append(row)
+    intro = (
+        "Generated from data/compatibility.json (result enum: yes, yes_narrows, conditional, no, not_applicable), "
+        "which also holds each ruling's primary source. \u2020 marks a ruling not yet re-verified against a primary "
+        "source. Editorial view; not legal advice."
+    )
+    return f"# Compatibility matrix (human view)\n\n{intro}\n\n" + table(rows)
 
 
 def cell(value) -> str:

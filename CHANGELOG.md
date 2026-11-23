@@ -1,5 +1,25 @@
 # Changelog
 
+## 2.12 (2026-11-23)
+
+- **Compatibility rulings checked against primary sources** (FSF compatibility pages and GPL FAQ matrix, the license
+  texts, the Mozilla MPL FAQ, SPDX). Each ruling now carries `verification_status`, `last_verified` and its primary
+  source URL; 177 of 220 are verified. The rest, mostly the AI model and noncommercial groups, say so.
+- **SSPL-1.0, BUSL-1.1, Elastic-2.0 and RSALv2 have their own rulings.** They shared one, so SSPL-1.0 code in a
+  proprietary product read "Conditional" when SSPL requires the whole work to be SSPL. Each is now ruled from its own
+  text: SSPL-1.0 is "no" for every distributed destination; BUSL-1.1 is "no" until its Change Date, then follows the
+  licensor's Change License; Elastic-2.0 and RSALv2 allow closed products and services only on their stated
+  limitations.
+- **Corrections:** MPL-2.0's source duty covers every MPL file you ship, not only modified ones; LGPL-2.1 allows static
+  linking if users can relink; LGPL-3.0 terms must allow reverse engineering for debugging; EPL-2.0 code can become
+  GPL, never LGPL; AGPL-3.0's source offer is triggered by modification, not by being user-facing; LGPL-2.1-only
+  caveats added.
+- **What "no" means, stated:** the combined work cannot be released under the project's license (or a later version
+  it allows). GPL code in an LGPL, MIT or Apache project is "no", and the conditions name the only route: moving the
+  whole project to GPL. Under that rule three results changed: LGPL-3.0 into an LGPL-2.1-or-later project, and
+  AGPL-3.0 into a GPL-2.0-or-later or GPL-3.0 project, are now "yes_narrows".
+- `references/compatibility-matrix.md` is now generated from the data; it had drifted from it.
+
 ## 2.11 (2026-11-23)
 
 - **The workbook is no longer distributed.** It was a v2.3 snapshot that predated every correction since; shipping it

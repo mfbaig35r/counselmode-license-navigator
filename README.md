@@ -5,7 +5,8 @@ Free, open-source answers to software, model and data license questions, inside 
 - **What a license allows and requires**: 142 records (132 licenses in 12 families, from permissive and copyleft to
   source-available, noncommercial, ethical-source, AI model, content and data, hardware and proprietary, plus 10
   exceptions), keyed by SPDX ID.
-- **Whether two licenses combine**: 187 compatibility rulings, for distributed works and for SaaS.
+- **Whether two licenses combine**: 220 compatibility rulings, for distributed works and for SaaS, 177 of them
+  checked against primary sources.
 - **What your use triggers**: obligations and a risk level for internal use, SaaS, distribution and devices.
 - **Which license an AI model is under**: 58 records keyed by exact model and version (Gemma 4 is Apache-2.0; Gemma 1
   to 3 are not).

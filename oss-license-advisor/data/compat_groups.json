@@ -92,11 +92,23 @@
     "AGPL-3.0-or-later"
    ]
   },
-  "SSPL-1.0 / BUSL-1.1 / Elastic-2.0 / RSALv2": {
+  "SSPL-1.0": {
    "members": [
-    "SSPL-1.0",
-    "BUSL-1.1",
-    "Elastic-2.0",
+    "SSPL-1.0"
+   ]
+  },
+  "BUSL-1.1": {
+   "members": [
+    "BUSL-1.1"
+   ]
+  },
+  "Elastic-2.0": {
+   "members": [
+    "Elastic-2.0"
+   ]
+  },
+  "RSALv2": {
+   "members": [
     "LicenseRef-RSALv2"
    ]
   },

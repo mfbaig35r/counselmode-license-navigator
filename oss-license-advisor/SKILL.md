@@ -3,9 +3,9 @@ name: oss-license-advisor
 description: Classify, explain and assess software, model and data licenses (open source, source-available, noncommercial, ethical-source, hardware, proprietary, and AI/LLM model licenses) and their obligations. Use whenever a user asks what a license allows; whether a dependency, tool or model can be used internally, in SaaS, in distributed software or on devices; which license to choose; whether licenses are compatible; how GPL/AGPL/LGPL/MPL/Apache/MIT/SSPL/BUSL/FSL/Llama/Gemma/Muse/Kimi/Mistral/OpenMDW terms apply; or needs open-source/AI license diligence for M&A, audit or compliance (SBOM triage, copyleft, revenue thresholds, maintenance risk, EU AI Act/CRA overlay). Not legal advice.
 ---
 
-# OSS License Advisor (v2.11)
+# OSS License Advisor (v2.12)
 
-Data-backed workflow for software and model licensing, for **inbound** use (building on others' code/models) and **outbound** licensing (your own releases). Version 2.11, November 23, 2026: 132 license records in 12 families plus 10 exception records (one per SPDX ID / LicenseRef, checked against SPDX License List 3.29.0), 58 version-keyed model records, 56 projects with SPDX expressions, 187 compatibility tuples over 22 license groups, 190 aliases, plus case law, regulatory overlay, relicensing log and diligence checklist.
+Data-backed workflow for software and model licensing, for **inbound** use (building on others' code/models) and **outbound** licensing (your own releases). Version 2.12, November 23, 2026: 132 license records in 12 families plus 10 exception records (one per SPDX ID / LicenseRef, checked against SPDX License List 3.29.0), 58 version-keyed model records, 56 projects with SPDX expressions, 220 compatibility tuples over 25 license groups (177 verified against primary sources), 190 aliases, plus case law, regulatory overlay, relicensing log and diligence checklist.
 
 ## Package contents
 

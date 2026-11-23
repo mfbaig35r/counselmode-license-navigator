@@ -66,10 +66,12 @@ with `any_use` keep their base risk; otherwise as the family table says.
 
 ## compatibility.json and compat_groups.json
 
-`compatibility.json`: a list of `{inbound, outbound, context, result, conditions, source}`. `inbound` and `outbound` are
-group labels such as `"MIT / BSD-2 / BSD-3 / ISC / zlib"`. `context`: `distribution_combined_work` or
-`saas_not_distributed`. `result`: `yes` (notice-only conditions), `yes_narrows` (the combined work takes the stricter
-license), `conditional` (substantive terms carry over), `no`, `not_applicable`.
+`compatibility.json`: a list of `{inbound, outbound, context, result, conditions, source, verification_status,
+last_verified}`. `inbound` and `outbound` are group labels such as `"MIT / BSD-2 / BSD-3 / ISC / zlib"`. `context`:
+`distribution_combined_work` or `saas_not_distributed`. `result`: `yes` (notice-only conditions), `yes_narrows` (the
+combined work takes the stricter license), `conditional` (substantive terms carry over), `no`, `not_applicable`.
+`verification_status` is `Verified (primary)` (checked against the primary source in `source`, on `last_verified`) or
+`Not re-verified` (`last_verified` is null; `source` names the editorial basis).
 
 `compat_groups.json`: `{note, groups: {label: {members: [license IDs], note?}}}`. Every label used in
 `compatibility.json` is here, and every member is a record in `licenses.json` (both tested).

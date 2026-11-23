@@ -155,6 +155,15 @@ def test_every_compat_tuple_is_reachable_by_license_ids():
         assert t in ll.compat(i, o)["tuples"], (t["inbound"], t["outbound"])
 
 
+def test_every_compat_tuple_says_whether_it_was_verified():
+    for t in ll.COMP:
+        assert t["verification_status"] in ("Verified (primary)", "Not re-verified"), t
+        if t["verification_status"] == "Verified (primary)":
+            assert t["source"].startswith("https://") and t["last_verified"], t
+        else:
+            assert t["last_verified"] is None, t
+
+
 def test_compat_says_which_name_is_ambiguous_or_unknown():
     assert "ambiguous" in ll.compat("GPL", "MIT")["error"]
     assert "unknown" in ll.compat("MIT", "nope-9")["error"]
