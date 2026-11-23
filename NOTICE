@@ -1,5 +1,5 @@
 CounselMode License Navigator
-Copyright 2026 [CounselMode legal entity]
+Copyright 2026 CounselMode LLC
 
 The code (src, deploy, tests and oss-license-advisor/scripts) is licensed under the Apache License 2.0 (LICENSE).
 The data (oss-license-advisor/data), the reference text (oss-license-advisor/references, SKILL.md) and the workbook

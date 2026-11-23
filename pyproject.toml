@@ -6,6 +6,7 @@ readme = "README.md"
 license = "Apache-2.0 AND CC-BY-4.0"
 license-files = ["LICENSE", "DATA-LICENSE", "NOTICE"]
 requires-python = ">=3.11"
+authors = [{ name = "CounselMode LLC" }]
 dependencies = ["fastmcp>=4.2,<5"]
 
 keywords = ["mcp", "license", "open-source", "spdx", "compliance", "ai-models"]
