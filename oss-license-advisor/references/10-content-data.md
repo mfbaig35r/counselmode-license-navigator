@@ -31,7 +31,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'state_changes', 'same_license']
 - steward_year: Creative Commons / 2013
-- allows: As CC-BY
+- allows: Share and adapt for any purpose
 - conditions: Adaptations under same/compatible license (one-way compatible with GPLv3)
 - copyleft_detail: Copyleft on adaptations
 - gpl_compatibility: One-way to GPLv3
@@ -97,7 +97,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: N/A
 - notable_projects: Some datasets
 - saas: N/A
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** LOW for internal use; REVIEW for SaaS and distribution.
 - **Editorial view – license_your_own:** For datasets where you want modifications to the data shared back.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -117,7 +117,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: N/A
 - notable_projects: OpenStreetMap
 - saas: N/A
-- **Editorial view – build_on:** Moderate; produced works (maps) exempt but derivative databases must be shared.
+- **Editorial view – build_on:** LOW for internal use; REVIEW for SaaS and distribution. Produced works (maps) exempt but derivative databases must be shared.
 - **Editorial view – license_your_own:** For open databases.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False

@@ -32,13 +32,13 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license']
 - steward_year: FSF / 1991
-- allows: As GPLv2, recipient may choose later versions
-- conditions: As GPLv2
+- allows: Run, study, modify, distribute; recipients may choose GPLv2 or any later version
+- conditions: Distributing the program or "work based on the program" requires licensing the whole under GPLv2 with complete corresponding source (or written offer, 3 years); no additional restrictions
 - copyleft_detail: Whole work; distribution
 - gpl_compatibility: Compatible with GPLv3 (by choosing v3)
 - notable_projects: GCC (historic), many GNU programs, WordPress
 - saas: Not triggered
-- **Editorial view – build_on:** As above.
+- **Editorial view – build_on:** HIGH if you distribute: shipping proprietary code combined or linked with GPL code can require releasing your source. Internal use and SaaS do not trigger it.
 - **Editorial view – license_your_own:** Gives flexibility to move to GPLv3.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://www.gnu.org/licenses/gpl-2.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
@@ -52,8 +52,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'installation_info']
 - steward_year: FSF / 2007
-- allows: As GPLv2
-- conditions: As GPLv2 plus: Installation Information for "User Products" (anti-tivoization), anti-DRM (§3), express patent license & anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)
+- allows: Run, study, modify, distribute
+- conditions: Conveying the program or a work based on it requires licensing the whole under GPLv3 with complete corresponding source; no additional restrictions; plus Installation Information for "User Products" (anti-tivoization), anti-DRM (§3), express patent license and anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)
 - copyleft_detail: Whole work; "convey" (distribution)
 - gpl_compatibility: Compatible with Apache-2.0, LGPLv3, AGPLv3 (combination); INCOMPATIBLE with GPLv2-only
 - notable_projects: Most GNU projects (Bash, GCC, GIMP; also Ansible, Samba) are GPL-3.0-or-later, not -only: check each project's license notice
@@ -72,8 +72,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'installation_info']
 - steward_year: FSF / 2007
-- allows: As GPLv2
-- conditions: As GPLv2 plus: Installation Information for "User Products" (anti-tivoization), anti-DRM (§3), express patent license & anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)
+- allows: Run, study, modify, distribute
+- conditions: Conveying the program or a work based on it requires licensing the whole under GPLv3 with complete corresponding source; no additional restrictions; plus Installation Information for "User Products" (anti-tivoization), anti-DRM (§3), express patent license and anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)
 - copyleft_detail: Whole work; "convey" (distribution)
 - gpl_compatibility: Compatible with Apache-2.0, LGPLv3, AGPLv3 (combination); INCOMPATIBLE with GPLv2-only
 - notable_projects: Bash, GCC, GIMP, Ansible, Samba
@@ -99,7 +99,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: EU public-sector software (Joinup)
 - saas: Possibly triggered via "communication to the public" - interpretation varies
 - notes: Some treat it as weak copyleft due to compatibility clause.
-- **Editorial view – build_on:** Moderate-high; compatibility clause allows relicensing to listed licenses for combined works.
+- **Editorial view – build_on:** LOW for internal use; HIGH for SaaS and distribution. Compatibility clause allows relicensing to listed licenses for combined works.
 - **Editorial view – license_your_own:** Available in all 23 EU languages; designed for EU law.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False

@@ -31,13 +31,13 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: CERN / 2020
-- allows: As P
+- allows: Use, modify, make and distribute hardware designs and products
 - conditions: Modifications to covered sources must be shared when products are conveyed; external components exempt
 - copyleft_detail: Design-file level
 - gpl_compatibility: N/A
 - notable_projects: Open hardware libraries/IP cores
 - saas: N/A
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** LOW for internal use; REVIEW for SaaS and distribution.
 - **Editorial view – license_your_own:** For reusable hardware blocks.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -51,7 +51,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: CERN / 2020
-- allows: As P
+- allows: Use, modify, make and distribute hardware designs and products
 - conditions: Complete design sources of the whole product must be made available when products are conveyed
 - copyleft_detail: Whole design
 - gpl_compatibility: N/A

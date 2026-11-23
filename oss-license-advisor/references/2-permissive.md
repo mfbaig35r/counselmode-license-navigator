@@ -18,7 +18,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: React, Node.js, jQuery, Rails, .NET runtime, VS Code (source)
 - saas: No obligations
 - notes: No express patent grant; Apache-2.0 preferred where patents matter.
-- **Editorial view – build_on:** Very low risk: include notice in your attribution/NOTICES file or "About" screen.
+- **Editorial view – build_on:** LOW risk. Include notice in your attribution/NOTICES file or "About" screen.
 - **Editorial view – license_your_own:** Most popular OSS license; maximizes adoption, allows proprietary forks.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://opensource.org/license/mit; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
@@ -38,7 +38,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Compatible with GPL
 - notable_projects: FreeBSD, Homebrew, NetBSD
 - saas: No obligations
-- **Editorial view – build_on:** Very low risk; reproduce notice in docs for binary distribution.
+- **Editorial view – build_on:** LOW risk. Reproduce notice in docs for binary distribution.
 - **Editorial view – license_your_own:** Functionally equivalent to MIT.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://opensource.org/license/bsd-2-clause; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
@@ -52,13 +52,13 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'naming_rule']
 - steward_year: UC Berkeley / 1999
-- allows: As BSD-2
-- conditions: As BSD-2 + no use of names of copyright holder/contributors to endorse
+- allows: Redistribution and use in source and binary, with or without modification
+- conditions: Retain notice in source; reproduce notice in binary documentation; no use of names of copyright holder or contributors to endorse
 - copyleft_detail: None
 - gpl_compatibility: Compatible with GPL
 - notable_projects: Chromium, Django, NumPy, Go, Flask
 - saas: No obligations
-- **Editorial view – build_on:** Very low risk; do not use author names for endorsement.
+- **Editorial view – build_on:** LOW risk. Do not use author names for endorsement.
 - **Editorial view – license_your_own:** Common for academic and corporate projects.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://opensource.org/license/bsd-3-clause; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://www.gnu.org/licenses/bsd.html; https://spdx.org/licenses/ | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
@@ -72,7 +72,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution']
 - steward_year: UC Berkeley / 1980s
-- allows: As BSD-3
+- allows: Redistribution and use in source and binary, with or without modification
 - conditions: Adds "advertising clause": ads must acknowledge the university/authors
 - copyleft_detail: None
 - gpl_compatibility: INCOMPATIBLE with GPL (advertising clause)
@@ -99,7 +99,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Compatible with GPL
 - notable_projects: OpenBSD (preferred), npm (historic default), BIND
 - saas: No obligations
-- **Editorial view – build_on:** Very low risk.
+- **Editorial view – build_on:** LOW risk.
 - **Editorial view – license_your_own:** Simplified MIT/BSD-2 equivalent.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -161,7 +161,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Compatible with GPL
 - notable_projects: zlib, SDL2, Box2D
 - saas: No obligations
-- **Editorial view – build_on:** Very low risk; no binary attribution required.
+- **Editorial view – build_on:** LOW risk. No binary attribution required.
 - **Editorial view – license_your_own:** Common in game dev.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -182,7 +182,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: Boost C++ libraries, Catch2
 - saas: No obligations
 - notes: Do not confuse SPDX "BSL-1.0" (Boost) with Business Source License "BUSL-1.1".
-- **Editorial view – build_on:** Very low risk; no binary attribution.
+- **Editorial view – build_on:** LOW risk. No binary attribution.
 - **Editorial view – license_your_own:** Good for header-only C++ libs.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -202,7 +202,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Compatible with GPL
 - notable_projects: PostgreSQL
 - saas: No obligations
-- **Editorial view – build_on:** Very low risk.
+- **Editorial view – build_on:** LOW risk.
 - **Editorial view – license_your_own:** MIT/BSD-like.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -243,7 +243,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: Raku, some Perl modules
 - saas: No obligations
 - notes: Artistic 1.0 is considered vague; FSF considers 1.0 non-free. (v2: patent field corrected from "implicit" to express.)
-- **Editorial view – build_on:** Low-moderate; read modified-version rules.
+- **Editorial view – build_on:** LOW risk. Read modified-version rules.
 - **Editorial view – license_your_own:** Niche; enforced in Jacobsen v. Katzer (Artistic 1.0).
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -263,7 +263,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Compatible with GPL
 - notable_projects: Legacy LLVM (pre-2019)
 - saas: No obligations
-- **Editorial view – build_on:** Very low risk.
+- **Editorial view – build_on:** LOW risk.
 - **Editorial view – license_your_own:** LLVM moved to Apache-2.0 WITH LLVM-exception.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -363,7 +363,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: INCOMPATIBLE with GPL
 - notable_projects: Some academic projects
 - saas: No obligations
-- **Editorial view – build_on:** Low-moderate (compatibility).
+- **Editorial view – build_on:** LOW risk.
 - **Editorial view – license_your_own:** Rarely chosen today.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -383,7 +383,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Compatible with GPL
 - notable_projects: X Window System
 - saas: No obligations
-- **Editorial view – build_on:** Very low risk.
+- **Editorial view – build_on:** LOW risk.
 - **Editorial view – license_your_own:** Legacy MIT variant.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -403,7 +403,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Compatible with GPL
 - notable_projects: ICU, CLDR, much of the Rust ecosystem (unicode-ident etc.)
 - saas: No obligations
-- **Editorial view – build_on:** Very low risk; appears in nearly every scan.
+- **Editorial view – build_on:** LOW risk. Appears in nearly every scan.
 - **Editorial view – license_your_own:** Rarely chosen outside Unicode data.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -423,7 +423,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Compatible with GPLv2 and v3
 - notable_projects: EDK II (UEFI firmware)
 - saas: No obligations
-- **Editorial view – build_on:** Very low risk.
+- **Editorial view – build_on:** LOW risk.
 - **Editorial view – license_your_own:** Permissive with express patent grant and GPLv2 compatibility.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -464,7 +464,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: curl and libcurl (since 7.10)
 - saas: No obligations
 - notes: SPDX and the OSI list carry the 1996-2015 copyright line; curl's own COPYING at curl-8_23_0 reads 1996-2026 with 'many contributors'. The license terms are the same.
-- **Editorial view – build_on:** Very low risk: keep the copyright and permission notice with every copy, including in the notices file that ships with binaries.
+- **Editorial view – build_on:** LOW risk. Keep the copyright and permission notice with every copy, including in the notices file that ships with binaries.
 - **Editorial view – license_your_own:** Usable, but MIT or ISC say nearly the same thing and are far better known.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://github.com/curl/curl/blob/curl-8_23_0/COPYING ; https://github.com/curl/curl/blob/curl-8_23_0/docs/HISTORY.md ; https://opensource.org/license/curl ; https://opensource.org/api/licenses ; https://web.archive.org/web/20261118021016/https://www.gnu.org/licenses/license-list.html (Wayback capture, Nov. 18, 2026; gnu.org timed out) ; https://spdx.org/licenses/curl.html (list 3.29.0, 2026-09-16) | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False

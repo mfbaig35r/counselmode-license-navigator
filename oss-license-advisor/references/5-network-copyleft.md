@@ -11,17 +11,17 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution', 'network_interaction']
 - **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'network_source_offer', 'installation_info']
 - steward_year: FSF / 2007 (Affero v1: 2002)
-- allows: As GPLv3
-- conditions: As GPLv3 plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version
+- allows: Run, study, modify, distribute
+- conditions: Conveying the program or a work based on it requires licensing the whole under AGPLv3 with complete corresponding source, with GPLv3's Installation Information for "User Products" (anti-tivoization), anti-DRM (§3), express patent license and anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8); plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version
 - copyleft_detail: Whole work; distribution AND remote network interaction with modified version
 - gpl_compatibility: Compatible with GPLv3: combination permitted by GPLv3 §13 and AGPLv3 §13; the AGPL part keeps its network clause
 - notable_projects: Grafana, Elasticsearch & Kibana (AGPL option alongside SSPL and ELv2), Redis 8 (AGPLv3 option alongside RSALv2 and SSPLv1), MinIO (repository no longer maintained)
 - saas: Triggered when a modified version is offered to users interacting with it over a network (§13)
 - notes: Scope of "interacting remotely" and what counts as the "Program" in a microservice architecture is debated.
-- **Editorial view – build_on:** VERY HIGH for SaaS/cloud products. Many companies ban AGPL dependencies outright (e.g., Google policy). Unmodified internal use is generally safe; modifying and exposing over a network triggers source release.
-- **Editorial view – license_your_own:** Used by open-core vendors to force cloud providers to share or buy commercial license.
+- **Editorial view – build_on:** HIGH for SaaS and distribution; LOW for internal use. Many companies ban AGPL dependencies outright. Unmodified internal use is generally safe; modifying it and exposing it over a network triggers the source offer.
+- **Editorial view – license_your_own:** Used by open-core vendors to require cloud providers to share their changes or buy a commercial license.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-1.0-only.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
+- provenance: https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-3.0-only.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## GNU Affero GPL v3.0 [AGPL-3.0-or-later] — `AGPL-3.0-or-later`
 
@@ -32,17 +32,17 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution', 'network_interaction']
 - **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'network_source_offer', 'installation_info']
 - steward_year: FSF / 2007 (Affero v1: 2002)
-- allows: As GPLv3
-- conditions: As GPLv3 plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version
+- allows: Run, study, modify, distribute
+- conditions: Conveying the program or a work based on it requires licensing the whole under AGPLv3 with complete corresponding source, with GPLv3's Installation Information for "User Products" (anti-tivoization), anti-DRM (§3), express patent license and anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8); plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version
 - copyleft_detail: Whole work; distribution AND remote network interaction with modified version
 - gpl_compatibility: Compatible with GPLv3: combination permitted by GPLv3 §13 and AGPLv3 §13; the AGPL part keeps its network clause
 - notable_projects: Mastodon, iText, Ghostscript, Nextcloud (mixed; some files AGPL-3.0-only)
 - saas: Triggered when a modified version is offered to users interacting with it over a network (§13)
 - notes: Scope of "interacting remotely" and what counts as the "Program" in a microservice architecture is debated.
-- **Editorial view – build_on:** VERY HIGH for SaaS/cloud products. Many companies ban AGPL dependencies outright (e.g., Google policy). Unmodified internal use is generally safe; modifying and exposing over a network triggers source release.
-- **Editorial view – license_your_own:** Used by open-core vendors to force cloud providers to share or buy commercial license.
+- **Editorial view – build_on:** HIGH for SaaS and distribution; LOW for internal use. Many companies ban AGPL dependencies outright. Unmodified internal use is generally safe; modifying it and exposing it over a network triggers the source offer.
+- **Editorial view – license_your_own:** Used by open-core vendors to require cloud providers to share their changes or buy a commercial license.
 - **Editorial view – jurisdiction:** US (general); verify locally
-- provenance: https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-1.0-only.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
+- provenance: https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-3.0-or-later.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
 ## Reciprocal Public License 1.5 — `RPL-1.5`
 
@@ -59,7 +59,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Incompatible with GPL
 - notable_projects: Rare
 - saas: Triggered even internally
-- **Editorial view – build_on:** VERY HIGH; avoid.
+- **Editorial view – build_on:** HIGH for any use, including internal use; avoid.
 - **Editorial view – license_your_own:** Avoid.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -79,7 +79,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Incompatible with GPL
 - notable_projects: Historic web apps
 - saas: TRIGGERED
-- **Editorial view – build_on:** Moderate-high: attribution display in UI.
+- **Editorial view – build_on:** LOW for internal use; HIGH for SaaS and distribution. Attribution display in UI.
 - **Editorial view – license_your_own:** Rare.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False

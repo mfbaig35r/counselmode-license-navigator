@@ -85,7 +85,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** none
 - steward_year: AWS & others / 2018
-- allows: Same as MIT without attribution requirement
+- allows: Use, copy, modify, merge, publish, distribute, sublicense, sell; no attribution required
 - conditions: None
 - copyleft_detail: None
 - gpl_compatibility: Compatible with GPL

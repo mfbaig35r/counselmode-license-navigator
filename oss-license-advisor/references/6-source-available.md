@@ -101,7 +101,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Not compatible until conversion
 - notable_projects: Sentry, Codecov, Liquibase Community 5.0+ (FSL-1.1-ALv2 since Sept. 30, 2025)
 - saas: Restricted only for competing use
-- **Editorial view – build_on:** Low-moderate unless you compete with the licensor.
+- **Editorial view – build_on:** HIGH for SaaS and distribution if you compete with the licensor; LOW otherwise and for internal use.
 - **Editorial view – license_your_own:** "Fair Source" option with short conversion period.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://github.com/getsentry/fsl.software/blob/main/FSL-1.1-ALv2.template.md ; https://fsl.software/ ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) ; https://opensource.org/api/licenses ; https://www.gnu.org/licenses/license-list.html | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: True
@@ -121,7 +121,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Not compatible until conversion
 - notable_projects: None verified for the MIT variant (Sentry, Codecov and Liquibase use FSL-1.1-ALv2)
 - saas: Restricted only for competing use
-- **Editorial view – build_on:** Low-moderate unless you compete with the licensor.
+- **Editorial view – build_on:** HIGH for SaaS and distribution if you compete with the licensor; LOW otherwise and for internal use.
 - **Editorial view – license_your_own:** "Fair Source" option with short conversion period.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://github.com/getsentry/fsl.software/blob/main/FSL-1.1-MIT.template.md ; https://fsl.software/ ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) ; https://opensource.org/api/licenses ; https://www.gnu.org/licenses/license-list.html | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: True
@@ -142,7 +142,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: Redis modules (historic), Neo4j Enterprise 3.4-3.5 (AGPL + Commons Clause)
 - saas: Restricted
 - notes: Neo4j v. PureThink: the LICENSOR (Neo4j) appended the Commons Clause to the AGPL; the court rejected the argument that licensees could strip it out under AGPL §7/§10, because those sections restrict "you" (the licensee), not the licensor. 9th Cir. unpublished, non-precedential memorandum (Feb. 18, 2022). District court findings of fact July 22, 2024 (US$597,000 damages + permanent injunction); judgment entered Aug. 15, 2024 (reported to add prejudgment interest less a stipulated deduction); appeal No. 24-5538 dismissed Dec. 10, 2025; satisfaction of judgment filed Dec. 15, 2025. No appellate merits ruling on §7. See Case Law tab.
-- **Editorial view – build_on:** Moderate-high; ambiguity of "substantially". A project labeled "Apache 2.0 + Commons Clause" is NOT Apache-licensed.
+- **Editorial view – build_on:** LOW for internal use; HIGH for SaaS and distribution. Ambiguity of "substantially". A project labeled "Apache 2.0 + Commons Clause" is NOT Apache-licensed.
 - **Editorial view – license_your_own:** Not recommended (ambiguous).
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: CourtListener docket 5:18-cv-07182 (N.D. Cal.); govinfo judgment Doc. 248 | verification: Verified (primary) | last_verified: 2026-11-18 | volatile: True
@@ -162,7 +162,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Not compatible
 - notable_projects: Various
 - saas: Restricted for competitors
-- **Editorial view – build_on:** Moderate if you might compete.
+- **Editorial view – build_on:** HIGH for SaaS and distribution if you might compete with the licensor; LOW for internal use.
 - **Editorial view – license_your_own:** Lawyer-drafted standardized source-available license; bars any product competing with the licensor.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True
@@ -176,13 +176,13 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['competing_use', 'service_offering', 'distribution']
 - **obligations:** ['attribution', 'patent_retaliation', 'no_competing_service']
 - steward_year: PolyForm Project / 2019
-- allows: As Shield but narrower (cannot compete with the software itself)
+- allows: Any purpose except providing a product that competes with the software itself (narrower than PolyForm Shield, which bars competing with the licensor)
 - conditions: Non-compete
 - copyleft_detail: Usage restriction
 - gpl_compatibility: Not compatible
 - notable_projects: Various
 - saas: Restricted
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** LOW for internal use; HIGH for SaaS and distribution.
 - **Editorial view – license_your_own:** Use when you want to bar only direct substitutes for your software, not all competitors.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True
@@ -202,7 +202,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Not compatible
 - notable_projects: Confluent Schema Registry, ksqlDB
 - saas: Restricted
-- **Editorial view – build_on:** Moderate; Apache Kafka itself is Apache-2.0 - distinguish components.
+- **Editorial view – build_on:** LOW for internal use; HIGH for SaaS and distribution. Apache Kafka itself is Apache-2.0 - distinguish components.
 - **Editorial view – license_your_own:** Vendor protection.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True
@@ -222,7 +222,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Not compatible
 - notable_projects: Keygen
 - saas: Restricted
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** LOW for internal use; HIGH for SaaS and distribution.
 - **Editorial view – license_your_own:** Open-core variant of FSL.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True
@@ -242,7 +242,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Not compatible
 - notable_projects: Keygen
 - saas: Restricted
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** LOW for internal use; HIGH for SaaS and distribution.
 - **Editorial view – license_your_own:** Open-core variant of FSL.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True
@@ -262,7 +262,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Not compatible
 - notable_projects: TimescaleDB community features (core is Apache-2.0)
 - saas: Restricted for DBaaS
-- **Editorial view – build_on:** Moderate; split licensing per feature.
+- **Editorial view – build_on:** LOW for internal use; HIGH for SaaS and distribution. Split licensing per feature.
 - **Editorial view – license_your_own:** Vendor protection.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True

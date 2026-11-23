@@ -5,6 +5,7 @@ Run from the repository root:  uv run --with pytest pytest tests
 
 import importlib.util
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -410,3 +411,30 @@ def test_choose_rejects_unknown_goals_and_unclear_licenses():
 def test_cli_choose():
     done = cli("choose", "all_derivatives_open", "--includes", "Apache-2.0,MIT")
     assert done.returncode == 0 and "GPL-3.0-or-later" in done.stdout and "[Disclaimer]" in done.stdout
+
+
+DESCRIBED = [("facts", k) for k in ("allows", "conditions", "copyleft_detail", "saas")] + [
+    ("editorial_view", k) for k in ("build_on", "license_your_own")
+]
+
+
+@pytest.mark.parametrize("record", ll.LIC, ids=lambda r: r["id"])
+def test_descriptions_stand_alone_and_use_the_risk_scale(record):
+    """Each record is shown on its own (a license page, one MCP answer): no "As BSD-2" pointers, and risk words only
+    from the tool's own scale."""
+    for part, key in DESCRIBED:
+        text = (record.get(part) or {}).get(key) or ""
+        assert not re.search(r"^\s*(As |Same as|See )|\bAs above\b", text), (record["id"], key, text)
+        assert not re.search(r"\b(VERY HIGH|Very low risk|Moderate-high|Low-moderate|Moderate)\b", text), (
+            record["id"],
+            key,
+            text,
+        )
+
+
+@pytest.mark.parametrize("record", ll.LIC, ids=lambda r: r["id"])
+def test_spdx_source_links_name_the_record_or_an_exception_it_explains(record):
+    """Regression: AGPL-3.0 records cited the SPDX page for AGPL-1.0-only."""
+    exceptions = {r["id"] for r in ll.LIC if r.get("record_type") == "exception"}
+    for cited in re.findall(r"spdx\.org/licenses/([A-Za-z0-9.+-]+)\.html", record["provenance"].get("source") or ""):
+        assert cited in ({record["id"], "exceptions-index"} | exceptions), (record["id"], cited)

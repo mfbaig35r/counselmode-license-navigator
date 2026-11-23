@@ -32,14 +32,14 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['threshold', 'prohibited_use', 'distribution']
 - **obligations:** ['attribution', 'notice_file', 'naming_rule', 'usage_policy', 'mau_revenue_cap', 'patent_retaliation']
 - steward_year: Meta / 2024
-- allows: As above; 3.1+ expressly allows using outputs to improve other models (with naming rule)
+- allows: Use, reproduce, distribute, copy, create derivative works of, and modify the Llama Materials; 3.1 and later expressly allow using outputs to improve other models (with the naming rule)
 - conditions: 700M MAU; AUP; Llama 3: "Built with Meta Llama 3", derivative names begin "Llama 3", no use of outputs to improve other LLMs; 3.1-3.3: "Built with Llama", names begin "Llama"; Notice file; 3.2 multimodal: no s.1(a) rights for EU-domiciled individuals/companies (AUP), end users excepted
 - copyleft_detail: Weights & derivatives
 - gpl_compatibility: N/A
 - notable_projects: Llama 3.1 8B/70B/405B, Llama 3.2, Llama 3.3 70B
 - saas: Allowed subject to AUP
 - notes: Version-specific: keep a register of exact model + license version.
-- **Editorial view – build_on:** As above; Llama 3 (pre-3.1) prohibited using outputs to improve other LLMs.
+- **Editorial view – build_on:** Commercial use generally allowed below the 700M MAU threshold, subject to the AUP and attribution; flow-down obligations apply when distributing fine-tunes. Llama 3 (before 3.1) prohibited using outputs to improve other LLMs.
 - **Editorial view – license_your_own:** N/A
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://www.llama.com/llama3/license/ ; https://www.llama.com/llama3_1/license/ ; https://www.llama.com/llama3_2/license/ ; https://www.llama.com/llama3_3/license/ ; https://www.llama.com/llama3_2/use-policy/ ; https://www.gnu.org/licenses/license-list.html ; https://spdx.org/licenses/ (list 3.29.0, 2026-09-16) | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: True
@@ -59,7 +59,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: N/A
 - notable_projects: Llama 2 and many fine-tunes (e.g., early Vicuna variants)
 - saas: Allowed subject to AUP
-- **Editorial view – build_on:** As above; output restriction matters for distillation.
+- **Editorial view – build_on:** Commercial use generally allowed below the 700M MAU threshold, subject to the AUP and attribution; flow-down obligations apply when distributing fine-tunes. The bar on using outputs to improve other LLMs matters for distillation.
 - **Editorial view – license_your_own:** N/A
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True
@@ -100,7 +100,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: N/A
 - notable_projects: Stable Diffusion 1.x / 2.x
 - saas: Allowed subject to restrictions
-- **Editorial view – build_on:** Moderate: flow-down use restrictions; commercial OK.
+- **Editorial view – build_on:** Rated REVIEW. Flow-down use restrictions; commercial OK.
 - **Editorial view – license_your_own:** N/A
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True
@@ -114,13 +114,13 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution', 'service_offering', 'prohibited_use']
 - **obligations:** ['attribution', 'state_changes', 'patent_retaliation', 'usage_policy']
 - steward_year: BigScience / 2022
-- allows: As OpenRAIL-M
+- allows: Use, share, modify model; commercial use allowed
 - conditions: Use-based restrictions flow down
 - copyleft_detail: Use restrictions flow down
 - gpl_compatibility: N/A
 - notable_projects: BLOOM, StarCoder (BigCode OpenRAIL-M)
 - saas: Allowed subject to restrictions
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** Rated REVIEW.
 - **Editorial view – license_your_own:** RAIL family is a template for "responsible" licenses.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True
@@ -134,13 +134,13 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution', 'service_offering', 'prohibited_use']
 - **obligations:** ['attribution', 'state_changes', 'patent_retaliation', 'usage_policy']
 - steward_year: BigScience / 2022
-- allows: As OpenRAIL-M
+- allows: Use, share, modify model; commercial use allowed
 - conditions: Use-based restrictions flow down
 - copyleft_detail: Use restrictions flow down
 - gpl_compatibility: N/A
 - notable_projects: BLOOM, StarCoder (BigCode OpenRAIL-M)
 - saas: Allowed subject to restrictions
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** Rated REVIEW.
 - **Editorial view – license_your_own:** RAIL family is a template for "responsible" licenses.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True

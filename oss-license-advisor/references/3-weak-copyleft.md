@@ -18,7 +18,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: None verified as LGPL-2.1-only; glibc, FFmpeg (default build) and GTK are "or later"; current Qt is LGPL-3.0-only
 - saas: Not triggered by SaaS (no network clause)
 - notes: Mobile app stores and static linking make compliance harder (iOS).
-- **Editorial view – build_on:** Moderate. Prefer dynamic linking; static linking requires providing object files for relinking. Do not prohibit reverse engineering in your EULA for the combined work.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution. Prefer dynamic linking; static linking requires providing object files for relinking. Do not prohibit reverse engineering in your EULA for the combined work.
 - **Editorial view – license_your_own:** For libraries you want widely used incl. by proprietary apps, while keeping library improvements open.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://www.gnu.org/licenses/lgpl-2.1.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
@@ -39,7 +39,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: glibc, FFmpeg (default build), GTK
 - saas: Not triggered by SaaS (no network clause)
 - notes: Mobile app stores and static linking make compliance harder (iOS).
-- **Editorial view – build_on:** Moderate. Prefer dynamic linking; static linking requires providing object files for relinking. Do not prohibit reverse engineering in your EULA for the combined work.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution. Prefer dynamic linking; static linking requires providing object files for relinking. Do not prohibit reverse engineering in your EULA for the combined work.
 - **Editorial view – license_your_own:** For libraries you want widely used incl. by proprietary apps, while keeping library improvements open.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://www.gnu.org/licenses/lgpl-2.1.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
@@ -53,15 +53,15 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'relinking', 'installation_info']
 - steward_year: FSF / 2007
-- allows: As LGPL-2.1 (implemented as GPLv3 + additional permissions)
-- conditions: As 2.1, plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions
+- allows: Use library in any program, including proprietary (LGPLv3 is GPLv3 plus additional permissions)
+- conditions: Modifications to the library must be LGPL with source; distributed works must permit user modification of library and reverse engineering for debugging; provide relinking ability (shared library or object files); plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions
 - copyleft_detail: Library-level; distribution
 - gpl_compatibility: Compatible with GPLv3; INCOMPATIBLE with GPLv2-only
 - notable_projects: Qt (Qt Base and other modules, LGPL-3.0-only option)
 - saas: Not triggered by SaaS
 - notes: Many embedded vendors avoid (L)GPLv3 due to anti-tivoization.
-- **Editorial view – build_on:** Moderate-high for embedded/consumer devices: must allow users to install modified library (Installation Information).
-- **Editorial view – license_your_own:** As 2.1, with modern patent terms.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution. On consumer devices, users must be able to install a modified library (Installation Information).
+- **Editorial view – license_your_own:** For libraries you want widely used including by proprietary apps, while keeping library improvements open. LGPLv2.1's approach with modern patent terms.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://www.gnu.org/licenses/lgpl-3.0.txt; https://www.gnu.org/licenses/gpl-3.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Verified (primary) | last_verified: 2026-11-23 | volatile: False
 
@@ -74,15 +74,15 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'relinking', 'installation_info']
 - steward_year: FSF / 2007
-- allows: As LGPL-2.1 (implemented as GPLv3 + additional permissions)
-- conditions: As 2.1, plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions
+- allows: Use library in any program, including proprietary (LGPLv3 is GPLv3 plus additional permissions)
+- conditions: Modifications to the library must be LGPL with source; distributed works must permit user modification of library and reverse engineering for debugging; provide relinking ability (shared library or object files); plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions
 - copyleft_detail: Library-level; distribution
 - gpl_compatibility: Compatible with GPLv3; INCOMPATIBLE with GPLv2-only
 - notable_projects: GNU libraries (unverified; no project checked)
 - saas: Not triggered by SaaS
 - notes: Many embedded vendors avoid (L)GPLv3 due to anti-tivoization.
-- **Editorial view – build_on:** Moderate-high for embedded/consumer devices: must allow users to install modified library (Installation Information).
-- **Editorial view – license_your_own:** As 2.1, with modern patent terms.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution. On consumer devices, users must be able to install a modified library (Installation Information).
+- **Editorial view – license_your_own:** For libraries you want widely used including by proprietary apps, while keeping library improvements open. LGPLv2.1's approach with modern patent terms.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://www.gnu.org/licenses/lgpl-3.0.txt; https://www.gnu.org/licenses/gpl-3.0.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
 
@@ -102,7 +102,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: Firefox, Thunderbird, LibreOffice (MPL/LGPL), Terraform providers, OpenTofu
 - saas: Not triggered by SaaS
 - notes: Most business-friendly copyleft.
-- **Editorial view – build_on:** Low-moderate: only modified MPL files must be published. Keep your proprietary code in separate files.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution. Only modified MPL files must be published. Keep your proprietary code in separate files.
 - **Editorial view – license_your_own:** Balanced choice: protects your files while allowing proprietary combination.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: https://www.mozilla.org/media/MPL/2.0/index.txt; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/ | verification: Partially verified (primary) | last_verified: 2026-11-23 | volatile: False
@@ -116,13 +116,13 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'state_changes', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: Mozilla / 1999
-- allows: As MPL-2.0
+- allows: Use and combine in "Larger Works" under any license
 - conditions: File-level copyleft
 - copyleft_detail: File-level
 - gpl_compatibility: INCOMPATIBLE with GPL
 - notable_projects: Legacy Mozilla code
 - saas: Not triggered
-- **Editorial view – build_on:** Moderate; GPL incompatibility.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution. GPL incompatibility.
 - **Editorial view – license_your_own:** Superseded.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -142,7 +142,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: GPL-compatible only if Secondary License (GPL-2.0) is designated
 - notable_projects: Eclipse IDE, Jakarta EE, OpenJ9
 - saas: Not triggered
-- **Editorial view – build_on:** Moderate; check for Secondary License designation before mixing with GPL.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution. Check for Secondary License designation before mixing with GPL.
 - **Editorial view – license_your_own:** Common in Java ecosystem.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -156,13 +156,13 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **triggers:** ['distribution']
 - **obligations:** ['attribution', 'source_disclosure', 'same_license', 'patent_retaliation']
 - steward_year: Eclipse / 2004
-- allows: As EPL-2.0
+- allows: Use, combine with separate modules under other licenses
 - conditions: Module-level copyleft; choice-of-law (NY)
 - copyleft_detail: Module-level
 - gpl_compatibility: INCOMPATIBLE with GPL
 - notable_projects: JUnit 4, Clojure
 - saas: Not triggered
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution.
 - **Editorial view – license_your_own:** Superseded by EPL-2.0.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -183,7 +183,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: OpenZFS, illumos, GlassFish
 - saas: Not triggered
 - notes: Ubuntu ships ZFS module; legal views differ.
-- **Editorial view – build_on:** Moderate; notorious ZFS-on-Linux GPL incompatibility debate.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution. Notorious ZFS-on-Linux GPL incompatibility debate.
 - **Editorial view – license_your_own:** Rarely chosen today.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -203,7 +203,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Incompatible with GPL
 - notable_projects: Legacy IBM projects
 - saas: Not triggered
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution.
 - **Editorial view – license_your_own:** Superseded.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -223,7 +223,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Incompatible with GPL
 - notable_projects: WiX Toolset (historic)
 - saas: Not triggered
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution.
 - **Editorial view – license_your_own:** Niche.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -243,7 +243,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Compatible with LGPL-style use
 - notable_projects: French public-sector projects
 - saas: Not triggered
-- **Editorial view – build_on:** Moderate; French law governs.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution. French law governs.
 - **Editorial view – license_your_own:** Used by French institutions.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -263,7 +263,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Incompatible with GPL
 - notable_projects: Darwin / XNU components
 - saas: External deployment of modified covered code triggers obligations
-- **Editorial view – build_on:** Moderate.
+- **Editorial view – build_on:** LOW for internal use; MEDIUM for SaaS and distribution.
 - **Editorial view – license_your_own:** Niche.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False
@@ -284,7 +284,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - notable_projects: Older .NET projects, CodePlex-era libraries
 - saas: Not triggered
 - notes: Sibling of Ms-RL.
-- **Editorial view – build_on:** Low-moderate; GPL incompatibility.
+- **Editorial view – build_on:** LOW for internal use and SaaS; MEDIUM for distribution. GPL incompatibility.
 - **Editorial view – license_your_own:** Superseded in practice by MIT/Apache.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: False

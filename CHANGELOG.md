@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.13.1 (2026-11-23)
+
+- **Every record stands on its own.** 32 fields in 20 records only pointed at another record ("As BSD-2", "As
+  GPLv2"); each now carries the text itself, with the facts unchanged.
+- **Editorial views use the tool's risk scale.** Off-scale words ("Very low risk", "Moderate", "Moderate-high",
+  "VERY HIGH") are replaced by the record's own computed levels (LOW, MEDIUM, HIGH, BLOCK, REVIEW) per scenario, so a
+  view never contradicts the risk the tools report; the AGPL views no longer name a company or say "force".
+- AGPL-3.0 records cited the SPDX page for AGPL-1.0-only; corrected.
+- Tests: descriptions stand alone and use the scale; SPDX source links name the record (or an exception it explains).
+
 ## 2.13 (2026-11-23)
 
 - **Software projects, keyed by version** (`data/projects.json`, the `project_license` MCP tool and the `project`

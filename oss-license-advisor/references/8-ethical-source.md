@@ -59,7 +59,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - gpl_compatibility: Not compatible
 - notable_projects: Projects from the 996.ICU movement (China)
 - saas: Restricted
-- **Editorial view – build_on:** Moderate-high; compliance condition tied to employment practices.
+- **Editorial view – build_on:** REVIEW for internal use; HIGH for SaaS and distribution. Compliance condition tied to employment practices.
 - **Editorial view – license_your_own:** Protest license.
 - **Editorial view – jurisdiction:** US (general); verify locally
 - provenance: Hand-compiled Nov. 2026 | verification: Not re-verified | last_verified: None | volatile: True

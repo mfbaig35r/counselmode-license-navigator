@@ -179,7 +179,7 @@
    "obligations": [],
    "facts": {
     "steward_year": "AWS & others / 2018",
-    "allows": "Same as MIT without attribution requirement",
+    "allows": "Use, copy, modify, merge, publish, distribute, sublicense, sell; no attribution required",
     "conditions": "None",
     "copyleft_detail": "None",
     "gpl_compatibility": "Compatible with GPL",
@@ -272,7 +272,7 @@
     "notes": "No express patent grant; Apache-2.0 preferred where patents matter."
    },
    "editorial_view": {
-    "build_on": "Very low risk: include notice in your attribution/NOTICES file or \"About\" screen.",
+    "build_on": "LOW risk. Include notice in your attribution/NOTICES file or \"About\" screen.",
     "license_your_own": "Most popular OSS license; maximizes adoption, allows proprietary forks.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -316,7 +316,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Very low risk; reproduce notice in docs for binary distribution.",
+    "build_on": "LOW risk. Reproduce notice in docs for binary distribution.",
     "license_your_own": "Functionally equivalent to MIT.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -352,8 +352,8 @@
    ],
    "facts": {
     "steward_year": "UC Berkeley / 1999",
-    "allows": "As BSD-2",
-    "conditions": "As BSD-2 + no use of names of copyright holder/contributors to endorse",
+    "allows": "Redistribution and use in source and binary, with or without modification",
+    "conditions": "Retain notice in source; reproduce notice in binary documentation; no use of names of copyright holder or contributors to endorse",
     "copyleft_detail": "None",
     "gpl_compatibility": "Compatible with GPL",
     "notable_projects": "Chromium, Django, NumPy, Go, Flask",
@@ -361,7 +361,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Very low risk; do not use author names for endorsement.",
+    "build_on": "LOW risk. Do not use author names for endorsement.",
     "license_your_own": "Common for academic and corporate projects.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -396,7 +396,7 @@
    ],
    "facts": {
     "steward_year": "UC Berkeley / 1980s",
-    "allows": "As BSD-3",
+    "allows": "Redistribution and use in source and binary, with or without modification",
     "conditions": "Adds \"advertising clause\": ads must acknowledge the university/authors",
     "copyleft_detail": "None",
     "gpl_compatibility": "INCOMPATIBLE with GPL (advertising clause)",
@@ -449,7 +449,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Very low risk.",
+    "build_on": "LOW risk.",
     "license_your_own": "Simplified MIT/BSD-2 equivalent.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -586,7 +586,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Very low risk; no binary attribution required.",
+    "build_on": "LOW risk. No binary attribution required.",
     "license_your_own": "Common in game dev.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -630,7 +630,7 @@
     "notes": "Do not confuse SPDX \"BSL-1.0\" (Boost) with Business Source License \"BUSL-1.1\"."
    },
    "editorial_view": {
-    "build_on": "Very low risk; no binary attribution.",
+    "build_on": "LOW risk. No binary attribution.",
     "license_your_own": "Good for header-only C++ libs.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -674,7 +674,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Very low risk.",
+    "build_on": "LOW risk.",
     "license_your_own": "MIT/BSD-like.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -766,7 +766,7 @@
     "notes": "Artistic 1.0 is considered vague; FSF considers 1.0 non-free. (v2: patent field corrected from \"implicit\" to express.)"
    },
    "editorial_view": {
-    "build_on": "Low-moderate; read modified-version rules.",
+    "build_on": "LOW risk. Read modified-version rules.",
     "license_your_own": "Niche; enforced in Jacobsen v. Katzer (Artistic 1.0).",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -810,7 +810,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Very low risk.",
+    "build_on": "LOW risk.",
     "license_your_own": "LLVM moved to Apache-2.0 WITH LLVM-exception.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1037,7 +1037,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Low-moderate (compatibility).",
+    "build_on": "LOW risk.",
     "license_your_own": "Rarely chosen today.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1081,7 +1081,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Very low risk.",
+    "build_on": "LOW risk.",
     "license_your_own": "Legacy MIT variant.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1125,7 +1125,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Very low risk; appears in nearly every scan.",
+    "build_on": "LOW risk. Appears in nearly every scan.",
     "license_your_own": "Rarely chosen outside Unicode data.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1169,7 +1169,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Very low risk.",
+    "build_on": "LOW risk.",
     "license_your_own": "Permissive with express patent grant and GPLv2 compatibility.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1258,7 +1258,7 @@
     "notes": "SPDX and the OSI list carry the 1996-2015 copyright line; curl's own COPYING at curl-8_23_0 reads 1996-2026 with 'many contributors'. The license terms are the same."
    },
    "editorial_view": {
-    "build_on": "Very low risk: keep the copyright and permission notice with every copy, including in the notices file that ships with binaries.",
+    "build_on": "LOW risk. Keep the copyright and permission notice with every copy, including in the notices file that ships with binaries.",
     "license_your_own": "Usable, but MIT or ISC say nearly the same thing and are far better known.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1588,7 +1588,7 @@
     "notes": "Mobile app stores and static linking make compliance harder (iOS)."
    },
    "editorial_view": {
-    "build_on": "Moderate. Prefer dynamic linking; static linking requires providing object files for relinking. Do not prohibit reverse engineering in your EULA for the combined work.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution. Prefer dynamic linking; static linking requires providing object files for relinking. Do not prohibit reverse engineering in your EULA for the combined work.",
     "license_your_own": "For libraries you want widely used incl. by proprietary apps, while keeping library improvements open.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1636,7 +1636,7 @@
     "notes": "Mobile app stores and static linking make compliance harder (iOS)."
    },
    "editorial_view": {
-    "build_on": "Moderate. Prefer dynamic linking; static linking requires providing object files for relinking. Do not prohibit reverse engineering in your EULA for the combined work.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution. Prefer dynamic linking; static linking requires providing object files for relinking. Do not prohibit reverse engineering in your EULA for the combined work.",
     "license_your_own": "For libraries you want widely used incl. by proprietary apps, while keeping library improvements open.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1676,8 +1676,8 @@
    ],
    "facts": {
     "steward_year": "FSF / 2007",
-    "allows": "As LGPL-2.1 (implemented as GPLv3 + additional permissions)",
-    "conditions": "As 2.1, plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions",
+    "allows": "Use library in any program, including proprietary (LGPLv3 is GPLv3 plus additional permissions)",
+    "conditions": "Modifications to the library must be LGPL with source; distributed works must permit user modification of library and reverse engineering for debugging; provide relinking ability (shared library or object files); plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions",
     "copyleft_detail": "Library-level; distribution",
     "gpl_compatibility": "Compatible with GPLv3; INCOMPATIBLE with GPLv2-only",
     "notable_projects": "Qt (Qt Base and other modules, LGPL-3.0-only option)",
@@ -1685,8 +1685,8 @@
     "notes": "Many embedded vendors avoid (L)GPLv3 due to anti-tivoization."
    },
    "editorial_view": {
-    "build_on": "Moderate-high for embedded/consumer devices: must allow users to install modified library (Installation Information).",
-    "license_your_own": "As 2.1, with modern patent terms.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution. On consumer devices, users must be able to install a modified library (Installation Information).",
+    "license_your_own": "For libraries you want widely used including by proprietary apps, while keeping library improvements open. LGPLv2.1's approach with modern patent terms.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
    },
@@ -1725,8 +1725,8 @@
    ],
    "facts": {
     "steward_year": "FSF / 2007",
-    "allows": "As LGPL-2.1 (implemented as GPLv3 + additional permissions)",
-    "conditions": "As 2.1, plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions",
+    "allows": "Use library in any program, including proprietary (LGPLv3 is GPLv3 plus additional permissions)",
+    "conditions": "Modifications to the library must be LGPL with source; distributed works must permit user modification of library and reverse engineering for debugging; provide relinking ability (shared library or object files); plus GPLv3 Installation Information (anti-tivoization) for user products; patent provisions",
     "copyleft_detail": "Library-level; distribution",
     "gpl_compatibility": "Compatible with GPLv3; INCOMPATIBLE with GPLv2-only",
     "notable_projects": "GNU libraries (unverified; no project checked)",
@@ -1734,8 +1734,8 @@
     "notes": "Many embedded vendors avoid (L)GPLv3 due to anti-tivoization."
    },
    "editorial_view": {
-    "build_on": "Moderate-high for embedded/consumer devices: must allow users to install modified library (Installation Information).",
-    "license_your_own": "As 2.1, with modern patent terms.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution. On consumer devices, users must be able to install a modified library (Installation Information).",
+    "license_your_own": "For libraries you want widely used including by proprietary apps, while keeping library improvements open. LGPLv2.1's approach with modern patent terms.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
    },
@@ -1781,7 +1781,7 @@
     "notes": "Most business-friendly copyleft."
    },
    "editorial_view": {
-    "build_on": "Low-moderate: only modified MPL files must be published. Keep your proprietary code in separate files.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution. Only modified MPL files must be published. Keep your proprietary code in separate files.",
     "license_your_own": "Balanced choice: protects your files while allowing proprietary combination.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1820,7 +1820,7 @@
    ],
    "facts": {
     "steward_year": "Mozilla / 1999",
-    "allows": "As MPL-2.0",
+    "allows": "Use and combine in \"Larger Works\" under any license",
     "conditions": "File-level copyleft",
     "copyleft_detail": "File-level",
     "gpl_compatibility": "INCOMPATIBLE with GPL",
@@ -1829,7 +1829,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate; GPL incompatibility.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution. GPL incompatibility.",
     "license_your_own": "Superseded.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1876,7 +1876,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate; check for Secondary License designation before mixing with GPL.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution. Check for Secondary License designation before mixing with GPL.",
     "license_your_own": "Common in Java ecosystem.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1914,7 +1914,7 @@
    ],
    "facts": {
     "steward_year": "Eclipse / 2004",
-    "allows": "As EPL-2.0",
+    "allows": "Use, combine with separate modules under other licenses",
     "conditions": "Module-level copyleft; choice-of-law (NY)",
     "copyleft_detail": "Module-level",
     "gpl_compatibility": "INCOMPATIBLE with GPL",
@@ -1923,7 +1923,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution.",
     "license_your_own": "Superseded by EPL-2.0.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -1971,7 +1971,7 @@
     "notes": "Ubuntu ships ZFS module; legal views differ."
    },
    "editorial_view": {
-    "build_on": "Moderate; notorious ZFS-on-Linux GPL incompatibility debate.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution. Notorious ZFS-on-Linux GPL incompatibility debate.",
     "license_your_own": "Rarely chosen today.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -2018,7 +2018,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution.",
     "license_your_own": "Superseded.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -2065,7 +2065,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution.",
     "license_your_own": "Niche.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -2112,7 +2112,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate; French law governs.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution. French law governs.",
     "license_your_own": "Used by French institutions.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -2163,7 +2163,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "LOW for internal use; MEDIUM for SaaS and distribution.",
     "license_your_own": "Niche.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -2209,7 +2209,7 @@
     "notes": "Sibling of Ms-RL."
    },
    "editorial_view": {
-    "build_on": "Low-moderate; GPL incompatibility.",
+    "build_on": "LOW for internal use and SaaS; MEDIUM for distribution. GPL incompatibility.",
     "license_your_own": "Superseded in practice by MIT/Apache.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -2340,8 +2340,8 @@
    ],
    "facts": {
     "steward_year": "FSF / 1991",
-    "allows": "As GPLv2, recipient may choose later versions",
-    "conditions": "As GPLv2",
+    "allows": "Run, study, modify, distribute; recipients may choose GPLv2 or any later version",
+    "conditions": "Distributing the program or \"work based on the program\" requires licensing the whole under GPLv2 with complete corresponding source (or written offer, 3 years); no additional restrictions",
     "copyleft_detail": "Whole work; distribution",
     "gpl_compatibility": "Compatible with GPLv3 (by choosing v3)",
     "notable_projects": "GCC (historic), many GNU programs, WordPress",
@@ -2349,7 +2349,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "As above.",
+    "build_on": "HIGH if you distribute: shipping proprietary code combined or linked with GPL code can require releasing your source. Internal use and SaaS do not trigger it.",
     "license_your_own": "Gives flexibility to move to GPLv3.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -2388,8 +2388,8 @@
    ],
    "facts": {
     "steward_year": "FSF / 2007",
-    "allows": "As GPLv2",
-    "conditions": "As GPLv2 plus: Installation Information for \"User Products\" (anti-tivoization), anti-DRM (§3), express patent license & anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)",
+    "allows": "Run, study, modify, distribute",
+    "conditions": "Conveying the program or a work based on it requires licensing the whole under GPLv3 with complete corresponding source; no additional restrictions; plus Installation Information for \"User Products\" (anti-tivoization), anti-DRM (§3), express patent license and anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)",
     "copyleft_detail": "Whole work; \"convey\" (distribution)",
     "gpl_compatibility": "Compatible with Apache-2.0, LGPLv3, AGPLv3 (combination); INCOMPATIBLE with GPLv2-only",
     "notable_projects": "Most GNU projects (Bash, GCC, GIMP; also Ansible, Samba) are GPL-3.0-or-later, not -only: check each project's license notice",
@@ -2436,8 +2436,8 @@
    ],
    "facts": {
     "steward_year": "FSF / 2007",
-    "allows": "As GPLv2",
-    "conditions": "As GPLv2 plus: Installation Information for \"User Products\" (anti-tivoization), anti-DRM (§3), express patent license & anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)",
+    "allows": "Run, study, modify, distribute",
+    "conditions": "Conveying the program or a work based on it requires licensing the whole under GPLv3 with complete corresponding source; no additional restrictions; plus Installation Information for \"User Products\" (anti-tivoization), anti-DRM (§3), express patent license and anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8)",
     "copyleft_detail": "Whole work; \"convey\" (distribution)",
     "gpl_compatibility": "Compatible with Apache-2.0, LGPLv3, AGPLv3 (combination); INCOMPATIBLE with GPLv2-only",
     "notable_projects": "Bash, GCC, GIMP, Ansible, Samba",
@@ -2494,7 +2494,7 @@
     "notes": "Some treat it as weak copyleft due to compatibility clause."
    },
    "editorial_view": {
-    "build_on": "Moderate-high; compatibility clause allows relicensing to listed licenses for combined works.",
+    "build_on": "LOW for internal use; HIGH for SaaS and distribution. Compatibility clause allows relicensing to listed licenses for combined works.",
     "license_your_own": "Available in all 23 EU languages; designed for EU law.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -2723,8 +2723,8 @@
    ],
    "facts": {
     "steward_year": "FSF / 2007 (Affero v1: 2002)",
-    "allows": "As GPLv3",
-    "conditions": "As GPLv3 plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version",
+    "allows": "Run, study, modify, distribute",
+    "conditions": "Conveying the program or a work based on it requires licensing the whole under AGPLv3 with complete corresponding source, with GPLv3's Installation Information for \"User Products\" (anti-tivoization), anti-DRM (§3), express patent license and anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8); plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version",
     "copyleft_detail": "Whole work; distribution AND remote network interaction with modified version",
     "gpl_compatibility": "Compatible with GPLv3: combination permitted by GPLv3 §13 and AGPLv3 §13; the AGPL part keeps its network clause",
     "notable_projects": "Grafana, Elasticsearch & Kibana (AGPL option alongside SSPL and ELv2), Redis 8 (AGPLv3 option alongside RSALv2 and SSPLv1), MinIO (repository no longer maintained)",
@@ -2732,13 +2732,13 @@
     "notes": "Scope of \"interacting remotely\" and what counts as the \"Program\" in a microservice architecture is debated."
    },
    "editorial_view": {
-    "build_on": "VERY HIGH for SaaS/cloud products. Many companies ban AGPL dependencies outright (e.g., Google policy). Unmodified internal use is generally safe; modifying and exposing over a network triggers source release.",
-    "license_your_own": "Used by open-core vendors to force cloud providers to share or buy commercial license.",
+    "build_on": "HIGH for SaaS and distribution; LOW for internal use. Many companies ban AGPL dependencies outright. Unmodified internal use is generally safe; modifying it and exposing it over a network triggers the source offer.",
+    "license_your_own": "Used by open-core vendors to require cloud providers to share their changes or buy a commercial license.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-1.0-only.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "source": "https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-3.0-only.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
     "verification_status": "Partially verified (primary)",
     "last_verified": "2026-11-23",
     "volatile": false,
@@ -2773,8 +2773,8 @@
    ],
    "facts": {
     "steward_year": "FSF / 2007 (Affero v1: 2002)",
-    "allows": "As GPLv3",
-    "conditions": "As GPLv3 plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version",
+    "allows": "Run, study, modify, distribute",
+    "conditions": "Conveying the program or a work based on it requires licensing the whole under AGPLv3 with complete corresponding source, with GPLv3's Installation Information for \"User Products\" (anti-tivoization), anti-DRM (§3), express patent license and anti-discrimination patent deal terms (§11), 30-day cure for first violation (§8); plus §13: if you MODIFY the program and users interact with it remotely over a network, you must offer those users the Corresponding Source of your version",
     "copyleft_detail": "Whole work; distribution AND remote network interaction with modified version",
     "gpl_compatibility": "Compatible with GPLv3: combination permitted by GPLv3 §13 and AGPLv3 §13; the AGPL part keeps its network clause",
     "notable_projects": "Mastodon, iText, Ghostscript, Nextcloud (mixed; some files AGPL-3.0-only)",
@@ -2782,13 +2782,13 @@
     "notes": "Scope of \"interacting remotely\" and what counts as the \"Program\" in a microservice architecture is debated."
    },
    "editorial_view": {
-    "build_on": "VERY HIGH for SaaS/cloud products. Many companies ban AGPL dependencies outright (e.g., Google policy). Unmodified internal use is generally safe; modifying and exposing over a network triggers source release.",
-    "license_your_own": "Used by open-core vendors to force cloud providers to share or buy commercial license.",
+    "build_on": "HIGH for SaaS and distribution; LOW for internal use. Many companies ban AGPL dependencies outright. Unmodified internal use is generally safe; modifying it and exposing it over a network triggers the source offer.",
+    "license_your_own": "Used by open-core vendors to require cloud providers to share their changes or buy a commercial license.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
    },
    "provenance": {
-    "source": "https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-1.0-only.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
+    "source": "https://www.gnu.org/licenses/agpl-3.0.txt; https://spdx.org/licenses/AGPL-3.0-or-later.html; https://opensource.org/licenses; https://www.gnu.org/licenses/license-list.html; https://spdx.org/licenses/",
     "verification_status": "Partially verified (primary)",
     "last_verified": "2026-11-23",
     "volatile": false,
@@ -2834,7 +2834,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "VERY HIGH; avoid.",
+    "build_on": "HIGH for any use, including internal use; avoid.",
     "license_your_own": "Avoid.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -2885,7 +2885,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate-high: attribution display in UI.",
+    "build_on": "LOW for internal use; HIGH for SaaS and distribution. Attribution display in UI.",
     "license_your_own": "Rare.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -3175,7 +3175,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Low-moderate unless you compete with the licensor.",
+    "build_on": "HIGH for SaaS and distribution if you compete with the licensor; LOW otherwise and for internal use.",
     "license_your_own": "\"Fair Source\" option with short conversion period.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -3223,7 +3223,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Low-moderate unless you compete with the licensor.",
+    "build_on": "HIGH for SaaS and distribution if you compete with the licensor; LOW otherwise and for internal use.",
     "license_your_own": "\"Fair Source\" option with short conversion period.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -3272,7 +3272,7 @@
     "notes": "Neo4j v. PureThink: the LICENSOR (Neo4j) appended the Commons Clause to the AGPL; the court rejected the argument that licensees could strip it out under AGPL §7/§10, because those sections restrict \"you\" (the licensee), not the licensor. 9th Cir. unpublished, non-precedential memorandum (Feb. 18, 2022). District court findings of fact July 22, 2024 (US$597,000 damages + permanent injunction); judgment entered Aug. 15, 2024 (reported to add prejudgment interest less a stipulated deduction); appeal No. 24-5538 dismissed Dec. 10, 2025; satisfaction of judgment filed Dec. 15, 2025. No appellate merits ruling on §7. See Case Law tab."
    },
    "editorial_view": {
-    "build_on": "Moderate-high; ambiguity of \"substantially\". A project labeled \"Apache 2.0 + Commons Clause\" is NOT Apache-licensed.",
+    "build_on": "LOW for internal use; HIGH for SaaS and distribution. Ambiguity of \"substantially\". A project labeled \"Apache 2.0 + Commons Clause\" is NOT Apache-licensed.",
     "license_your_own": "Not recommended (ambiguous).",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -3320,7 +3320,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate if you might compete.",
+    "build_on": "HIGH for SaaS and distribution if you might compete with the licensor; LOW for internal use.",
     "license_your_own": "Lawyer-drafted standardized source-available license; bars any product competing with the licensor.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -3359,7 +3359,7 @@
    ],
    "facts": {
     "steward_year": "PolyForm Project / 2019",
-    "allows": "As Shield but narrower (cannot compete with the software itself)",
+    "allows": "Any purpose except providing a product that competes with the software itself (narrower than PolyForm Shield, which bars competing with the licensor)",
     "conditions": "Non-compete",
     "copyleft_detail": "Usage restriction",
     "gpl_compatibility": "Not compatible",
@@ -3368,7 +3368,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "LOW for internal use; HIGH for SaaS and distribution.",
     "license_your_own": "Use when you want to bar only direct substitutes for your software, not all competitors.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -3416,7 +3416,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate; Apache Kafka itself is Apache-2.0 - distinguish components.",
+    "build_on": "LOW for internal use; HIGH for SaaS and distribution. Apache Kafka itself is Apache-2.0 - distinguish components.",
     "license_your_own": "Vendor protection.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -3465,7 +3465,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "LOW for internal use; HIGH for SaaS and distribution.",
     "license_your_own": "Open-core variant of FSL.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -3514,7 +3514,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "LOW for internal use; HIGH for SaaS and distribution.",
     "license_your_own": "Open-core variant of FSL.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -3561,7 +3561,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate; split licensing per feature.",
+    "build_on": "LOW for internal use; HIGH for SaaS and distribution. Split licensing per feature.",
     "license_your_own": "Vendor protection.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -4290,7 +4290,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate-high; compliance condition tied to employment practices.",
+    "build_on": "REVIEW for internal use; HIGH for SaaS and distribution. Compliance condition tied to employment practices.",
     "license_your_own": "Protest license.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -4533,7 +4533,7 @@
    ],
    "facts": {
     "steward_year": "Meta / 2024",
-    "allows": "As above; 3.1+ expressly allows using outputs to improve other models (with naming rule)",
+    "allows": "Use, reproduce, distribute, copy, create derivative works of, and modify the Llama Materials; 3.1 and later expressly allow using outputs to improve other models (with the naming rule)",
     "conditions": "700M MAU; AUP; Llama 3: \"Built with Meta Llama 3\", derivative names begin \"Llama 3\", no use of outputs to improve other LLMs; 3.1-3.3: \"Built with Llama\", names begin \"Llama\"; Notice file; 3.2 multimodal: no s.1(a) rights for EU-domiciled individuals/companies (AUP), end users excepted",
     "copyleft_detail": "Weights & derivatives",
     "gpl_compatibility": "N/A",
@@ -4542,7 +4542,7 @@
     "notes": "Version-specific: keep a register of exact model + license version."
    },
    "editorial_view": {
-    "build_on": "As above; Llama 3 (pre-3.1) prohibited using outputs to improve other LLMs.",
+    "build_on": "Commercial use generally allowed below the 700M MAU threshold, subject to the AUP and attribution; flow-down obligations apply when distributing fine-tunes. Llama 3 (before 3.1) prohibited using outputs to improve other LLMs.",
     "license_your_own": "N/A",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -4592,7 +4592,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "As above; output restriction matters for distillation.",
+    "build_on": "Commercial use generally allowed below the 700M MAU threshold, subject to the AUP and attribution; flow-down obligations apply when distributing fine-tunes. The bar on using outputs to improve other LLMs matters for distillation.",
     "license_your_own": "N/A",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -4690,7 +4690,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate: flow-down use restrictions; commercial OK.",
+    "build_on": "Rated REVIEW. Flow-down use restrictions; commercial OK.",
     "license_your_own": "N/A",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -4732,7 +4732,7 @@
    ],
    "facts": {
     "steward_year": "BigScience / 2022",
-    "allows": "As OpenRAIL-M",
+    "allows": "Use, share, modify model; commercial use allowed",
     "conditions": "Use-based restrictions flow down",
     "copyleft_detail": "Use restrictions flow down",
     "gpl_compatibility": "N/A",
@@ -4741,7 +4741,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "Rated REVIEW.",
     "license_your_own": "RAIL family is a template for \"responsible\" licenses.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -4781,7 +4781,7 @@
    ],
    "facts": {
     "steward_year": "BigScience / 2022",
-    "allows": "As OpenRAIL-M",
+    "allows": "Use, share, modify model; commercial use allowed",
     "conditions": "Use-based restrictions flow down",
     "copyleft_detail": "Use restrictions flow down",
     "gpl_compatibility": "N/A",
@@ -4790,7 +4790,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "Rated REVIEW.",
     "license_your_own": "RAIL family is a template for \"responsible\" licenses.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -5514,7 +5514,7 @@
    ],
    "facts": {
     "steward_year": "Creative Commons / 2013",
-    "allows": "As CC-BY",
+    "allows": "Share and adapt for any purpose",
     "conditions": "Adaptations under same/compatible license (one-way compatible with GPLv3)",
     "copyleft_detail": "Copyleft on adaptations",
     "gpl_compatibility": "One-way to GPLv3",
@@ -5659,7 +5659,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "LOW for internal use; REVIEW for SaaS and distribution.",
     "license_your_own": "For datasets where you want modifications to the data shared back.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -5706,7 +5706,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate; produced works (maps) exempt but derivative databases must be shared.",
+    "build_on": "LOW for internal use; REVIEW for SaaS and distribution. Produced works (maps) exempt but derivative databases must be shared.",
     "license_your_own": "For open databases.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -5970,7 +5970,7 @@
    ],
    "facts": {
     "steward_year": "CERN / 2020",
-    "allows": "As P",
+    "allows": "Use, modify, make and distribute hardware designs and products",
     "conditions": "Modifications to covered sources must be shared when products are conveyed; external components exempt",
     "copyleft_detail": "Design-file level",
     "gpl_compatibility": "N/A",
@@ -5979,7 +5979,7 @@
     "notes": ""
    },
    "editorial_view": {
-    "build_on": "Moderate.",
+    "build_on": "LOW for internal use; REVIEW for SaaS and distribution.",
     "license_your_own": "For reusable hardware blocks.",
     "attribution": "CounselMode editorial view; not legal advice",
     "jurisdiction": "US (general); verify locally"
@@ -6018,7 +6018,7 @@
    ],
    "facts": {
     "steward_year": "CERN / 2020",
-    "allows": "As P",
+    "allows": "Use, modify, make and distribute hardware designs and products",
     "conditions": "Complete design sources of the whole product must be made available when products are conveyed",
     "copyleft_detail": "Whole design",
     "gpl_compatibility": "N/A",
