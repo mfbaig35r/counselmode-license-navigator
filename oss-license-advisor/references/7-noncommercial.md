@@ -109,8 +109,8 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **fsf_status:** nonfree
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
-- **triggers:** ['any_use', 'commercial_use', 'distribution']
-- **obligations:** ['patent_retaliation']
+- **triggers:** ['any_use', 'distribution']
+- **obligations:** ['patent_retaliation', 'reference_only']
 - steward_year: Microsoft / 2007
 - allows: View source for reference only (e.g., debugging)
 - conditions: No modification or redistribution
@@ -151,7 +151,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
 - **triggers:** ['commercial_use', 'distribution']
-- **obligations:** ['attribution', 'state_changes', 'noncommercial_only']
+- **obligations:** ['attribution', 'state_changes', 'noncommercial_only', 'no_derivatives']
 - steward_year: Creative Commons / 2013
 - allows: Noncommercial verbatim sharing
 - conditions: No commercial use; no derivatives

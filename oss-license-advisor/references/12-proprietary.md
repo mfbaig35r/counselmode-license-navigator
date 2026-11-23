@@ -226,7 +226,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** contract
 - **triggers:** ['any_use', 'commercial_use', 'distribution']
-- **obligations:** ['attribution']
+- **obligations:** ['attribution', 'no_production_use']
 - steward_year: Oracle / 2019 OTN; 2021 NFTC; 2023 per-employee pricing
 - allows: Oracle JDK free for development/personal use under OTN; NFTC allows free production use of recent LTS releases for a limited period (verify per version)
 - conditions: Commercial production use of Oracle JDK builds outside NFTC requires Java SE Universal Subscription, priced per total employee count (since Jan. 2023)

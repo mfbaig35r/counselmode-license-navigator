@@ -235,7 +235,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
 - **triggers:** ['commercial_use', 'distribution']
-- **obligations:** ['noncommercial_only', 'notice_file', 'state_changes', 'patent_retaliation']
+- **obligations:** ['noncommercial_only', 'notice_file', 'state_changes', 'patent_retaliation', 'no_production_use']
 - steward_year: Mistral AI / 2024
 - allows: Testing, research, Personal or evaluation purposes in Non-Production Environments; no supply in the course of commercial activity (incl. SaaS)
 - conditions: No production/commercial use without commercial license

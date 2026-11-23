@@ -49,7 +49,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** varies
 - **triggers:** ['distribution']
-- **obligations:** ['attribution', 'state_changes']
+- **obligations:** ['attribution', 'state_changes', 'no_derivatives']
 - steward_year: Creative Commons / 2013
 - allows: Share verbatim
 - conditions: No derivatives

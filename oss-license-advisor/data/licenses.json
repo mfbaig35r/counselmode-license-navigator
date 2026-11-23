@@ -2643,7 +2643,8 @@
    "obligations": [
     "attribution",
     "same_license",
-    "no_competing_service"
+    "no_competing_service",
+    "no_production_use"
    ],
    "facts": {
     "steward_year": "MariaDB / 2016-2017",
@@ -3452,11 +3453,11 @@
    "copyleft_scope": "use_restriction",
    "triggers": [
     "any_use",
-    "commercial_use",
     "distribution"
    ],
    "obligations": [
-    "patent_retaliation"
+    "patent_retaliation",
+    "reference_only"
    ],
    "facts": {
     "steward_year": "Microsoft / 2007",
@@ -3551,7 +3552,8 @@
    "obligations": [
     "attribution",
     "state_changes",
-    "noncommercial_only"
+    "noncommercial_only",
+    "no_derivatives"
    ],
    "facts": {
     "steward_year": "Creative Commons / 2013",
@@ -4448,7 +4450,8 @@
     "noncommercial_only",
     "notice_file",
     "state_changes",
-    "patent_retaliation"
+    "patent_retaliation",
+    "no_production_use"
    ],
    "facts": {
     "steward_year": "Mistral AI / 2024",
@@ -4974,7 +4977,8 @@
    ],
    "obligations": [
     "attribution",
-    "state_changes"
+    "state_changes",
+    "no_derivatives"
    ],
    "facts": {
     "steward_year": "Creative Commons / 2013",
@@ -5952,7 +5956,8 @@
     "distribution"
    ],
    "obligations": [
-    "attribution"
+    "attribution",
+    "no_production_use"
    ],
    "facts": {
     "steward_year": "Oracle / 2019 OTN; 2021 NFTC; 2023 per-employee pricing",

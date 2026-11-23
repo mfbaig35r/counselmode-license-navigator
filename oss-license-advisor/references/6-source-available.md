@@ -30,7 +30,7 @@ Facts are sourced per record; **Editorial view** lines are CounselMode judgments
 - **patent_grant:** none
 - **copyleft_scope:** use_restriction
 - **triggers:** ['competing_use', 'service_offering']
-- **obligations:** ['attribution', 'same_license', 'no_competing_service']
+- **obligations:** ['attribution', 'same_license', 'no_competing_service', 'no_production_use']
 - steward_year: MariaDB / 2016-2017
 - allows: Copy, modify, non-production use; vendor-defined "Additional Use Grant" may allow production use
 - conditions: Production use limited by Additional Use Grant (often "not a competing offering"); each version converts to a "Change License" (GPLv2+ compatible, e.g., Apache-2.0/MPL-2.0) on Change Date (max 4 years)

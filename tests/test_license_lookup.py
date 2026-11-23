@@ -249,13 +249,36 @@ def test_verification_statuses_use_the_known_values():
         ("GPL-3.0-only", "LOW"),
         ("PolyForm-Noncommercial-1.0.0", "BLOCK"),
         ("CC-BY-NC-4.0", "BLOCK"),
-        ("LicenseRef-MS-RSL", "BLOCK"),  # reference-only: no noncommercial_only value, blocked as a noncommercial license
+        ("LicenseRef-MS-RSL", "BLOCK"),  # reference_only
         ("LicenseRef-MRL", "BLOCK"),  # research only
         ("PolyForm-Small-Business-1.0.0", "REVIEW"),  # depends on the user's size
         ("LicenseRef-Llama-4", "REVIEW"),
         ("LicenseRef-Commons-Clause", "LOW"),  # restricts selling, not internal use
         ("LicenseRef-Moonshot-Modified-MIT", "REVIEW"),  # name display above a threshold
+        ("BUSL-1.1", "REVIEW"),  # no_production_use: production use only through the Additional Use Grant
+        ("LicenseRef-Oracle-OTN", "REVIEW"),  # no_production_use: development use is free
+        ("LicenseRef-MNPL", "BLOCK"),  # non-production and noncommercial
+        ("RPL-1.5", "HIGH"),  # duties attach to internal "Deploy"
+        ("AGPL-3.0-only", "LOW"),  # network copyleft, but internal use alone triggers nothing
     ],
 )
 def test_internal_use_is_blocked_by_a_use_restriction_not_a_commercial_trigger(license_id, risk):
     assert ll.family_risk(ll.unique(license_id), "internal") == risk
+
+
+def test_obligations_and_triggers_use_only_the_vocabulary():
+    for r in ll.LIC:
+        assert set(r.get("obligations") or []) <= ll.OBLIGATIONS, (r["id"], set(r["obligations"]) - ll.OBLIGATIONS)
+        assert set(r.get("triggers") or []) <= ll.TRIGGERS, (r["id"], set(r["triggers"]) - ll.TRIGGERS)
+
+
+def test_the_schema_doc_defines_every_vocabulary_value():
+    doc = (SKILL.parent / "docs" / "schema.md").read_text(encoding="utf-8")
+    for value in ll.OBLIGATIONS | ll.TRIGGERS:
+        assert f"`{value}`" in doc, value
+
+
+@pytest.mark.parametrize("license_id,value", [("CC-BY-ND-4.0", "no_derivatives"), ("CC-BY-NC-ND-4.0", "no_derivatives"),
+                                              ("LicenseRef-MS-RSL", "reference_only"), ("BUSL-1.1", "no_production_use")])
+def test_restrictions_are_recorded(license_id, value):
+    assert value in ll.unique(license_id)["obligations"]

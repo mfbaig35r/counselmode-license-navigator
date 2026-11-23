@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.6 (2026-11-23)
+
+- **Three new obligation values** for restrictions the vocabulary could not express: `no_derivatives` (CC BY-ND, CC
+  BY-NC-ND), `reference_only` (MS-RSL) and `no_production_use` (BUSL-1.1, Oracle OTN, Mistral's non-production license).
+  The allowed values now live in `scripts/license_lookup.py` (`OBLIGATIONS`, `TRIGGERS`); tests enforce them and require
+  each to be defined in `docs/schema.md`, which now defines every value.
+- **Internal-use risk** now also sees production limits and internal-use copyleft: BUSL-1.1 internal LOW to REVIEW
+  (production use depends on the Additional Use Grant); RPL-1.5 internal LOW to HIGH (its duties attach to internal
+  "Deploy"). No other rating changed.
+- MS-RSL no longer needs a `commercial_use` trigger to be blocked for internal use: `reference_only` says why.
+
 ## 2.5 (2026-11-23)
 
 Content gate (phase 1): primary-source research on the most-asked records, and every record's obligations checked

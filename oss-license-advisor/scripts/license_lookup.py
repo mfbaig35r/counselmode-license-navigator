@@ -34,6 +34,18 @@ COMP = _load("compatibility.json")
 MODELS = _load("models.json")
 GROUPS = {label: set(g["members"]) for label, g in _load("compat_groups.json")["groups"].items()}
 
+# The only values `obligations` and `triggers` may hold (docs/schema.md defines each). MCP tool schemas and the tests
+# read them from here.
+OBLIGATIONS = frozenset({
+    "attribution", "notice_file", "state_changes", "source_disclosure", "same_license", "network_source_offer",
+    "relinking", "installation_info", "patent_retaliation", "noncommercial_only", "no_competing_service",
+    "mau_revenue_cap", "maas_gate", "naming_rule", "usage_policy", "no_derivatives", "reference_only",
+    "no_production_use",
+})
+TRIGGERS = frozenset({
+    "distribution", "network_interaction", "service_offering", "competing_use", "commercial_use", "threshold",
+    "prohibited_use", "any_use",
+})
 SCENARIOS = {
     "internal": set(),
     "saas": {"network_interaction", "service_offering", "competing_use", "threshold", "prohibited_use", "any_use",
@@ -94,12 +106,15 @@ def family_risk(record: dict, scenario: str) -> str:
     triggers = set(record.get("triggers", []))
     if scenario == "internal":
         # Internal use is blocked by an actual use restriction, not by a commercial-use trigger (which only says what
-        # sets obligations off). Size- or revenue-bounded licenses depend on who you are.
-        bounded = "mau_revenue_cap" in record.get("obligations", []) or "threshold" in triggers
-        if "noncommercial_only" in record.get("obligations", []) or (family == "noncommercial" and not bounded):
+        # sets obligations off). Size-, revenue- or production-bounded licenses depend on who you are and what you do.
+        obligations = set(record.get("obligations", []))
+        bounded = "mau_revenue_cap" in obligations or "threshold" in triggers
+        if obligations & {"noncommercial_only", "reference_only"} or (family == "noncommercial" and not bounded):
             return "BLOCK"
-        if bounded:
+        if bounded or "no_production_use" in obligations:
             return "REVIEW"
+        if "any_use" in triggers and family.endswith("copyleft"):
+            return base  # copyleft duties that apply to any use, internal included (e.g. RPL-1.5's "Deploy")
         if base in ("REVIEW", "HIGH") and family.startswith(("ai", "ethical", "propriet")):
             return "REVIEW"
         return "LOW"
