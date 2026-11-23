@@ -7,6 +7,9 @@
   A license that cannot take that code is excluded with the reason (for example, GPL-2.0-only code rules out MIT,
   Apache-2.0 and GPL-3.0-or-later). Source-available and use-restricted options appear only when open source is not
   required, marked as such. CounselMode editorial view.
+- NOTICE states the SPDX License List's terms (part of the SPDX Specification: Community Specification License 1.0,
+  earlier portions CC BY 3.0; Linux Foundation site content CC BY 3.0) and that we use a subset; attribution as both
+  require: name, version, source.
 - The goals live in `data/choosing.json` with exact IDs (`-or-later` for the GPL family; BigScience OpenRAIL-M for
   use-restricted weights); `choosing-a-license.md` is generated from it.
 

@@ -5,8 +5,12 @@ The code (oss-license-advisor/scripts, tests) is licensed under the Apache Licen
 The data (oss-license-advisor/data), the reference text (oss-license-advisor/references, SKILL.md) and the workbook
 (oss-license-advisor/assets) are licensed under Creative Commons Attribution 4.0 International (DATA-LICENSE).
 
-License identifiers and SPDX list membership come from the SPDX License List (https://spdx.org/licenses/), version
-3.29.0, and remain subject to the terms the SPDX project publishes. License facts were checked against the sources in
+License identifiers, names and SPDX list membership come from the SPDX License List, version 3.29.0, by the SPDX
+Workgroup, a Linux Foundation project, retrieved from https://spdx.org/licenses/. We use a subset of it
+(oss-license-advisor/data/spdx_snapshot_3.29.0.json and the identifiers and names in our records), arranged in our own
+records. The SPDX License List is part of the SPDX Specification, which is provided under the Community Specification
+License 1.0 (earlier portions under Creative Commons Attribution 3.0 Unported); the Linux Foundation licenses content on
+its sites under Creative Commons Attribution 3.0. Those terms, not this project's licenses, apply to that material. License facts were checked against the sources in
 oss-license-advisor/references/sources.md, which keep their own terms. License, product and model names are trademarks
 of their owners and are used only to identify the licenses they name.
 
