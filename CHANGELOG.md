@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.10 (2026-11-23)
+
+- **`choose_license`** (MCP tool and `choose` command): which license to release your own software, model weights or
+  dataset under, for one of nine goals, with each recommendation checked against the licenses of code you include.
+  A license that cannot take that code is excluded with the reason (for example, GPL-2.0-only code rules out MIT,
+  Apache-2.0 and GPL-3.0-or-later). Source-available and use-restricted options appear only when open source is not
+  required, marked as such. CounselMode editorial view.
+- The goals live in `data/choosing.json` with exact IDs (`-or-later` for the GPL family; BigScience OpenRAIL-M for
+  use-restricted weights); `choosing-a-license.md` is generated from it.
+
 ## 2.9 (2026-11-23)
 
 - **Relicensing log checked against primary sources** (project announcements, license-file history, fork

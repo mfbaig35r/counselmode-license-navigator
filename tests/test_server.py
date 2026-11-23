@@ -35,6 +35,7 @@ def test_tools_are_the_expected_read_only_set():
 
     tools = {t.name: t for t in asyncio.run(run())}
     assert set(tools) == {
+        "choose_license",
         "lookup_license",
         "model_license",
         "check_compatibility",
@@ -120,3 +121,14 @@ def test_resources_serve_the_method_and_the_data():
     assert len(json.loads(read("licenses://data/licenses"))["licenses"]) >= 139
     with pytest.raises(Exception, match="No data file"):
         read("licenses://data/secrets")
+
+
+def test_choose_license_checks_included_code():
+    plain = call("choose_license", goal="max_adoption")
+    assert [r["id"] for r in plain["recommendations"]] == ["MIT", "Apache-2.0"]
+    assert plain["attribution"] == "CounselMode editorial view; not legal advice" and plain["disclaimer"]
+    blocked = call("choose_license", goal="max_adoption", includes=["GPL-2.0-only"])
+    assert blocked["recommendations"] == [] and {e["id"] for e in blocked["excluded"]} == {"MIT", "Apache-2.0"}
+    assert "check_compatibility" in blocked["note"]
+    with pytest.raises(ToolError, match="ambiguous"):
+        call("choose_license", goal="max_adoption", includes=["GPL"])

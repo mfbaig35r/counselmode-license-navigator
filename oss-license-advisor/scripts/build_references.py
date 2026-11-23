@@ -62,6 +62,8 @@ def build() -> dict[str, str]:
         context = json.load(f)
     with open(os.path.join(ROOT, "data", "models.json"), encoding="utf-8") as f:
         models = json.load(f)
+    with open(os.path.join(ROOT, "data", "choosing.json"), encoding="utf-8") as f:
+        docs[os.path.join(ROOT, "references", "choosing-a-license.md")] = render_choosing(json.load(f)["goals"])
     for name, title, intro, rows in TABLES(context, models):
         docs[os.path.join(ROOT, "references", name)] = (
             f"# {title}\n\n" + (f"{intro}\n\n" if intro else "") + table(rows)
@@ -81,6 +83,24 @@ def TABLES(context: dict, models: list) -> list[tuple[str, str, str, list[dict]]
             models,
         ),
     ]
+
+
+def render_choosing(goals: list[dict]) -> str:
+    rows = []
+    for g in goals:
+        recommended = " or ".join(c["id"] for c in g["candidates"])
+        if g.get("not_open_source"):
+            recommended += "; not open source: " + ", ".join(c["id"] for c in g["not_open_source"])
+        rows.append(
+            {
+                "Your goal": g["title"],
+                "Recommended license(s)": recommended,
+                "Why": g["why"],
+                "Trade-offs": g["trade_offs"],
+            }
+        )
+    intro = "Generated from data/choosing.json; the choose_license tool also checks each one against code you include."
+    return f"# Choosing an outbound license (editorial view)\n\n{intro}\n\n" + table(rows)
 
 
 def cell(value) -> str:

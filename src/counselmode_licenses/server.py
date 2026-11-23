@@ -152,6 +152,38 @@ def create_server() -> FastMCP:
         return done(out)
 
     @mcp.tool(annotations=READ_ONLY)
+    def choose_license(
+        goal: Annotated[
+            Literal[
+                "max_adoption",
+                "adoption_with_patents",
+                "library_open_apps_free",
+                "all_derivatives_open",
+                "stop_cloud_resale",
+                "dual_licensing",
+                "public_domain",
+                "open_model_weights",
+                "open_dataset",
+            ],
+            Field(description="What the user wants from their license. Ask them; do not infer it."),
+        ],
+        must_be_open_source: Annotated[
+            bool, Field(description="False only if the user accepts source-available or use-restricted licenses.")
+        ] = True,
+        includes: Annotated[
+            list[str] | None,
+            Field(description="Licenses of code the project includes or combines with (SPDX IDs or names)."),
+        ] = None,
+    ) -> dict:
+        """Which license to release your own software, model weights or dataset under, for a stated goal. Each
+        recommendation is checked against the licenses of code you include; one that cannot take that code is
+        excluded with the reason. CounselMode's editorial view, not legal advice."""
+        out = ll.choose(goal, must_be_open_source, includes)
+        if "error" in out:
+            raise ToolError(out["error"] + ". Ask the user for the exact license.")
+        return done(out)
+
+    @mcp.tool(annotations=READ_ONLY)
     def search(query: Annotated[str, Field(description="Words to search license and model records for.")]) -> dict:
         """Search license and AI model records. Returns ids to pass to `fetch`."""
         return {"results": _search(ll, query)}

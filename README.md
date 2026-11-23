@@ -9,6 +9,8 @@ Free, open-source answers to software, model and data license questions, inside 
 - **What your use triggers**: obligations and a risk level for internal use, SaaS, distribution and devices.
 - **Which license an AI model is under**: 58 records keyed by exact model and version (Gemma 4 is Apache-2.0; Gemma 1
   to 3 are not).
+- **Which license to choose for your own project**, for a stated goal, checked against the licenses of code you
+  include.
 - **A first pass over a dependency list**: one license or SPDX expression per line, or a CSV with a license column.
 
 Every answer carries its source, when it was last verified, and whether it is volatile. **This is not legal advice.**
@@ -27,6 +29,7 @@ python oss-license-advisor/scripts/license_lookup.py model "Gemma 4"
 python oss-license-advisor/scripts/license_lookup.py compat MIT GPL-3.0-only
 python oss-license-advisor/scripts/license_lookup.py obligations AGPL-3.0-only --scenario saas
 python oss-license-advisor/scripts/license_lookup.py triage sbom.csv --scenario distribute
+python oss-license-advisor/scripts/license_lookup.py choose all_derivatives_open --includes Apache-2.0,MIT
 ```
 
 `triage` exits with 2 if anything is HIGH, BLOCK or UNKNOWN, so it can gate a build.
@@ -39,7 +42,7 @@ claude mcp add licenses -- uvx counselmode-licenses        # Claude Code
 
 For Claude Desktop, Cursor and others, run the command `uvx counselmode-licenses` (or `pip install counselmode-licenses`
 and run `counselmode-licenses`) as a stdio server. Tools: `lookup_license`, `model_license`, `check_compatibility`,
-`license_obligations`, `triage_dependencies`, `search` and `fetch`; the method is the resource `licenses://skill` and
+`license_obligations`, `triage_dependencies`, `choose_license`, `search` and `fetch`; the method is the resource `licenses://skill` and
 the data files are `licenses://data/<name>`. A hosted endpoint with no sign-in, for ChatGPT, Claude.ai and Grok, is at
 `https://counselmode-licenses.vercel.app/mcp` (testing; a permanent address comes with the public release).
 

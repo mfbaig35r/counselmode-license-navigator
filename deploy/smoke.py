@@ -29,6 +29,7 @@ FILES = [
     "/wheels/",
 ]
 TOOLS = {
+    "choose_license",
     "lookup_license",
     "model_license",
     "check_compatibility",

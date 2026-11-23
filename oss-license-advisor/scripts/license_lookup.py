@@ -6,6 +6,7 @@
   license_lookup.py compat <inbound license> <outbound license>
   license_lookup.py obligations <license> --scenario internal|saas|distribute|device
   license_lookup.py triage <file> [--scenario ...]   (one license per line, or CSV/TSV with a license column)
+  license_lookup.py choose <goal> [--not-open-source] [--includes LICENSE,LICENSE]   (goals: see data/choosing.json)
 
 Names resolve exactly (alias, SPDX ID, then name); a partial name returns candidates instead of a guess.
 Every output ends with the disclaimer. Exit 2 from triage if any HIGH, BLOCK or UNKNOWN. Standard library only.
@@ -33,6 +34,7 @@ ALIASES = _load("aliases.json")
 COMP = _load("compatibility.json")
 MODELS = _load("models.json")
 GROUPS = {label: set(g["members"]) for label, g in _load("compat_groups.json")["groups"].items()}
+GOALS = {g["goal"]: g for g in _load("choosing.json")["goals"]}
 
 # The only values `obligations` and `triggers` may hold (docs/schema.md defines each). MCP tool schemas and the tests
 # read them from here.
@@ -217,6 +219,92 @@ def compat(inbound: str, outbound: str) -> dict:
     return {"inbound": ri["id"], "outbound": ro["id"], "tuples": tuples}
 
 
+def combine(inbound_id: str, outbound_id: str) -> str:
+    """Can code under `inbound_id` go into a distributed work under `outbound_id`? yes, conditional, no or unknown."""
+    results = {
+        t["result"]
+        for t in COMP
+        if t["context"] == "distribution_combined_work"
+        and t["result"] != "not_applicable"
+        and inbound_id in GROUPS.get(t["inbound"], ())
+        and outbound_id in GROUPS.get(t["outbound"], ())
+    }
+    if not results:
+        return "unknown"
+    if "no" in results:
+        return "no"
+    return "conditional" if results & {"conditional", "yes_narrows"} else "yes"
+
+
+def choose(goal: str, must_be_open_source: bool = True, includes: list[str] | None = None) -> dict:
+    """Outbound licenses for a goal (data/choosing.json, CounselMode editorial view), each checked against the licenses
+    of code you include. A candidate that cannot take one of them is excluded, with the reason."""
+    if goal not in GOALS:
+        return {"error": f"goal must be one of {', '.join(GOALS)}"}
+    deps = []
+    for q in includes or []:
+        r = unique(q)
+        if r is None:
+            res = resolve(q)
+            return {
+                "error": f"{q!r} is "
+                + (
+                    "ambiguous: " + ", ".join(x["id"] for x in res["records"][:8])
+                    if res["records"]
+                    else "not in the database"
+                )
+            }
+        deps.append(r["id"])
+    g = GOALS[goal]
+    pool = [dict(c, not_open_source=False) for c in g["candidates"]]
+    if not must_be_open_source:
+        pool += [dict(c, not_open_source=True) for c in g.get("not_open_source", [])]
+    recommendations, excluded = [], []
+    for c in pool:
+        r = _BY_ID[norm(c["id"])]
+        checks = {d: combine(d, r["id"]) for d in deps}
+        blocked = [d for d, v in checks.items() if v == "no"]
+        if blocked:
+            excluded.append({"id": r["id"], "because": f"cannot include {', '.join(blocked)} in a distributed work"})
+            continue
+        recommendations.append(
+            {
+                "id": r["id"],
+                "name": r["name"],
+                "note": c.get("note"),
+                "not_open_source": c["not_open_source"],
+                "osi_status": r.get("osi_status"),
+                "patent_grant": r.get("patent_grant"),
+                "with_your_code": checks,
+                "provenance": r["provenance"],
+            }
+        )
+    out = {
+        "goal": goal,
+        "title": g["title"],
+        "for": g["for"],
+        "why": g["why"],
+        "trade_offs": g["trade_offs"],
+        "recommendations": recommendations,
+        "excluded": excluded,
+        "attribution": "CounselMode editorial view; not legal advice",
+    }
+    if not must_be_open_source and g.get("not_open_source"):
+        out["note_not_open_source"] = (
+            "Entries marked not_open_source are source-available or use-restricted, not open source."
+        )
+    if deps and not recommendations:
+        out["note"] = (
+            "None of the recommended licenses can include " + ", ".join(deps) + ". The included code's license "
+            "usually decides the outbound license: check_compatibility shows what can take it."
+        )
+    elif any(v in ("unknown", "conditional") for r in recommendations for v in r["with_your_code"].values()):
+        out["note"] = (
+            "Some combinations are conditional or not covered by the data: check them against the license texts."
+        )
+    return out
+
+
 def obligations(query: str, scenario: str) -> dict:
     if scenario not in SCENARIOS:
         return {"error": f"scenario must be one of {', '.join(SCENARIOS)}"}
@@ -326,7 +414,11 @@ def main(argv: list[str]) -> int:
         return 1
     cmd = argv[0]
     scenario = argv[argv.index("--scenario") + 1] if "--scenario" in argv else "distribute"
-    args = [a for i, a in enumerate(argv[1:], 1) if not a.startswith("--") and argv[i - 1] != "--scenario"]
+    args = [
+        a
+        for i, a in enumerate(argv[1:], 1)
+        if not a.startswith("--") and argv[i - 1] not in ("--scenario", "--includes")
+    ]
     if cmd == "lookup":
         out = lookup(" ".join(args))
         _print(
@@ -346,6 +438,12 @@ def main(argv: list[str]) -> int:
         return 1 if "error" in out else 0
     if cmd == "obligations":
         out = obligations(args[0], scenario)
+        _print(out)
+        print(DISCLAIMER)
+        return 1 if "error" in out else 0
+    if cmd == "choose":
+        includes = argv[argv.index("--includes") + 1].split(",") if "--includes" in argv else []
+        out = choose(args[0], must_be_open_source="--not-open-source" not in argv, includes=includes)
         _print(out)
         print(DISCLAIMER)
         return 1 if "error" in out else 0

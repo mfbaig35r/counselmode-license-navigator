@@ -1,0 +1,167 @@
+{
+ "note": "Outbound license recommendations by goal: CounselMode editorial view, not legal advice. choose() and references/choosing-a-license.md are both built from this file.",
+ "goals": [
+  {
+   "goal": "max_adoption",
+   "title": "Maximum adoption, including by companies",
+   "for": "software",
+   "candidates": [
+    {
+     "id": "MIT"
+    },
+    {
+     "id": "Apache-2.0",
+     "note": "adds an express patent grant and contribution terms"
+    }
+   ],
+   "why": "Minimal friction; Apache-2.0 adds an express patent grant and contribution terms",
+   "trade_offs": "Others can build proprietary forks without giving back"
+  },
+  {
+   "goal": "adoption_with_patents",
+   "title": "Maximum adoption + patent protection",
+   "for": "software",
+   "candidates": [
+    {
+     "id": "Apache-2.0"
+    }
+   ],
+   "why": "Patent grant and patent-retaliation clause",
+   "trade_offs": "Incompatible with GPLv2-only projects"
+  },
+  {
+   "goal": "library_open_apps_free",
+   "title": "Keep your library improvements open, allow proprietary apps to use it",
+   "for": "software",
+   "candidates": [
+    {
+     "id": "MPL-2.0",
+     "note": "file-level copyleft; simpler"
+    },
+    {
+     "id": "LGPL-3.0-or-later",
+     "note": "library-level copyleft; users must be able to relink"
+    }
+   ],
+   "why": "File/library-level copyleft",
+   "trade_offs": "LGPL relinking requirements can deter mobile/embedded use; MPL is simpler"
+  },
+  {
+   "goal": "all_derivatives_open",
+   "title": "Ensure all derivative distributions remain open",
+   "for": "software",
+   "candidates": [
+    {
+     "id": "GPL-3.0-or-later"
+    }
+   ],
+   "why": "Strong copyleft with patent and anti-tivoization terms",
+   "trade_offs": "Many companies avoid embedding GPL code"
+  },
+  {
+   "goal": "stop_cloud_resale",
+   "title": "Prevent cloud providers from offering your software as a service without contributing",
+   "for": "software",
+   "candidates": [
+    {
+     "id": "AGPL-3.0-or-later",
+     "note": "stays open source"
+    }
+   ],
+   "not_open_source": [
+    {
+     "id": "SSPL-1.0"
+    },
+    {
+     "id": "Elastic-2.0"
+    },
+    {
+     "id": "BUSL-1.1"
+    },
+    {
+     "id": "FSL-1.1-ALv2"
+    }
+   ],
+   "why": "AGPL stays open source; source-available gives stronger protection but is not open source",
+   "trade_offs": "AGPL reduces enterprise adoption; source-available triggers community backlash and forks"
+  },
+  {
+   "goal": "dual_licensing",
+   "title": "Monetize with dual licensing",
+   "for": "software",
+   "candidates": [
+    {
+     "id": "GPL-3.0-or-later",
+     "note": "plus a commercial license"
+    },
+    {
+     "id": "AGPL-3.0-or-later",
+     "note": "plus a commercial license"
+    }
+   ],
+   "why": "Copyleft pushes commercial users to buy a license",
+   "trade_offs": "Contributors must sign a CLA so you can relicense their work; community friction"
+  },
+  {
+   "goal": "public_domain",
+   "title": "Dedicate to public domain",
+   "for": "software",
+   "candidates": [
+    {
+     "id": "0BSD"
+    },
+    {
+     "id": "MIT-0"
+    },
+    {
+     "id": "Unlicense"
+    },
+    {
+     "id": "CC0-1.0",
+     "note": "for non-code works: it excludes patent rights, so prefer 0BSD or MIT-0 for code"
+    }
+   ],
+   "why": "Legally robust public-domain equivalents",
+   "trade_offs": "No attribution; CC0 excludes patents"
+  },
+  {
+   "goal": "open_model_weights",
+   "title": "Release model weights openly",
+   "for": "model_weights",
+   "candidates": [
+    {
+     "id": "Apache-2.0"
+    },
+    {
+     "id": "MIT"
+    }
+   ],
+   "not_open_source": [
+    {
+     "id": "LicenseRef-BigScience-OpenRAIL-M",
+     "note": "if you want use restrictions; use-restricted licenses are not open source"
+    }
+   ],
+   "why": "Clear rights encourage adoption",
+   "trade_offs": "Use-restricted licenses are not open source"
+  },
+  {
+   "goal": "open_dataset",
+   "title": "Release a dataset",
+   "for": "dataset",
+   "candidates": [
+    {
+     "id": "CC-BY-4.0"
+    },
+    {
+     "id": "CDLA-Permissive-2.0"
+    },
+    {
+     "id": "CC0-1.0"
+    }
+   ],
+   "why": "Clear rights for training and reuse",
+   "trade_offs": "Share-alike data licenses (ODbL, CC-BY-SA) complicate downstream use"
+  }
+ ]
+}

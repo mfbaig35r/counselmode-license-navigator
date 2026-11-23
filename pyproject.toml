@@ -1,6 +1,6 @@
 [project]
 name = "counselmode-licenses"
-version = "2.9.0"
+version = "2.10.0"
 description = "Software, model and data license answers inside your AI assistant: an MCP server and agent skill. Not legal advice."
 readme = "README.md"
 license = "Apache-2.0 AND CC-BY-4.0"

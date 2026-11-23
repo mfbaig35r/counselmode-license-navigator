@@ -3,9 +3,9 @@ name: oss-license-advisor
 description: Classify, explain and assess software, model and data licenses (open source, source-available, noncommercial, ethical-source, hardware, proprietary, and AI/LLM model licenses) and their obligations. Use whenever a user asks what a license allows; whether a dependency, tool or model can be used internally, in SaaS, in distributed software or on devices; which license to choose; whether licenses are compatible; how GPL/AGPL/LGPL/MPL/Apache/MIT/SSPL/BUSL/FSL/Llama/Gemma/Muse/Kimi/Mistral/OpenMDW terms apply; or needs open-source/AI license diligence for M&A, audit or compliance (SBOM triage, copyleft, revenue thresholds, maintenance risk, EU AI Act/CRA overlay). Not legal advice.
 ---
 
-# OSS License Advisor (v2.9)
+# OSS License Advisor (v2.10)
 
-Data-backed workflow for software and model licensing, for **inbound** use (building on others' code/models) and **outbound** licensing (your own releases). Version 2.9, November 23, 2026: 132 license records in 12 families plus 10 exception records (one per SPDX ID / LicenseRef, checked against SPDX License List 3.29.0), 58 version-keyed model records, 56 projects with SPDX expressions, 187 compatibility tuples over 22 license groups, 190 aliases, plus case law, regulatory overlay, relicensing log and diligence checklist.
+Data-backed workflow for software and model licensing, for **inbound** use (building on others' code/models) and **outbound** licensing (your own releases). Version 2.10, November 23, 2026: 132 license records in 12 families plus 10 exception records (one per SPDX ID / LicenseRef, checked against SPDX License List 3.29.0), 58 version-keyed model records, 56 projects with SPDX expressions, 187 compatibility tuples over 22 license groups, 190 aliases, plus case law, regulatory overlay, relicensing log and diligence checklist.
 
 ## Package contents
 
@@ -19,7 +19,8 @@ Data-backed workflow for software and model licensing, for **inbound** use (buil
 | `data/aliases.json` | How people write licenses ("ALv2", "ASL 2.0", "GPLv3") → SPDX ID |
 | `data/context.json` | Case law, regulatory overlay, relicensing log |
 | `references/*.md` | Human-readable versions per family tab plus model map, compatibility, scenarios, choosing, projects, checklist, case law, regulation, relicensing, glossary, sources |
-| `scripts/license_lookup.py` | `lookup`, `model`, `compat`, `obligations --scenario`, `triage <SBOM> --scenario` |
+| `data/choosing.json` | Outbound license recommendations by goal (editorial view); `choose` checks each against code you include |
+| `scripts/license_lookup.py` | `lookup`, `model`, `compat`, `obligations --scenario`, `triage <SBOM> --scenario`, `choose <goal> --includes ...` |
 | `assets/Open_Source_License_Reference_v2.3.xlsx` | Shareable workbook, a v2.3 snapshot (includes its Change Log); `data/` is authoritative from v2.4 |
 
 Load only what the question needs. Prefer `data/` for lookups; use `references/` for explanation.

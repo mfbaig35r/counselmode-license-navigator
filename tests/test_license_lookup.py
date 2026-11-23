@@ -362,3 +362,42 @@ def test_aliases_are_unique_within_and_across_model_records():
         assert len(normed) == len(set(normed)), ("duplicate alias in", m["model"])
         for a in normed:
             assert owner.setdefault(a, i) == i, (a, "is on two records")
+
+
+def test_every_goal_names_real_licenses():
+    for g in ll.GOALS.values():
+        for c in g["candidates"] + g.get("not_open_source", []):
+            assert c["id"] in IDS, (g["goal"], c["id"])
+
+
+def test_choose_offers_source_available_only_when_open_source_is_not_required():
+    open_only = {r["id"] for r in ll.choose("stop_cloud_resale")["recommendations"]}
+    assert open_only == {"AGPL-3.0-or-later"}
+    allowed = ll.choose("stop_cloud_resale", must_be_open_source=False)["recommendations"]
+    assert {r["id"] for r in allowed if r["not_open_source"]} == {"SSPL-1.0", "Elastic-2.0", "BUSL-1.1", "FSL-1.1-ALv2"}
+
+
+@pytest.mark.parametrize(
+    "goal,includes,kept,dropped",
+    [
+        ("all_derivatives_open", ["Apache-2.0", "MIT"], {"GPL-3.0-or-later"}, set()),
+        ("all_derivatives_open", ["GPL-2.0-only"], set(), {"GPL-3.0-or-later"}),  # GPLv2-only cannot go into GPLv3
+        ("max_adoption", ["GPL-2.0-only"], set(), {"MIT", "Apache-2.0"}),
+        ("library_open_apps_free", ["MIT"], {"MPL-2.0", "LGPL-3.0-or-later"}, set()),
+    ],
+)
+def test_choose_excludes_licenses_that_cannot_take_included_code(goal, includes, kept, dropped):
+    out = ll.choose(goal, includes=includes)
+    assert {r["id"] for r in out["recommendations"]} == kept
+    assert {e["id"] for e in out["excluded"]} == dropped
+
+
+def test_choose_rejects_unknown_goals_and_unclear_licenses():
+    assert "goal must be one of" in ll.choose("world_domination")["error"]
+    assert "ambiguous" in ll.choose("max_adoption", includes=["GPL"])["error"]
+    assert "not in the database" in ll.choose("max_adoption", includes=["nope-9"])["error"]
+
+
+def test_cli_choose():
+    done = cli("choose", "all_derivatives_open", "--includes", "Apache-2.0,MIT")
+    assert done.returncode == 0 and "GPL-3.0-or-later" in done.stdout and "[Disclaimer]" in done.stdout
