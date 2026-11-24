@@ -110,6 +110,20 @@ A list of well-known software projects, keyed by version, because projects chang
 
 `references/common-projects.md` and the software part of `references/relicensing-log.md` are generated from it.
 
+## How MCP answers label their claims
+
+The tools return three kinds of claim, labelled so an assistant can't pass one off as another (enforced by
+`tests/test_labels.py`):
+
+| Kind | In an answer | How to repeat it |
+|---|---|---|
+| Fact | Record fields with `provenance` or `verification_status`, `source`, `last_verified` | With the source |
+| Rating or ruling | `rating` / `ratings` (`{level, because}`), compatibility `result`; the answer carries `rating_basis` or `rulings_basis` | Attributed to CounselMode, with the reason |
+| View | `counselmode_view` (`label` first), `choose_license` recommendations (`basis`) | As CounselMode's view |
+
+`verification_gaps` lists every part of an answer that is not fully verified. `licenses://coverage` counts the whole
+dataset by verification status. In the data files the view is still `editorial_view`; answers rename it.
+
 ## context.json
 
 `case_law`, `regulatory` and `relicensing` (AI model families only; software license changes are the era boundaries in

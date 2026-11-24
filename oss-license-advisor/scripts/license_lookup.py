@@ -156,28 +156,79 @@ def unique(query: str) -> dict | None:
 
 
 def family_risk(record: dict, scenario: str) -> str:
+    return rating(record, scenario)["level"]
+
+
+# How a trigger reads inside a rating's `because`.
+TRIGGER_PHRASE = {
+    "distribution": "distribution",
+    "network_interaction": "users interacting with it over a network",
+    "service_offering": "offering it as a service",
+    "competing_use": "competing use",
+    "commercial_use": "commercial use",
+    "threshold": "a size, revenue or user threshold",
+    "prohibited_use": "uses the license prohibits",
+    "any_use": "any use",
+}
+
+
+def _words(keys) -> str:
+    return ", ".join(TRIGGER_PHRASE.get(k, k.replace("_", " ")) for k in sorted(keys))
+
+
+def rating(record: dict, scenario: str) -> dict:
+    """CounselMode's first-pass risk rating for one license and one use, and why: `because` names the path the rule
+    took (the license family, the triggers this use hits, or the reason it drops to LOW). A derived rating, not a
+    legal conclusion."""
     family = record["family"]
+    kind = family.replace("_", " ")
     base = FAMILY_RISK.get(family, "REVIEW")
     triggers = set(record.get("triggers", []))
+    obligations = set(record.get("obligations", []))
+
+    def out(level, because):
+        return {"level": level, "because": because}
+
     if scenario == "internal":
         # Internal use is blocked by an actual use restriction, not by a commercial-use trigger (which only says what
         # sets obligations off). Size-, revenue- or production-bounded licenses depend on who you are and what you do.
-        obligations = set(record.get("obligations", []))
         bounded = "mau_revenue_cap" in obligations or "threshold" in triggers
-        if obligations & {"noncommercial_only", "reference_only"} or (family == "noncommercial" and not bounded):
-            return "BLOCK"
-        if bounded or "no_production_use" in obligations:
-            return "REVIEW"
+        if blocked := obligations & {"noncommercial_only", "reference_only"}:
+            return out("BLOCK", f"the license allows only {_words(blocked).replace(' only', '')} use")
+        if family == "noncommercial" and not bounded:
+            return out("BLOCK", "a noncommercial license; internal use at a business is commercial use")
+        if bounded:
+            return out("REVIEW", "rights depend on a size, revenue or user threshold; check where you stand")
+        if "no_production_use" in obligations:
+            return out("REVIEW", "production use is not licensed unless a grant allows it")
         if "any_use" in triggers and family.endswith("copyleft"):
-            return base  # copyleft duties that apply to any use, internal included (e.g. RPL-1.5's "Deploy")
+            return out(base, f"{kind}, with duties that apply to any use, internal use included")
         if base in ("REVIEW", "HIGH") and family.startswith(("ai", "ethical", "propriet")):
-            return "REVIEW"
-        return "LOW"
-    if not (triggers & SCENARIOS[scenario]) and base in ("MEDIUM", "HIGH"):
-        return "LOW"
-    if scenario == "device" and "installation_info" in record.get("obligations", []):
-        return "HIGH"
-    return base
+            return out("REVIEW", f"{kind}: its use terms apply even to internal use; read them")
+        return out("LOW", "internal use triggers none of its obligations")
+    hit = triggers & SCENARIOS[scenario]
+    if not hit and base in ("MEDIUM", "HIGH"):
+        return out("LOW", f"{kind}, but this use triggers none of its obligations")
+    if scenario == "device" and "installation_info" in obligations:
+        return out("HIGH", f"{kind}; shipping it on a device triggers the installation-information duty")
+    if base == "LOW":
+        return out("LOW", f"{kind}: notice-type obligations only")
+    return out(base, kind + (f"; this use triggers {_words(hit)}" if hit else ""))
+
+
+VIEW_LABEL = "CounselMode's view: judgment, not fact or legal advice."
+
+
+def labelled(record: dict) -> dict:
+    """A record for an answer: its editorial view under `counselmode_view`, labelled, apart from the facts."""
+    out = {k: v for k, v in record.items() if k != "editorial_view"}
+    view = record.get("editorial_view") or {}
+    if isinstance(view, str):  # a project's one-sentence view
+        view = {"view": view}
+    view = {k: v for k, v in view.items() if k != "attribution"}
+    if view:
+        out["counselmode_view"] = {"label": VIEW_LABEL, **view}
+    return out
 
 
 def lookup(query: str) -> dict:
@@ -185,12 +236,12 @@ def lookup(query: str) -> dict:
     choose from; exceptions appear only when the query asks for one."""
     res = resolve(query)
     if res["match"] != "candidates":
-        return {"query": query, "match": res["match"], "results": res["records"][:5]}
+        return {"query": query, "match": res["match"], "results": [labelled(r) for r in res["records"][:5]]}
     records = res["records"]
     if "exception" not in query.lower():
         records = [r for r in records if r.get("record_type") != "exception"] or records
     if len(records) == 1:
-        return {"query": query, "match": "candidates", "results": records}
+        return {"query": query, "match": "candidates", "results": [labelled(records[0])]}
     return {
         "query": query,
         "match": "candidates",
@@ -274,13 +325,13 @@ def project(query: str, version: str | None = None) -> list[dict]:
             eras = [
                 {
                     **e,
-                    "risk": {
-                        s: expression_risk(e["license_expression"], s)[1] for s in ("internal", "saas", "distribute")
+                    "ratings": {
+                        s: expression_rating(e["license_expression"], s) for s in ("internal", "saas", "distribute")
                     },
                 }
                 for e in eras
             ]
-        out.append({**p, "eras": eras, **({"version": version} if version else {})})
+        out.append(labelled({**p, "eras": eras, **({"version": version} if version else {})}))
     return out
 
 
@@ -404,8 +455,8 @@ def obligations(query: str, scenario: str) -> dict:
         "scenario": scenario,
         "triggers_hit": sorted(set(r.get("triggers", [])) & SCENARIOS[scenario]),
         "obligations": r.get("obligations", []),
-        "risk": family_risk(r, scenario),
-        "editorial_view": r.get("editorial_view"),
+        "rating": rating(r, scenario),
+        "counselmode_view": labelled(r).get("counselmode_view"),
         "provenance": r["provenance"],
     }
 
@@ -497,6 +548,17 @@ def expression_family(expr: str) -> str:
     return _fold(expr, leaf, OPENNESS.index) or "unknown"
 
 
+def expression_rating(expr: str, scenario: str) -> dict:
+    """A rating object for an SPDX expression: the level from expression_risk, and why, naming the license that
+    decided it when the expression offers a choice (OR) or combines licenses (AND)."""
+    chosen, level, _ = expression_risk(expr, scenario)
+    record = unique(chosen) if level != "UNKNOWN" else None
+    because = rating(record, scenario)["because"] if record else "the license is not recognised; read it directly"
+    if record and re.search(r"\b(OR|AND)\b", expr):
+        because = f"via {chosen}: {because}"
+    return {"level": level, "because": because}
+
+
 def read_components(path: str) -> list[tuple[str, str]]:
     with open(path, encoding="utf-8") as f:
         return parse_components(f.read().splitlines())
@@ -513,10 +575,19 @@ def parse_components(lines: list[str]) -> list[tuple[str, str]]:
 
 
 def triage(components: list[tuple[str, str]], scenario: str) -> list[dict]:
-    return [
-        dict(zip(("component", "license", "id", "risk", "volatile"), (comp, expr, *expression_risk(expr, scenario))))
-        for comp, expr in components
-    ]
+    rows = []
+    for comp, expr in components:
+        chosen, _, volatile = expression_risk(expr, scenario)
+        rows.append(
+            {
+                "component": comp,
+                "license": expr,
+                "id": chosen,
+                "rating": expression_rating(expr, scenario),
+                "volatile": volatile,
+            }
+        )
+    return rows
 
 
 def _print(obj) -> None:
@@ -575,9 +646,9 @@ def main(argv: list[str]) -> int:
         rows = triage(read_components(args[0]), scenario)
         print(f"scenario: {scenario}\ncomponent\tlicense\tid\trisk\tvolatile")
         for r in rows:
-            print(f"{r['component']}\t{r['license']}\t{r['id']}\t{r['risk']}\t{r['volatile']}")
+            print(f"{r['component']}\t{r['license']}\t{r['id']}\t{r['rating']['level']}\t{r['volatile']}")
         print("(OR = least risky alternative; AND = most risky; AND binds tighter than OR; review)" + DISCLAIMER)
-        return 2 if any(ORDER.index(r["risk"]) >= ORDER.index("HIGH") for r in rows) else 0
+        return 2 if any(ORDER.index(r["rating"]["level"]) >= ORDER.index("HIGH") for r in rows) else 0
     print(__doc__)
     return 1
 

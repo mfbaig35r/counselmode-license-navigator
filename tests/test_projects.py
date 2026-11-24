@@ -122,12 +122,12 @@ def test_a_version_selects_the_era_that_covers_it(query, version, expected):
     hits = ll.project(query, version)
     assert len(hits) == 1, [h["id"] for h in hits]
     assert [e["license_expression"] for e in hits[0]["eras"]] == [expected]
-    assert set(hits[0]["eras"][0]["risk"]) == {"internal", "saas", "distribute"}
+    assert set(hits[0]["eras"][0]["ratings"]) == {"internal", "saas", "distribute"}
 
 
 def test_without_a_version_every_era_is_returned_and_unknown_names_find_nothing():
     (redis,) = ll.project("Redis")
-    assert len(redis["eras"]) == 3 and "risk" not in redis["eras"][0]
+    assert len(redis["eras"]) == 3 and "ratings" not in redis["eras"][0]
     assert ll.project("no-such-project-xyz") == []
 
 

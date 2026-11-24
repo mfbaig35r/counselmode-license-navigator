@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.14.0 (2026-11-24)
+
+Answers now say what kind of claim each part is, so an assistant can't pass a judgment along as a fact. From the second
+client review ("an assistant could easily pass 'HIGH for SaaS' along as a fact") and the epistemic-labelling rule in
+our human-operable MCP research. Breaking change to the answer format; the data files are unchanged.
+
+- **Ratings explain themselves.** Every risk level is a `rating` object with `level` and `because`, the path the rule
+  took (for example "network copyleft; this use triggers users interacting with it over a network", or "strong
+  copyleft, but this use triggers none of its obligations"). Answers with ratings carry `rating_basis`. Levels are
+  unchanged.
+- **Views are labelled.** License and project records in answers carry `counselmode_view`, with its label first,
+  instead of `editorial_view`. Compatibility answers carry `rulings_basis`; `choose_license` carries `basis`.
+- **Gaps are flagged in one place.** `verification_gaps` lists every part of an answer that rests on something not
+  fully verified.
+- **Coverage is disclosed.** New resource `licenses://coverage`: the dataset by verification status.
+- **Instructions** say how to repeat each kind of claim; a new test enforces the labels on every tool's answers.
+- The answer disclaimer is shorter (the per-answer caveat is now `verification_gaps`); typical answers are about the
+  same size as before, except where ratings now carry their reasons.
+
 ## 2.13.4 (2026-11-24)
 
 From the first client test run (Claude Desktop, 11 of 12 passed):

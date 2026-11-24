@@ -3,7 +3,7 @@ name: oss-license-advisor
 description: Classify, explain and assess software, model and data licenses (open source, source-available, noncommercial, ethical-source, hardware, proprietary, and AI/LLM model licenses) and their obligations. Use whenever a user asks what a license allows; whether a dependency, tool or model can be used internally, in SaaS, in distributed software or on devices; which license to choose; whether licenses are compatible; how GPL/AGPL/LGPL/MPL/Apache/MIT/SSPL/BUSL/FSL/Llama/Gemma/Muse/Kimi/Mistral/OpenMDW terms apply; or needs open-source/AI license diligence for M&A, audit or compliance (SBOM triage, copyleft, revenue thresholds, maintenance risk, EU AI Act/CRA overlay). Not legal advice.
 ---
 
-# OSS License Advisor (v2.13.4)
+# OSS License Advisor (v2.14)
 
 Data-backed workflow for software and model licensing, for **inbound** use (building on others' code/models) and **outbound** licensing (your own releases). Version 2.13, November 23, 2026: 144 license records in 12 families plus 12 exception records (one per SPDX ID / LicenseRef, checked against SPDX License List 3.29.0), 58 version-keyed model records, 99 software projects keyed by version (each era checked against the project's LICENSE file), 220 compatibility tuples over 25 license groups (177 verified against primary sources), 190 aliases, plus case law, regulatory overlay, relicensing log and diligence checklist.
 
@@ -40,8 +40,11 @@ Load only what the question needs. Prefer `data/` for lookups; use `references/`
 ## Output rules
 
 - Lead with the bottom line and the assumed scenario.
-- Separate **facts** (with source and verification date) from **editorial view** (label it "CounselMode editorial view").
-- Risk levels: LOW / MEDIUM / HIGH / BLOCK / REVIEW / UNKNOWN.
+- Separate three kinds of claim. **Facts**: state them with their source and verification date. **Ratings and
+  compatibility rulings**: CounselMode's rule-based judgment; attribute them and give the reason ("CounselMode rates
+  this HIGH for SaaS, because running it as a service triggers the network source offer"). **Editorial view**: label
+  it "CounselMode editorial view". Never present a rating, ruling or view as a legal conclusion.
+- Risk levels: LOW / MEDIUM / HIGH / BLOCK / REVIEW / UNKNOWN, each with the reason the rule gives.
 - Diligence findings: component, license ID, scenario, risk, evidence, remediation, SPA treatment (rep, special indemnity, pre-closing covenant).
 - Always end with: not legal advice; jurisdiction assumed (U.S. general, EU overlay where relevant); verify volatile items.
 

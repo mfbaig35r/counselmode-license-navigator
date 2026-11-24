@@ -75,12 +75,12 @@ def test_gpl_3_0_obligations_are_the_gpls_not_the_lgpls():
     """Regression: v2.3 resolved "GPL-3.0" to LGPL-3.0-only by substring match."""
     out = ll.obligations("GPL-3.0", "saas")
     assert out["id"] == "GPL-3.0-only"
-    assert out["risk"] == "LOW"  # the GPL triggers on distribution; SaaS alone does not
-    assert ll.obligations("GPL-3.0", "distribute")["risk"] == "HIGH"
+    assert out["rating"]["level"] == "LOW"  # the GPL triggers on distribution; SaaS alone does not
+    assert ll.obligations("GPL-3.0", "distribute")["rating"]["level"] == "HIGH"
 
 
 def test_agpl_is_high_for_saas():
-    assert ll.obligations("AGPL-3.0-only", "saas")["risk"] == "HIGH"
+    assert ll.obligations("AGPL-3.0-only", "saas")["rating"]["level"] == "HIGH"
 
 
 def test_obligations_refuse_an_ambiguous_or_unknown_license():

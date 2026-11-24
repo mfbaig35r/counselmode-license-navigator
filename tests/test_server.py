@@ -54,7 +54,7 @@ def test_lookup_by_alias_carries_provenance_and_disclaimer():
     out = call("lookup_license", license="ALv2")
     assert out["match"] == "alias" and out["results"][0]["id"] == "Apache-2.0"
     assert out["results"][0]["provenance"]["verification_status"]
-    assert out["disclaimer"].startswith("[Caveat]") and "Not legal advice." in out["disclaimer"]
+    assert out["disclaimer"].startswith("Not legal advice.")
 
 
 def test_a_partial_name_returns_candidates():
@@ -90,8 +90,8 @@ def test_compatibility_on_license_ids():
 
 def test_obligations_by_scenario():
     assert call("license_obligations", license="GPL-3.0", scenario="saas")["id"] == "GPL-3.0-only"
-    assert call("license_obligations", license="GPL-3.0", scenario="saas")["risk"] == "LOW"
-    assert call("license_obligations", license="AGPL-3.0-only", scenario="saas")["risk"] == "HIGH"
+    assert call("license_obligations", license="GPL-3.0", scenario="saas")["rating"]["level"] == "LOW"
+    assert call("license_obligations", license="AGPL-3.0-only", scenario="saas")["rating"]["level"] == "HIGH"
     with pytest.raises(ToolError):
         call("license_obligations", license="MIT", scenario="cloud")
 

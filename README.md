@@ -37,7 +37,9 @@ uvx counselmode-licenses                                   # any client: run it 
 
 Tools: `lookup_license`, `model_license`, `project_license`, `check_compatibility`, `license_obligations`,
 `choose_license`, `triage_dependencies`, and `search` and `fetch` (for ChatGPT's deep research). The method is the
-resource `licenses://skill`; the data files are `licenses://data/<name>`.
+resource `licenses://skill`; the data files are `licenses://data/<name>`; what is verified and what is not is
+`licenses://coverage`. Answers label each kind of claim: facts carry their source and verification status, ratings
+carry the reason the rule gives, and CounselMode's editorial view is marked as such.
 
 **As an agent skill.** Copy `oss-license-advisor/` into your assistant's skills folder (for Claude Code,
 `~/.claude/skills/`). The assistant reads `SKILL.md` and uses the data and script as needed.

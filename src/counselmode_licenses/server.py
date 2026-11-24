@@ -24,6 +24,19 @@ MAX_COMPONENTS = 500
 SITE = "https://counselmode.com"
 NOT_ADVICE = "This is not legal advice."
 HANDOFF = f"For a full compliance screening of these dependencies, with a report, see {SITE}."
+# What each kind of claim in an answer is. One short sentence per answer, not per item.
+RATING_BASIS = (
+    "Ratings: CounselMode's rule (license family + what this use triggers; OR takes the least risky option, AND "
+    "the most), not a legal conclusion."
+)
+RULINGS_BASIS = "Rulings: CounselMode's reading of the licenses and FSF/OSI positions, not a legal conclusion."
+CHOOSE_BASIS = "Recommendations: CounselMode's editorial view, not legal advice."
+# Answers say what is unverified (verification_gaps) and what is judgment (the basis lines and counselmode_view), so
+# the closing line only needs what applies to every answer.
+DISCLAIMER = (
+    "Not legal advice. Confirm anything that matters against the license text, and ask a lawyer for decisions with "
+    "real consequences. Jurisdiction: US (general), with an EU overlay."
+)
 DATA_FILES = ("licenses", "compatibility", "compat_groups", "models", "projects", "aliases", "context")
 Scenario = Literal["internal", "saas", "distribute", "device"]
 
@@ -37,7 +50,12 @@ License answers for software, AI models and data, from a curated dataset keyed b
 - Ask which scenario applies (internal use, SaaS, distribution, a device) before stating obligations or risk.
 - Every record has provenance: say how it was verified and when, and say so plainly when it is not re-verified or
   volatile. Recommend confirming anything that matters against the license text, and a lawyer for real decisions.
-- Editorial views are CounselMode's judgment; label them as such.
+- Answers separate three kinds of claim. Facts carry a source and a verification status: state them with the source.
+  Ratings (`rating`, `ratings`) and compatibility rulings are CounselMode's rule-based judgments: attribute them
+  ("CounselMode rates this HIGH for SaaS, because ...") and give the `because`. `counselmode_view` is editorial
+  judgment: present it as CounselMode's view. Never present a rating, ruling or view as a legal conclusion.
+- If an answer has `verification_gaps`, say which parts are not fully verified.
+- Coverage of the whole dataset (what is verified and what is not) is the resource licenses://coverage.
 The method in full is the resource licenses://skill."""
 
 
@@ -56,6 +74,52 @@ def _url(record: dict) -> str:
     if "Listed" in str((record.get("provenance") or {}).get("spdx_list_status")):
         return f"https://spdx.org/licenses/{record['id']}.html"
     return SITE
+
+
+def _coverage(ll) -> dict:
+    """Counts by verification status for each part of the dataset."""
+
+    def count(statuses):
+        c = Counter("Verified (primary)" if s.startswith("Verified (primary)") else s for s in statuses)
+        return dict(sorted(c.items(), key=lambda kv: -kv[1]))
+
+    eras = [e for p in ll.PROJECTS for e in p["eras"]]
+    return {
+        "note": "Verified (primary): checked against a primary source. Anything else says what is missing. "
+        "Ratings and compatibility rulings are CounselMode's judgment even when the facts under them are verified.",
+        "licenses": {"total": len(ll.LIC), "by_status": count(r["provenance"]["verification_status"] for r in ll.LIC)},
+        "compatibility_rulings": {"total": len(ll.COMP), "by_status": count(t["verification_status"] for t in ll.COMP)},
+        "project_license_eras": {"total": len(eras), "by_status": count(e["verification_status"] for e in eras)},
+        "models": {"total": len(ll.MODELS), "by_status": count(m.get("verification_status") or "?" for m in ll.MODELS)},
+    }
+
+
+def _verification_gaps(answer) -> list[dict]:
+    """Every record, ruling, model or project era in an answer whose verification status is not fully verified."""
+    gaps, seen = [], set()
+
+    def walk(node, owner=None):
+        if isinstance(node, list):
+            for item in node:
+                walk(item, owner)
+        elif isinstance(node, dict):
+            owner = node.get("id") or node.get("name") or owner
+            status = node.get("verification_status") or (node.get("provenance") or {}).get("verification_status")
+            if status and not status.startswith("Verified (primary)"):
+                what = node.get("id") or node.get("model") or node.get("license_expression")
+                if "inbound" in node and "outbound" in node:
+                    what = f"{node['inbound']} into {node['outbound']} ({node.get('context', '')})"
+                elif "license_expression" in node and owner:
+                    what = f"{owner}: {node['license_expression']}"
+                if what and what not in seen:
+                    seen.add(what)
+                    gaps.append({"what": what, "status": status})
+            for key, value in node.items():
+                if key not in ("provenance", "change"):
+                    walk(value, owner)
+
+    walk(answer)
+    return gaps
 
 
 def _era_range(era: dict) -> str:
@@ -80,10 +144,12 @@ def _model_id(m: dict) -> str:
 
 def create_server() -> FastMCP:
     ll = lookup()
-    disclaimer = ll.DISCLAIMER.strip()
+    disclaimer = DISCLAIMER
     mcp = FastMCP("CounselMode License Navigator", instructions=INSTRUCTIONS, version=_version(), website_url=SITE)
 
     def done(result: dict) -> dict:
+        if gaps := _verification_gaps(result):
+            result["verification_gaps"] = gaps
         result["disclaimer"] = disclaimer
         return result
 
@@ -132,14 +198,17 @@ def create_server() -> FastMCP:
     ) -> dict:
         """The license a well-known software project is released under, keyed by version: projects change licenses
         (Redis, Elasticsearch, Terraform), so the answer depends on the release. Returns each matching project's license
-        eras with the LICENSE file each was checked against; with a version, only the era covering it, with its risk for
-        internal use, SaaS and distribution."""
+        eras with the LICENSE file each was checked against; with a version, only the era covering it, with CounselMode's
+        rating for internal use, SaaS and distribution (each with its `because`)."""
         hits = ll.project(project, version)
         if not hits:
             raise ToolError(
                 f"{project!r} is not mapped. Read the LICENSE file in the exact release you use. {NOT_ADVICE}"
             )
-        return done({"query": project, "results": hits})
+        out = {"query": project, "results": hits}
+        if version:
+            out["rating_basis"] = RATING_BASIS
+        return done(out)
 
     @mcp.tool(annotations=READ_ONLY)
     def check_compatibility(
@@ -154,6 +223,8 @@ def create_server() -> FastMCP:
             raise ToolError(out["error"] + ". Ask the user for the exact license.")
         if not out["tuples"]:
             out["note"] = "No ruling for this pair in the dataset: analyze the two license texts directly."
+        else:
+            out["rulings_basis"] = RULINGS_BASIS
         return done(out)
 
     @mcp.tool(annotations=READ_ONLY)
@@ -161,11 +232,13 @@ def create_server() -> FastMCP:
         license: Annotated[str, Field(description="An SPDX ID, name or alias.")],
         scenario: Annotated[Scenario, Field(description="How the software is used.")],
     ) -> dict:
-        """What a license requires for one use (internal, SaaS, distribution or a device), with a risk level: LOW,
-        MEDIUM, HIGH, BLOCK or REVIEW (depends on facts the data cannot know)."""
+        """What a license requires for one use (internal, SaaS, distribution or a device), with CounselMode's rating:
+        LOW, MEDIUM, HIGH, BLOCK or REVIEW (depends on facts the data cannot know), and `because`, the reason. The
+        rating is a rule-based first pass, not a legal conclusion: attribute it."""
         out = ll.obligations(license, scenario)
         if "error" in out:
             raise ToolError(out["error"] + ". Ask the user for the exact license.")
+        out["rating_basis"] = RATING_BASIS
         return done(out)
 
     @mcp.tool(annotations=READ_ONLY)
@@ -188,13 +261,14 @@ def create_server() -> FastMCP:
         if len(rows) > MAX_COMPONENTS:
             raise ToolError(f"{len(rows)} rows: send at most {MAX_COMPONENTS} per call.")
         result = ll.triage(rows, scenario)
-        counts = Counter(r["risk"] for r in result)
-        failed = any(ll.ORDER.index(r["risk"]) >= ll.ORDER.index("HIGH") for r in result)
+        counts = Counter(r["rating"]["level"] for r in result)
+        failed = any(ll.ORDER.index(r["rating"]["level"]) >= ll.ORDER.index("HIGH") for r in result)
         out = {
             "scenario": scenario,
             "rows": result,
             "summary": {k: counts[k] for k in ll.ORDER if counts[k]},
             "gate": "fail" if failed else "pass",
+            "rating_basis": RATING_BASIS,
         }
         if failed:
             out["next_step"] = HANDOFF
@@ -230,6 +304,7 @@ def create_server() -> FastMCP:
         out = ll.choose(goal, must_be_open_source, includes)
         if "error" in out:
             raise ToolError(out["error"] + ". Ask the user for the exact license.")
+        out["basis"] = CHOOSE_BASIS
         return done(out)
 
     @mcp.tool(annotations=READ_ONLY)
@@ -246,6 +321,11 @@ def create_server() -> FastMCP:
     def skill() -> str:
         """The method: how to resolve, scope and answer a license question (SKILL.md)."""
         return (skill_dir() / "SKILL.md").read_text(encoding="utf-8")
+
+    @mcp.resource("licenses://coverage", mime_type="application/json")
+    def coverage() -> str:
+        """How much of the dataset is verified against primary sources, and what is not."""
+        return json.dumps(_coverage(ll), indent=1, ensure_ascii=False)
 
     @mcp.resource("licenses://data/{name}", mime_type="application/json")
     def data(name: str) -> str:
