@@ -81,7 +81,7 @@ def smoke(base: str) -> list[str]:
     check("tools/list", names == TOOLS, str(sorted(names ^ TOOLS)) if names != TOOLS else "")
     args = {"license": "GPL-3.0", "scenario": "saas"}
     sc = rpc(base, "tools/call", {"name": "license_obligations", "arguments": args}, 3).get("structuredContent") or {}
-    check("obligations GPL-3.0 saas", sc.get("id") == "GPL-3.0-only" and sc.get("risk") == "LOW", str(sc.get("id")))
+    check("obligations GPL-3.0 saas", sc.get("id") == "GPL-3.0-only" and (sc.get("rating") or {}).get("level") == "LOW", str(sc.get("id")))
     r = rpc(base, "tools/call", {"name": "model_license", "arguments": {"model": "Gemma 4"}}, 4)
     ids = {m["license_id"] for m in (r.get("structuredContent") or {}).get("results", [])}
     check("model Gemma 4", ids == {"Apache-2.0"}, str(ids))
