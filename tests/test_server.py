@@ -59,7 +59,7 @@ def test_lookup_by_alias_carries_provenance_and_disclaimer():
 
 def test_a_partial_name_returns_candidates():
     out = call("lookup_license", license="GPL")
-    assert out["match"] == "candidates" and "give the exact SPDX ID" in out["note"]
+    assert out["match"] == "candidates" and "exact SPDX ID" in out["note"]
 
 
 def test_unknown_license_is_an_error_not_an_empty_answer():
@@ -145,3 +145,28 @@ def test_choose_license_checks_included_code():
     assert "check_compatibility" in blocked["note"]
     with pytest.raises(ToolError, match="ambiguous"):
         call("choose_license", goal="max_adoption", includes=["GPL"])
+
+
+def test_an_ambiguous_name_returns_a_short_list_without_exceptions():
+    out = call("lookup_license", license="GPL")
+    ids = [r["id"] for r in out["results"]]
+    assert "GPL-3.0-only" in ids and all(set(r) == {"id", "name", "family"} for r in out["results"])
+    assert not any("exception" in i.lower() for i in ids)
+
+
+def test_a_model_answer_names_other_versions_under_different_terms():
+    out = call("model_license", model="Gemma 4")
+    assert {m["license_id"] for m in out["results"]} == {"Apache-2.0"}
+    assert "LicenseRef-Gemma" in {m["license_id"] for m in out["other_versions"]}
+    llama = call("model_license", model="Llama 3.1")
+    assert {"LicenseRef-Llama-2", "LicenseRef-Llama-4"} <= {m["license_id"] for m in llama["other_versions"]}
+
+
+def test_not_mapped_errors_say_it_is_not_legal_advice():
+    for tool, args in [
+        ("project_license", {"project": "no-such-project-xyz"}),
+        ("model_license", {"model": "no-such-model-xyz"}),
+        ("lookup_license", {"license": "definitely-not-a-license-9"}),
+    ]:
+        with pytest.raises(ToolError, match="not legal advice"):
+            call(tool, **args)

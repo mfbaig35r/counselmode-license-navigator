@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.13.4 (2026-11-24)
+
+From the first client test run (Claude Desktop, 11 of 12 passed):
+
+- `model_license` adds `other_versions`: versions of the same model family under different terms, so an answer about
+  Gemma 4 can say Gemma 1 to 3 are under the Gemma Terms of Use (also Llama 2, 3.x and 4; Mistral Large; Qwen;
+  DeepSeek-V; and others).
+- An ambiguous `lookup_license` ("GPL") returns a short list of candidate IDs, names and families instead of five full
+  records, and leaves out license exceptions unless the query asks for one.
+- "Not mapped" and "not in the database" errors now say the answer is not legal advice.
+
 ## 2.13.3 (2026-11-23)
 
 - Case law: two disputes that never reached a court, from the parties' own records (court dockets not checked).

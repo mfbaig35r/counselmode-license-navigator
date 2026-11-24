@@ -60,7 +60,7 @@ def test_a_partial_name_returns_candidates_not_a_guess():
     assert res["match"] == "candidates"
     assert {"GPL-3.0-only", "LGPL-3.0-only", "AGPL-3.0-only"} <= {r["id"] for r in res["records"]}
     assert ll.unique("GPL") is None
-    assert "give the exact SPDX ID" in ll.lookup("GPL")["note"]
+    assert "exact SPDX ID" in ll.lookup("GPL")["note"]
 
 
 def test_unknown_resolves_to_nothing():

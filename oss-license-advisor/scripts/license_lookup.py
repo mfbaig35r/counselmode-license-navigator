@@ -181,13 +181,22 @@ def family_risk(record: dict, scenario: str) -> str:
 
 
 def lookup(query: str) -> dict:
+    """Exact matches return the full record. A partial name returns a short list of candidates (ID, name, family) to
+    choose from; exceptions appear only when the query asks for one."""
     res = resolve(query)
-    out = {"query": query, "match": res["match"], "results": res["records"][:5]}
-    if res["match"] == "candidates" and len(res["records"]) > 1:
-        out["note"] = f"{len(res['records'])} licenses match; give the exact SPDX ID: " + ", ".join(
-            r["id"] for r in res["records"][:12]
-        )
-    return out
+    if res["match"] != "candidates":
+        return {"query": query, "match": res["match"], "results": res["records"][:5]}
+    records = res["records"]
+    if "exception" not in query.lower():
+        records = [r for r in records if r.get("record_type") != "exception"] or records
+    if len(records) == 1:
+        return {"query": query, "match": "candidates", "results": records}
+    return {
+        "query": query,
+        "match": "candidates",
+        "results": [{"id": r["id"], "name": r["name"], "family": r["family"]} for r in records[:12]],
+        "note": f"{len(records)} licenses match; ask which one is meant and look it up by its exact SPDX ID.",
+    }
 
 
 def model(query: str) -> list[dict]:
@@ -201,6 +210,24 @@ def model(query: str) -> list[dict]:
         m
         for m in MODELS
         if any(_alias_hit(query, a) for a in m.get("aliases") or [m["model"]]) or norm(m["vendor"]).startswith(q)
+    ]
+
+
+def model_family(m: dict) -> tuple[str, str]:
+    """(vendor, family): the words of the first alias before its first version number ("Gemma 4 E2B" -> "gemma")."""
+    first = (m.get("aliases") or [m["model"]])[0]
+    return m["vendor"], re.split(r"\s*\d", first, maxsplit=1)[0].strip().lower()
+
+
+def other_versions(hits: list[dict]) -> list[dict]:
+    """Versions in the same families as `hits` that are under a different license (Gemma 1 to 3 for Gemma 4), so an
+    answer about one version can say the others differ."""
+    families = {model_family(m) for m in hits}
+    licenses = {m["license_id"] for m in hits}
+    return [
+        {"model": m["model"], "license": m["license"], "license_id": m["license_id"]}
+        for m in MODELS
+        if model_family(m) in families and m not in hits and m["license_id"] not in licenses
     ]
 
 

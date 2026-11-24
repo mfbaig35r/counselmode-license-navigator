@@ -22,6 +22,7 @@ from counselmode_licenses.skill import lookup, references, skill_dir
 READ_ONLY = ToolAnnotations(read_only_hint=True, destructive_hint=False, idempotent_hint=True, open_world_hint=False)
 MAX_COMPONENTS = 500
 SITE = "https://counselmode.com"
+NOT_ADVICE = "This is not legal advice."
 HANDOFF = f"For a full compliance screening of these dependencies, with a report, see {SITE}."
 DATA_FILES = ("licenses", "compatibility", "compat_groups", "models", "projects", "aliases", "context")
 Scenario = Literal["internal", "saas", "distribute", "device"]
@@ -91,11 +92,13 @@ def create_server() -> FastMCP:
         license: Annotated[str, Field(description='An SPDX ID ("Apache-2.0"), a name, or an alias ("ALv2", "GPLv3").')],
     ) -> dict:
         """What a software, model or data license allows and requires: OSI and FSF status, patent grant, copyleft scope,
-        obligations, facts, CounselMode's editorial view and provenance. A partial name returns `candidates`: ask the
-        user which one they mean."""
+        obligations, facts, CounselMode's editorial view and provenance. A partial name returns `candidates`, a short list
+        of IDs: ask the user which one they mean, then look that one up."""
         out = ll.lookup(license)
         if not out["results"]:
-            raise ToolError(f"{license!r} is not in the database. Classify it against the license text itself.")
+            raise ToolError(
+                f"{license!r} is not in the database. Classify it against the license text itself. {NOT_ADVICE}"
+            )
         return done(out)
 
     @mcp.tool(annotations=READ_ONLY)
@@ -108,8 +111,14 @@ def create_server() -> FastMCP:
         of the same family). Returns the matching model records with their conditions and provenance."""
         hits = ll.model(model)
         if not hits:
-            raise ToolError(f"{model!r} is not mapped. Read the license shipped with the exact checkpoint.")
-        return done({"query": model, "results": hits})
+            raise ToolError(
+                f"{model!r} is not mapped. Read the license shipped with the exact checkpoint. {NOT_ADVICE}"
+            )
+        out = {"query": model, "results": hits}
+        if others := ll.other_versions(hits):
+            out["other_versions"] = others
+            out["other_versions_note"] = "Other versions of this model family are under different terms; say so."
+        return done(out)
 
     @mcp.tool(annotations=READ_ONLY)
     def project_license(
@@ -127,7 +136,9 @@ def create_server() -> FastMCP:
         internal use, SaaS and distribution."""
         hits = ll.project(project, version)
         if not hits:
-            raise ToolError(f"{project!r} is not mapped. Read the LICENSE file in the exact release you use.")
+            raise ToolError(
+                f"{project!r} is not mapped. Read the LICENSE file in the exact release you use. {NOT_ADVICE}"
+            )
         return done({"query": project, "results": hits})
 
     @mcp.tool(annotations=READ_ONLY)
