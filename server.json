@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mfbaig35r/counselmode-license-navigator",
+  "title": "CounselMode License Navigator",
+  "description": "Software, model and data license answers with sources: lookup, compatibility, obligations, triage.",
+  "websiteUrl": "https://counselmode.com/licenses",
+  "repository": {
+    "url": "https://github.com/mfbaig35r/counselmode-license-navigator",
+    "source": "github"
+  },
+  "version": "2.14.1",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "counselmode-licenses",
+      "version": "2.14.1",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://licenses.counselmode.com/mcp"
+    }
+  ]
+}

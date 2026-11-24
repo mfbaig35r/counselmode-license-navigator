@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.14.1 (2026-11-24)
+
+- Listed in the official MCP Registry as `io.github.mfbaig35r/counselmode-license-navigator` (`server.json`; the
+  README carries the `mcp-name` line the registry uses to confirm the PyPI package belongs to this repository). The
+  entry offers both the PyPI package (`uvx counselmode-licenses`) and the hosted server.
+- A monthly re-check (`maintenance/recheck_projects.py`, run by `.github/workflows/recheck.yml`): compares each
+  project's LICENSE file at the tag we verified with the same file at the project's HEAD today, ignoring copyright
+  lines, and checks whether the SPDX License List has moved past our snapshot. When something changed it opens or
+  updates a `data` issue; a changed file is a prompt to re-verify, not proof the license changed. No change to the
+  tools or data.
+
 ## 2.14.0 (2026-11-24)
 
 Answers now say what kind of claim each part is, so an assistant can't pass a judgment along as a fact. From the second
