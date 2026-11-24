@@ -1,0 +1,50 @@
+name: Wrong or outdated answer
+description: The Navigator said something about a license, project or model that the primary source contradicts.
+title: "Wrong answer: "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for checking us. Every record is meant to match its primary source, so a link to that source is what
+        lets us fix it quickly. Please don't include anything confidential about your own product.
+  - type: input
+    id: subject
+    attributes:
+      label: License, project or model
+      description: The SPDX ID, project name and version, or model name and version.
+      placeholder: "e.g. BUSL-1.1, Redis 7.4, Llama 3.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where you saw it
+      options:
+        - An MCP tool (Claude, ChatGPT, Grok or another client)
+        - counselmode.com/licenses
+        - The data files or reference docs in this repository
+        - The command-line script
+    validations:
+      required: true
+  - type: textarea
+    id: said
+    attributes:
+      label: What it said
+      description: The question or tool call, and the answer or field that is wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What the source says instead
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Link to the primary source
+      description: The license text, the project's LICENSE file at a release tag, the vendor's own page, or a court record.
+      placeholder: "https://"
+    validations:
+      required: true
