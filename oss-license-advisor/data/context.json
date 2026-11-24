@@ -69,6 +69,26 @@
    "Why it matters": "GPL as a counterclaim risk in commercial software disputes; GPL obligations can be litigated as state-law contract claims",
    "Verification status": "Verified (primary)",
    "Last verified": "2026-11-23"
+  },
+  {
+   "ID": "case-hashicorp-opentofu-removed-block",
+   "Case": "HashiCorp, Inc. / OpenTofu (cease-and-desist and DMCA notice over the \"removed\" block)",
+   "Court / citation": "No court filing; cease-and-desist letter from HashiCorp's counsel, GitHub DMCA takedown notice, and OpenTofu DMCA counter notice",
+   "Date(s)": "Apr. 3, 2024 (cease-and-desist; response demanded by Apr. 10); Apr. 9, 2024 (OpenTofu counsel's response); Apr. 11, 2024 (OpenTofu publishes the letters and a source code origin analysis; date of HashiCorp's DMCA notice in GitHub's DMCA repository); Apr. 24, 2024 (OpenTofu DMCA counter notice)",
+   "Holding / status": "No ruling. HashiCorp asserted that five OpenTofu files implementing the \"removed\" block copied BUSL-1.1 Terraform code and were relabeled MPL-2.0, named the contributors involved, demanded removal, and reserved DMCA takedowns and litigation. OpenTofu's counsel and published analysis stated the files derive from pre-fork MPL-2.0 code; OpenTofu filed a DMCA counter notice. No later demand by HashiCorp or IBM (owner since Feb. 27, 2025) appears in either party's records, and the disputed file remains in the OpenTofu repository as of Nov. 23, 2026. No lawsuit announced by either party (docket not checked)",
+   "Why it matters": "Forks of relicensed projects: document the origin of code against the last permissively licensed version, and expect copyright and SPDX header choices in new files to be scrutinized",
+   "Verification status": "Partially verified (primary): parties' own records; court docket not checked",
+   "Last verified": "2026-11-23"
+  },
+  {
+   "ID": "case-onlyoffice-euro-office-agpl-section-7",
+   "Case": "Ascensio System SIA (ONLYOFFICE) / Nextcloud, IONOS and the Euro-Office project (AGPLv3 Section 7 logo-retention term)",
+   "Court / citation": "No court filing; public license dispute conducted through the parties' blog posts, an ONLYOFFICE partnership suspension, and license and header changes on GitHub",
+   "Date(s)": "Mar. 27, 2026 (Euro-Office launched; logo-retention term removed from its headers); Mar. 30, 2026 (ONLYOFFICE asserts license violation and copyright infringement); Mar. 31, 2026 (ONLYOFFICE suspends Nextcloud partnership); Apr. 15, 2026 (FSF statement); Apr. 17, 2026 (Nextcloud compliance analysis); Apr. 21, 2026 (ONLYOFFICE open letter); May 6, 2026 (ONLYOFFICE replaces its LICENSE additional terms); Aug. 18, 2026 (Nextcloud says it will conform to the new license)",
+   "Holding / status": "No ruling. ONLYOFFICE asserted that its Section 7(b) term requiring retention of the product logo is part of an indivisible grant, so removing it breaches AGPLv3 and terminates rights under Section 8. Nextcloud asserted the term is a \"further restriction\" that Section 7 lets recipients remove, and the FSF publicly took the same view. On May 6, 2026 ONLYOFFICE replaced the logo term with attribution, modification-notice and user-interface notice terms plus a trademark disclaimer; on Aug. 18, 2026 Nextcloud stated it would update Euro-Office code and headers to match. No lawsuit announced by either party (docket not checked)",
+   "Why it matters": "AGPLv3 additional terms: the FSF's published view is that a logo-retention requirement is not a permitted Section 7(b) term and may be removed as a further restriction; licensors seeking attribution are pointed to author-attribution notices and Section 7(e) trademark terms instead",
+   "Verification status": "Partially verified (primary): parties' own records; court docket not checked",
+   "Last verified": "2026-11-23"
   }
  ],
  "regulatory": [

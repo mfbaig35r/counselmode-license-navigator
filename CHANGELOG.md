@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.13.3 (2026-11-23)
+
+- Case law: two disputes that never reached a court, from the parties' own records (court dockets not checked).
+  **HashiCorp / OpenTofu** (April 2024): a cease-and-desist and DMCA notice over OpenTofu's `removed` block, answered
+  with an analysis tracing the code to pre-fork MPL-2.0 Terraform and a DMCA counter notice; no later demand found.
+  **ONLYOFFICE / Euro-Office** (March to August 2026): whether an AGPLv3 Section 7 term requiring the ONLYOFFICE logo
+  to be kept may be removed as a "further restriction"; the FSF said it may, and ONLYOFFICE replaced the term with
+  attribution and notice terms in May 2026.
+
 ## 2.13.2 (2026-11-23)
 
 - `search` and `fetch` link each license and project to its plain-English page on counselmode.com
