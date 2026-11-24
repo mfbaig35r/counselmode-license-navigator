@@ -8,12 +8,12 @@
     "url": "https://github.com/mfbaig35r/counselmode-license-navigator",
     "source": "github"
   },
-  "version": "2.14.1",
+  "version": "2.14.2",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "counselmode-licenses",
-      "version": "2.14.1",
+      "version": "2.14.2",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"

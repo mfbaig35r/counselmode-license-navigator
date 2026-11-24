@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.14.2 (2026-11-24)
+
+The first monthly re-check flagged five projects; each was re-verified against its license file at the latest release.
+No license changed.
+
+- **Redis:** still RSALv2, SSPLv1 or AGPLv3 at 8.12.0 (source re-pinned). Found: in 8.0.0 only, the section headed
+  "GNU AFFERO GENERAL PUBLIC LICENSE" contained the GPLv3 text (no AGPL section 13); 8.0.1 and later carry the AGPLv3
+  text. Recorded in the project's notes.
+- **Terraform:** still BUSL-1.1 at v1.17.2 (source re-pinned); the Licensor is now IBM, the Licensed Work is "1.6.0 or
+  later", and the Additional Use Grant was reworded.
+- **Qt:** still LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only at v6.12.1; Qt 6 declares licenses per file (REUSE),
+  so the source is now the SPDX line in `qglobal.cpp`.
+- **Spring Framework** and **Bun:** unchanged in their latest releases; only their unreleased main branches differ (a
+  rename, and Bun's third-party table).
+- The re-check compares SPDX lines for REUSE source files, and reports a renamed license file with the same text as a
+  rename rather than a change.
+
 ## 2.14.1 (2026-11-24)
 
 - Listed in the official MCP Registry as `io.github.mfbaig35r/counselmode-license-navigator` (`server.json`; the

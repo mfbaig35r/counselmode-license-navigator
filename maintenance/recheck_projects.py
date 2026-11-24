@@ -91,9 +91,20 @@ def check_project(p: dict) -> dict:
     ref, path = split_ref(owner, repo, rest)
     head = fetch(f"https://raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}")
     if head is None:
-        moved = next((alt for alt in LICENSE_FILES if alt != path and fetch(f"{RAW}/{owner}/{repo}/HEAD/{alt}")), None)
-        where = f"; a license file is at {moved} now" if moved else ""
-        return {"id": p["id"], "status": "changed", "why": f"{path} is gone at HEAD{where}"}
+        for alt in LICENSE_FILES:
+            if alt != path and (text := fetch(f"{RAW}/{owner}/{repo}/HEAD/{alt}")):
+                ratio = difflib.SequenceMatcher(None, normalize(pinned), normalize(text)).ratio()
+                if ratio >= SIMILAR:  # renamed, same text: worth knowing, not worth an alert
+                    return {"id": p["id"], "status": "renamed", "why": f"{path} is now {alt} at HEAD, same text"}
+                return {"id": p["id"], "status": "changed", "why": f"{path} is gone at HEAD; {alt} differs"}
+        return {"id": p["id"], "status": "changed", "why": f"{path} is gone at HEAD"}
+    # A source file under REUSE (Qt) declares its license in an SPDX line; compare that, not the code around it.
+    declared = re.compile(r"SPDX-License-Identifier:\s*(.+)")
+    if (was := declared.search(pinned)) and not path.upper().startswith(("LICENSE", "COPYING", "LICENSES/")):
+        now = declared.search(head)
+        if not now or now.group(1).strip() != was.group(1).strip():
+            return {"id": p["id"], "status": "changed", "why": f"the SPDX line in {path} changed at HEAD"}
+        return {"id": p["id"], "status": "same"}
     ratio = difflib.SequenceMatcher(None, normalize(pinned), normalize(head)).ratio()
     if ratio < SIMILAR:
         return {
@@ -125,6 +136,7 @@ def main(argv: list[str]) -> int:
     changed = [r for r in results if r["status"] == "changed"]
     errors = [r for r in results if r["status"] == "error"]
     skipped = [r for r in results if r["status"] == "skipped"]
+    renamed = [r for r in results if r["status"] == "renamed"]
 
     lines = [
         "## License re-check",
@@ -132,7 +144,7 @@ def main(argv: list[str]) -> int:
         (
             f"{len(projects)} projects: {len(changed)} changed, {len(errors)} could not be checked, "
             f"{len(skipped)} skipped (no GitHub LICENSE file), "
-            f"{len(projects) - len(changed) - len(errors) - len(skipped)} unchanged."
+            f"{len(renamed)} renamed, {len(projects) - len(changed) - len(errors) - len(skipped) - len(renamed)} unchanged."
         ),
         "",
     ]
@@ -141,6 +153,9 @@ def main(argv: list[str]) -> int:
     if changed:
         lines += ["**Changed since verified** (re-read the license and update `data/projects.json`):", ""]
         lines += [f"- {names[r['id']]} (`{r['id']}`): {r['why']}" for r in changed] + [""]
+    if renamed:
+        lines += ["**Renamed, same text** (update the source path at the next release):", ""]
+        lines += [f"- {names[r['id']]} (`{r['id']}`): {r['why']}" for r in renamed] + [""]
     if errors:
         lines += ["**Could not be checked:**", ""]
         lines += [f"- {names[r['id']]} (`{r['id']}`): {r['why']}" for r in errors] + [""]
