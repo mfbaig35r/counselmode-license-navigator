@@ -2,6 +2,9 @@
 
 <!-- mcp-name: io.github.mfbaig35r/counselmode-license-navigator -->
 
+[![counselmode-licenses MCP server](https://glama.ai/mcp/servers/mfbaig35r/counselmode-license-navigator/badges/score.svg)](https://glama.ai/mcp/servers/mfbaig35r/counselmode-license-navigator)
+[![CounselMode License Navigator MCP connector](https://glama.ai/mcp/connectors/io.github.mfbaig35r/counselmode-license-navigator/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.mfbaig35r/counselmode-license-navigator)
+
 Free, open-source answers to software, model and data license questions, inside the AI assistant you already use.
 
 - **What a license allows and requires**: 156 records (144 licenses in 12 families, from permissive and copyleft to
